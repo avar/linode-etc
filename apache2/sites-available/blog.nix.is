@@ -1,0 +1,6 @@
+<VirtualHost *:80>
+    ServerName blog.nix.is
+    DocumentRoot /var/www/blog.nix.is/
+    AddHandler fcgid-script .php
+    FCGIWrapper /usr/bin/php5-cgi .php
+</VirtualHost>

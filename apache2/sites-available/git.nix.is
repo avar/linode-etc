@@ -1,0 +1,9 @@
+<VirtualHost *:80>
+    ServerName git.nix.is
+    DocumentRoot /var/www/git.nix.is/
+
+    <Location /index.cgi>
+        SetHandler cgi-script
+        Options +ExecCGI
+    </Location>
+</VirtualHost>

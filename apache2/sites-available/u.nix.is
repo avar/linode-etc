@@ -1,0 +1,22 @@
+<VirtualHost *:80>
+    ServerName u.nix.is
+    DocumentRoot /var/www/u.nix.is/
+
+    <IfModule mod_userdir.c>
+        UserDir www
+        UserDir disabled root
+
+        <Directory /home/*/www>
+            AllowOverride FileInfo AuthConfig Limit Indexes
+            Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec
+            <Limit GET POST OPTIONS>
+                Order allow,deny
+                Allow from all
+            </Limit>
+            <LimitExcept GET POST OPTIONS>
+                Order deny,allow
+                Deny from all
+                </LimitExcept>
+        </Directory>
+    </IfModule>
+</VirtualHost>
