@@ -1,4 +1,5 @@
 <VirtualHost *:80>
+	ServerName ci.nix.is
         DocumentRoot /home/bjorn/calamitous_intent/
         AddHandler fcgid-script .php
         FCGIWrapper /usr/bin/php5-cgi .php
