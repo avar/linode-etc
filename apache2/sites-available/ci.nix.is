@@ -1,5 +1,6 @@
 <VirtualHost *:80>
-	ServerName ci.nix.is
+        ServerName ci.nix.is
+        AddDefaultCharset ISO-8859-1
         DocumentRoot /home/bjorn/calamitous_intent/
         AddHandler fcgid-script .php
         FCGIWrapper /usr/bin/php5-cgi .php
