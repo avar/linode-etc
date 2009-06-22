@@ -1,4 +1,3 @@
 127.0.0.1	u u.nix.is localhost localhost.localdomain
 208.78.101.240  t
-127.0.0.1 rtpg-scgi rtpg-scgi.localhost rtpg
-127.0.0.1 rtpg.rtorrent.nix.is scgi.rtorrent.nix.is
+
