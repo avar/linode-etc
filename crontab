@@ -24,7 +24,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 ## osm.nix.is
 0 7      * * *  avar perl /var/www/osm.nix.is/script/download-osm-with-retry --out-dir /var/www/osm.nix.is/dump --fallback http://download.geofabrik.de/osm/europe/iceland.osm.bz2
 0 8      * * *  avar perl /var/www/osm.nix.is/script/generate-garmin-img-from-osm --date=$(date --iso-8601) --osm "/var/www/osm.nix.is/dump/$(date --iso-8601).osm.bz2" --min-osm-size=$((2*10**6)) --mkgmap-dir=/home/avar/src/mkgmap --osm2mp-dir=/home/avar/src/osm2mp --mapname 13314530 --description="Iceland OSM" --country-name=ICELAND --country-abbr=ICE --out-dir /var/www/osm.nix.is --out-file=Iceland.osm --out-mp=Iceland.mp
-5 8      * * * avar LC_ALL=en_US.UTF8 perl /var/www/osm.nix.is/script/generate-daily-osmdiff.pl --date=$(date --iso-8601)
+30 8      * * * avar LC_ALL=en_US.UTF8 perl /var/www/osm.nix.is/script/generate-daily-osmdiff.pl --date=$(date --iso-8601)
 
 ## berlin.osm.nix.is
 0 5 * * *  avar perl /var/www/osm.nix.is/script/download-osm-with-retry --out-dir /var/www/osm.nix.is/berlin/dump --fallback http://download.geofabrik.de/osm/europe/germany/berlin.osm.bz2
