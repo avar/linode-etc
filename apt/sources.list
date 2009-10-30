@@ -1,2 +1,5 @@
-deb http://ftp.us.debian.org/debian testing main contrib non-free
-deb-src http://ftp.us.debian.org/debian testing main contrib non-free
+#deb http://ftp.us.debian.org/debian testing main contrib non-free
+#deb-src http://ftp.us.debian.org/debian testing main contrib non-free
+
+deb http://mirrors.usc.edu/debian testing main contrib non-free
+deb-src http://mirrors.usc.edu/debian testing main contrib non-free
