@@ -1,8 +1,0 @@
-<VirtualHost *:80>
-    ServerName git.nix.is
-    DocumentRoot /var/www/git.nix.is/
-    Alias /gitweb.css /usr/share/gitweb/gitweb.css
-    Alias /git-favicon.png /usr/share/gitweb/git-favicon.png
-    Alias /git-logo.png /usr/share/gitweb/git-logo.png
-    ScriptAlias / /usr/lib/cgi-bin/gitweb.cgi
-</VirtualHost>
