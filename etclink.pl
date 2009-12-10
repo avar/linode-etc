@@ -87,7 +87,7 @@ for my $file (@files) {
 
 =head1 NAME
 
-etclink.pl - Creates/copies symlinks to your /etc dir for all the dotfiles
+etclink.pl - Creates/copies symlinks to your /etc dir for all the files
 in a specified directory.
 
 =head1 SYNOPSIS
