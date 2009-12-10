@@ -20,3 +20,6 @@ root	ALL=(ALL) ALL
 # (Note that later entries override this, so you might need to move
 # it further down)
 %sudo ALL=NOPASSWD: ALL
+
+# for users who like to provide a password
+%fail ALL=(ALL) ALL
