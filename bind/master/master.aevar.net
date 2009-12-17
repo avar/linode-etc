@@ -1,16 +1,16 @@
 $TTL 86400 ; 24 hours could have been written as 24h or 1d
-$ORIGIN xn--var-xla.net.
-@  1D  IN SOA ns.xn--var-xla.net.hostmaster.xn--var-xla.net. (
+$ORIGIN aevar.net.
+@  1D  IN SOA ns.aevar.net.hostmaster.aevar.net. (
       2002022401 ; serial
       3H ; refresh
       15 ; retry
       1w ; expire
       3h ; minimum
      )
-       IN  NS     ns.xn--var-xla.net.   ; in the domain
-       IN  MX  10 mail.xn--var-xla.net. ; external mail provider
+       IN  NS     ns.aevar.net.   ; in the domain
+       IN  MX  10 mail.aevar.net. ; external mail provider
 ; server host definitions
 ns     IN  A      109.74.193.250
-www    IN  CNAME  xn--var-xla.net.
+www    IN  CNAME  aevar.net.
 mail   IN  A      109.74.193.250
 
