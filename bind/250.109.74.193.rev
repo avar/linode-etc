@@ -1,11 +1,11 @@
 $TTL 86400 ; 24 hours could have been written as 24h or 1d
 $ORIGIN 250.193.74.109.IN-ADDR.ARPA.
-@  1D  IN SOA ns.xn--var-xla.net. (
-      2002022401 ; serial
+@  1D  IN SOA ns.xn--var-xla.net. dns.xn--var-xla.net. (
+      3 ; serial
       3H ; refresh
       15 ; retry
       1w ; expire
       3h ; minimum
      )
 ; server host definitions
-250    IN  PTR    xn--var-xla.net.
+250.193.74.109.in-addr.arpa.    IN  PTR    v.nix.is.
