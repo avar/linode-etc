@@ -10,7 +10,8 @@ $ORIGIN xn--var-xla.net.
        IN  NS     ns.xn--var-xla.net.   ; in the domain
        IN  MX  10 mail.xn--var-xla.net. ; external mail provider
 ; server host definitions
-ns     IN  A      109.74.193.250
-www    IN  CNAME  xn--var-xla.net.
-mail   IN  A      109.74.193.250
+xn--var-xla.net. IN  A      109.74.193.250
+ns               IN  A      109.74.193.250
+www              IN  CNAME  xn--var-xla.net.
+mail             IN  A      109.74.193.250
 
