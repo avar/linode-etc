@@ -1,17 +1,20 @@
 $TTL 86400 ; 24 hours could have been written as 24h or 1d
 $ORIGIN xn--var-xla.net.
-@  1D  IN SOA ns.xn--var-xla.net. dns.xn--var-xla.net. (
-      1   ; serial
+@  1D  IN SOA ns1.xn--var-xla.net. dns.xn--var-xla.net. (
+      4   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
       3h  ; minimum
      )
-       IN  NS     ns.xn--var-xla.net.   ; in the domain
-       IN  MX  10 mail.xn--var-xla.net. ; external mail provider
+
+       IN  NS     ns1.xn--var-xla.net.
+       IN  NS     ns2.xn--var-xla.net.
+       IN  MX  10 mail.xn--var-xla.net.
 
 xn--var-xla.net. IN  A      109.74.193.250
-ns               IN  A      109.74.193.250
+ns1              IN  A      109.74.193.250
+ns2              IN  A      64.71.167.207
 www              IN  CNAME  xn--var-xla.net.
 mail             IN  A      109.74.193.250
 
