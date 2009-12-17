@@ -1,0 +1,19 @@
+$TTL 86400 ; 24 hours could have been written as 24h or 1d
+$ORIGIN openstreetmap.is.
+@  1D  IN SOA v.nix.is. dns.openstreetmap.is. (
+      1   ; serial
+      3h  ; refresh
+      30m ; retry
+      1w  ; expire
+      3h  ; minimum
+     )
+
+       IN  NS     v.nix.is.
+       IN  NS     ns2.xn--var-xla.is.
+       IN  MX  10 mail.openstreetmap.is.
+
+openstreetmap.is.    IN  A      109.74.193.250
+www                  IN  CNAME  openstreetmap.is.
+mail                 IN  A      109.74.193.250
+
+
