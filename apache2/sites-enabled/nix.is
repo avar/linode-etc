@@ -1,1 +1,5 @@
-../sites-available/nix.is
+<VirtualHost *:80>
+    ServerName v.nix.is
+    DocumentRoot /var/www/v.nix.is/
+    ScriptAlias /vnstat /var/www/v.nix.is/vnstat/vnstat.cgi
+</VirtualHost>
