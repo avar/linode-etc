@@ -1,3 +1,3 @@
-# Here come the local changes the user made, like configuration of 
-# the several backends that exist.
-
+launch=bind
+bind-check-interval=300
+bind-config=/etc/bind/named.conf
