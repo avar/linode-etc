@@ -1,4 +1,4 @@
-$TTL86400 ; 24 hours could have been written as 24h
+$TTL 86400 ; 24 hours could have been written as 24h
 $ORIGIN localhost.
 ; line below = localhost 1D IN SOA localhost root.localhost
 @  1D  IN SOA @root (

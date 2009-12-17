@@ -1,4 +1,4 @@
-$TTL86400 ; 24 hours could have been written as 24h or 1d
+$TTL 86400 ; 24 hours could have been written as 24h or 1d
 $ORIGIN example.com.
 @  1D  IN SOA ns1.example.com.hostmaster.example.com. (
       2002022401 ; serial

@@ -1,4 +1,4 @@
-$TTL86400 ;
+$TTL 86400 ;
 ; could use $ORIGIN 0.0.127.IN-ADDR.ARPA.
 @       IN      SOA     localhost. root.localhost.  (
                         1997022700 ; Serial
