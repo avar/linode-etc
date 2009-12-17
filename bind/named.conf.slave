@@ -1,0 +1,19 @@
+// The corresponding slave configuration for named.conf
+
+options {
+  directory "/var/run/named";
+  allow-notify { 109.74.193.250; };
+  allow-transfer {"none";};
+};
+
+zone "xn--var-xla.net" in {
+  type slave;
+  file "slave.xn--var-xla.net";
+  masters { 109.74.193.250; };
+};
+
+zone "aevar.net" in {
+  type slave;
+  file "slave.aevar.net";
+  masters { 109.74.193.250; };
+};
