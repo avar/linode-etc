@@ -1,15 +1,16 @@
 $TTL 86400 ; 24 hours could have been written as 24h or 1d
 $ORIGIN aevar.net.
 @  1D  IN SOA v.nix.is. dns.v.nix.is. (
-      14  ; serial
+      20  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
       3h  ; minimum
      )
 
-       IN  NS     v.nix.is.
-       IN  NS     u.nix.is.
+       IN  NS     ns0.1984.is.
+       IN  NS     ns1.1984.is.
+       IN  NS     ns2.1984.is.
        IN  MX  10 mail.aevar.net.
 
 aevar.net. IN  A      109.74.193.250
