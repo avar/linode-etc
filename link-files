@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# comes with File::LinkDir
-link-files --recursive -a $(basename $0) --source . --dest /etc "$@"
