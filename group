@@ -49,8 +49,6 @@ git:x:1001:hinrik,avar
 netdev:x:109:
 bitlbee:x:110:
 fail:x:1002:tumi
-postfix:x:111:
-postdrop:x:112:
 bjorn:x:1003:
 postgres:x:113:
 pdns:x:114:
