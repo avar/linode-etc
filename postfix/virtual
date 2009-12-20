@@ -1,8 +1,5 @@
 # remember to run "sudo postmap /etc/postfix/virtual" after making changes
-postmaster@nix.is           hinrik.sig@gmail.com
-webmaster@nix.is            hinrik.sig@gmail.com
-root@nix.is                 hinrik.sig@gmail.com
-
+@nix.is           hinrik.sig@gmail.com
 @osm.is           avarab@gmail.com
 @openstreetmap.is avarab@gmail.com
 @aevar.net        avarab@gmail.com
