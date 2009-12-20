@@ -1,7 +1,7 @@
 $TTL 86400 ; 24 hours could have been written as 24h or 1d
 $ORIGIN nix.is.
 @  1D  IN SOA ns0.1984.is. hinriksig.gmail.com. (
-      1   ; serial
+      2   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -21,6 +21,7 @@ v                    IN  A      109.74.193.250
 
 www                  IN  CNAME  nix.is.
 mail                 IN  A      109.74.193.250
+lists                IN  A      109.74.193.250
 blog                 IN  A      64.71.167.207
 ci                   IN  A      64.71.167.207
 ci-dev               IN  A      64.71.167.207

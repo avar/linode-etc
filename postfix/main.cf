@@ -18,9 +18,6 @@ append_dot_mydomain = no
 # only relay mail from localhost
 mynetworks = 127.0.0.0/8
 
-# don't forward mail from strangers
-relay_domains =
-
 # only use the local aliases database, not NIS
 alias_maps = $alias_database
 
@@ -30,3 +27,8 @@ mydestination = localhost
 # use virtual aliases for our domains
 virtual_alias_domains = nix.is osm.is openstreetmap.is aevar.net xn--var-xla.net
 virtual_alias_maps = hash:/etc/postfix/virtual
+
+# mailman setup
+relay_domains = lists.nix.is
+transport_maps = hash:/etc/postfix/transport
+mailman_destination_recipient_limit = 1
