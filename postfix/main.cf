@@ -22,10 +22,10 @@ mynetworks = 127.0.0.0/8
 alias_maps = $alias_database
 
 # do local delivery for localhost in /var/mail/$user
-mydestination = localhost
+#mydestination = localhost
 
 # use virtual aliases for our domains
-virtual_alias_domains = nix.is osm.is openstreetmap.is aevar.net xn--var-xla.net
+virtual_alias_domains = localhost nix.is osm.is openstreetmap.is aevar.net xn--var-xla.net
 virtual_alias_maps = hash:/etc/postfix/virtual
 
 # mailman setup
