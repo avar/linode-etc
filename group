@@ -52,4 +52,5 @@ fail:x:1002:tumi
 bjorn:x:1003:
 postgres:x:113:
 pdns:x:114:
-Debian-exim:x:115:
+postfix:x:108:
+postdrop:x:111:

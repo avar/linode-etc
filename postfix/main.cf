@@ -1,0 +1,32 @@
+# remember to run "sudo postfix reload" after making changes
+
+myhostname = v.nix.is
+
+# Debian specific:  Specifying a file name will cause the first
+# line of that file to be used as the name.  The Debian default
+# is /etc/mailname.
+myorigin = /etc/mailname
+
+smtpd_banner = $myhostname ESMTP $mail_name
+
+# disable comsat network service
+biff = no
+
+# appending .domain is the MUA's job.
+append_dot_mydomain = no
+
+# only relay mail from localhost
+mynetworks = 127.0.0.0/8
+
+# don't forward mail from strangers
+relay_domains =
+
+# only use the local aliases database, not NIS
+alias_maps = $alias_database
+
+# do local delivery for localhost in /var/mail/$user
+mydestination = localhost
+
+# use virtual aliases for our domains
+virtual_alias_domains = nix.is osm.is openstreetmap.is aevar.net xn--var-xla.net
+virtual_alias_maps = hash:/etc/postfix/virtual
