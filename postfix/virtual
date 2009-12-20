@@ -3,18 +3,7 @@ postmaster@nix.is           hinrik.sig@gmail.com
 webmaster@nix.is            hinrik.sig@gmail.com
 root@nix.is                 hinrik.sig@gmail.com
 
-postmaster@osm.is           avarab@gmail.com
-webmaster@osm.is            avarab@gmail.com
-root@osm.is                 avarab@gmail.com
-
-postmaster@openstreetmap.is avarab@gmail.com
-webmaster@openstreetmap.is  avarab@gmail.com
-root@openstreetmap.is       avarab@gmail.com
-
-postmaster@aevar.net        avarab@gmail.com
-webmaster@aevar.net         avarab@gmail.com
-root@aevar.net              avarab@gmail.com
-
-postmaster@xn--var-xla.net  avarab@gmail.com
-webmaster@xn--var-xla.net   avarab@gmail.com
-root@xn--var-xla.net        avarab@gmail.com
+@osm.is           avarab@gmail.com
+@openstreetmap.is avarab@gmail.com
+@aevar.net        avarab@gmail.com
+@xn--var-xla.net  avarab@gmail.com
