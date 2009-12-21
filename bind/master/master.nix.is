@@ -1,7 +1,7 @@
 $TTL 86400 ; 24 hours could have been written as 24h or 1d
 $ORIGIN nix.is.
 @  1D  IN SOA ns0.1984.is. hostmaster.nix.is. (
-      62  ; serial
+      63  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -42,4 +42,5 @@ $ORIGIN v.nix.is.
      )
        IN  MX  10 mail
 mail   IN  A      109.74.193.250
+noc    IN  A      109.74.193.250
 
