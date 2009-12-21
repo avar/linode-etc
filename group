@@ -54,4 +54,4 @@ postgres:x:113:
 pdns:x:114:
 postfix:x:108:
 postdrop:x:111:
-munin:x:112:
+munin:x:112:hinrik,avar,tumi,andreasg
