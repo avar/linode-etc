@@ -12,6 +12,9 @@
 #                       individual plugins to find out which variables they
 #                       care about.
 
+[apache_*]
+env.url   http://127.0.0.1:%d/server-status?auto
+env.ports 80
 
 [amavis]
 env.logfile /var/log/mail.info
