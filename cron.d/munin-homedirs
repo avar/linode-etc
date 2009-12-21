@@ -1,0 +1,1 @@
+0 * * * * root [ -O /tmp/munin-homedirs.cache ] && du -sk /home/* > /tmp/munin-homedirs.cache
