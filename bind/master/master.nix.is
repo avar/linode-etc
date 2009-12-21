@@ -1,7 +1,7 @@
 $TTL 86400 ; 24 hours could have been written as 24h or 1d
 $ORIGIN nix.is.
 @  1D  IN SOA ns0.1984.is. hostmaster.nix.is. (
-      61  ; serial
+      62  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -31,7 +31,6 @@ home                 IN  A      194.144.99.91
 osm                  IN  A      64.71.167.207
 tms                  IN  A      64.71.167.207
 tumi                 IN  A      64.71.167.207
-test                 IN  A      109.74.193.250
 
 $ORIGIN v.nix.is.
 @  1D  IN SOA ns0.1984.is. hostmaster.v.nix.is. (
