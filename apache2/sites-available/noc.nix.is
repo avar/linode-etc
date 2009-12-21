@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+    ServerName noc.nix.is
+    DocumentRoot /var/cache/munin/www
+
+    <Directory /var/cache/munin/www>
+        AllowOverride None
+        Order allow,deny
+        Allow from all
+        Options None
+
+        <IfModule mod_expires.c>
+            ExpiresActive On
+            ExpiresDefault M310
+        </IfModule>
+    </Directory> 
+</VirtualHost>
