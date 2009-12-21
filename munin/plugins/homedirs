@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# (c)2008, Christian Kujau <lists@nerdbynature.de>
+# Inspired by the perl version from Philipp Gruber <pg@flupps.net>
+#
+# We still need a cronjob to update CACHEFILE once in a while, e.g.:
+# 0 * * * * root [ -O /tmp/munin-homedirs.cache ] && du -sk /home/* > /tmp/munin-homedirs.cache
+#
+CACHEFILE=/tmp/munin-homedirs.cache
+
+if [ "$1" = "autoconf" ]; then
+	echo yes
+	exit 0
+fi
+
+if [ "$1" = "config" ]; then
+	echo 'graph_title Homedir usage (in MB)'
+	echo 'graph_args --base 1024 -l 1'
+	echo 'graph_vlabel MBytes'
+	echo 'graph_category disk'
+	echo 'graph_info This graph shows the size of the users homedirs'
+
+	awk '!/lost\+found/ {gsub(/\//,"_"); print $2}' $CACHEFILE | sort | while read i; do
+		echo "$i".label `echo "$i" | sed 's/_/\//g'`
+		echo "$i".warning 1024000
+		echo "$i".critical 2048000
+	done
+	exit 0
+fi	
+
+awk '!/lost\+found/ {gsub(/\//,"_"); print $2".value "$1 * 1024 }' $CACHEFILE
