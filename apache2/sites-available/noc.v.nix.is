@@ -1,0 +1,9 @@
+<VirtualHost *:80>
+    ServerName v.nix.is
+    DocumentRoot /var/www/noc.v.nix.is/
+
+    <IfModule mod_expires>
+        ExpiresActive On
+    	ExpiresDefault M310
+    </IfModule>
+</VirtualHost>
