@@ -1,7 +1,7 @@
 $TTL 86400 ; 24 hours could have been written as 24h or 1d
 $ORIGIN nix.is.
 @  1D  IN SOA ns0.1984.is. hostmaster.nix.is. (
-      60  ; serial
+      61  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -11,12 +11,6 @@ $ORIGIN nix.is.
        IN  NS     ns0.1984.is.
        IN  NS     ns1.1984.is.
        IN  NS     ns2.1984.is.
-
-       IN  NS     ns1.linode.com.
-       IN  NS     ns2.linode.com.
-       IN  NS     ns3.linode.com.
-       IN  NS     ns4.linode.com.
-       IN  NS     ns5.linode.com.
 
        IN  MX  10 mail.nix.is.
 
