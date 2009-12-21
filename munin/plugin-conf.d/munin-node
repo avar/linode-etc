@@ -122,3 +122,28 @@ group munin
 user postgres
 env.PGUSER postgres
 env.PGPORT 5432
+
+[rtom_mem]
+user leech
+env.src socket
+env.socket /home/leech/torrent/rpc.socket
+
+[rtom_peers]
+user leech
+env.src socket
+env.socket /home/leech/torrent/rpc.socket
+
+[rtom_spd]
+user leech
+env.src socket
+env.socket /home/leech/torrent/rpc.socket
+
+[rtom_spdd]
+user leech
+env.src socket
+env.socket /home/leech/torrent/rpc.socket
+
+[rtom_vol]
+user leech
+env.src socket
+env.socket /home/leech/torrent/rpc.socket
