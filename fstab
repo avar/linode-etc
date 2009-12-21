@@ -1,0 +1,4 @@
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+proc            /proc           proc    defaults        0       0
+/dev/xvda       /               ext3    noatime,errors=remount-ro 0       1
+/swapfile       swap            swap    defaults        0       0
