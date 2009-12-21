@@ -1,0 +1,4 @@
+Package: *
+Pin: release a=testing
+Pin-Priority: 650
+
