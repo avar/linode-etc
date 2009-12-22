@@ -132,4 +132,4 @@ env.socket /home/leech/torrent/rpc.socket
 user root
 
 [mailman]
-user list
+group list
