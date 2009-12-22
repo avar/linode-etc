@@ -1,10 +1,8 @@
 Defaults	env_reset
 root	ALL=(ALL) ALL
 
-# Uncomment to allow members of group sudo to not need a password
-# (Note that later entries override this, so you might need to move
-# it further down)
-%sudo ALL=NOPASSWD: ALL
+# members of group sudo can do as they please
+%sudo   ALL=(ALL) NOPASSWD: ALL
 
 # for users who like to provide a password
-%fail ALL=(ALL) ALL
+%fail   ALL=(ALL) ALL
