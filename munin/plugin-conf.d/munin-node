@@ -130,3 +130,6 @@ env.socket /home/leech/torrent/rpc.socket
 
 [pdns_rec_*]
 user root
+
+[mailman]
+user list
