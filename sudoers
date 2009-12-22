@@ -1,8 +1,8 @@
 Defaults	env_reset
-root	ALL=(ALL) ALL
+root	ALL=(ALL:ALL) ALL
 
 # members of group sudo can do as they please
-%sudo   ALL=(ALL) NOPASSWD: ALL
+%sudo   ALL=(ALL:ALL) NOPASSWD: ALL
 
 # for users who like to provide a password
-%fail   ALL=(ALL) ALL
+%fail   ALL=(ALL:ALL) ALL
