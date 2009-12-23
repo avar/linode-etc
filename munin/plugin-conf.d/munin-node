@@ -128,11 +128,11 @@ user leech
 env.src socket
 env.socket /home/leech/torrent/rpc.socket
 
-[pdns_rec_*]
+[pdns_*]
 user root
 
 [mailman]
 group list
 
 [multiping]
-env.host vodafone.is www.vodafone.de telefonica.com.ar
+env.host vodafone.is 145.254.15.113 telefonica.com.ar
