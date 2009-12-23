@@ -133,3 +133,6 @@ user root
 
 [mailman]
 group list
+
+[multiping]
+env.host vodafone.is www.vodafone.de telefonica.com.ar
