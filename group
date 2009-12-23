@@ -55,3 +55,4 @@ pdns:x:114:
 postfix:x:108:
 postdrop:x:111:
 munin:x:112:hinrik,avar,tumi,andreasg
+debian-tor:x:115:
