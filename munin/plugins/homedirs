@@ -22,8 +22,6 @@ if [ "$1" = "config" ]; then
 
 	awk '!/lost\+found/ {gsub(/\//,"_"); print $2}' $CACHEFILE | sort | while read i; do
 		echo "$i".label `echo "$i" | sed 's/_/\//g'`
-		echo "$i".warning 1024000
-		echo "$i".critical 2048000
 	done
 	exit 0
 fi	
