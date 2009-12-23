@@ -154,3 +154,5 @@ ExitPolicy reject *:* # no exits allowed
 #BridgeRelay 1
 #ExitPolicy reject *:*
 
+# How many processes to use at once for decrypting onionskins. (Default: 1)
+NumCPUs 4
