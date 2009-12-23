@@ -15,8 +15,9 @@
 
 ## Replace this with "SocksPort 0" if you plan to run Tor only as a
 ## relay, and not make any local application connections yourself.
-SocksPort 9050 # what port to open for local application connections
-SocksListenAddress 127.0.0.1 # accept connections only from localhost
+SocksPort 0
+#SocksPort 9050 # what port to open for local application connections
+#SocksListenAddress 127.0.0.1 # accept connections only from localhost
 #SocksListenAddress 192.168.0.1:9100 # listen on this IP:port also
 
 ## Entry policies to allow/deny SOCKS requests based on IP address.
