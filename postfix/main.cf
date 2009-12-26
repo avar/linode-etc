@@ -32,3 +32,6 @@ virtual_alias_maps = hash:/etc/postfix/virtual
 relay_domains = lists.nix.is
 transport_maps = hash:/etc/postfix/transport
 mailman_destination_recipient_limit = 1
+
+# Check headers
+header_checks = regexp:/etc/postfix/header_checks

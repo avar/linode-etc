@@ -1,0 +1,2 @@
+# Log Subject in maillogs
+/^Subject:/     WARN
