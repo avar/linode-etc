@@ -47,10 +47,10 @@ env.warning 92
 env.critical 98
 
 [exim_mailqueue]
-group adm
+group adm, (Debian-exim)
 
 [exim_mailstats]
-group adm
+group adm, (Debian-exim)
 
 [fw_conntrack]
 user root
