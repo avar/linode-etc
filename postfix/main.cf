@@ -21,8 +21,8 @@ mynetworks = 127.0.0.0/8
 # only use the local aliases database, not NIS
 alias_maps = $alias_database
 
-# do local delivery for localhost in /var/mail/$user
-#mydestination = localhost
+# don't do local delivery for any domains
+mydestination =
 
 # use virtual aliases for our domains
 virtual_alias_domains = localhost nix.is v.nix.is osm.is openstreetmap.is aevar.net xn--var-xla.net
