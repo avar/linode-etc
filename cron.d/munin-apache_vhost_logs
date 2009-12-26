@@ -1,1 +1,1 @@
-*/10 * * * * root [ -O /tmp/munin-apache_vhost.cache ] && find /var/log/apache2/ -maxdepth 1 -mindepth 1 -type d -exec du -sk {} \; | sort -n | sed 's/\/.*\///' > munin-apache_vhost.cache
+*/10 * * * * root [ -O /tmp/munin-apache_vhost.cache ] && find /var/log/apache2/ -maxdepth 1 -mindepth 1 -type d -exec du -sk {} \; | sort -n | sed 's/\/.*\///' > /tmp/munin-apache_vhost.cache
