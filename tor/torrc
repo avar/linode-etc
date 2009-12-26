@@ -97,13 +97,13 @@ Nickname vnixis
 ## Define these to limit how much relayed traffic you will allow. Your
 ## own traffic is still unthrottled. Note that RelayBandwidthRate must
 ## be at least 20 KBytes.
-RelayBandwidthRate 100 KBytes  # Throttle traffic to 100KB/s (800Kbps)
-RelayBandwidthBurst 200 KBytes # But allow bursts up to 200KB/s (1600Kbps)
+RelayBandwidthRate 500 KBytes
+RelayBandwidthBurst 1000 KBytes
 
 # Don't suck up all our bandwidth. Note that the total bandwidth tor
 # might use will be ~ AccountingMax * 2. See torrc(5)
 AccountingStart month 1 12:00
-AccountingMax 3 GB
+AccountingMax 80 GB
 
 ## Contact info to be published in the directory, so we can contact you
 ## if your relay is misconfigured or something else goes wrong. Google
