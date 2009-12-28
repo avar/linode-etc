@@ -32,7 +32,7 @@ tumi                 IN  A      109.74.193.250
 
 blog                 IN  A      64.71.167.207
 
-home                 IN  A      194.144.99.91
+lupus                IN  A      194.144.99.91
 
 $ORIGIN v.nix.is.
 @  1D  IN SOA ns0.1984.is. hostmaster.v.nix.is. (
