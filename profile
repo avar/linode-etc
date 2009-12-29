@@ -25,5 +25,5 @@ umask 022
 
 # spread failo's wisdom to interactive shells
 if [[ $- == *i* ]] ; then
-    perl -COEL -MYAML::XS=LoadFile -E'@q = @{ LoadFile("/home/hinrik/src/failo/quotes.yml") }; say $q[rand @q]' 2>/dev/null
+    perl -COEL -MYAML::XS=LoadFile -E'@q = @{ LoadFile("/home/hinrik/src/failo/quotes.yml") }; @q && say $q[rand @q]' 2>/dev/null
 fi
