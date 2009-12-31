@@ -1,0 +1,29 @@
+<VirtualHost *:80>
+    ServerName awstats.nix.is
+
+    Alias /icon/ /usr/share/awstats/icon/
+    Alias /css/ /usr/share/doc/awstats/examples/css/
+    Alias /classes/ /usr/share/doc/awstats/examples/xslt/
+    ScriptAlias /awstats/ /usr/lib/cgi-bin/
+
+	<Directory /usr/lib/cgi-bin>
+		AllowOverride None
+		Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+		Order allow,deny
+		Allow from all
+	</Directory>
+
+    <Directory /usr/share/awstats/icon/>
+        Options Indexes
+        AllowOverride None
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+    <Directory /usr/share/doc/awstats/examples/>
+        Options Indexes
+        AllowOverride None
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
