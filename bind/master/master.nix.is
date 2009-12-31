@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN nix.is.
 @  1d  IN SOA ns0.1984.is. hostmaster.nix.is. (
-      72  ; serial
+      73  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -24,6 +24,7 @@ www                  IN  CNAME  nix.is.
 mail                 IN  A      109.74.193.250
 lists                IN  A      109.74.193.250
 noc                  IN  A      109.74.193.250
+awstats              IN  A      109.74.193.250
 vnstat               IN  A      109.74.193.250
 ci                   IN  A      109.74.193.250
 osm                  IN  A      109.74.193.250
