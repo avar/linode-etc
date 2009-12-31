@@ -1,7 +1,7 @@
-$TTL 1h
+$TTL 1d
 $ORIGIN nix.is.
-@  1h  IN SOA ns0.1984.is. hostmaster.nix.is. (
-      71  ; serial
+@  1d  IN SOA ns0.1984.is. hostmaster.nix.is. (
+      72  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
