@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+    ServerName openstreetmap.is
+    ServerAlias www.openstreetmap.is osm.is www.osm.is
+
+    DocumentRoot /var/www/openstreetmap.is/root
+    Alias /static /var/www/openstreetmap.is/root/static
+
+    <Location /static>
+        SetHandler default-handler
+    </Location>
+
+    FastCgiServer /var/www/openstreetmap.is/script/app_openstreetmapis_web_fastcgi.pl -processes 3
+
+    Alias / /var/www/openstreetmap.is/script/app_openstreetmapis_web_fastcgi.pl/
+</VirtualHost>
