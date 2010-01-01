@@ -9,7 +9,7 @@
         SetHandler default-handler
     </Location>
 
-    FastCgiServer /var/www/openstreetmap.is/script/app_openstreetmapis_web_fastcgi.pl -processes 3
+    FastCgiServer /var/www/openstreetmap.is/script/app_openstreetmapis_web_fastcgi.pl -processes 1
 
     Alias / /var/www/openstreetmap.is/script/app_openstreetmapis_web_fastcgi.pl/
 </VirtualHost>
