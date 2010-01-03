@@ -1,0 +1,23 @@
+<VirtualHost *:80>
+    ServerName ap.nix.is
+
+    DocumentRoot /var/www/ap.nix.is/root
+    Alias /static /var/www/ap.nix.is/root/static
+
+    <Location /static>
+        SetHandler default-handler
+    </Location>
+
+    FastCgiServer /var/www/ap.nix.is/script/avarpics_fastcgi.pl -processes 1
+
+    Alias / /var/www/ap.nix.is/script/avarpics_fastcgi.pl/
+
+    <Location />
+        AuthName "hlagh"
+        AuthType Basic
+        AuthUserFile /home/avar/avar.log/users
+        <Limit GET POST>
+            require valid-user
+        </Limit>
+    </Location>
+</VirtualHost>
