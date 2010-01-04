@@ -13,7 +13,11 @@
 # example, any plugin which issues a hard-DENY to any SMTP stage will preempt
 # the execution of any others for that stage.
 
+logtersish
+
 ## Filtering/SMTP exchange plugins
+
+dont_require_anglebrackets
 
 # check_earlytalker -- listens to the connection breifly before the SMTP
 # greeting is issued, disconnecting (or logging) any host that starts
@@ -25,7 +29,7 @@
 # usage:
 # check_earlytalker [wait <secs>] [action <deny|denysoft|log>] [defer-reject]
 #
-check_earlytalker action log
+check_earlytalker
 
 # check_relay -- checks connecting hosts against /etc/qpsmtpd/relayclients and
 # (if present) /etc/qpsmtpd/relayclients.cdb to grant or deny mail relaying.
@@ -37,13 +41,13 @@ check_relay
 # an A or MX record (meaning, apart from any other issue, that the mail cannot
 # be bounced.)
 #
-# require_resolvable_fromhost
+require_resolvable_fromhost
 
 # rhsbl -- checks the envelope sender hostname (the "right-hand side") against
 # a list of DNS blacklists given in /etc/qpsmtpd/rhsbl_zones.  Although this
 # plugin is enabled by default, that list has no blacklists enabled.
 # 
-rhsbl
+#rhsbl
 
 # dnsbl -- checks the IP address of the connecting host against a list of DNS
 # blacklists given in /etc/qpsmtpd/dnsbl_zones, declining any mail from any
@@ -53,7 +57,7 @@ rhsbl
 # blacklisting technique.  Although the plugin is enabled by default, that
 # list has no blacklists enabled.
 #
-dnsbl
+#dnsbl
 
 # check_spamhelo -- checks the HELO/EHLO greeting sent by the remote host
 # against a blacklist given in /etc/qpsmtpd/badhelo.  A host which introduces
@@ -63,13 +67,13 @@ dnsbl
 # mailserver name in their greetings.  While enabled by default, the list
 # initially has no greetings listed.
 #
-check_spamhelo
+#check_spamhelo
 
 # check_badmailfrom -- checks the envelope sender address of inbound mail
 # against a blacklist given in /etc/qpsmtpd/badmailfrom.  This plugin is
 # enabled by default but has no addresses listed.
 #
-check_badmailfrom
+#check_badmailfrom
 
 # check_badrcptto -- checks the envelope recipient address(es) of inbound mail
 # against a blacklist given in /etc/qpsmtpd/badrcptto.  Delivery to those
@@ -79,13 +83,13 @@ check_badmailfrom
 # at locally hosted domains, with no mail accepted once those addresses are
 # closed.
 #
-check_badrcptto
+#check_badrcptto
 
-# badrcptto_patterns -- a more sophisticated form of badrcptto, this plugin
+# check_badrcptto_patterns -- a more sophisticated form of badrcptto, this plugin
 # checks envelope recipient addresses against a list of perl patterns given in
 # /etc/qpsmtpd/badrcptto_patterns.
 #
-# check_badrcptto
+# check_badrcptto_patterns
 
 # check_loop -- implements a simple form of mail loop detection, by counting
 # the number of "Received" and "Delivered-To" headers in the mail.  If that
@@ -103,7 +107,7 @@ check_loop
 # before the spam payload.
 #
 # usage:
-# count_unrecognized_commands [count]
+count_unrecognized_commands
 
 # greylisting -- implements SMTP greylisting (for a further discussion of
 # which see http://en.wikipedia.org/wiki/Greylisting).  The greylist plugin
@@ -155,7 +159,7 @@ check_loop
 #              [spamd_socket /path/to/spamd.socket]
 #              [leave_old_headers <drop|rename|keep>]
 #
-# spamassassin munge_subject_threshold 8 reject_threshold 10
+spamassassin reject_threshold 15
 
 ## (for a list of further virus scanner plugins, see the directory
 ## /usr/share/qpsmtpd/plugins/virus)

@@ -7,7 +7,7 @@
 # afterward.)
 
 # The file logging plugin logs to /var/log/qpsmtpd:
-logging/file loglevel LOGINFO /var/log/qpsmtpd/qpsmtpd.log
+logging/file loglevel LOGWARN /var/log/qpsmtpd/qpsmtpd.log
 
 # The syslog logging plugin logs to the syslog facility:
 #
