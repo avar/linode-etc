@@ -5,7 +5,7 @@
 # There may be security risks.
 
 # Change to one to enable spamd
-ENABLED=0
+ENABLED=1
 
 # Options
 # See man spamd for possible options. The -d option is automatically added.
@@ -28,4 +28,4 @@ PIDFILE="/var/run/spamd.pid"
 # Cronjob
 # Set to anything but 0 to enable the cron job to automatically update
 # spamassassin's rules on a nightly basis
-CRON=0
+CRON=1
