@@ -14,7 +14,7 @@ $ORIGIN nix.is.
 
        IN  MX  10 mail.nix.is.
 
-nix.is.              IN  A      64.71.167.207
+nix.is.              IN  A      109.74.193.250
 
 t                    IN  A      208.78.101.240
 u                    IN  A      64.71.167.207
