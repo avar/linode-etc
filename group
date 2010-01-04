@@ -52,7 +52,7 @@ fail:x:1002:tumi
 postgres:x:113:
 pdns:x:114:
 postfix:x:108:
-postdrop:x:111:
+postdrop:x:111:qpsmtpd
 munin:x:112:hinrik,avar,tumi,andreasg
 debian-tor:x:115:
 oident:x:116:
