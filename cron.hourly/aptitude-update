@@ -1,3 +1,2 @@
-#!/bin/bash
-
+#!/bin/sh
 aptitude update > /dev/null
