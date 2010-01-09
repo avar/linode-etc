@@ -1,6 +1,10 @@
 #!/usr/bin/env perl
 use Modern::Perl;
 
+# Generated in cron.d with:
+#  0 * * * * root [ -O /tmp/munin-cpanp_o.cache ] && cpanp -o | egrep '^    [0-9]+' > /tmp/munin-cpanp_o.cache
+my $cache = "/tmp/munin-cpanp_o.cache";
+
 given ($ARGV[0]) {
     when ("config") {
         print <<END;
@@ -15,7 +19,7 @@ count.info The number of CPAN modules that aren't up to date
 END
     }
     default {
-        my $num = () = qx[cpanp -o];
-        say "count.value $num";
+        my ($lines) = qx[wc -l $cache] =~ /^(\d+)/;
+        say "count.value $lines";
     }
 }

@@ -1,0 +1,1 @@
+0 * * * * root [ -O /tmp/munin-cpanp_o.cache ] && cpanp -o | egrep '^    [0-9]+' > /tmp/munin-cpanp_o.cache
