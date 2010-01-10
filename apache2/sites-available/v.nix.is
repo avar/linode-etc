@@ -2,7 +2,7 @@
     ServerName v.nix.is
     DocumentRoot /var/www/v.nix.is/
 
-    #<IfModule mod_userdir.c>
+    <IfModule mod_userdir.c>
         UserDir www
         UserDir disabled root
 
@@ -18,5 +18,5 @@
                 Deny from all
                 </LimitExcept>
         </Directory>
-    #</IfModule>
+    </IfModule>
 </VirtualHost>
