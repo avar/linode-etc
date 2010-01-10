@@ -16,7 +16,13 @@
             <LimitExcept GET POST OPTIONS>
                 Order deny,allow
                 Deny from all
-                </LimitExcept>
+            </LimitExcept>
+
+            IndexIgnore noindex
+        </Directory>
+
+        <Directory /home/*/www/noindex>
+            Options -Indexes
         </Directory>
     </IfModule>
 </VirtualHost>
