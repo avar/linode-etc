@@ -7,13 +7,13 @@ my @ns = qw(localhost ns0.1984.is ns1.1984.is ns2.1984.is);
 
 for my $domain (@domains) {
     pass "Testing $domain";
-    subtest $domain => sub {
+    subtest "$domain AXFR" => sub {
         my %dig;
 
-        $dig{$_} = dig_at($_, $domain) for @ns;
+        $dig{$_} = dig_at($_, $domain, 'AXFR') for @ns;
 
         for my $slave (@ns[1..$#ns]) {
-            is_deeply($dig{$ns[0]}, $dig{$slave}, "The configuration for $domain \@$slave equals \@$ns[0]");
+            is_deeply($dig{$ns[0]}, $dig{$slave}, "The AXFR for $domain \@$slave equals \@$ns[0]");
         }
 
         done_testing();
@@ -22,9 +22,9 @@ for my $domain (@domains) {
 
 sub dig_at
 {
-    my ($host, $domain) = @_;
+    my ($host, $domain, $cmd) = @_;
 
-    chomp(my @out = qx[ dig \@$host $domain AXFR | grep -v -e ^$ -v -e '^;' | sort ]);
+    chomp(my @out = qx[ dig \@$host $domain $cmd | grep -v -e ^$ -v -e '^;' | sort ]);
 
     \@out;
 }
