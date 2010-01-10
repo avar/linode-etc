@@ -24,9 +24,7 @@ sub dig_at
 {
     my ($host, $domain) = @_;
 
-    chomp(my @out = qx[ dig \@$host $domain AXFR | sort ]);
+    chomp(my @out = qx[ dig \@$host $domain AXFR | grep -v -e ^$ -v -e '^;' | sort ]);
 
-    my @filtered = grep { not /^;/ } grep { $_ ne '' } @out;
-
-    \@filtered;
+    \@out;
 }
