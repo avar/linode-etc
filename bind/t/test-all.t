@@ -3,7 +3,7 @@ use Modern::Perl;
 use Test::More tests => 10;
 
 chomp(my @domains = qx[ ls /etc/bind/master/master* | perl -pe 's/.*master\.//' ]);
-my @ns = qw(localhost ns0.1984.is ns1.1984.is ns2.1984.is);
+my @ns = (qw(localhost), map({ "ns$_.1984.is" } 0 .. 2), (map { "ns$_.linode.com" } 1..5));
 
 for my $domain (@domains) {
     pass "Testing $domain";
