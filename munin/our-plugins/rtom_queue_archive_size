@@ -1,0 +1,21 @@
+#!/usr/bin/env perl
+use Modern::Perl;
+
+given ($ARGV[0]) {
+    when ("config") {
+        print <<END;
+graph_title rTorrent cumulative torrent files
+graph_args --base 1000 -l 0
+graph_vlabel cumulative torrents
+graph_category rTorrent
+graph_info The total number of torrent files downloaded on this box
+count.label files
+count.type GAUGE
+count.info The number of files in the torrent archive
+END
+    }
+    default {
+        my ($lines) = qx[find /home/leech/torrent/queue-archive/ -type f | wc -l] =~ /^(\d+)/;
+        say "count.value $lines";
+    }
+}
