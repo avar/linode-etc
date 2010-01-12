@@ -1,0 +1,51 @@
+#!/usr/bin/env perl
+use Modern::Perl;
+use Munin::Plugin;
+
+my $host = $ENV{host};
+
+my %programs = netstat_host($host);
+
+given ($ARGV[0]) {
+    when ("config") {
+        print <<END;
+graph_title Netstat: Programs listening on $host
+graph_args --base 1000 -l 0
+graph_vlabel programs
+graph_category network
+graph_info Programs listening on $host by name
+END
+        for my $program (keys %programs) {
+            my $fieldname = clean_fieldname($program);
+            print <<END;
+$fieldname.label $program
+$fieldname.type GAUGE
+$fieldname.info The number of programs with the name "$program" listening on some port
+END
+        }
+    }
+    default {
+        while (my ($program, $count) = each %programs) {
+            my $fieldname = clean_fieldname($program);
+            print <<END;
+$fieldname.value $count
+END
+        }
+    }
+}
+
+sub netstat_host
+{
+    my ($host) = @_;
+    chomp(my @cmd = qx[netstat -ldnp | egrep "\\bLISTEN\\b" | egrep "0 $host"]);
+
+    my %programs;
+
+    for (@cmd) {
+        my ($pid, $program) = ((split /\s{3,}/, $_)[-1]) =~ m[^(\d+)/(.*)];
+        $program =~ s/\s+$//;
+        $programs{$program}++;
+    }
+
+    %programs;
+}
