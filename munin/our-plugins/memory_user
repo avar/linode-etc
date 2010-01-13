@@ -1,0 +1,55 @@
+#!/usr/bin/env perl
+use Modern::Perl;
+use Munin::Plugin;
+use Data::Dump 'dump';
+
+my %mem = mem_user();
+my @mem = map { [ $_, $mem{$_} ] } sort { $mem{$b} <=> $mem{$a} } keys %mem;
+
+given ($ARGV[0]) {
+    when ("config") {
+        print <<END;
+graph_title Memory usage (RSS) by user
+graph_args --base 1000 -l 0
+graph_vlabel Memory (RSS) by user
+graph_category system
+graph_info Shows usage of resident set size memory by user
+END
+        for my $user (@mem) {
+            my ($user, $mem) = @$user;
+            my $fn = clean_fieldname($user);
+            print <<END;
+$fn.label $user
+$fn.type GAUGE
+$fn.info Memory usage by $user
+END
+        }
+    }
+    default {
+        for my $user (@mem) {
+            my ($user, $mem) = @$user;
+            my $fn = clean_fieldname($user);
+            print <<END;
+$fn.value $mem
+END
+        }
+    }
+}
+
+sub mem_user
+{
+    chomp(my @ps = qx[ps -A -o user,rss]);
+    @ps = grep { not /^USER/ } @ps;
+
+    my %user_mem;
+
+    for (@ps) {
+        if (/^(.+?)\s+(\d+)$/) {
+            $user_mem{$1} += $2 unless $1 =~ /^\d+$/;
+        } else {
+            die $_;
+        }
+    }
+
+    %user_mem;
+}
