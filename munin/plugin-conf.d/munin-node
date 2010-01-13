@@ -153,14 +153,34 @@ env.host 127.0.0.1
 user root
 env.host 0.0.0.0
 
+#
+# OpenStreetMap Iceland monitoring
+#
+
 [osm_apidb_*]
 env.PGUSER osmis
 env.PGPASSWORD osmis
 env.PGDATABASE osmis
 
-[osm_apidb_primitive_count]
-env.graph_title The number of nodes, ways & relations in Iceland
-env.graph_info  The number of nodes, ways & relations in Iceland's extract of the OpenStreetMap database
+# Count node/ways/relations
+[osm_apidb_primitive_count_nodes]
+env.primitive nodes
+
+[osm_apidb_primitive_count_ways]
+env.primitive ways
+
+[osm_apidb_primitive_count_relations]
+env.primitive relations
+
+# Count node/way/relation tags
+[osm_apidb_primitive_tag_count_node]
+env.primitive node
+
+[osm_apidb_primitive_tag_count_way]
+env.primitive way
+
+[osm_apidb_primitive_tag_count_relation]
+env.primitive relation
 
 [osm_apidb_primitive_count_tags]
 env.graph_title The number of node, way & relation tags in Iceland
