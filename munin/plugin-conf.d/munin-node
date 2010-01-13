@@ -182,6 +182,16 @@ env.primitive way
 [osm_apidb_primitive_tag_count_relation]
 env.primitive relation
 
-[osm_apidb_primitive_count_tags]
-env.graph_title The number of node, way & relation tags in Iceland
-env.graph_info  The number of node, way & relation tags in Iceland's extract of the OpenStreetMap database
+# Count nodes/ways/relations per user
+[osm_apidb_user_count_nodes]
+env.primitive nodes
+env.limit 50
+
+[osm_apidb_user_count_ways]
+env.primitive ways
+env.limit 25
+
+[osm_apidb_user_count_relations]
+env.primitive relations
+env.limit 5
+
