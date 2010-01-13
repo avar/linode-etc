@@ -37,15 +37,11 @@ END
 sub netstat_host
 {
     my ($host) = @_;
-    chomp(my @cmd = qx[netstat -ldnp | egrep "\\bLISTEN\\b" | egrep "0 $host"]);
-
+    chomp(my @pids = qx[netstat -ldnp | egrep "\\bLISTEN\\b" | egrep "0 $host" | awk '{print \$7}' | sed 's/\\/.*//']);
     my %programs;
-
-    for (@cmd) {
-        my ($pid, $program) = ((split /\s{3,}/, $_)[-1]) =~ m[^(\d+)/(.*)];
-        $program =~ s/\s+$//;
+    for my $pid (@pids) {
+        chomp(my $program = qx[ps h -o %a $pid]);
         $programs{$program}++;
     }
-
     %programs;
 }
