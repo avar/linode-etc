@@ -5,5 +5,6 @@
 ## osm.nix.is
 #0 7     * * *  avar perl /var/www/osm.nix.is/script/download-osm-with-retry --out-dir /var/www/osm.nix.is/dump --fallback http://download.geofabrik.de/osm/europe/iceland.osm.bz2 'http://www.informationfreeway.org/api/0.5/*[bbox=-24.6333,63.1833,-13.1333,67]'
 0 7      * * *  avar perl /var/www/osm.nix.is/script/download-osm-with-retry --out-dir /var/www/osm.nix.is/dump --fallback http://download.geofabrik.de/osm/europe/iceland.osm.bz2
+10 7     * * *  avar bash /var/www/osm.nix.is/script/daily-database-import.sh
 0 8      * * *  avar perl /var/www/osm.nix.is/script/generate-garmin-img-from-osm --date=$(date --iso-8601) --osm "/var/www/osm.nix.is/dump/$(date --iso-8601).osm.bz2" --min-osm-size=2000000 --mkgmap-dir=/home/avar/src/mkgmap --mapname 13314530 --description="Iceland OSM" --country-name=ICELAND --country-abbr=ICE --out-dir /var/www/osm.nix.is --out-file=Iceland.osm 2>&1 | grep -v '^SEVERE (RoadNetwork)'
 30 8     * * * avar LC_ALL=en_US.UTF8 perl /var/www/osm.nix.is/script/generate-daily-osmdiff.pl --date=$(date --iso-8601)
