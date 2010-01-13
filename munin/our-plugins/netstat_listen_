@@ -43,8 +43,8 @@ sub netstat_host
         chomp(my $program = qx[ps h -o %a $pid]);
 
         # Sanitize program names
-        $program =~ s[^/usr/.*?bin/][];
-        if ($program =~ m[^(\w+) -]) { $program = $1 }
+        $program =~ s[^/\S+/][];
+        if ($program =~ m[^(\S+) -]) { $program = $1 }
 
         $programs{$program}++;
     }
