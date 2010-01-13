@@ -18,6 +18,7 @@ END
         for my $user (@mem) {
             my ($user, $mem) = @$user;
             my $fn = clean_fieldname($user);
+            $fn = 'uroot' if $fn eq 'root';
             print <<END;
 $fn.label $user
 $fn.type GAUGE
@@ -29,6 +30,7 @@ END
         for my $user (@mem) {
             my ($user, $mem) = @$user;
             my $fn = clean_fieldname($user);
+            $fn = 'uroot' if $fn eq 'root';
             print <<END;
 $fn.value $mem
 END
