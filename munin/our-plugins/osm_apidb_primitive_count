@@ -30,7 +30,6 @@ ways.type GAUGE
 relations.info The number of relations in the database
 relations.label Relations
 relations.type GAUGE
-relations.info The number of relations in the database
 END
     }
     default {
