@@ -152,3 +152,16 @@ env.host 127.0.0.1
 [netstat_listen_wildcard]
 user root
 env.host 0.0.0.0
+
+[osm_apidb_*]
+env.PGUSER osmis
+env.PGPASSWORD osmis
+env.PGDATABASE osmis
+
+[osm_apidb_primitive_count]
+env.graph_title The number of nodes, ways & relations in Iceland
+env.graph_info  The number of nodes, ways & relations in Iceland's extract of the OpenStreetMap database
+
+[osm_apidb_primitive_count_tags]
+env.graph_title The number of node, way & relation tags in Iceland
+env.graph_info  The number of node, way & relation tags in Iceland's extract of the OpenStreetMap database

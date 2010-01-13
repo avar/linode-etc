@@ -8,8 +8,8 @@ my $host = $ENV{PGHOST} // 'localhost';
 my $port = $ENV{PGPORT} // 5432;
 my $dbnm = $ENV{PGDATABASE};
 
-my $title = $ENV{graph_title} // 'The number of nodes, ways & relations in OSM';
-my $desc = $ENV{graph_info}   // 'The number of nodes, ways & relations in the OpenStreetMap database';
+my $title = $ENV{graph_title} // 'The number of node, way & relation tags in OSM';
+my $desc = $ENV{graph_info}   // 'The number of node, way & relation tags in the OpenStreetMap database';
 
 my $dbh = DBI->connect("dbi:Pg:dbname=$dbnm;host=$host;port=$port", $user, $pass);
 
@@ -21,21 +21,21 @@ graph_args --base 1000 -l 0
 graph_vlabel primitives
 graph_category OpenStreetMap
 graph_info $desc
-nodes.info The number of nodes in the database
+nodes.info The number of node tags in the database
 nodes.label Nodes
 nodes.type GAUGE
-ways.info The number of ways in the database
+ways.info The number of way tags in the database
 ways.label Ways
 ways.type GAUGE
-relations.info The number of relations in the database
+relations.info The number of relation tags in the database
 relations.label Relations
 relations.type GAUGE
 END
     }
     default {
         my ($nodes, $ways, $relations) = map {
-            $dbh->selectall_arrayref("SELECT count(*) FROM current_$_")->[0][0]
-        } qw(nodes ways relations);
+            $dbh->selectall_arrayref("SELECT count(*) FROM current_${_}_tags")->[0][0]
+        } qw(node way relation);
         print <<END;
 nodes.value $nodes
 ways.value $ways
