@@ -195,3 +195,39 @@ env.limit 25
 env.primitive relations
 env.limit 5
 
+## Tag count
+
+[osm_apidb_tags_node_*]
+env.primitive node
+env.limit 50
+[osm_apidb_tags_way_*]
+env.primitive way
+env.limit 50
+[osm_apidb_tags_relation_*]
+env.primitive relation
+env.limit 15
+
+# Normal tags
+[osm_apidb_tags_node_all]
+env.k_blacklist source created_by converted_by
+[osm_apidb_tags_way_all]
+env.k_blacklist source created_by converted_by
+[osm_apidb_tags_relation_all]
+env.k_blacklist source created_by converted_by
+
+# Source
+[osm_apidb_tags_node_source]
+env.graph_title The number of node source=* tags in OSM by value
+env.graph_info The number of node source=* tags in the OpenStreetMap database by value
+env.k_whitelist source
+env.label_v_only 1
+[osm_apidb_tags_way_source]
+env.graph_title The number of way source=* tags in OSM by value
+env.graph_info The number of way source=* tags in the OpenStreetMap database by value
+env.k_whitelist source
+env.label_v_only 1
+[osm_apidb_tags_relation_source]
+env.graph_title The number of relation source=* tags in OSM by value
+env.graph_info The number of relation source=* tags in the OpenStreetMap database by value
+env.k_whitelist source
+env.label_v_only 1
