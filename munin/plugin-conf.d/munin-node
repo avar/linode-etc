@@ -162,6 +162,9 @@ env.dirs /var/www/*
 [dirs_root]
 env.dirs /*
 
+[apache_vhost]
+env.dirs /var/log/apache2/* (filtered)
+
 #
 # OpenStreetMap Iceland monitoring
 #
