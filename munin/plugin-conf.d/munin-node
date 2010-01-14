@@ -153,6 +153,15 @@ env.host 127.0.0.1
 user root
 env.host 0.0.0.0
 
+[homedirs]
+env.dirs /home/*
+
+[dirs_var_www]
+env.dirs /var/www/*
+
+[dirs_root]
+env.dirs /*
+
 #
 # OpenStreetMap Iceland monitoring
 #

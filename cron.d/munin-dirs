@@ -1,0 +1,9 @@
+SHELL=/bin/bash
+
+HOMEDIRS_CACHE=/var/lib/munin/plugin-state/homedirs-cache
+DIRS_VAR_WWW_CACHE=/var/lib/munin/plugin-state/dirs_var_www-cache
+DIRS_ROOT_CACHE=/var/lib/munin/plugin-state/dirs_root-cache
+
+10  * * * * root  [[ ! -f $DIRS_ROOT_CACHE || -O $DIRS_ROOT_CACHE ]] && nice -n 5 du -sk /* > $DIRS_ROOT_CACHE 2>/dev/null
+15 * * * * root  [[ ! -f $HOMEDIRS_CACHE || -O $HOMEDIRS_CACHE ]] && nice -n 5 du -sk /home/* > $HOMEDIRS_CACHE 2>/dev/null
+16 * * * * root  [[ ! -f $DIRS_VAR_WWW_CACHE || -O $DIRS_VAR_WWW_CACHE ]] && nice -n 5 du -sk /var/www/* > $DIRS_VAR_WWW_CACHE 2>/dev/null
