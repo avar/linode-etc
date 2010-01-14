@@ -3,12 +3,14 @@ use Modern::Perl;
 use Munin::Plugin;
 use File::Slurp qw(slurp);
 use File::Spec::Functions qw(catfile);
+use File::Basename qw(basename);
 
 my $statedir  = $ENV{MUNIN_PLUGSTATE};
 my $statefile = $0; $statefile =~ s[^.*/][];
 my $cache = catfile($statedir, $statefile . '-cache');
 
 my $dirs = $ENV{dirs};
+my $basename = $ENV{basename};
 my @dirs = parse_du_sk($cache);
 
 given ($ARGV[0]) {
@@ -22,9 +24,10 @@ graph_info Shows the size of $dirs directories
 END
         for my $dir (@dirs) {
             my ($size, $name) = @$dir;
+            my $label = $basename ? basename($name) : $name;
             my $fieldname = clean_fieldname($name);
             print <<END;
-$fieldname.label $name
+$fieldname.label $label
 count.info The size of $name
 END
         }

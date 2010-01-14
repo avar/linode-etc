@@ -155,9 +155,11 @@ env.host 0.0.0.0
 
 [homedirs]
 env.dirs /home/*
+env.basename 1
 
 [dirs_var_www]
 env.dirs /var/www/*
+env.basename 1
 
 [dirs_root]
 env.dirs /*
