@@ -28,7 +28,7 @@ END
             my $fieldname = clean_fieldname($name);
             print <<END;
 $fieldname.label $label
-count.info The size of $name
+$fieldname.info The size of $name
 END
         }
     }
