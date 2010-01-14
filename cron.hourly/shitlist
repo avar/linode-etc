@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for shitlisted in $(egrep -v -e ^# -e ^\s*$ /etc/shitlist.conf); do
+    # -v on purpose, this should send e-mails to v-admins
+    rm -v $shitlisted
+done
