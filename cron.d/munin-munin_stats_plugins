@@ -2,4 +2,4 @@ SHELL=/bin/bash
 
 MUNIN_STATS_PLUGINS_CACHE=/var/lib/munin/plugin-state/munin_stats_plugins-127.0.0.1cache
 
-15/* * * * * root cd /etc/munin/plugins && (for i in *; do (time -p sudo munin-run $i) 2>&1 | grep ^real | sed 's/^real //' | tr '\n' ' ' && echo $i; done) > ${MUNIN_STATS_PLUGINS_CACHE}.tmp 2>&1 && mv ${MUNIN_STATS_PLUGINS_CACHE}.tmp $MUNIN_STATS_PLUGINS_CACHE
+*/15 * * * * root cd /etc/munin/plugins && (for i in *; do (time -p sudo munin-run $i) 2>&1 | grep ^real | sed 's/^real //' | tr '\n' ' ' && echo $i; done) > ${MUNIN_STATS_PLUGINS_CACHE}.tmp 2>&1 && mv ${MUNIN_STATS_PLUGINS_CACHE}.tmp $MUNIN_STATS_PLUGINS_CACHE
