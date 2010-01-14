@@ -1,9 +1,7 @@
 #!/usr/bin/env perl
 use Modern::Perl;
 
-# Generated in cron.d with:
-#  0 * * * * root [ -O /tmp/munin-cpanp_o.cache ] && cpanp -o | egrep '^    [0-9]+' > /tmp/munin-cpanp_o.cache
-my $cache = "/tmp/munin-cpanp_o.cache";
+my $cache = $ENV{MUNIN_STATEFILE} . 'cache';
 
 given ($ARGV[0]) {
     when ("config") {

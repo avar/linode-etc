@@ -1,1 +1,5 @@
-0 * * * * root [ -O /tmp/munin-cpanp_o.cache ] && cpanp -o | egrep '^    [0-9]+' > /tmp/munin-cpanp_o.cache
+SHELL=/bin/bash
+
+CPANP_O_CACHE=/var/lib/munin/plugin-state/cpanp_o-cache
+
+28 * * * * root  [[ ! -f $CPANP_O_CACHE || -O $CPANP_O_CACHE ]] && nice -n 5 cpanp -o | egrep '^    [0-9]+' > ${CPANP_O_CACHE}.tmp && mv ${CPANP_O_CACHE}.tmp CPANP_O_CACHE
