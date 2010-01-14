@@ -48,7 +48,7 @@ sub parse_du_sk
 
     my @dirs;
     while ($cont =~ /^ (?<size>\d+) \s+ (?<directory>.*) $/mgx) {
-        push @dirs => [ $+{size} => $+{directory} ];
+        push @dirs => [ $+{size} * 1024 => $+{directory} ];
     }
 
     # Sort by size
