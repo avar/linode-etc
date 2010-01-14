@@ -30,7 +30,13 @@ END
         for my $user (@mem) {
             my ($user, $mem) = @$user;
             my $fn = clean_fieldname($user);
+
+            # Root is a reserved munin word
             $fn = 'uroot' if $fn eq 'root';
+
+            # kB -> Bytes
+            $mem *= 1024;
+
             print <<END;
 $fn.value $mem
 END
