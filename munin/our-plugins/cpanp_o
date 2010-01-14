@@ -1,7 +1,11 @@
 #!/usr/bin/env perl
 use Modern::Perl;
+use Data::Dump 'dump';
+use File::Spec::Functions qw(catfile);
 
-my $cache = $ENV{MUNIN_STATEFILE} . 'cache';
+my $statedir  = $ENV{MUNIN_PLUGSTATE};
+my $statefile = $0; $statefile =~ s[^.*/][];
+my $cache = catfile($statedir, $statefile . '-cache');
 
 given ($ARGV[0]) {
     when ("config") {
