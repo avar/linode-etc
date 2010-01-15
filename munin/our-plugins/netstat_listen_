@@ -21,6 +21,7 @@ END
             print <<END;
 $fieldname.label $program
 $fieldname.type GAUGE
+$fieldname.draw AREASTACK
 $fieldname.info The number of programs with the name "$program" listening on ports: $ports_str
 END
         }
