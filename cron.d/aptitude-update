@@ -1,0 +1,1 @@
+23 08 * * *    root    aptitude update > /dev/null 2>&1 ; true

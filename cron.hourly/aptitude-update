@@ -1,3 +1,0 @@
-#!/bin/sh
-aptitude update > /dev/null 2>&1
-exit 0
