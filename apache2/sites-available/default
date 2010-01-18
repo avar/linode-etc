@@ -1,4 +1,4 @@
 <VirtualHost *:80>
-    VirtualDocumentRoot /var/www/%0/
-    VirtualScriptAlias /var/www/%0/cgi-bin/
+    ServerName v.nix.is
+    DocumentRoot /var/www/v.nix.is
 </VirtualHost>
