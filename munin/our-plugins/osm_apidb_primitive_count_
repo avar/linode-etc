@@ -2,6 +2,9 @@
 use Modern::Perl;
 use DBI;
 
+use lib '/etc/munin/our-plugins';
+use MuninOSMUtil;
+
 my $user = $ENV{PGUSER};
 my $pass = $ENV{PGPASSWORD};
 my $host = $ENV{PGHOST} // 'localhost';
@@ -29,7 +32,14 @@ $what.type GAUGE
 END
     }
     default {
-        my $count = $dbh->selectall_arrayref("SELECT count(*) FROM current_$what")->[0][0];
+        my $count = MuninOSMUtil::osm_cache(
+            $ENV{MUNIN_STATEFILE},
+            '/var/www/osm.nix.is/latest/Iceland.osm.bz2',
+            sub {
+                my $dbh = DBI->connect("dbi:Pg:dbname=$dbnm;host=$host;port=$port", $user, $pass);
+                $dbh->selectall_arrayref("SELECT count(*) FROM current_$what")->[0][0];
+            },
+        );
         print <<END;
 $what.value $count
 END

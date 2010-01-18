@@ -5,6 +5,9 @@ use DBI;
 use String::Truncate qw(elide);
 use Encode;
 
+use lib '/etc/munin/our-plugins';
+use MuninOSMUtil;
+
 binmode STDOUT, ":utf8";
 
 my $user = $ENV{PGUSER};
@@ -31,15 +34,22 @@ my $Whats = $What.'s';
 my $title = $ENV{graph_title} // "The number of $what tags in OSM by key=value";
 my $desc = $ENV{graph_info}   // "The number of $what tags in the OpenStreetMap database by key=value";
 
-my $dbh = DBI->connect("dbi:Pg:dbname=$dbnm;host=$host;port=$port", $user, $pass);
-my $query = <<QUERY;
+my $ret = MuninOSMUtil::osm_cache(
+    $ENV{MUNIN_STATEFILE},
+    '/var/www/osm.nix.is/latest/Iceland.osm.bz2',
+    sub {
+        my $dbh = DBI->connect("dbi:Pg:dbname=$dbnm;host=$host;port=$port", $user, $pass);
+        my $query = <<QUERY;
 SELECT count(*) as c, k, v
 FROM current_${what}_tags
 WHERE $where
 GROUP BY k, v ORDER BY c DESC LIMIT $limit;
 QUERY
+        $dbh->selectall_arrayref($query);
+    },
+);
 
-my @tags = @{ $dbh->selectall_arrayref($query) };
+my @tags = @$ret;
 
 given ($ARGV[0]) {
     when ("config") {

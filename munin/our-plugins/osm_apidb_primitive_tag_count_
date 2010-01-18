@@ -2,6 +2,9 @@
 use Modern::Perl;
 use DBI;
 
+use lib '/etc/munin/our-plugins';
+use MuninOSMUtil;
+
 my $user = $ENV{PGUSER};
 my $pass = $ENV{PGPASSWORD};
 my $host = $ENV{PGHOST} // 'localhost';
@@ -12,8 +15,6 @@ my $what = $ENV{primitive};
 my $What = ucfirst $what;
 my $title = $ENV{graph_title} // "The number of $what tags in OSM";
 my $desc = $ENV{graph_info}   // "The number of $what tags in the OpenStreetMap database";
-
-my $dbh = DBI->connect("dbi:Pg:dbname=$dbnm;host=$host;port=$port", $user, $pass);
 
 given ($ARGV[0]) {
     when ("config") {
@@ -29,7 +30,15 @@ $what.type GAUGE
 END
     }
     default {
-        my $count = $dbh->selectall_arrayref("SELECT count(*) FROM current_${what}_tags")->[0][0];
+        my $count = ;
+        my $count = MuninOSMUtil::osm_cache(
+            $ENV{MUNIN_STATEFILE},
+            '/var/www/osm.nix.is/latest/Iceland.osm.bz2',
+            sub {
+                my $dbh = DBI->connect("dbi:Pg:dbname=$dbnm;host=$host;port=$port", $user, $pass);
+                $dbh->selectall_arrayref("SELECT count(*) FROM current_${what}_tags")->[0][0]
+            },
+        );
         print <<END;
 $what.value $count
 END
