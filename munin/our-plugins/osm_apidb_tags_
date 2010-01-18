@@ -1,7 +1,6 @@
 #!/usr/bin/env perl
 use Modern::Perl;
 use Munin::Plugin;
-use DBI;
 use String::Truncate qw(elide);
 use Encode;
 
@@ -38,6 +37,7 @@ my $ret = MuninOSMUtil::osm_cache(
     $ENV{MUNIN_STATEFILE},
     '/var/www/osm.nix.is/latest/Iceland.osm.bz2',
     sub {
+        require DBI;
         my $dbh = DBI->connect("dbi:Pg:dbname=$dbnm;host=$host;port=$port", $user, $pass);
         my $query = <<QUERY;
 SELECT count(*) as c, k, v

@@ -1,6 +1,5 @@
 #!/usr/bin/env perl
 use Modern::Perl;
-use DBI;
 
 use lib '/etc/munin/our-plugins';
 use MuninOSMUtil;
@@ -35,6 +34,7 @@ END
             $ENV{MUNIN_STATEFILE},
             '/var/www/osm.nix.is/latest/Iceland.osm.bz2',
             sub {
+                require DBI;
                 my $dbh = DBI->connect("dbi:Pg:dbname=$dbnm;host=$host;port=$port", $user, $pass);
                 $dbh->selectall_arrayref("SELECT count(*) FROM current_${what}_tags")->[0][0]
             },

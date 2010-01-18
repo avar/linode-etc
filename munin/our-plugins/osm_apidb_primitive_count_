@@ -1,6 +1,5 @@
 #!/usr/bin/env perl
 use Modern::Perl;
-use DBI;
 
 use lib '/etc/munin/our-plugins';
 use MuninOSMUtil;
@@ -15,8 +14,6 @@ my $what = $ENV{primitive};
 my $What = ucfirst $what;
 my $title = $ENV{graph_title} // "The number of $what in OSM";
 my $desc = $ENV{graph_info}   // "The number of $what in the OpenStreetMap database";
-
-my $dbh = DBI->connect("dbi:Pg:dbname=$dbnm;host=$host;port=$port", $user, $pass);
 
 given ($ARGV[0]) {
     when ("config") {
@@ -36,6 +33,7 @@ END
             $ENV{MUNIN_STATEFILE},
             '/var/www/osm.nix.is/latest/Iceland.osm.bz2',
             sub {
+                require DBI;
                 my $dbh = DBI->connect("dbi:Pg:dbname=$dbnm;host=$host;port=$port", $user, $pass);
                 $dbh->selectall_arrayref("SELECT count(*) FROM current_$what")->[0][0];
             },
