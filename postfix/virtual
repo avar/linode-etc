@@ -17,10 +17,18 @@ thorirmar@osm.is                thorirmar@gmail.com
 thorirmar@openstreetmap.is      thorirmar@gmail.com
 
 # Catch-all for domains
-@nix.is           hinrik.sig@gmail.com
 @osm.is           avarab@gmail.com
 @openstreetmap.is avarab@gmail.com
 @aevar.net        avarab@gmail.com
 @xn--var-xla.net  avarab@gmail.com
-@v.nix.is         v-admins@lists.nix.is
-@localhost        v-admins@lists.nix.is
+
+# Don't wildcard catch nix.is due to spam
+hinrik@nix.is       hinrik.sig@gmail.com
+abuse@nix.is        hinrik.sig@gmail.com
+postmaster@nix.is   hinrik.sig@gmail.com
+hostmaster@nix.is   hinrik.sig@gmail.com
+webmaster@nix.is    hinrik.sig@gmail.com
+
+# Send cron E-Mails to v-cron
+@v.nix.is         v-cron@lists.nix.is
+@localhost        v-cron@lists.nix.is
