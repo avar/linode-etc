@@ -1,5 +1,6 @@
 <VirtualHost *:80>
         ServerName tumi.nix.is
+        ServerAlias tms.nix.is
         DocumentRoot /var/www/tumi.nix.is/
         AddHandler fcgid-script .php
         FCGIWrapper /usr/bin/php5-cgi .php
