@@ -18,7 +18,7 @@
 
         AuthName "hlagh"
         AuthType Basic
-        AuthUserFile /home/avar/avar.log/users
+        AuthUserFile /etc/apache2/passwd/ap.nix.is
         <Limit GET POST>
             require valid-user
         </Limit>
