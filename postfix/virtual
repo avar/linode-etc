@@ -30,11 +30,12 @@ hostmaster@nix.is   hinrik.sig@gmail.com
 webmaster@nix.is    hinrik.sig@gmail.com
 
 # Send things relevant to v.nix.is from the outside to v-admins
-abuse@v.nix.is        v-admins@lists.nix.is
-postmaster@v.nix.is   v-admins@lists.nix.is
-hostmaster@v.nix.is   v-admins@lists.nix.is
-webmaster@v.nix.is    v-admins@lists.nix.is
-debian-bug@v.nix.is   v-admins@lists.nix.is
+abuse@v.nix.is                     v-admins@lists.nix.is
+postmaster@v.nix.is                v-admins@lists.nix.is
+hostmaster@v.nix.is                v-admins@lists.nix.is
+webmaster@v.nix.is                 v-admins@lists.nix.is
+debian-bug@v.nix.is                v-admins@lists.nix.is
+debian-popularity-contest@v.nix.is v-admins@lists.nix.is
 
 # Send cron E-Mails to v-cron
 @v.nix.is         v-cron@lists.nix.is
