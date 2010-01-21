@@ -1,4 +1,5 @@
 #!/usr/bin/env perl
+use 5.10.0;
 use MooseX::Declare;
 
 =head1 NAME
@@ -37,9 +38,10 @@ This program is in the public domain.
 =cut
 
 class Munin::Plugin::Multiping::Async {
-    use Modern::Perl;
     use MooseX::POE::SweetArgs qw(event);
     use POE::Component::Client::Ping;
+    use Munin::Plugin;
+    use Digest;
 
     # Hosts we're going to ping
     has hosts => (
@@ -75,7 +77,14 @@ class Munin::Plugin::Multiping::Async {
         # Create the pinger
         POE::Component::Client::Ping->spawn( Alias => 'yhlo' );
 
-        $poe_kernel->post( yhlo => ping => got_pong => $_ ) for $self->hosts
+        for ($self->hosts) {
+            $poe_kernel->post(
+                'yhlo',
+                'ping',
+                'got_pong',
+                $_,
+            );
+        }
     }
 
     event got_pong => sub {
@@ -103,26 +112,32 @@ graph_vlabel seconds
 graph_category network
 graph_info This graph shows ping RTT statistics.
 GRAPH
-        my $i = 1; for my $host ($self->hosts) {
+        for my $host ($self->hosts) {
+            my $fieldname = $self->fieldname($host);
             print <<HOST;
-site$i.label $host
-site$i.info Ping RTT statistics for $host
-site$i.draw LINE2
+$fieldname.label $host
+$fieldname.info Ping RTT statistics for $host
+$fieldname.draw LINE2
 HOST
-            $i++;
         }
     };
 
     event print_hosts => sub {
         my ($self) = @_;
 
-        my $i = 1; for my $host ($self->hosts) {
+        for my $host ($self->hosts) {
+            my $fieldname = $self->fieldname($host);
             my $value = sprintf "%6.6f", $self->response->{ $host };
 
-            say "site$i.value $value";
-            $i++;
+            say "$fieldname.value $value";
         }
     };
+
+    sub fieldname {
+        my ($self, $name) = @_;
+        my $sha1 = substr Digest->new("SHA-1")->add($name)->hexdigest, 0, 10;
+        return clean_fieldname($name) . '_' . $sha1;
+    }
 }
 
 Munin::Plugin::Multiping::Async->new;
