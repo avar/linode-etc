@@ -1,0 +1,128 @@
+#!/usr/bin/env perl
+use MooseX::Declare;
+
+=head1 NAME
+
+multiping_async - Like the multiping plugin but runs asynchronously using L<POE::Component::Client::Ping>
+
+=head1 SYNOPSIS
+
+    sudo cpanp -i Modern::Perl MooseX::Declare POE::Component::Client::Ping
+    sudo munin-run multiping_async
+
+=head1 CONFIGURATION
+
+The following environment variables are used:
+
+    host - Whitespace-seperated list of hosts to ping
+
+Configuration example:
+
+    [multiping_async]
+    env.host www.example.org mail.example.org
+
+=head1 AUTHOR
+
+E<AElig>var ArnfjE<ouml>rE<eth> Bjarmason <avar@cpan.org>
+
+=head1 LICENSE
+
+This program is in the public domain.
+
+=head1 MAGIC MARKERS
+
+ #%# family=manual
+
+=cut
+
+class Munin::Plugin::Multiping::Async {
+    use Modern::Perl;
+    use MooseX::POE::SweetArgs qw(event);
+    use POE::Component::Client::Ping;
+
+    # Hosts we're going to ping
+    has hosts => (
+        isa        => 'ArrayRef',
+        is         => 'ro',
+        auto_deref => 1,
+        default    => sub { [ split /\s+/, $ENV{host} ] },
+    );
+
+    # To store ping responses
+    has response => (
+        isa        => 'HashRef',
+        is         => 'ro',
+        auto_deref => 0,
+        default    => sub { +{} },
+    );
+
+    # Spew out config section?
+    has should_config => (
+        isa => 'Bool',
+        is => 'ro',
+        default => sub { defined $ARGV[0] and $ARGV[0] eq "config" },
+    );
+
+    sub START {
+        my ($self) = @_;
+
+        if ($self->should_config) {
+            $self->yield( print_config => $self->hosts );
+            return;
+        }
+
+        # Create the pinger
+        POE::Component::Client::Ping->spawn( Alias => 'yhlo' );
+
+        $poe_kernel->post( yhlo => ping => got_pong => $_ ) for $self->hosts
+    }
+
+    event got_pong => sub {
+        my ($self, $request, $response) = @_;
+
+        my ($req_address, $req_timeout, $req_time) = @$request;
+        my ($resp_address, $roundtrip_time, $resp_time, $resp_ttl) = @$response;
+
+        # The response address is defined if this is a response.
+        if (defined $resp_address) {
+            $self->response->{ $req_address } = $roundtrip_time;
+
+            if (keys(%{ $self->response}) == @{ $self->hosts }) {
+                $self->yield( 'print_hosts' );
+            }
+        }
+    };
+
+    event print_config => sub {
+        my ($self) = @_;
+        print <<GRAPH;
+graph_title Ping times
+graph_args --base 1000 -l 0
+graph_vlabel seconds
+graph_category network
+graph_info This graph shows ping RTT statistics.
+GRAPH
+        my $i = 1; for my $host ($self->hosts) {
+            print <<HOST;
+site$i.label $host
+site$i.info Ping RTT statistics for $host
+site$i.draw LINE2
+HOST
+            $i++;
+        }
+    };
+
+    event print_hosts => sub {
+        my ($self) = @_;
+
+        my $i = 1; for my $host ($self->hosts) {
+            my $value = sprintf "%6.6f", $self->response->{ $host };
+
+            say "site$i.value $value";
+            $i++;
+        }
+    };
+}
+
+Munin::Plugin::Multiping::Async->new;
+POE::Kernel->run;
