@@ -135,6 +135,7 @@ user root
 group list
 
 [multiping]
+user root
 env.host vodafone.is 145.254.15.113 telefonica.com.ar
 
 [tor_*]

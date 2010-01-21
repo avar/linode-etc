@@ -19,6 +19,7 @@ The following environment variables are used:
 Configuration example:
 
     [multiping_async]
+    user root
     env.host www.example.org mail.example.org
 
 =head1 AUTHOR
