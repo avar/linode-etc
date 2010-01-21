@@ -138,6 +138,10 @@ group list
 user root
 env.host vodafone.is 145.254.15.113 telefonica.com.ar
 
+[multiping_async]
+user root
+env.host vodafone.is 145.254.15.113 127-218-231-201.fibertel.com.ar
+
 [tor_*]
 user debian-tor
 env.cookiefile /var/lib/tor/control_auth_cookie
