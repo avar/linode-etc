@@ -140,7 +140,7 @@ env.host vodafone.is 145.254.15.113 telefonica.com.ar
 
 [multiping_async]
 user root
-env.host vodafone.is 145.254.15.113 127-218-231-201.fibertel.com.ar
+env.host vodafone.is 145.254.15.113 201.231.218.1
 
 [tor_*]
 user debian-tor
