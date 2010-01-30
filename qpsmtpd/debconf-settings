@@ -3,7 +3,7 @@
 # This is a copy of the qpsmtpd debconf settings for use at startup time.
 # Please don't edit it directly -- if you need to change any of these
 # settings, run 'dpkg-reconfigure qpsmtpd'.
-ENABLED="true"
+ENABLED="false"
 SERVER="forkserver"
 INTERFACES="109.74.193.250:2526 127.0.0.1:2526"
 QUEUE_PLUGIN="postfix"
