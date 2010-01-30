@@ -58,3 +58,4 @@ debian-tor:x:115:
 oident:x:116:
 freenet:x:1003:
 qpsmtpd:x:117:
+failo:x:1004:
