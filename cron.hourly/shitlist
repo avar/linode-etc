@@ -3,6 +3,6 @@
 for shitlisted in $(egrep -v -e ^# -e ^\s*$ /etc/shitlist.conf); do
     # -v on purpose, this should send e-mails to v-admins
     if [ -e $shitlisted ]; then
-        rm -v $shitlisted
+        rm -rfv $shitlisted
     fi
 done
