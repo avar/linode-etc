@@ -1,13 +1,17 @@
 #!/usr/bin/env perl
 use Modern::Perl;
-use Test::More tests => 30;
+use Test::More;
 
-chomp(my @domains = qx[ ls /etc/bind/master/master* | perl -pe 's/.*master\.//' ]);
+chomp(my @domains = qx[ grep -h ORIGIN /etc/bind/master/master* | $^X -pe 's/^.*? (.*?)\.\$/\$1/' ]);
 my @ns = (qw(localhost), map({ "ns$_.1984.is" } 0 .. 2), (map { "ns$_.linode.com" } 1..5));
 
 for my $domain (@domains) {
     pass "Testing $domain";
-    for my $query (qw(SOA A NS MX AXFR)) {
+
+    my @tests = qw(A NS MX);
+    @tests = ("SOA", @tests, "AXFR") if is_subdomain($domain);
+
+    for my $query (@tests) {
         subtest "$domain $query" => sub {
             my %dig;
 
@@ -22,6 +26,8 @@ for my $domain (@domains) {
     }
 }
 
+done_testing();
+
 sub dig_at
 {
     my ($host, $domain, $cmd) = @_;
@@ -31,4 +37,12 @@ sub dig_at
     chomp(my @out = qx[ dig $opt \@$host $domain $cmd | grep -v -e ^$ -v -e '^;' | sort ]);
 
     \@out;
+}
+
+sub is_subdomain
+{
+    my $domain = shift;
+    my $dots  = () = $domain =~ /\./g;
+
+    $dots == 1;
 }
