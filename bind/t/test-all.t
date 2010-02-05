@@ -39,7 +39,7 @@ sub dig_at
 
     my $opt = $cmd eq 'AXFR' ? '' : '+short';
 
-    chomp(my @out = qx[ dig $opt \@$host $domain $cmd | grep -v -e ^$ -v -e '^;' | sort ]);
+    chomp(my @out = qx[ dig +norecurse $opt \@$host $domain $cmd | grep -v -e ^$ -v -e '^;' | sort ]);
 
     \@out;
 }
