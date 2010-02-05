@@ -1,0 +1,10 @@
+<VirtualHost *:80>
+        ServerName git.nix.is
+
+        # Close connection after 301 is sent
+        KeepAlive Off
+
+        # Redirect everything to my github
+        RewriteEngine On
+        RewriteRule .* http://github.com/avar [R=301,L]
+</VirtualHost>
