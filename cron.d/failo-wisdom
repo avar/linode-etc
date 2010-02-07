@@ -1,1 +1,1 @@
-4 * * * * avar perl -COEL ~avar/g/failo/utils/quotes-cc /home/hinrik/src/failo/quotes.yml | gcc -x c -o /usr/local/bin/failo-wisdom -
+4 * * * * avar nice -n 15 perl -COEL ~avar/g/failo/utils/quotes-cc /home/hinrik/src/failo/quotes.yml | nice -n 15 gcc -x c -o /usr/local/bin/failo-wisdom -
