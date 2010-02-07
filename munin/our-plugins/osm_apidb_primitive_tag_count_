@@ -29,7 +29,6 @@ $what.type GAUGE
 END
     }
     default {
-        my $count = ;
         my $count = MuninOSMUtil::osm_cache(
             $ENV{MUNIN_STATEFILE},
             '/var/www/osm.nix.is/latest/Iceland.osm.bz2',
