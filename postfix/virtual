@@ -39,6 +39,7 @@ debian-popularity-contest@v.nix.is v-admins@lists.nix.is
 
 # Send apt-listchanges mails to v-admins
 apt-listchanges@localhost          v-admins@lists.nix.is
+apt-listchanges@v.nix.is           v-admins@lists.nix.is
 
 # Send cron E-Mails to v-cron
 @v.nix.is         v-cron@lists.nix.is
