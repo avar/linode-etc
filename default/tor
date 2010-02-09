@@ -27,7 +27,7 @@ RUN_DAEMON="yes"
 # of the amount of traffic flowing through your node.  Consult the torrc(5)
 # manual page for more information on setting BandwidthRate.
 #
-# NICE="--nicelevel 5"
+NICE="--nicelevel 10"
 
 # Additional arguments to pass on tor's command line.
 #
