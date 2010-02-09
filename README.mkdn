@@ -38,3 +38,24 @@ After that commit your changes:
 
     # Push back to Github
     git push
+
+# Documentation
+
+Most of the documentation on the setup of various services is in the
+Git commit logs.
+
+For example; to find out why the mail setup is why it is just [read
+the `git
+log`](http://github.com/avar/linode-etc/commits/master/postfix) for
+the `postfix/` directory.
+
+There may also be some documentation in subdirectories of `/etc`. To
+check it out look at:
+
+    sudo find /etc -name 'README.mkdn'  
+
+# Issues
+
+Issues and TODOs are tracked [in the issue
+tracker](http://github.com/avar/linode-etc/issues) which is hosted on
+Github.
