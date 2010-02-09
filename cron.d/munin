@@ -4,5 +4,5 @@
 
 MAILTO=root
 
-*/5 * * * *     munin if [ -x /usr/bin/munin-cron ]; then nice -n 15 /usr/bin/munin-cron; fi
-14 10 * * *     munin if [ -x /usr/share/munin/munin-limits ]; then nice -n 15 /usr/share/munin/munin-limits --force --contact nagios --contact old-nagios; fi
+*/5 * * * *     munin if [ -x /usr/bin/munin-cron ]; then nice -n 15 ionice -c 2 -n 6 /usr/bin/munin-cron; fi
+14 10 * * *     munin if [ -x /usr/share/munin/munin-limits ]; then nice -n 15 ionice -c 2 -n 6 /usr/share/munin/munin-limits --force --contact nagios --contact old-nagios; fi

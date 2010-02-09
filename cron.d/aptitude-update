@@ -1,1 +1,1 @@
-23 08 * * *    root    nice -n 15 aptitude update > /dev/null 2>&1 ; true
+23 08 * * *    root    nice -n 15 ionice -c 2 -n 6 aptitude update > /dev/null 2>&1 ; true
