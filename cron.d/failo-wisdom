@@ -1,1 +1,1 @@
-4 * * * * avar nice -n 15 ionice -c 2 -n 6 perl -COEL ~avar/g/failo/utils/quotes-cc /home/hinrik/src/failo/quotes.yml | nice -n 15 ionice -c 2 -n 6 gcc -x c -o /usr/local/bin/failo-wisdom -
+4 * * * * avar nice -n 15 ionice -c 2 -n 6 /etc/bin/cron/failo-wisdom-update
