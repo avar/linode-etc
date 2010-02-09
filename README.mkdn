@@ -1,0 +1,40 @@
+# About this repository
+
+This Git repository hosts the `/etc` configuration for
+[v.nix.is](http://v.nix.is). Its origin is
+[avar/linode-etc](http://github.com/avar/linode-etc) on Github.
+
+# What's here
+
+We've only checked in files which have been modified from the Debian
+defaults. This way we can easily migrate to another machine, install
+the relevant packages and checkout this repository on top of the
+`/etc` tree.
+
+# How to commit
+
+First make sure you have a `~/.gitconfig` which includes `user.name`
+and `user.email` settings. See [the Github
+documentation](http://help.github.com/git-email-settings/) for more
+info.
+
+## Adding a file
+
+If you're going to edit a file first commit the default Debian
+version. This gives us something to `git diff` against:
+
+    sudo git add -f /etc/crontab
+    sudo git commit -m"Adding the default Debian crontab" !$
+
+## Modifying files
+
+After that commit your changes:
+
+    # See what you changed
+    git diff /etc/crontab
+
+    # Add your changes
+    sudo git commit -m"Adding XXYYZZ cron jobs" /etc/crontab
+
+    # Push back to Github
+    git push
