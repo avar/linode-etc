@@ -12,9 +12,6 @@ for my $config (@configs) {
     my ($servername, @serveralias) = get_servername_serveralias($config);
     my $config = get_config($servername, @serveralias);
 
-    # Hack until vhosts work
-    next unless $servername eq 'v.nix.is';
-
     open my $fh, ">", "/etc/awstats/awstats.$servername.conf";
     print $fh $config;
     close $fh;
@@ -70,7 +67,6 @@ __DATA__
 # do not edit directly or check into Git
 
 Include "/etc/awstats/awstats.conf"
-# LogFile="/var/log/apache2/[% servername %]/access.log"
-LogFile="/var/log/apache2/access.log"
+LogFile="/var/log/apache2/[% servername %]/access.log"
 SiteDomain="[% servername %]"
 HostAliases="[% servername %] [% serveralias.join(' ') %]"
