@@ -76,6 +76,11 @@ Options are given in short format on the command line.
 	Do not autoflush files.  This may improve performance but may break logfile
 analyzers that depend on full entries in the logs.
 
+-p
+    PassThrough mode. In this mode vlogger will not munge the log by
+    chopping the vhost off the beginning of each log entry. Useful for
+    creating per-host files that still have vhost information.
+
 -e
 	ErrorLog mode.  In this mode, the host parsing is disabled, and the file is
 written out using the template under the specified LOGDIR.
@@ -150,7 +155,7 @@ use IO::Handle;
 
 # get command line options
 our %OPTS;
-getopts( 'f:t:s:hu:g:aeivr:d:', \%OPTS );
+getopts( 'f:t:s:hu:g:aepivr:d:', \%OPTS );
 
 # print out version
 if ( $OPTS{'v'} ) {
@@ -451,7 +456,7 @@ else {
             $log_line =~ s/^\S*\s+\S*\s+\S*\s+//o;
         }
         else {
-            $log_line =~ s/^\S*\s+//o;
+            $log_line =~ s/^\S*\s+//o unless $OPTS{'p'};
         }
 
         if ( $reqsize =~ m/^\d*$/ && $reqsize > 0 ) {
@@ -538,6 +543,7 @@ sub usage {
     print "host components, and rotates the files daily.\n\n";
     print "  -a                          do not autoflush files\n";
     print "  -e                          errorlog mode\n";
+    print "  -p                          passthrough mode\n";
     print "  -n                          don't rotate files\n";
     print "  -f MAXFILES                 max number of files to keep open\n";
     print "  -u UID                      uid to switch to when running as root\n";
