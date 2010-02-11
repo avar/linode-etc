@@ -1,0 +1,23 @@
+# cd /var/www
+# git svn clone svn://wtorrent-project.org/repos/trunk leech.nix.is
+# cd leech.nix.is
+# chgrp -R www-data wtorrent && chmod -R g+rw wtorrent
+
+<VirtualHost *:80>
+    ServerName leech.nix.is
+    DocumentRoot /var/www/leech.nix.is/wtorrent
+
+    Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
+
+    # wTorrent php UI
+    AddHandler fcgid-script .php
+    FCGIWrapper /usr/bin/php5-cgi .php
+
+    # http://leech.nix.is/RPC2, but only from v.nix.is    
+    SCGIMount /RPC2 127.0.0.1:1337
+    <Location /RPC2>
+    	Order deny,allow
+        allow from v.nix.is
+        deny from all 
+    </Location>
+</VirtualHost>
