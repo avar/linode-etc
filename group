@@ -10,7 +10,7 @@ mail:x:8:
 news:x:9:
 uucp:x:10:
 man:x:12:
-proxy:x:13:
+proxy:x:13:avar
 kmem:x:15:
 dialout:x:20:
 fax:x:21:
