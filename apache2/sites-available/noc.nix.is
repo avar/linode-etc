@@ -1,4 +1,4 @@
-<VirtualHost *:80>
+<VirtualHost *:81>
     ServerName noc.nix.is
     DocumentRoot /var/cache/munin/www
 

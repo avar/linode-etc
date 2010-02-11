@@ -3,7 +3,7 @@
 # cd leech.nix.is
 # chgrp -R www-data wtorrent && chmod -R g+rw wtorrent
 
-<VirtualHost *:80>
+<VirtualHost *:81>
     ServerName leech.nix.is
     DocumentRoot /var/www/leech.nix.is/wtorrent
 

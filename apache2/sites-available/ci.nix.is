@@ -1,4 +1,4 @@
-<VirtualHost *:80>
+<VirtualHost *:81>
         ServerName ci.nix.is
         DocumentRoot /var/www/ci.nix.is
         AddHandler fcgid-script .php

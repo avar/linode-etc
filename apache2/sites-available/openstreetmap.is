@@ -1,4 +1,4 @@
-<VirtualHost *:80>
+<VirtualHost *:81>
     ServerName openstreetmap.is
     ServerAlias www.openstreetmap.is osm.is www.osm.is
 
