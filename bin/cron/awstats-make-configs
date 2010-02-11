@@ -12,6 +12,9 @@ for my $config (@configs) {
     my ($servername, @serveralias) = get_servername_serveralias($config);
     my $config = get_config($servername, @serveralias);
 
+    # Hack until vhosts work
+    next unless $servername eq 'v.nix.is';
+
     open my $fh, ">", "/etc/awstats/awstats.$servername.conf";
     print $fh $config;
     close $fh;
