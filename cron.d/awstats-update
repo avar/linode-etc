@@ -1,0 +1,1 @@
+27 */12 * * *	www-data        nice -n 15 ionice -c 2 -n 6 /etc/bin/cron/awstats-update
