@@ -13,7 +13,7 @@
 	rotate 7
 	compress
 	notifempty
-	create 640 munin adm
+	create 660 munin www-data
 }
 
 /var/log/munin/munin-html.log {

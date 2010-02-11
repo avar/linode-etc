@@ -2,6 +2,16 @@
     ServerName noc.nix.is
     DocumentRoot /var/cache/munin/www
 
+    # CGI graph, see http://munin.projects.linpro.no/wiki/CgiHowto
+    ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+
+    <Directory /usr/lib/cgi-bin>
+        AllowOverride None
+        Options ExecCGI -MultiViews +SymLinksIfOwnerMatch
+        Order allow,deny
+        Allow from all
+    </Directory>
+
     <Directory /var/cache/munin/www>
         AllowOverride None
         Order allow,deny
