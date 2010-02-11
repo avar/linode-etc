@@ -1,6 +1,8 @@
 <VirtualHost *:80>
     ServerName ap.nix.is
 
+    Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
+
     DocumentRoot /var/www/ap.nix.is/root
     Alias /static /var/www/ap.nix.is/root/static
 

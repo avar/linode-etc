@@ -2,6 +2,8 @@
     ServerName v.nix.is
     DocumentRoot /var/www/v.nix.is/
 
+    Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
+
     <IfModule mod_userdir.c>
         UserDir www
         UserDir disabled root

@@ -2,6 +2,8 @@
     ServerName lists.nix.is
     DocumentRoot /usr/lib/cgi-bin/mailman
 
+    Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
+
     <Directory /var/lib/mailman/archives/>
         Options Indexes FollowSymLinks
         AllowOverride None
