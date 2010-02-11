@@ -118,7 +118,8 @@ __DATA__
 # do not edit directly or check into Git
 
 Include "/etc/awstats/awstats.conf"
-LogFile="/var/log/apache2/[% servername %]/access.log"
+LogFile="[% IF servername == 'awstats.nix.is' %]/var/log/apache2/access.log[% ELSE %]/var/log/apache2/[% servername %]/access.log[% END %]"
 SiteDomain="[% servername %]"
-HostAliases="[% servername %] [% serveralias.join(' ') %]"
+# This has already been normalized by vlogger(1) to the ServerName
+HostAliases="[% servername %]"
 HTMLHeadSection="[% hosts_html %]"
