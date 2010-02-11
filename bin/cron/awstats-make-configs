@@ -8,31 +8,82 @@ use Data::Dump 'dump';
 my @configs = glob "/etc/apache2/sites-enabled/*";
 my $DATA = join '', <DATA>;
 
-for my $config (@configs) {
-    my ($servername, @serveralias) = get_servername_serveralias($config);
-    my $config = get_config($servername, @serveralias);
+my @vhost = get_vhosts(@configs);
+
+for my $vhost (@vhost) {
+    my ($servername, @serveralias) = @$vhost;
+    my $config = get_config($servername, \@serveralias, \@vhost);
 
     open my $fh, ">", "/etc/awstats/awstats.$servername.conf";
     print $fh $config;
     close $fh;
 }
 
+sub get_vhosts {
+    my @configs = @_;
+    my @vhost;
+
+    for my $config (@configs) {
+        my ($servername, @serveralias) = get_servername_serveralias($config);
+
+        push @vhost => [ $servername, \@serveralias ];
+    }
+
+    return @vhost;
+}
+
 sub get_config {
-    my ($servername, @serveralias) = @_;
+    my ($servername, $serveralias, $vhost) = @_;
+
+    my @hosts = sort {
+        $a->{servername} cmp $b->{servername}
+    } map {
+        my $sn = $_->[0];
+        {
+            servername => $sn,
+            active     => ($sn eq $servername)
+        }
+    } @$vhost;
+
+    my $hosts_html = hosts_html(@hosts);
 
     my $ret;
-
     Template->new->process(
         \$DATA,
         {
             program     => $0,
             servername  => $servername,
-            serveralias => \@serveralias,
+            serveralias => $serveralias,
+            hosts_html  => $hosts_html,
         },
         \$ret,
     );
 
     return $ret;
+}
+
+sub hosts_html {
+    my (@hosts) = @_;
+    my $html;
+
+    $html .= "<p>";
+
+    my @host_html;
+    for my $host (@hosts) {
+        my ($sn, $active) = @$host{qw( servername active ) };
+        my $h;
+        $h .= qq[<a href="?config=$sn&framename=mainright" title="Statistics for $sn">];
+        $h .= qq[<b>] if $active;
+        $h .= qq[$sn];
+        $h .= qq[</b>] if $active;
+        $h .= qq[</a>];
+        push @host_html => $h;
+    }
+
+    $html .= join ' | ', @host_html;
+    $html .= "</p>";
+
+    return $html;
 }
 
 sub get_servername_serveralias {
@@ -70,3 +121,4 @@ Include "/etc/awstats/awstats.conf"
 LogFile="/var/log/apache2/[% servername %]/access.log"
 SiteDomain="[% servername %]"
 HostAliases="[% servername %] [% serveralias.join(' ') %]"
+HTMLHeadSection="[% hosts_html %]"
