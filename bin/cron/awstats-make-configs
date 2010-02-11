@@ -122,4 +122,4 @@ LogFile="[% IF servername == 'awstats.nix.is' %]/var/log/apache2/access.log[% EL
 SiteDomain="[% servername %]"
 # This has already been normalized by vlogger(1) to the ServerName
 HostAliases="[% servername %]"
-HTMLHeadSection="[% hosts_html %]"
+HTMLHeadSection="<center>[% hosts_html %]</center>"
