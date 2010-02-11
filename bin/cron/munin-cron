@@ -1,10 +1,7 @@
 #!/bin/sh
 
-# This used to test if the executables were installed.  But that is
-# perfectly redundant and supresses errors that the admin should see.
-
 /usr/share/munin/munin-update $@ || exit 1
 
 /usr/share/munin/munin-limits $@ || exit 1
 
-nice /usr/share/munin/munin-html $@ || exit 1
+/usr/share/munin/munin-html $@ || exit 1
