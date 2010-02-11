@@ -1,0 +1,2 @@
+#!/bin/bash
+perl -0777 -pe 's[sub generate_ps_command.*?\{.*?\n\}][sub generate_ps_command { "ps H -eo lwp,cmd" }]s;' < /usr/bin/reniced | perl 2>/dev/null
