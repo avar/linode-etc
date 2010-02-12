@@ -1,0 +1,4 @@
+<VirtualHost *:81>
+        ServerName noc.nix.is
+        DocumentRoot /etc/htdocs/noc.nix.is/
+</VirtualHost>
