@@ -1,0 +1,22 @@
+# SRG - Default settings
+#
+# This script is sourced by the Debian SRG cronscripts and can be used to
+# control several aspects of their operation as documented below.
+#
+# Author:       Matt Brown <matt@crc.net.nz>
+# Version:      $Id: srg.default 313 2008-01-20 00:54:28Z matt $
+
+# Top level directory for output reports
+REPORTBASE=/var/www/srg_reports
+
+# Configuration file location
+CONFIGFILE=/etc/srg/srg.conf
+
+# If you would like a summary report emailed to you each night, specify 
+# your email address here
+# eg. MAILUSER="srg-daily@yourdomain.com"
+MAILUSER=""
+
+# Number of days to keep daily SRG reports for. Reports older than this many
+# days will be automatically removed.
+DAILY_REPORT_RETAIN_DAYS="31"
