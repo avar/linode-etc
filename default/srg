@@ -7,7 +7,7 @@
 # Version:      $Id: srg.default 313 2008-01-20 00:54:28Z matt $
 
 # Top level directory for output reports
-REPORTBASE=/var/www/srg_reports
+REPORTBASE=/var/cache/srg_reports
 
 # Configuration file location
 CONFIGFILE=/etc/srg/srg.conf
