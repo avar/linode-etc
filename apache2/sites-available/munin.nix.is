@@ -1,5 +1,5 @@
 <VirtualHost *:81>
-    ServerName noc.nix.is
+    ServerName munin.nix.is
     DocumentRoot /var/cache/munin/www
 
     Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
