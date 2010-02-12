@@ -1,4 +1,11 @@
 <VirtualHost *:81>
-        ServerName noc.nix.is
-        DocumentRoot /etc/htdocs/noc.nix.is/
+    ServerName noc.nix.is
+    DocumentRoot /etc/htdocs/noc.nix.is/
+
+    Alias /srg /var/cache/srg_reports/daily/
+
+    <Location /srg>
+        AddHandler fcgid-script .php
+        FCGIWrapper /usr/bin/php5-cgi .php
+    </Location>
 </VirtualHost>
