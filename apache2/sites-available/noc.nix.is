@@ -2,6 +2,8 @@
     ServerName noc.nix.is
     DocumentRoot /etc/htdocs/noc.nix.is/
 
+    Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
+
     Alias /srg /var/cache/srg_reports/daily/
 
     <Location /srg>
