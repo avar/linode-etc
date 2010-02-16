@@ -1,0 +1,53 @@
+#!/bin/bash
+#
+# Debian cron script to generate daily SRG reports. Based on the example
+# shipped with the SRG package.
+#
+# You can configure this cronjob by modifying /etc/default/srg
+#
+# Author:       Matt Brown <matt@mattb.net.nz>
+# Version:      $Id: srg.cron.daily 313 2008-01-20 00:54:28Z matt $
+
+# Path to SRG binary
+SRG=/usr/bin/srg
+
+# Utility to use for sending mail
+MAIL_UTIL=/usr/bin/mail
+
+# Log Files - Space separated list of logfiles to process
+# eg. LOGS="access1.log access2.log access3.log"
+LOGS="/var/log/squid/access.log"
+
+# Get the date range
+YESTERDAY=$(date --date "1 day ago" +%Y-%m-%d)
+
+# Check that the SRG binary exists and is executable
+test -x $SRG || exit 0
+
+# Read configuration
+. /etc/default/srg
+if [ -z "$CONFIGFILE" ]; then
+    # Something is wrong with the configuration.
+    exit 1
+fi
+
+# Check that at least one of the specified logfiles exists
+found=0
+for log in $LOGS; do
+    if [ -e $log ]; then
+        found=1
+    fi
+done
+if [ "$found" -eq "0" ]; then
+    exit 0
+fi
+
+# Generate the srg reports
+if [ -z $MAILUSER ]; then
+    $SRG -C $CONFIGFILE -m $DAILY_REPORT_RETAIN_DAYS \
+        -f $YESTERDAY -t $YESTERDAY -o $REPORTBASE/daily $LOGS
+else
+    $SRG -M -C $CONFIGFILE -m $DAILY_REPORT_RETAIN_DAYS \
+        -f $YESTERDAY -t $YESTERDAY -o $REPORTBASE/daily \
+        $LOGS | $MAIL_UTIL -s 'Squid Traffic Report' $MAILUSER
+fi
