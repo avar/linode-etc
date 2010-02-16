@@ -16,7 +16,7 @@ MAIL_UTIL=/usr/bin/mail
 
 # Log Files - Space separated list of logfiles to process
 # eg. LOGS="access1.log access2.log access3.log"
-LOGS="/var/log/squid/access.log"
+LOGS="/var/log/squid/access.log /var/log/squid/access.log.1"
 
 # Get the date range
 YESTERDAY=$(date --date "1 day ago" +%Y-%m-%d)
