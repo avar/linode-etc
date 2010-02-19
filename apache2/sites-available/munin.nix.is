@@ -5,7 +5,7 @@
     Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
 
     # CGI graph, see http://munin.projects.linpro.no/wiki/CgiHowto
-    ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+    ScriptAlias /cgi-bin/ /home/avar/src/munin/build/master/_bin/
 
     <Directory /usr/lib/cgi-bin>
         AllowOverride None
