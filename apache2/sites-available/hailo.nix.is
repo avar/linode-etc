@@ -1,0 +1,18 @@
+<VirtualHost *:81>
+    ServerName hailo.nix.is
+
+    DocumentRoot /var/www/hailo.nix.is/root
+    Alias /static /var/www/hailo.nix.is/root/static
+
+    <Location /static>
+        SetHandler default-handler
+    </Location>
+
+    Alias / /var/www/hailo.nix.is/script/hailo_ui_web_fastcgi.pl/
+    <Location />
+        Options ExecCGI
+        Order allow,deny
+        Allow from all
+        AddHandler fcgid-script .pl
+    </Location>
+</VirtualHost>
