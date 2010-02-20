@@ -1,10 +1,11 @@
 # remember to run "sudo postmap /etc/postfix/virtual" after making changes
 
-avar@v.nix.is          avarab@gmail.com
-tor@v.nix.is           avarab@gmail.com
-hinrik@v.nix.is        hinrik.sig@gmail.com
-tumi@v.nix.is          tumi.st@gmail.com
-andreasg@v.nix.is      andreassonurgudmunds@gmail.com
+avar@v.nix.is             avarab@gmail.com
+mediawiki-github@v.nix.is avarab@gmail.com
+tor@v.nix.is              avarab@gmail.com
+hinrik@v.nix.is           hinrik.sig@gmail.com
+tumi@v.nix.is             tumi.st@gmail.com
+andreasg@v.nix.is         andreassonurgudmunds@gmail.com
 
 # Send cron e-mails to the relevant people
 avar@localhost          avarab@gmail.com
