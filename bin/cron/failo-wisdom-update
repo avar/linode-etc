@@ -1,2 +1,2 @@
 #!/bin/bash
-perl -COEL ~avar/g/failo/utils/quotes-cc /home/hinrik/src/failo/quotes.yml | gcc -x c -o /usr/local/bin/failo-wisdom -
+perl -COEL ~avar/g/failo/utils/quotes-cc  ~failo/failo/quotes.yml | gcc -x c -o /usr/local/bin/failo-wisdom -
