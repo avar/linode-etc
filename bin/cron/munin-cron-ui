@@ -1,0 +1,5 @@
+#!/bin/sh
+
+/usr/share/munin/munin-graph $@ || exit 1
+
+/usr/share/munin/munin-html $@ || exit 1
