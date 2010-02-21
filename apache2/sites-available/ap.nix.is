@@ -10,13 +10,14 @@
         SetHandler default-handler
     </Location>
 
-    Alias / /var/www/ap.nix.is/script/avarpics_fastcgi.pl/
+    ScriptAlias / /var/www/ap.nix.is/script/avarpics_cgi.pl/
+    #Alias / /var/www/ap.nix.is/script/avarpics_fastcgi.pl/
 
     <Location />
         Options ExecCGI
         Order allow,deny
         Allow from all
-        AddHandler fcgid-script .pl
+        #AddHandler fcgid-script .pl
 
         AuthName "hlagh"
         AuthType Basic

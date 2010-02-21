@@ -9,11 +9,12 @@
         SetHandler default-handler
     </Location>
 
-    Alias / /var/www/openstreetmap.is/script/app_openstreetmapis_web_fastcgi.pl/
+    ScriptAlias / /var/www/openstreetmap.is/script/app_openstreetmapis_web_cgi.pl/
+    #Alias / /var/www/openstreetmap.is/script/app_openstreetmapis_web_fastcgi.pl/
     <Location />
         Options ExecCGI
         Order allow,deny
         Allow from all
-        AddHandler fcgid-script .pl
+        #AddHandler fcgid-script .pl
     </Location>
 </VirtualHost>
