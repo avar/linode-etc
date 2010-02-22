@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Back up Githup repositories for all users with Git::Megapull
+
+GITHUB=/var/backup/github
+
+for user in $(find $GITHUB -maxdepth 1 -mindepth 1 -type d -printf "%f\n"); do
+    cd $GITHUB/$user
+    sudo -u $user git-megapull --bare --source Github > /dev/null
+done
