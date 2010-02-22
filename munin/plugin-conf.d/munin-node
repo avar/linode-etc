@@ -166,6 +166,10 @@ env.basename 1
 env.dirs /var/www/*
 env.basename 1
 
+[dirs_var_backup_github]
+env.dirs /var/backup/github/*
+env.basename 1
+
 [dirs_root]
 env.dirs /*
 
