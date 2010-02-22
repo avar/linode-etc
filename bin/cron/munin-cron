@@ -4,4 +4,3 @@
 
 /usr/share/munin/munin-limits $@ || exit 1
 
-/usr/share/munin/munin-html $@ || exit 1
