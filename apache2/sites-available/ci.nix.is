@@ -1,6 +1,4 @@
 <VirtualHost *:81>
         ServerName ci.nix.is
         DocumentRoot /var/www/ci.nix.is
-        AddHandler fcgid-script .php
-        FCGIWrapper /usr/bin/php5-cgi .php
 </VirtualHost>

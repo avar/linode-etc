@@ -9,10 +9,6 @@
 
     Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
 
-    # wTorrent php UI
-    AddHandler fcgid-script .php
-    FCGIWrapper /usr/bin/php5-cgi .php
-
     Alias /torrent /home/leech/torrent/
     <Location /torrent>
         AuthName "leech"

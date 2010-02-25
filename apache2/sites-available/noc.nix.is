@@ -5,9 +5,4 @@
     Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
 
     Alias /srg /var/cache/srg_reports/daily/
-
-    <Location /srg>
-        AddHandler fcgid-script .php
-        FCGIWrapper /usr/bin/php5-cgi .php
-    </Location>
 </VirtualHost>
