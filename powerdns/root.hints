@@ -1,6 +1,4 @@
-.           235809  IN  NS  resolver1.london.linode.com.
-.           235809  IN  NS  resolver2.london.linode.com.
-.           235809  IN  NS  resolver3.london.linode.com.
-resolver1.london.linode.com. 1206856 IN  A   109.74.192.20
-resolver2.london.linode.com. 1206856 IN  A   109.74.193.20
-resolver3.london.linode.com. 1206856 IN  A   109.74.194.20
+.           235809  IN  NS  indnsc41.bt.net.
+.           235809  IN  NS  indnsc31.bt.net.
+indnsc41.bt.net. 1206856 IN  A   194.74.65.69
+indnsc31.bt.net. 1206856 IN  A   194.72.9.38
