@@ -1,3 +1,3 @@
 [submodule "github-backup"]
-    path = github-backup
-    url  = git://github.com/avar/github-backup
+	path = github-backup
+	url = git://github.com/avar/github-backup.git
