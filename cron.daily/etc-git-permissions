@@ -1,0 +1,4 @@
+#!/bin/sh
+
+chown -R root:adm /etc/.git
+chmod -R g+rw /etc/.git
