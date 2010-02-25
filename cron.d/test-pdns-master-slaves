@@ -1,1 +1,0 @@
-0 22      * * *  pdns perl -e 'my $out = qx[prove -vr /etc/bind/t 2>&1]; print $out if $?'
