@@ -2,3 +2,4 @@
 proc            /proc           proc    defaults        0       0
 /dev/xvda       /               ext3    noatime,errors=remount-ro 0       1
 /swapfile.128MB       swap            swap    defaults        0       0
+/swapfile.256MB       swap            swap    defaults        0       0
