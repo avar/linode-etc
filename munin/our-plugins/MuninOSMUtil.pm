@@ -1,5 +1,5 @@
 package MuninOSMUtil;
-use Modern::Perl;
+use strict;
 use Storable;
 
 sub osm_cache
