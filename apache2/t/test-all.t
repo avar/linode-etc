@@ -12,7 +12,6 @@ my @tests = (
     'leech.nix.is'       => qr/wTorrent/,
     'lists.nix.is'       => qr/Mailman/,
     'munin.nix.is'       => qr/Munin/,
-    'mw.dev.avar.nix.is' => qr/MediaWiki/,
     'nix.is'             => qr/logo\.png/,
     'noc.nix.is'         => qr/Network operations/,
     'openstreetmap.is'   => qr/OpenStreetMap/,
