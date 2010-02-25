@@ -6,6 +6,11 @@ sub osm_cache
 {
     my ($cache, $file, $generate_data) = @_;
 
+    # Remove the host identifier from the MUNIN_STATEFILE. Helps with
+    # running via munin-run but obviously breaks multi-host systems
+    # (which I don't need)
+    $cache  =~ s[-[^-]*$][];
+
     $cache .= '.storable';
 
     my $store; eval { $store = retrieve($cache) };
