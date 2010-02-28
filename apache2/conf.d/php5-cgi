@@ -1,0 +1,5 @@
+<IfModule mod_actions.c>
+    ScriptAlias /cgi-bin/php5-cgi /usr/lib/cgi-bin/php5
+    Action php5-cgi /cgi-bin/php5-cgi
+    AddHandler php5-cgi .php
+</IfModule>
