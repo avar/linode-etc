@@ -14,5 +14,6 @@ echo "Sleeping for $sleep secs before running tests on us/slaves:"
 sleep $sleep
 
 echo "Running domain tests:"
-prove -r /etc/bind/t
+perl /etc/bind/t/gen.PL
+prove -j 10 -r /etc/bind/t/
 
