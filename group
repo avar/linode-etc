@@ -43,7 +43,7 @@ ssh:x:103:
 messagebus:x:104:
 ntp:x:105:
 ssl-cert:x:106:postgres
-mysql:x:107:
+mysql:x:107:avar
 leech:x:1000:hinrik,avar,tumi,andreasg
 git:x:1001:hinrik,avar
 netdev:x:109:
