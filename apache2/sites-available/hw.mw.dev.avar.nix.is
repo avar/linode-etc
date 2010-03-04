@@ -1,4 +1,4 @@
 <VirtualHost *:81>
         ServerName hw.mw.dev.avar.nix.is
-        DocumentRoot /home/avar/src/hw/hallowiki/sunrise
+        DocumentRoot /home/avar/src/hw/sunrise
 </VirtualHost>
