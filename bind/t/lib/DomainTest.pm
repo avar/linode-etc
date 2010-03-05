@@ -1,18 +1,19 @@
 package DomainTest;
-use 5.010;
-use Mouse;
+use strict;
 use Test::More;
 
-has domain  => ( is => 'ro', isa => 'Str' );
-has servers => ( is => 'ro', isa => 'ArrayRef', auto_deref => 1 );
-has tests   => ( is => 'ro', isa => 'ArrayRef', auto_deref => 1 );
+sub new {
+    my ($class, %args) = @_;
+
+    bless \%args => $class;
+}
 
 sub run_tests {
     my ($self) = @_;
 
-    my $domain   = $self->domain;
-    my @ns       = $self->servers;
-    my @tests    = $self->tests;
+    my $domain   = $self->{domain};
+    my @ns       = @{ $self->{servers} };
+    my @tests    = @{ $self->{tests} };
 
     plan( tests => @tests * (scalar(@ns) - 1) );
 
