@@ -3,7 +3,6 @@ use 5.010;
 use autodie;
 use strict;
 use File::Path qw(remove_tree make_path);
-use List::Util 'sum';
 
 chomp(my @domains = qx[ grep -h ORIGIN /etc/bind/master/master* | $^X -pe 's/^.*? (.*?)\.\$/\$1/' ]);
 my @ns = (qw(localhost), map({ "ns$_.1984.is" } 0 .. 2), (map { "ns$_.linode.com" } 1..5));
