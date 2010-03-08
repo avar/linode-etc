@@ -24,7 +24,7 @@
 /var/log/debug
 /var/log/messages
 {
-	rotate 4
+	rotate 48
 	weekly
 	missingok
 	notifempty
