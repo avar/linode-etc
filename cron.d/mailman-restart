@@ -1,0 +1,2 @@
+# Deliever mailman queue periodically
+*/15 * * * *     munin nice -n 15 ionice -c 2 -n 6 /etc/bin/cron/mailman-restart
