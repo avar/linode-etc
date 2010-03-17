@@ -15,6 +15,6 @@ Pin-Priority: 800
 
 Explanation: 5.3.1 which is the php in testing/unstable is broken with MediaWiki, once they have 5.3.2 this can be removed
 Explanation: Maybe php-benchmark/phpunit don't need to be here, but just to be sure..
-Package: php5 php5-cgi php-benchmark phpunit
+Package: php5 php5-cgi php-benchmark phpunit libapache2-mod-php5
 Pin: release a=stable
 Pin-Priority: 1001
