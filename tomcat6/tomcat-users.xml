@@ -16,6 +16,8 @@
   limitations under the License.
 -->
 <tomcat-users>
+  <role rolename="manager"/>
+  <user username="tomcat" password="seekrt" roles="manager"/>
 <!--
   <role rolename="tomcat"/>
   <role rolename="role1"/>
