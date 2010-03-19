@@ -47,3 +47,6 @@ apt-listchanges@v.nix.is           v-admins@lists.nix.is
 # Send cron E-Mails to v-cron
 @v.nix.is         v-cron@lists.nix.is
 @localhost        v-cron@lists.nix.is
+
+# faggot, come in faggot
+faggot@nix.is     avarab@gmail.com
