@@ -2,7 +2,7 @@
 
 This Git repository hosts the `/etc` configuration for
 [v.nix.is](http://v.nix.is). Its origin is
-[avar/linode-etc](http://github.com/avar/linode-etc) on Github.
+[avar/linode-etc](http://github.com/avar/linode-etc) on GitHub.
 
 # What's here
 
