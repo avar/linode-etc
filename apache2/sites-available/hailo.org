@@ -1,0 +1,11 @@
+<VirtualHost *:81>
+    ServerName hailo.org
+    ServerAlias www.hailo.org
+
+    # Close connection after 302 is sent
+    KeepAlive Off
+
+    # Redirect everything to my github
+    RewriteEngine On
+    RewriteRule .* http://hailo.github.com/ [R=302,L]
+</VirtualHost>

@@ -9,6 +9,7 @@ my @tests = (
     'ci.nix.is'          => qr/Powered by phpBB/,
     'git.nix.is'         => qr/GitHub/,
     'hailo.nix.is'       => qr/Hailo Chat/,
+    'hailo.org'          => qr/Hailo is a a pluggable/,
     'leech.nix.is'       => qr/wTorrent/,
     'lists.nix.is'       => qr/Mailman/,
     'munin.nix.is'       => qr/Munin/,
