@@ -1,6 +1,7 @@
 package DomainTest;
 use strict;
 use Test::More;
+use Time::HiRes qw< gettimeofday tv_interval >;
 
 sub new {
     my ($class, %args) = @_;
@@ -43,9 +44,13 @@ sub dig_at
     my $opt = $query eq 'AXFR' ? '' : '+short';
     my $cmd = qq[ dig +norecurse $opt \@$host $domain $query | grep -v -e '^\$' -v -e '^;' | sort ];
 
+    my $t0 = [gettimeofday];
     chomp(my @out = qx[ $cmd ]);
+    my $t1 = [gettimeofday];
+    my $elapsed = tv_interval($t0, $t1);
 
-    subtest "^^ output of <<$cmd>>" => sub {
+    my $subtest = sprintf "^^ output of <<$cmd>> (in %.3f seconds)", $elapsed;
+    subtest $subtest => sub {
         if (@out == 0) {
             plan tests => 1;
             pass("No output");
