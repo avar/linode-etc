@@ -25,7 +25,9 @@ my @tests = (
 
 plan tests => scalar @tests;
 
-my $mech = Test::WWW::Mechanize->new;
+my $mech = Test::WWW::Mechanize->new(
+    agent => __FILE__
+);
 
 while (my ($site, $content_like) = splice @tests, 0, 2) {
     $site = "http://$site/";
