@@ -37,6 +37,19 @@ sub run_tests {
     }
 }
 
+sub run_public_tests {
+    my ($self) = @_;
+
+    my $domain              = $self->{domain};
+    my ($public, undef, @servers)  = @{ $self->{servers} };
+
+    plan( tests => 2 );
+
+    my $res = $self->dig_at($public, $domain, "NS");
+
+    cmp_ok(scalar(@$res), '==', scalar(@servers), "We should have " . scalar(@servers) . " public servers (<<@servers>>); We got: <<@$res>>");
+}
+
 sub dig_at
 {
     my ($self, $host, $domain, $query) = @_;
