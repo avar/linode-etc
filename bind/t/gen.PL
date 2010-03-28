@@ -49,6 +49,7 @@ use DomainTest;
 DomainTest->new(
     domain  => q[$domain],
     servers => [ 'resolver1.london.linode.com.', qw[ @ns ] ],
+    recurse => 1,
 )->run_public_tests;
 TEST
     my $dir = "$Bin/gen/public";

@@ -6,7 +6,12 @@ use Time::HiRes qw< gettimeofday tv_interval >;
 sub new {
     my ($class, %args) = @_;
 
-    bless \%args => $class;
+    my $self = {
+        recurse => 0,
+        %args,
+    };
+
+    bless $self => $class;
 }
 
 sub run_tests {
@@ -54,8 +59,9 @@ sub dig_at
 {
     my ($self, $host, $domain, $query) = @_;
 
+    my $recurse = $self->{recurse} ? '' : '+norecurse';
     my $opt = $query eq 'AXFR' ? '' : '+short';
-    my $cmd = qq[ dig +norecurse $opt \@$host $domain $query | grep -v -e '^\$' -v -e '^;' | sort ];
+    my $cmd = qq[ dig $recurse $opt \@$host $domain $query | grep -v -e '^\$' -v -e '^;' | sort ];
 
     my $t0 = [gettimeofday];
     chomp(my @out = qx[ $cmd ]);
