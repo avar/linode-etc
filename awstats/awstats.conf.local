@@ -3,7 +3,7 @@
 # different virtual servers, who want to reuse common parameters.
 # Also, this file is not updated with each new upstream release.
 LogFormat=1
-DNSLookup=0
+DNSLookup=1
 DirIcons="/icon"
 StyleSheet="/css/awstats_default.css"
 
