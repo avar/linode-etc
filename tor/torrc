@@ -103,7 +103,7 @@ RelayBandwidthBurst 1000 KBytes
 # Don't suck up all our bandwidth. Note that the total bandwidth tor
 # might use will be ~ AccountingMax * 2. See torrc(5)
 AccountingStart day 12:00
-AccountingMax 1337 MB
+AccountingMax 1000 MB
 
 ## Contact info to be published in the directory, so we can contact you
 ## if your relay is misconfigured or something else goes wrong. Google
