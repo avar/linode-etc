@@ -7,6 +7,7 @@ my @tests = (
     'awstats.nix.is'     => qr/Awstats/,
     'blog.nix.is'        => qr/literal thoughts/,
     'ci.nix.is'          => qr/Powered by phpBB/,
+    'downlode.org'       => qr/downlode/,
     'git.nix.is'         => qr/GitHub/,
     'hailo.nix.is'       => qr/Hailo Chat/,
     'hailo.org'          => qr/Hailo is a a pluggable/,
@@ -20,6 +21,7 @@ my @tests = (
     'tumi.nix.is'        => qr/Tumi/,
     'v.nix.is'           => qr/vee nix/,
     'vnstat.nix.is'      => qr/vnstat\.cgi/,
+    'voodootronix.com'   => qr/voodootronix/,
     'xn--var-xla.net'    => qr/Bjarmason/,
 );
 
