@@ -7,12 +7,14 @@ tor@v.nix.is              avarab@gmail.com
 hinrik@v.nix.is           hinrik.sig@gmail.com
 tumi@v.nix.is             tumi.st@gmail.com
 andreasg@v.nix.is         andreassonurgudmunds@gmail.com
+hex@v.nix.is              hex@downlode.org
 
 # Send cron e-mails to the relevant people
 avar@localhost          avarab@gmail.com
 hinrik@localhost        hinrik.sig@gmail.com
 tumi@localhost          tumi.st@gmail.com
 andreasg@localhost      andreassonurgudmunds@gmail.com
+hex@localhost           hex@downlode.org
 
 # (osm|openstreetmap).is aliases
 thorirmar@osm.is                thorirmar@gmail.com
