@@ -16,24 +16,6 @@
 env.url   http://127.0.0.1:%d/server-status?auto
 env.ports 80
 
-[amavis]
-env.logfile /var/log/mail.info
-
-[apt]
-user root
-
-[courier_mta_mailqueue]
-group daemon
-
-[courier_mta_mailstats]
-group adm
-
-[courier_mta_mailvolume]
-group adm
-
-[cps*]
-user root
-
 [cpu]
 env.iowait_critical 50
 env.iowait_warning 30
@@ -46,12 +28,6 @@ env.exclude none unknown iso9660 squashfs udf romfs ramfs debugfs
 env.warning 92
 env.critical 98
 
-[exim_mailqueue]
-group adm, (Debian-exim)
-
-[exim_mailstats]
-group adm, (Debian-exim)
-
 [fw_conntrack]
 user root
 
@@ -61,25 +37,15 @@ user root
 [hddtemp_smartctl]
 user root
 
-[hddtemp2]
-user root
-
 [if_*]
 user root
 
 [if_err_*]
 user nobody
 
-[ip_*]
-user root
-
-[ipmi_*]
-user root
-
 [mysql*]
 user root
 env.mysqlopts --defaults-file=/etc/mysql/debian.cnf
-
 
 [postfix_mailqueue]
 user postfix
@@ -90,26 +56,6 @@ group adm
 [postfix_mailvolume]
 group adm
 env.logfile mail.log
-
-[smart_*]
-user root
-
-[vlan*]
-user root
-
-[ejabberd*]
-user ejabberd
-env.statuses available away chat xa
-env.days 1 7 30
-
-[dhcpd3]
-user root
-env.leasefile /var/lib/dhcp3/dhcpd.leases
-env.configfile /etc/dhcp3/dhcpd.conf
-
-[jmx_*]
-env.ip 127.0.0.1
-env.port 5400
 
 [samba]
 user root
