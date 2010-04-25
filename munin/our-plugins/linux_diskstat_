@@ -117,6 +117,7 @@ use strict;
 use File::Basename;
 use Carp;
 use POSIX;
+use Time::HiRes qw(tv_interval gettimeofday);
 
 # We load our own version of save/restore_state if Munin::Plugin is unavailable.
 # Don't try this at home
@@ -320,7 +321,7 @@ my %cur_diskstat = fetch_device_counters($device);
 
 my ( $prev_time, %prev_diskstat ) = restore_state();
 
-save_state( time(), %cur_diskstat );
+save_state( join("|", gettimeofday()), %cur_diskstat );
 
 # Probably the first run for the given device, we need state to do our job,
 # so let's wait for the next run.
@@ -339,7 +340,8 @@ sub calculate_and_print_values {
 
     my $bytes_per_sector = 512;
 
-    my $interval = time() - $prev_time;
+    my ($seconds, $microseconds) = split /\|/, $prev_time;
+    my $interval = tv_interval([$seconds, $microseconds], [gettimeofday]);
 
     my $read_ios  = $cur_stats->{'rd_ios'} - $prev_stats->{'rd_ios'};
     my $write_ios = $cur_stats->{'wr_ios'} - $prev_stats->{'wr_ios'};
