@@ -9,3 +9,7 @@ deb-src http://mirror.sov.uk.goscomb.net/debian/ testing main contrib non-free
 # Unstable
 deb http://mirror.sov.uk.goscomb.net/debian/ unstable main contrib non-free
 deb-src http://mirror.sov.uk.goscomb.net/debian/ unstable main contrib non-free
+
+# Experimental
+deb http://mirror.sov.uk.goscomb.net/debian/ experimental main contrib non-free
+deb-src http://mirror.sov.uk.goscomb.net/debian/ experimental main contrib non-free
