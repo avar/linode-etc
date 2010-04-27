@@ -48,7 +48,7 @@ leech:x:1000:hinrik,avar,tumi,andreasg,hex
 git:x:1001:hinrik,avar
 netdev:x:109:
 bitlbee:x:110:
-fail:x:1002:tumi
+fail:x:1002:tumi,hex
 postgres:x:113:
 pdns:x:114:
 postfix:x:108:
