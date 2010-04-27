@@ -7,7 +7,7 @@ myhostname = v.nix.is
 # is /etc/mailname.
 myorigin = /etc/mailname
 
-smtpd_banner = $myhostname ESMTP $mail_name
+smtpd_banner = $myhostname ESMTP $mail_name ($mail_version)
 
 # disable comsat network service
 biff = no
