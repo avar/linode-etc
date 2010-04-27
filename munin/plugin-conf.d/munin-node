@@ -28,6 +28,9 @@ env.exclude none unknown iso9660 squashfs udf romfs ramfs debugfs
 env.warning 92
 env.critical 98
 
+[fail2ban_all_jails]
+user root
+
 [sockstat]
 user root
 
