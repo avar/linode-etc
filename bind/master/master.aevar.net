@@ -1,7 +1,7 @@
 $TTL 86400 ; 24 hours could have been written as 24h or 1d
 $ORIGIN aevar.net.
 @  1D  IN SOA ns0.1984.is. hostmaster.aevar.net. (
-      29  ; serial
+      30  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -21,5 +21,6 @@ $ORIGIN aevar.net.
        IN  MX  10 mail.aevar.net.
 
 aevar.net. IN  A      109.74.193.250
+blog       IN  A      109.74.193.250
 www        IN  CNAME  aevar.net.
 mail       IN  A      109.74.193.250
