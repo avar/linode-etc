@@ -1,0 +1,25 @@
+<VirtualHost *:81>
+    ServerName blog.xn--var-xla.net
+    ServerAlias blog.aevar.net
+    DocumentRoot /var/www/xn--var-xla.net
+
+    <Location /static>
+        SetHandler default-handler
+    </Location>
+
+    Alias /static /home/avar/g/blogg/static
+
+    Alias / /home/avar/g/blawd/bin/blawd.pcgi/
+    <Location />
+        # PLACK_SERVER=FCGI BLAWD_REPO=/home/avar/g/blogg/.git BLAWD_HOST=localhost BLAWD_PORT=1584 perl -Ilib bin/blawd.pcgi
+        Options ExecCGI
+        SetEnv PLACK_SERVER FCGI
+        SetEnv BLAWD_REPO /home/avar/g/blogg/.git
+        SetEnv BLAWD_HOST localhost
+        SetEnv BLAWD_PORT 1584
+        SetEnv PERL5LIB /home/avar/g/blawd/lib
+        Order allow,deny
+        Allow from all
+        AddHandler fcgid-script .pcgi
+    </Location>
+</VirtualHost>
