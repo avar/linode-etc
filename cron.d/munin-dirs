@@ -6,8 +6,8 @@ DIRS_ROOT_CACHE=/var/lib/munin/plugin-state/dirs_root-cache
 APACHE_VHOST_CACHE=/var/lib/munin/plugin-state/apache_vhost-cache
 DIRS_VAR_BACKUP_GITHUB_CACHE=/var/lib/munin/plugin-state/dirs_var_backup_github-cache
 
-10 6 * * * root  [[ ! -f $DIRS_ROOT_CACHE || -O $DIRS_ROOT_CACHE ]] && nice -n 10 du -sk /* > ${DIRS_ROOT_CACHE}.tmp 2>/dev/null ; mv ${DIRS_ROOT_CACHE}.tmp $DIRS_ROOT_CACHE
-41 */4 * * * root  [[ ! -f $HOMEDIRS_CACHE || -O $HOMEDIRS_CACHE ]] && nice -n 10 du -sk /home/* > ${HOMEDIRS_CACHE}.tmp 2>/dev/null && mv ${HOMEDIRS_CACHE}.tmp $HOMEDIRS_CACHE
-20  */1 * * * root  [[ ! -f $DIRS_VAR_WWW_CACHE || -O $DIRS_VAR_WWW_CACHE ]] && nice -n 10 du -sk /var/www/* > ${DIRS_VAR_WWW_CACHE}.tmp 2>/dev/null && mv ${DIRS_VAR_WWW_CACHE}.tmp $DIRS_VAR_WWW_CACHE
-*/30 * * * * root [[ ! -f $APACHE_VHOST_CACHE || -O $APACHE_VHOST_CACHE ]] && nice -n 10 find /var/log/apache2/ -maxdepth 1 -mindepth 1 -type d -exec du -sk {} \; | sed 's/\/.*\///' > ${APACHE_VHOST_CACHE}.tmp 2>/dev/null && mv ${APACHE_VHOST_CACHE}.tmp $APACHE_VHOST_CACHE
-10 6 * * * root  [[ ! -f $DIRS_VAR_BACKUP_GITHUB_CACHE || -O $DIRS_VAR_BACKUP_GITHUB_CACHE ]] && nice -n 10 du -sk /var/backup/github/* > ${DIRS_VAR_BACKUP_GITHUB_CACHE}.tmp 2>/dev/null ; mv ${DIRS_VAR_BACKUP_GITHUB_CACHE}.tmp $DIRS_VAR_BACKUP_GITHUB_CACHE
+10 5 * * * root  [[ ! -f $DIRS_ROOT_CACHE || -O $DIRS_ROOT_CACHE ]] && nice -n 10 du -sk /* > ${DIRS_ROOT_CACHE}.tmp 2>/dev/null ; mv ${DIRS_ROOT_CACHE}.tmp $DIRS_ROOT_CACHE
+41 5 * * * root  [[ ! -f $HOMEDIRS_CACHE || -O $HOMEDIRS_CACHE ]] && nice -n 10 du -sk /home/* > ${HOMEDIRS_CACHE}.tmp 2>/dev/null && mv ${HOMEDIRS_CACHE}.tmp $HOMEDIRS_CACHE
+20 5 * * * root  [[ ! -f $DIRS_VAR_WWW_CACHE || -O $DIRS_VAR_WWW_CACHE ]] && nice -n 10 du -sk /var/www/* > ${DIRS_VAR_WWW_CACHE}.tmp 2>/dev/null && mv ${DIRS_VAR_WWW_CACHE}.tmp $DIRS_VAR_WWW_CACHE
+05 5 * * * root [[ ! -f $APACHE_VHOST_CACHE || -O $APACHE_VHOST_CACHE ]] && nice -n 10 find /var/log/apache2/ -maxdepth 1 -mindepth 1 -type d -exec du -sk {} \; | sed 's/\/.*\///' > ${APACHE_VHOST_CACHE}.tmp 2>/dev/null && mv ${APACHE_VHOST_CACHE}.tmp $APACHE_VHOST_CACHE
+10 5 * * * root  [[ ! -f $DIRS_VAR_BACKUP_GITHUB_CACHE || -O $DIRS_VAR_BACKUP_GITHUB_CACHE ]] && nice -n 10 du -sk /var/backup/github/* > ${DIRS_VAR_BACKUP_GITHUB_CACHE}.tmp 2>/dev/null ; mv ${DIRS_VAR_BACKUP_GITHUB_CACHE}.tmp $DIRS_VAR_BACKUP_GITHUB_CACHE
