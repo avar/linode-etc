@@ -1,33 +1,40 @@
 # remember to run "sudo postmap /etc/postfix/virtual" after making changes
 
+## "Real" users
 avar@v.nix.is             avarab@gmail.com
-mediawiki-github@v.nix.is avarab@gmail.com
-hailo@v.nix.is            avarab@gmail.com
-openstreetmap@v.nix.is    avarab@gmail.com
-tor@v.nix.is              avarab@gmail.com
 hinrik@v.nix.is           hinrik.sig@gmail.com
 tumi@v.nix.is             tumi.st@gmail.com
 andreasg@v.nix.is         andreassonurgudmunds@gmail.com
 hex@v.nix.is              hex@downlode.org
 
-# Send cron e-mails to the relevant people
+## Aliases
+# Signup address for github.com/mediawiki
+mediawiki-github@v.nix.is avarab@gmail.com
+# Signup address for github.com/hailo
+hailo@v.nix.is            avarab@gmail.com
+# Signup address for github.com/openstreetmap
+openstreetmap@v.nix.is    avarab@gmail.com
+# Contact address for the Tor bridge
+tor@v.nix.is              avarab@gmail.com
+
+## Send cron e-mails to the relevant people
 avar@localhost          avarab@gmail.com
 hinrik@localhost        hinrik.sig@gmail.com
 tumi@localhost          tumi.st@gmail.com
 andreasg@localhost      andreassonurgudmunds@gmail.com
 hex@localhost           hex@downlode.org
 
-# (osm|openstreetmap).is aliases
+## (osm|openstreetmap).is aliases
 thorirmar@osm.is                thorirmar@gmail.com
 thorirmar@openstreetmap.is      thorirmar@gmail.com
 
-# Catch-all for domains
+## Catch-all for domains
 @osm.is           avarab@gmail.com
 @openstreetmap.is avarab@gmail.com
 @aevar.net        avarab@gmail.com
 @xn--var-xla.net  avarab@gmail.com
 
-# Don't wildcard catch nix.is due to spam
+## Don't wildcard catch nix.is due to spam
 hinrik@nix.is       hinrik.sig@gmail.com
 failo@nix.is        hinrik.sig@gmail.com
 abuse@nix.is        hinrik.sig@gmail.com
@@ -35,7 +42,7 @@ postmaster@nix.is   hinrik.sig@gmail.com
 hostmaster@nix.is   hinrik.sig@gmail.com
 webmaster@nix.is    hinrik.sig@gmail.com
 
-# Send things relevant to v.nix.is from the outside to v-admins
+## Send things relevant to v.nix.is from the outside to v-admins
 abuse@v.nix.is                     v-admins@lists.nix.is
 postmaster@v.nix.is                v-admins@lists.nix.is
 hostmaster@v.nix.is                v-admins@lists.nix.is
@@ -43,13 +50,13 @@ webmaster@v.nix.is                 v-admins@lists.nix.is
 debian-bug@v.nix.is                v-admins@lists.nix.is
 debian-popularity-contest@v.nix.is v-admins@lists.nix.is
 
-# Send apt-listchanges mails to v-admins
+## Send apt-listchanges mails to v-admins
 apt-listchanges@localhost          v-admins@lists.nix.is
 apt-listchanges@v.nix.is           v-admins@lists.nix.is
 
-# Send cron E-Mails to v-cron
+## Send cron E-Mails to v-cron
 @v.nix.is         v-cron@lists.nix.is
 @localhost        v-cron@lists.nix.is
 
-# faggot, come in faggot
+## faggot, come in faggot
 faggot@nix.is     hex@downlode.org
