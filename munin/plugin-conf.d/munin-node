@@ -206,3 +206,6 @@ env.graph_title The number of relation source=* tags in OSM by value
 env.graph_info The number of relation source=* tags in the OpenStreetMap database by value
 env.k_whitelist source
 env.label_v_only 1
+
+[downlode_302_victims]
+user root
