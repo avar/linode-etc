@@ -7,6 +7,10 @@ tumi@v.nix.is             tumi.st@gmail.com
 andreasg@v.nix.is         andreassonurgudmunds@gmail.com
 hex@v.nix.is              hex@downlode.org
 
+## "Fake" users
+# Cron for the OpenStreetMap mirror. Only avar cares
+osm-mirror@v.nix.is       avarab@gmail.com
+
 ## Aliases
 # Signup address for github.com/mediawiki
 mediawiki-github@v.nix.is avarab@gmail.com
