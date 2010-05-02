@@ -1,0 +1,18 @@
+# OpenStreetMap mirrors
+
+# Git repositories
+*/5 * * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 REPO_NAME=openstreetmap-website ~/g/openstreetmap-mirror/git-mirror.sh
+*/5 * * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 REPO_NAME=merkaartor            ~/g/openstreetmap-mirror/git-mirror.sh
+
+# JOSM is a special case
+*/15 * * * * osm-mirror nice -n 15 ionice -c 2 -n 6 ~/g/openstreetmap-mirror/josm-mirror.sh
+
+# git-svn mirrors
+*/45 * * * * osm-mirror nice -n 15 ionice -c 2 -n 6 REPO_NAME=potlatch2 ~/g/openstreetmap-mirror/svn-mirror.sh
+* */2 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 REPO_NAME=tirex     ~/g/openstreetmap-mirror/svn-mirror.sh
+* */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 REPO_NAME=osm2pgsql ~/g/openstreetmap-mirror/svn-mirror.sh
+* */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 REPO_NAME=potlatch  ~/g/openstreetmap-mirror/svn-mirror.sh
+* */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 REPO_NAME=mapnik    ~/g/openstreetmap-mirror/svn-mirror.sh
+* */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 REPO_NAME=shp2osm   ~/g/openstreetmap-mirror/svn-mirror.sh
+* */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 REPO_NAME=mod_tile  ~/g/openstreetmap-mirror/svn-mirror.sh
+* */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 REPO_NAME=cgimap    ~/g/openstreetmap-mirror/svn-mirror.sh
