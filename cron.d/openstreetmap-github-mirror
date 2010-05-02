@@ -16,4 +16,6 @@
 * */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 ~/g/openstreetmap-mirror/svn-mirror.sh shp2osm  
 * */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 ~/g/openstreetmap-mirror/svn-mirror.sh mod_tile 
 * */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 ~/g/openstreetmap-mirror/svn-mirror.sh cgimap
-* */12 * * * osm-mirror nice -n 15 ionice -c 2 -n 6 ~/g/openstreetmap-mirror/svn-mirror.sh gosmore
+* */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 ~/g/openstreetmap-mirror/svn-mirror.sh josm-plugins
+* */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 ~/g/openstreetmap-mirror/svn-mirror.sh map-icons
+* */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 ~/g/openstreetmap-mirror/svn-mirror.sh gosmore
