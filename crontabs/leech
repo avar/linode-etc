@@ -1,0 +1,2 @@
+*/5 * * * * rsync -aq --progress ~/torrent/queue/ ~/torrent/queue-powerseeding/ ~/torrent/queue-archive/
+@reboot screen -d -m

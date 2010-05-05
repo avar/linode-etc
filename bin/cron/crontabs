@@ -1,0 +1,7 @@
+#!/bin/sh
+CRONTABS="leech failo"
+
+for crontab in $CRONTABS; do
+    # Skip cron(1) boilerplate
+    perl -ne 'next LINE if $. <= 3; print' /var/spool/cron/crontabs/$crontab > /etc/crontabs/$crontab
+done
