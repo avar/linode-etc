@@ -1,2 +1,5 @@
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin
+
 */5 * * * * rsync -aq --progress ~/torrent/queue/ ~/torrent/queue-powerseeding/ ~/torrent/queue-archive/
 @reboot screen -d -m
