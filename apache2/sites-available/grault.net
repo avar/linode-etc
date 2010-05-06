@@ -2,4 +2,8 @@
     ServerName grault.net
     DocumentRoot /var/www/grault.net
 
+    <Directory /var/www/grault.net/adjunct/>
+        Options +ExecCGI
+        AddHandler cgi-script .cgi
+    </Directory> 
 </VirtualHost>
