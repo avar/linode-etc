@@ -14,6 +14,7 @@ osm-mirror@v.nix.is       avarab@gmail.com
 ## Aliases
 # Signup address for github.com/mediawiki
 mediawiki-github@v.nix.is avarab@gmail.com
+mediawiki@v.nix.is avarab@gmail.com
 # Signup address for github.com/hailo
 hailo@v.nix.is            avarab@gmail.com
 # Signup address for github.com/openstreetmap
