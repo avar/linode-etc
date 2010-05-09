@@ -21,3 +21,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 40 */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 cronjob -E -j map-icons    -c '~/g/openstreetmap-mirror/svn-mirror.sh map-icons'
 45 */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 cronjob -E -j gosmore      -c '~/g/openstreetmap-mirror/svn-mirror.sh gosmore'
 50 */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 cronjob -E -j osm2pgsql    -c '~/g/openstreetmap-mirror/svn-mirror.sh osm2pgsql'
+55 */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 cronjob -E -j mkgmap       -c '~/g/openstreetmap-mirror/svn-mirror.sh mkgmap'
