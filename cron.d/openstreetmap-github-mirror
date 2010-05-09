@@ -16,7 +16,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 15 */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 cronjob -E -j mapnik       -c '~/g/openstreetmap-mirror/svn-mirror.sh mapnik'
 20 */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 cronjob -E -j shp2osm      -c '~/g/openstreetmap-mirror/svn-mirror.sh shp2osm  '
 25 */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 cronjob -E -j mod-tile     -c '~/g/openstreetmap-mirror/svn-mirror.sh mod_tile '
-30 */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 cronjob -E -j cgimap       -c '~/g/openstreetmap-mirror/svn-mirror.sh cgimap'
 35 */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 cronjob -E -j josm-plugins -c '~/g/openstreetmap-mirror/svn-mirror.sh josm-plugins'
 40 */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 cronjob -E -j map-icons    -c '~/g/openstreetmap-mirror/svn-mirror.sh map-icons'
 45 */4 * * *  osm-mirror nice -n 15 ionice -c 2 -n 6 cronjob -E -j gosmore      -c '~/g/openstreetmap-mirror/svn-mirror.sh gosmore'
