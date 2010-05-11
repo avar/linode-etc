@@ -24,17 +24,16 @@ If you're going to edit a file first commit the default Debian
 version. This gives us something to `git diff` against:
 
     sudo git add -f /etc/crontab
-    sudo git commit -m"Adding the default Debian crontab" !$
 
 ## Modifying files
 
 After that commit your changes:
 
     # See what you changed
-    git diff /etc/crontab
+    git diff --staged
 
     # Add your changes
-    sudo git commit -m"Adding XXYYZZ cron jobs" /etc/crontab
+    sudo git commit
 
     # Push back to Github
     git push
