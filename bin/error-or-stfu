@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# Runs a program with arguments given on argv, either prints an error
-# on non-zero exit code on shuts up. Useful for running commands in
-# cron scripts
-
-out=$("$@" 2>&1)
-
-[ $? -ne 0 ] && echo $out
