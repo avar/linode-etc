@@ -1,8 +1,5 @@
-#!/bin/bash
-if [ -f ~failo/failo/quotes.yml ]; then
-    perl -COEL ~avar/g/failo/utils/quotes-cc  ~failo/failo/quotes.yml | gcc -x c -o /usr/local/bin/failo-wisdom -
-else
-    wget -q http://v.nix.is/~failo/quotes.yml -O /tmp/failo-quotes.yml
-    perl -COEL ~avar/g/failo/utils/quotes-cc  /tmp/failo-quotes.yml   | gcc -x c -o /usr/local/bin/failo-wisdom -
-    rm /tmp/failo-quotes.yml
-fi
+#!/bin/sh
+
+curl --silent --user-agent 'cron/failo-wisdom-update' http://v.nix.is/~failo/quotes.yml \
+    | quotecc -i - -I YAML -o - -O C \
+    | gcc -x c -o /usr/local/bin/failo-wisdom -
