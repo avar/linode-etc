@@ -1,1 +1,2 @@
-4 * * * * avar nice -n 15 ionice -c 2 -n 6 /etc/bin/cron/failo-wisdom-update
+PATH=/usr/bin:/usr/local/bin
+4 * * * * failo nice -n 15 ionice -c 2 -n 6 /etc/bin/cron/failo-wisdom-update
