@@ -77,8 +77,7 @@ env.PGPORT 5432
 
 [rtom_*]
 user leech
-env.src socket
-env.socket /home/leech/torrent/rpc.socket
+env.port 1337
 
 [pdns_*]
 user root
