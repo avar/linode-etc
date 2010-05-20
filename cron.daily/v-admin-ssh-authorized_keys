@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# Add all admin ssh keys to v-admin
-cat $(grep ^adm /etc/group | perl -pe 's/.*://; s/,/ /g; s[(\S+)][/home/$1/.ssh/authorized_keys]g') | sort | uniq > /home/v-admin/.ssh/authorized_keys
-
