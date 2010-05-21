@@ -1,0 +1,19 @@
+#!/usr/bin/env perl
+use perl5i::latest;
+
+my $cache   = "/var/lib/munin/plugin-state/$ARGV[0]";
+my $path    = $ARGV[1];
+my $command = $ARGV[2];
+
+if ( ! -f $cache || -O $cache ) {
+    $command = "du -sk $path" unless $command;
+    sys("ionice -c 2 -n 6 nice -n 19 $command > $cache.tmp 2>/dev/null");
+    sys("mv $cache.tmp $cache");
+    sys("cat $cache");
+}
+
+sub sys {
+    my $cmd = shift;
+    #warn $cmd;
+    system $cmd;
+}
