@@ -211,3 +211,7 @@ user root
 
 [squid_*]
 env.squidport 80
+
+[hailo_twatterhose]
+env.brain /home/avar/g/bot-twatterhose/twatterhose.brn
+env.name Twatterhose
