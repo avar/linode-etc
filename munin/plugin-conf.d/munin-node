@@ -208,3 +208,6 @@ env.label_v_only 1
 
 [downlode_302_victims]
 user root
+
+[squid_*]
+env.squidport 80
