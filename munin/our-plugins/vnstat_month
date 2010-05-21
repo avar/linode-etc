@@ -19,6 +19,9 @@ totaltx.cdef totaltx,1000000,*
 totalrx.label Received
 totalrx.info Total data received.
 totalrx.cdef totalrx,1000000,*
+totalrx.label Total
+totalrx.info Total data sent & received.
+totalrx.cdef totalrx,1000000,*
 END
     }
     default {
@@ -30,10 +33,12 @@ END
 
         my $rx = sum( map { $_->{rx_mib} } @relevant );
         my $tx = sum( map { $_->{tx_mib} } @relevant );
+        my $tt = $rx + $tx;
 
         print <<"END";
 totalrx.value $rx
 totaltx.value $tx
+totaltt.value $tt
 END
     }
 }
