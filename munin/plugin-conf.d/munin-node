@@ -206,9 +206,6 @@ env.graph_info The number of relation source=* tags in the OpenStreetMap databas
 env.k_whitelist source
 env.label_v_only 1
 
-[downlode_302_victims]
-user root
-
 [squid_*]
 env.squidport 80
 
