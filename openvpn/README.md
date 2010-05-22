@@ -1,9 +1,9 @@
 # OpenVPN server setup
 
 On v, as documented
-[on the debian wiki](http://wiki.debian.org/HowTo/openvpn):
+[on the debian wiki](http://wiki.debian.org/HowTo/openvpn), generate a
+secret key:
 
-openvpn
     openvpn --genkey --secret static.key
     
 Then start openvpn:
