@@ -9,11 +9,9 @@ if ( ! -f $cache || -O $cache ) {
     $command = "du -sk $path" unless $command;
     sys("ionice -c 2 -n 6 nice -n 19 $command > $cache.tmp 2>/dev/null");
     sys("mv $cache.tmp $cache");
-    sys("cat $cache");
 }
 
 sub sys {
     my $cmd = shift;
-    #warn $cmd;
     system $cmd;
 }
