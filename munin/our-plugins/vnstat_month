@@ -19,9 +19,9 @@ totaltx.cdef totaltx,1000000,*
 totalrx.label Received
 totalrx.info Total data received.
 totalrx.cdef totalrx,1000000,*
-totalrx.label Total
-totalrx.info Total data sent & received.
-totalrx.cdef totalrx,1000000,*
+totaltt.label Total
+totaltt.info Total data sent & received.
+totaltt.cdef totalrx,1000000,*
 END
     }
     default {
