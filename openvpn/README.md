@@ -24,9 +24,10 @@ laptop.
 
 # GUI client network-manager setup
 
-openvpn`, or somewhere else
-secure. Then set things up like this in GNOME's
-NetworkManager. Adjusting `Local IP Address` to something else:
+Copy v's `/etc/openvpn/static.key` to your own
+`/etc/openvpn/static.key` (or somewhere else secure). Then set things
+up like this in GNOME's NetworkManager. Adjusting `Local IP Address`
+to something else:
 
 ![OpenVPN setup with NetworkManager](http://github.com/avar/linode-etc/raw/master/openvpn/v.nix.is-vpn-network-manager.png)
 
