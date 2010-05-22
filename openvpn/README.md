@@ -10,6 +10,11 @@ Then start openvpn:
 
     sudo service openvpn start
     
+First you have to have done this somewhere:
+
+    echo 1 > /proc/sys/net/ipv4/ip_forward
+    sudo iptables -t nat -A POSTROUTING -s 10.9.8.0/24 -o eth0 -j MASQUERADE
+    
 # GUI client network-manager setup
 
 Copy v's `/etc/openvpn/static.key` to your own
