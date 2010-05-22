@@ -8,20 +8,8 @@ openvpn
     
 Then start openvpn:
 
-openvpn start
+    sudo service openvpn start
     
-# Manual client setup
-
-tun0.conf`:
-
-    remote v.nix.is
-    dev tun0
-    ifconfig 10.9.8.X 10.9.8.1
-    secret static.key
-    
-Replace `X` with some number, e.g. `3`, `1` is v, `2` is avar's
-laptop.
-
 # GUI client network-manager setup
 
 Copy v's `/etc/openvpn/static.key` to your own
@@ -43,5 +31,24 @@ And ping your client from v:
     PING 10.9.8.2 (10.9.8.2) 56(84) bytes of data.
     64 bytes from 10.9.8.2: icmp_seq=1 ttl=64 time=45.1 ms
     
-And your routes will look like this:
+And your routes will look something like this:
     
+    $ route -n
+    Kernel IP routing table
+    Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+    109.74.193.250  192.168.2.1     255.255.255.255 UGH   0      0        0 wlan0
+    # The important bit, all traffic through the VPN
+    10.9.8.1        0.0.0.0         255.255.255.255 UH    0      0        0 tun0
+    ...
+    
+# Manual client setup
+
+tun0.conf`:
+
+    remote v.nix.is
+    dev tun0
+    ifconfig 10.9.8.X 10.9.8.1
+    secret static.key
+    
+Replace `X` with some number, e.g. `3`, `1` is v, `2` is avar's
+laptop.
