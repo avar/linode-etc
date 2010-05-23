@@ -6,6 +6,7 @@ use Hailo;
 use JSON;
 use File::Slurp qw/ slurp /;
 use Sys::Hostname qw/ hostname /;
+use Time::HiRes qw/ gettimeofday tv_interval /;
 
 =head1 NAME
 
@@ -29,16 +30,23 @@ Load load remote statistics:
     # Loading
     brain=~/g/bot-twatterhose/twatterhose.brn name=Twatterhose mode=load file=/tmp/hailo.json perl /etc/munin/our-plugins/hailo_
 
+To get info about reply times just supply C<test=time> (C<test=stats>
+is the default>).
+
 =cut
 
 my $brain = $ENV{brain};
 my $name  = $ENV{name} // $brain;
 my $mode  = $ENV{mode} // "simple";
+my $test  = $ENV{test} // "stats";
+my $times = $ENV{times} // 100;
 my $file  = $ENV{file};
 
 given ($ARGV[0]) {
     when ("config") {
-        print <<"END";
+        given ($test) {
+            when ('stats') {
+                print <<"END";
 graph_title Hailo statistics for $name
 graph_args --base 1000 -l 0
 graph_vlabel count
@@ -61,6 +69,24 @@ next_tokens.label next tokens
 next_tokens.type GAUGE
 next_tokens.info The number of next_tokens in the brain
 END
+            }
+            when ('time') {
+                print <<"END";
+graph_title Hailo reply time for $name
+graph_args --base 1000 -l 0
+graph_vlabel millisecods
+graph_category hailo
+graph_info The time it takes the $name Hailo brain to make $times replies
+
+time.label time
+time.type GAUGE
+time.info The time it took the brain to generate $times replies
+END
+            }
+            default {
+                die "Unknown test $test";
+            }
+        }
     }
     default {
         given ($mode) {
@@ -91,9 +117,32 @@ END
 
 sub get_stats {
     my ($brain) = @_;
-    my $hailo = Hailo->new(brain => $brain);
     my %stats;
-    @stats{qw/tokens expressions prev_tokens next_tokens/} = $hailo->stats;
+    my $hailo = Hailo->new(brain => $brain);
+
+    given ($test) {
+        when ('stats') {
+            @stats{qw/tokens expressions prev_tokens next_tokens/} = $hailo->stats;
+        }
+        when ('time') {
+            # One reply to set up DB connections etc.
+            $hailo->reply();
+
+            my $start_time = [gettimeofday()];
+            for (1 .. $times) {
+                my $reply = $hailo->reply();
+                die "Didn't get a reply" unless defined $reply;
+            }
+            my $elapsed = tv_interval($start_time);
+
+            $stats{time} = int $elapsed * 1_000;
+            $stats{_times} = $times;
+        }
+        default {
+            die "Unknown test $test";
+        }
+    }
+
     return \%stats;
 }
 

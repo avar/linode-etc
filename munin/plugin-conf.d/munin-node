@@ -216,3 +216,4 @@ env.name Twatterhose
 [hailo_reply_time_twatterhose]
 env.brain /home/avar/g/bot-twatterhose/twatterhose.brn
 env.name Twatterhose
+env.test time
