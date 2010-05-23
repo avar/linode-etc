@@ -1,0 +1,4 @@
+SHELL=/bin/bash
+PATH=/usr/bin:/usr/local/bin
+
+*/35 * * * * avar (sleep $(($RANDOM \% 600))) && /etc/bin/cron/twatterhose-twat

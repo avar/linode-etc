@@ -1,0 +1,22 @@
+#!/bin/bash
+
+export brain=~/g/bot-twatterhose/twatterhose.brn
+password=$(cat ~/.twatterhose.password)
+
+# Run Twatterhose
+cronjob --errors-only --jobname twatterhose --command "
+    perl -I ~/g/bot-twatterhose/lib ~/g/bot-twatterhose/bin/twatterhose \
+        --username twatterhose \
+        --password $password \
+        --brain $brain \
+    | grep '^Got twat' >> ~/g/bot-twatterhose/twatterhose.txt
+"
+
+# Update munin stats
+
+export name=Twatterhose
+export mode=dump
+state_dir=/var/lib/munin/plugin-state/hailo_
+
+test=stats file=$state_dir/twatterhose-stats.json perl /etc/munin/our-plugins/hailo_
+test=time  file=$state_dir/twatterhose-time.json  perl /etc/munin/our-plugins/hailo_

@@ -222,10 +222,14 @@ env.mode load
 env.file /home/failo/failo/munin/hailo-time.json
 
 [hailo_twatterhose]
-env.brain /home/avar/g/bot-twatterhose/twatterhose.brn
+env.test stats
+env.mode load
 env.name Twatterhose
+env.file /var/lib/munin/plugin-state/hailo_/twatterhose-stats.json
 
 [hailo_reply_time_twatterhose]
-env.brain /home/avar/g/bot-twatterhose/twatterhose.brn
-env.name Twatterhose
 env.test time
+env.mode load
+env.name Twatterhose
+env.file /var/lib/munin/plugin-state/hailo_/twatterhose-time.json
+
