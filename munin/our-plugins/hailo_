@@ -65,21 +65,21 @@ graph_vlabel count
 graph_category hailo
 graph_info Statistics about the $name Hailo brain
 
-tokens.label tokens
-tokens.type GAUGE
-tokens.info The number of tokens in the brain
-
-expressions.label expressions
-expressions.type GAUGE
-expressions.info The number of expressions in the brain
+next_tokens.label next tokens
+next_tokens.type GAUGE
+next_tokens.info The number of next_tokens in the brain
 
 prev_tokens.label prev tokens
 prev_tokens.type GAUGE
 prev_tokens.info The number of prev_tokens in the brain
 
-next_tokens.label next tokens
-next_tokens.type GAUGE
-next_tokens.info The number of next_tokens in the brain
+expressions.label expressions
+expressions.type GAUGE
+expressions.info The number of expressions in the brain
+
+tokens.label tokens
+tokens.type GAUGE
+tokens.info The number of tokens in the brain
 END
             }
             when ('time') {
