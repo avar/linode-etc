@@ -1,10 +1,40 @@
 #!/usr/bin/env perl
 use 5.010;
+use autodie;
 use Any::Moose;
 use Hailo;
+use JSON;
+use File::Slurp qw/ slurp /;
+use Sys::Hostname qw/ hostname /;
+
+=head1 NAME
+
+hailo_ - Print information about a Hailo brain
+
+=head1 SYNOPSIS
+
+When you have a brain locally:
+
+    # Simple
+    $ brain=~/g/bot-twatterhose/twatterhose.brn name=Twatterhose perl /etc/munin/our-plugins/hailo_
+
+To transmit statistics to a remote machine:
+
+    # Dumping
+    brain=~/g/bot-twatterhose/twatterhose.brn name=Twatterhose mode=dump file=/tmp/hailo.json perl /etc/munin/our-plugins/hailo_
+    cat /tmp/hailo.json
+
+Load load remote statistics:
+
+    # Loading
+    brain=~/g/bot-twatterhose/twatterhose.brn name=Twatterhose mode=load file=/tmp/hailo.json perl /etc/munin/our-plugins/hailo_
+
+=cut
 
 my $brain = $ENV{brain};
 my $name  = $ENV{name} // $brain;
+my $mode  = $ENV{mode} // "simple";
+my $file  = $ENV{file};
 
 given ($ARGV[0]) {
     when ("config") {
@@ -33,9 +63,45 @@ next_tokens.info The number of next_tokens in the brain
 END
     }
     default {
-        my $hailo = Hailo->new(brain => $brain);
-        my %stats;
-        @stats{qw/tokens expressions prev_tokens next_tokens/} = $hailo->stats;
-        say "$_.value $stats{$_}" for sort keys %stats;
+        given ($mode) {
+            when ('simple') {
+                my $stats = get_stats($brain);
+                say_stats($stats);
+            }
+            when ('dump') {
+                my $stats = get_stats($brain);
+                open my $fh, ">", $file;
+                $stats->{_program} = $0;
+                $stats->{_time} = time;
+                $stats->{_hostname} = hostname();
+                say $fh encode_json($stats);
+                close $fh;
+            }
+            when ('load') {
+                my $cont = slurp $file;
+                my $stats = decode_json($cont);
+                say_stats($stats);
+            }
+            default {
+                die "Unknown mode $mode";
+            }
+        }
     }
+}
+
+sub get_stats {
+    my ($brain) = @_;
+    my $hailo = Hailo->new(brain => $brain);
+    my %stats;
+    @stats{qw/tokens expressions prev_tokens next_tokens/} = $hailo->stats;
+    return \%stats;
+}
+
+sub say_stats {
+    my ($stats) = @_;
+    for my $key (sort keys %$stats) {
+        next if $key =~ /^_/;
+        say "$key.value $stats->{$key}";
+    }
+    return;
 }
