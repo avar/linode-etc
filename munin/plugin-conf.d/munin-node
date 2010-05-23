@@ -213,13 +213,13 @@ env.squidport 80
 env.name failo
 env.test stats
 env.mode load
-env.file /home/failo/failo/munin/hailo-stats.json
+env.file /var/lib/munin/plugin-state/hailo_/hailo-stats.json
 
 [hailo_reply_time_failo]
 env.name failo
 env.test time
 env.mode load
-env.file /home/failo/failo/munin/hailo-time.json
+env.file /var/lib/munin/plugin-state/hailo_/hailo-time.json
 
 [hailo_twatterhose]
 env.test stats
