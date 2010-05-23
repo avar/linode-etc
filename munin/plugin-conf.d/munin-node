@@ -209,6 +209,18 @@ env.label_v_only 1
 [squid_*]
 env.squidport 80
 
+[hailo_failo]
+env.name failo
+env.test stats
+env.mode load
+env.file /home/failo/failo/munin/hailo-stats.json
+
+[hailo_reply_time_failo]
+env.name failo
+env.test time
+env.mode load
+env.file /home/failo/failo/munin/hailo-time.json
+
 [hailo_twatterhose]
 env.brain /home/avar/g/bot-twatterhose/twatterhose.brn
 env.name Twatterhose
