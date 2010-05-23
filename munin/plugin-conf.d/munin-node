@@ -215,7 +215,7 @@ env.test stats
 env.mode load
 env.file /var/lib/munin/plugin-state/hailo_/hailo-stats.json
 
-[hailo_reply_time_failo]
+[hailo_failo_reply_time]
 env.name failo
 env.test time
 env.mode load
@@ -227,7 +227,7 @@ env.mode load
 env.name Twatterhose
 env.file /var/lib/munin/plugin-state/hailo_/twatterhose-stats.json
 
-[hailo_reply_time_twatterhose]
+[hailo_twatterhose_reply_time]
 env.test time
 env.mode load
 env.name Twatterhose
