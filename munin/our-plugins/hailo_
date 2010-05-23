@@ -39,11 +39,11 @@ Set something like this up in cron:
 
     # Brain stats
     brain=~/failo.failo.brn name=Failo test=stats mode=dump file=/tmp/hailo-stats.json perl /etc/munin/our-plugins/hailo_
-    ssh v "cat > /tmp/hailo-stats.json && mv /tmp/hailo-stats.json ~failo/failo/munin/" < /tmp/hailo-stats.json
+    ssh v "cat > ~failo/failo/munin/hailo-stats.json.tmp && mv ~failo/failo/munin/hailo-stats.json.tmp ~failo/failo/munin/" < /tmp/hailo-stats.json
 
     # Time stats
     brain=~/failo.failo.brn name=Failo test=time mode=dump file=/tmp/hailo-time.json perl /etc/munin/our-plugins/hailo_
-    ssh v "cat > /tmp/hailo-time.json && mv /tmp/hailo-time.json ~failo/failo/munin/" < /tmp/hailo-time.json
+    ssh v "cat > ~failo/failo/munin/hailo-time.json.tmp && mv ~failo/failo/munin/hailo-time.json.tmp ~failo/failo/munin/" < /tmp/hailo-time.json
 
 =cut
 
