@@ -33,6 +33,18 @@ Load load remote statistics:
 To get info about reply times just supply C<test=time> (C<test=stats>
 is the default>).
 
+=head1 Host -> Munin
+
+Set something like this up in cron:
+
+    # Brain stats
+    brain=~/failo.failo.brn name=Failo test=stats mode=dump file=/tmp/hailo-stats.json perl /etc/munin/our-plugins/hailo_
+    scp /tmp/hailo-stats.json v:~failo/failo/munin/
+
+    # Time stats
+    brain=~/failo.failo.brn name=Failo test=time mode=dump file=/tmp/hailo-time.json perl /etc/munin/our-plugins/hailo_
+    scp /tmp/hailo-time.json v:~failo/failo/munin/
+
 =cut
 
 my $brain = $ENV{brain};
