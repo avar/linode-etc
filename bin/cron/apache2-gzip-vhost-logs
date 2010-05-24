@@ -1,0 +1,13 @@
+#!/usr/bin/env perl
+use perl5i::latest;
+
+our $apache2_logs = "/var/log/apache2";
+our @vhosts = map { s[^.*/][]; $_ } grep { -d } glob "$apache2_logs/*";
+
+for my $vhost (@vhosts) {
+    chdir "$apache2_logs/$vhost";
+    my $current_log = readlink 'access.log';
+    my @logs = glob "*-*.log";
+    my @old_logs = grep { $_ ne $current_log } @logs;
+    system gzip => $_ for @old_logs;
+}
