@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-use Modern::Perl;
+use perl5i::latest;
 use File::Spec::Functions qw(catfile);
 
 my $statedir  = $ENV{MUNIN_PLUGSTATE};

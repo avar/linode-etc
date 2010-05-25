@@ -13,7 +13,7 @@ multiping_async - Like the multiping plugin but runs asynchronously using L<POE:
 
 =head1 SYNOPSIS
 
-    sudo cpanp -i Modern::Perl MooseX::Declare POE::Component::Client::Ping
+    sudo cpanp -i MooseX::Declare POE::Component::Client::Ping
     sudo munin-run multiping_async
 
 =head1 CONFIGURATION

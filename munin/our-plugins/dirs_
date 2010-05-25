@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-use Modern::Perl;
+use perl5i::latest;
 use Munin::Plugin;
 use File::Slurp qw(slurp);
 use File::Spec::Functions qw(catfile);

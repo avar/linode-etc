@@ -1,9 +1,7 @@
 #!/usr/bin/env perl
-use autodie;
-use Modern::Perl;
+use perl5::latest;
 use Apache::ConfigParser;
 use Template;
-use Data::Dump 'dump';
 
 my @configs = glob "/etc/apache2/sites-enabled/*";
 my $DATA = join '', <DATA>;

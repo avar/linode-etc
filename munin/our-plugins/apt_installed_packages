@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-use Modern::Perl;
+use perl5i::latest;
 
 given ($ARGV[0]) {
     when ("config") {

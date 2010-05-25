@@ -1,7 +1,6 @@
 #!/usr/bin/env perl
-use Modern::Perl;
+use perl5i::latest;
 use Munin::Plugin;
-use Data::Dump 'dump';
 
 my %mem = mem_user();
 my @mem = map { [ $_, $mem{$_} ] } sort { $mem{$b} <=> $mem{$a} } keys %mem;
