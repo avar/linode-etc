@@ -1,3 +1,5 @@
+PATH=/usr/bin:/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin
+
 ##
 ## avar's daily mkgmap generation
 ##
