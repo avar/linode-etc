@@ -1,2 +1,3 @@
-PATH=/usr/bin:/usr/local/bin
+PATH=/usr/bin:/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin
+
 4 * * * * failo nice -n 15 ionice -c 2 -n 6 /etc/bin/cron/failo-wisdom-update
