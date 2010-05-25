@@ -1,5 +1,5 @@
 SHELL=/bin/bash
-PATH=/bin:/usr/bin:/usr/local/bin
+PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/bin:/usr/bin
 
 */35 * * * * avar (sleep $(($RANDOM \% 600))) && /etc/bin/cron/twatterhose-twat
 @daily       avar rm ~/g/bot-twatterhose/twatterhose.brn
