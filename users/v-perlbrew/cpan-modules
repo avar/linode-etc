@@ -40,3 +40,12 @@ Data::Validate::URI
 Capture::Tiny
 Date::Calc
 GD
+
+# Catalyst apps
+FCGI
+Catalyst::Devel
+Catalyst::Plugin::Unicode
+Catalyst::View::TT
+Catalyst::Model::Adaptor
+Catalyst::Log::Log4perl
+Catalyst::Controller::REST
