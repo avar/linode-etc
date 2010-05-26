@@ -9,6 +9,10 @@ perl5i::latest
 Task::BeLike::AVAR
 App::Nopaste::Service::Linode
 
+# CPAN
+App::cpanminus
+App::cpanoutdated
+
 # failo
 Hailo
 App::Bondage
