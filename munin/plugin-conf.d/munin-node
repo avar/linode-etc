@@ -233,3 +233,5 @@ env.mode load
 env.name Twatterhose
 env.file /var/lib/munin/plugin-state/hailo_/twatterhose-time.json
 
+[vnstat_month]
+env.limittt 800000

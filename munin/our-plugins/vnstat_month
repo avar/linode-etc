@@ -5,6 +5,8 @@ use warnings;
 use autodie;
 use List::Util 'sum';
 
+my $limittt = $ENV{limittt};
+
 given ($ARGV[0]) {
     when ("config") {
         print <<END;
@@ -23,6 +25,13 @@ totaltt.label Total
 totaltt.info Total data sent & received.
 totaltt.cdef totaltt,1000000,*
 END
+        if ($limittt) {
+            print <<END;
+limittt.label Limit
+limittt.info The data transfer limit for this month
+limittt.cdef limittt,1000000,*
+END
+        }
     }
     default {
         my @days = get_daylines();
@@ -40,6 +49,11 @@ totalrx.value $rx
 totaltx.value $tx
 totaltt.value $tt
 END
+        if ($limittt) {
+            print <<"END";
+limittt.value $limittt
+END
+        }
     }
 }
 
