@@ -10,7 +10,8 @@
 
         <Directory /home/*/www>
             AllowOverride FileInfo AuthConfig Limit Indexes
-            Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec
+            Options ExecCGI MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec
+            AddHandler cgi-script .cgi
             <Limit GET POST OPTIONS>
                 Order allow,deny
                 Allow from all
