@@ -1,0 +1,38 @@
+# -*- conf -*-
+
+# These modules need to be installed for various things on v to work.
+
+# Run it like: grep -v ^# cpan-modules | cpanm
+
+# misc
+perl5i::latest
+Task::BeLike::AVAR
+App::Nopaste::Service::Linode
+
+# failo
+Hailo
+App::Bondage
+POE::Component::IRC::Hailo
+POE::Component::Hailo
+POE::Component::IRC::Plugin::ImageMirror
+POE::Component::IRC::Plugin::RTorrentStatus
+POE::Component::IRC::Plugin::RTorrentStatus
+DateTime::Format::Human::Duration
+String::Approx
+CGI::Simple
+POE::Component::Server::SimpleHTTP
+
+# Twatterhose
+Bot::Twatterhose
+
+# failo-wisdom
+App::QuoteCC
+
+# Misc cron jobs
+App::Cronjob
+
+# osm.nix.is cron jobs
+Data::Validate::URI
+Capture::Tiny
+Date::Calc
+GD
