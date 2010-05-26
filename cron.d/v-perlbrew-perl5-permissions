@@ -1,0 +1,2 @@
+@daily root chmod g+rw ~v-perlbrew/perl5/
+@daily root chown -R v-perlbrew:v-perlbrew ~v-perlbrew/perl5
