@@ -9,6 +9,7 @@ perl5i::latest
 Task::BeLike::AVAR
 App::Nopaste::Service::Linode
 App::Ack
+Devel::NYTProf
 
 # CPAN
 App::cpanminus
