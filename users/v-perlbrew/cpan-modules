@@ -16,6 +16,8 @@ App::cpanoutdated
 
 # failo
 Hailo
+DBD::Pg
+DBD::mysql
 App::Bondage
 POE::Component::IRC::Hailo
 POE::Component::Hailo
