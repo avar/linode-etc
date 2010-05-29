@@ -97,8 +97,8 @@ Nickname vee
 ## Define these to limit how much relayed traffic you will allow. Your
 ## own traffic is still unthrottled. Note that RelayBandwidthRate must
 ## be at least 20 KBytes.
-RelayBandwidthRate 500 KBytes
-RelayBandwidthBurst 1000 KBytes
+RelayBandwidthRate 1500 KBytes
+RelayBandwidthBurst 3000 KBytes
 
 # Don't suck up all our bandwidth. Note that the total bandwidth tor
 # might use will be ~ AccountingMax * 2. See torrc(5)
