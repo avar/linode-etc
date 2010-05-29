@@ -18,3 +18,8 @@ Explanation: Maybe php-benchmark/phpunit don't need to be here, but just to be s
 Package: php-pear php5 php5-common php5-cli php-apc php5-cgi php-benchmark phpunit libapache2-mod-php5 php5-gd php5-curl php5-ldap php5-mysql php5-mcrypt php5-tidy php5-sqlite php5-dbg
 Pin: release a=stable
 Pin-Priority: 1001
+
+Explanation: Ævar likes being on the bleeding Emacs edge
+Package: emacs23 emacs23-bin-common emacs23-common emacs23-common-non-dfsg emacs23-nox
+Pin: release a=unstable
+Pin-Priority: 1001
