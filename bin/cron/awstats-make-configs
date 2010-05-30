@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-use perl5::latest;
+use perl5i::latest;
 use Apache::ConfigParser;
 use Template;
 
