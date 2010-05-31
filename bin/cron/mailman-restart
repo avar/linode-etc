@@ -1,0 +1,8 @@
+#!/bin/sh
+/etc/init.d/mailman stop >/dev/null 2>&1
+sleep 5
+
+/etc/init.d/mailman start >/dev/null
+sleep 30
+
+/etc/init.d/mailman stop >/dev/null
