@@ -4,4 +4,4 @@ PATH=/bin:/usr/bin:/usr/sbin
 # being started, this should give it time to build up connections.
 
 0  1 * * * root sudo service tor start > /dev/null
-30 6 * * * root sudo service tor start > /dev/null
+30 6 * * * root sudo service tor stop  > /dev/null
