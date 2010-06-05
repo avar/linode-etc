@@ -3,5 +3,5 @@ PATH=/bin:/usr/bin:/usr/sbin
 # Run Tor during the night only. It starts relaying an hour after
 # being started, this should give it time to build up connections.
 
-0  1 * * * root sudo service tor start > /dev/null
-30 6 * * * root sudo service tor stop  > /dev/null
+#0  1 * * * root sudo service tor start > /dev/null
+#30 6 * * * root sudo service tor stop  > /dev/null

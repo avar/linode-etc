@@ -12,9 +12,9 @@ PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/c
 # Database import. There's a munin script that scrapes this data from
 # the database
 
-5  7     * * *  root service postgresql-8.4 start > /dev/null
+#5  7     * * *  root service postgresql-8.4 start > /dev/null
 10 7     * * *  avar /var/www/osm.nix.is/script/daily-database-import.pl
-50 7     * * *  root service postgresql-8.4 stop > /dev/null
+#50 7     * * *  root service postgresql-8.4 stop > /dev/null
 
 # Generate Garmin map / osmdiff
 0  8     * * *  avar /var/www/osm.nix.is/script/generate-garmin-img-from-osm.sh
