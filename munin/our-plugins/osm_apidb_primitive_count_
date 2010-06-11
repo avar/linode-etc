@@ -1,4 +1,5 @@
-#!/usr/bin/env perl
+#!/home/v-perlbrew/perl5/perlbrew/bin/perl
+use lib '/usr/share/perl5';
 use 5.010;
 use strict;
 use lib '/etc/munin/our-plugins';

@@ -1,4 +1,5 @@
-#!/usr/bin/env perl
+#!/home/v-perlbrew/perl5/perlbrew/bin/perl
+use lib '/usr/share/perl5';
 package Munin::Plugin::Multiping::Async;
 use 5.10.0;
 use MooseX::POE;
