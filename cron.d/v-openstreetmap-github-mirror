@@ -1,6 +1,6 @@
 # OpenStreetMap mirrors
 
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/bin:/usr/bin
 
 # JOSM is a special case
 */30 * * * * osm-mirror nice -n 15 ionice -c 2 -n 6 cronjob -E -j josm -c '~/g/openstreetmap-mirror/josm-mirror.sh'
