@@ -49,6 +49,7 @@ GD
 FCGI
 Catalyst::Devel
 Catalyst::Plugin::Unicode
+Catalyst::Plugin::Data::Localize
 Catalyst::View::TT
 Catalyst::Model::Adaptor
 Catalyst::Log::Log4perl
