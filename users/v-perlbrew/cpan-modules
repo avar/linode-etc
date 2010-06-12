@@ -15,20 +15,26 @@ Devel::NYTProf
 App::cpanminus
 App::cpanoutdated
 
-# failo
+# hailo
 Hailo
-DBD::Pg
-DBD::mysql
-App::Bondage
 POE::Component::IRC::Hailo
 POE::Component::Hailo
+DBD::Pg
+DBD::mysql
+
+# failo
+List::MoreUtils
+App::Bondage
 POE::Component::IRC::Plugin::ImageMirror
 POE::Component::IRC::Plugin::RTorrentStatus
-POE::Component::IRC::Plugin::RTorrentStatus
-DateTime::Format::Human::Duration
 String::Approx
 CGI::Simple
 POE::Component::Server::SimpleHTTP
+URI::Title
+JSON::XS
+YAML::XS
+Net::Twitter::Lite
+Scalar::Util
 
 # Twatterhose
 Bot::Twatterhose
