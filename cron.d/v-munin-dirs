@@ -1,3 +1,5 @@
+PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/bin:/usr/bin:/usr/sbin
+
 10 5 * * * root /etc/bin/cron/munin-dirs dirs_root-cache '/[a-oq-z]*'
 41 5 * * * root /etc/bin/cron/munin-dirs homedirs-cache '/home/*'
 20 5 * * * root /etc/bin/cron/munin-dirs dirs_var_www-cache '/var/www/*'

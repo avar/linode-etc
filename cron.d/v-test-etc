@@ -1,2 +1,4 @@
+PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/bin:/usr/bin
+
 0 22      * * *  pdns     perl -e 'my $out = qx[prove -vr    /etc/bind/t 2>&1]; print $out if $?'
 0 22      * * *  www-data perl -e 'my $out = qx[prove -vr /etc/apache2/t 2>&1]; print $out if $?'
