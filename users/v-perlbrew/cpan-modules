@@ -52,6 +52,9 @@ Capture::Tiny
 Date::Calc
 GD
 
+# avar's cron jobs
+Email::Send
+
 # Catalyst apps
 FCGI
 Catalyst::Devel
