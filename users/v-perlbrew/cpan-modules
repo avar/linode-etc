@@ -11,7 +11,8 @@ App::Nopaste::Service::Linode
 App::Ack
 Devel::NYTProf
 
-# CPAN
+# perl / CPAN
+App::perlbrew
 App::cpanminus
 App::cpanoutdated
 
