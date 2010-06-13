@@ -56,6 +56,9 @@ GD
 # avar's cron jobs
 Email::Send
 
+# v-awstats-make-configs
+Apache::ConfigParser
+
 # Catalyst apps
 FCGI
 Catalyst::Devel
