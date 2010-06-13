@@ -32,6 +32,7 @@ String::Approx
 CGI::Simple
 POE::Component::Server::SimpleHTTP
 URI::Title
+WWW::YouTube::Download
 JSON::XS
 YAML::XS
 Net::Twitter::Lite
