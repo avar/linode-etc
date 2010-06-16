@@ -1,4 +1,18 @@
 <VirtualHost *:81>
-   ServerName vf.mw.dev.avar.nix.is
-   DocumentRoot /var/www/vf.mw.dev.avar.nix.is
+    ServerName vf.mw.dev.avar.nix.is
+    DocumentRoot /var/www/vf.mw.dev.avar.nix.is
+
+    # From http://www.mediawiki.org/wiki/Manual:Short_URL/Page_title_--_Aliasing_method--Root_access  
+    <IfModule mod_alias.c>
+        Alias /skins  /var/www/vf.mw.dev.avar.nix.is/skins
+        Alias /images /var/www/vf.mw.dev.avar.nix.is/images
+        Alias /extensions /var/www/vf.mw.dev.avar.nix.is/extensions
+        Alias /index.php /var/www/vf.mw.dev.avar.nix.is/index.php/
+        Alias /robots.txt /var/www/vf.mw.dev.avar.nix.is/robots.txt
+        Alias / /var/www/vf.mw.dev.avar.nix.is/index.php/
+        <Directory /var/www/vf.mw.dev.avar.nix.is>
+            Options -Indexes
+        </Directory>
+    </IfModule>
+
 </VirtualHost>
