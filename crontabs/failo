@@ -1,4 +1,4 @@
 SHELL=/bin/bash
-PATH=/usr/local/bin:/usr/bin:/bin
+PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/usr/local/bin:/usr/bin:/bin
 
 @reboot screen -d -m
