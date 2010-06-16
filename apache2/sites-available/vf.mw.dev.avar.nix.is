@@ -1,0 +1,4 @@
+<VirtualHost *:81>
+   ServerName vf.mw.dev.avar.nix.is
+   DocumentRoot /var/www/vf.mw.dev.avar.nix.is
+</VirtualHost>
