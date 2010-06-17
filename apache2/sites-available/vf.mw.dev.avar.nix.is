@@ -8,7 +8,7 @@
     # Don't rewrite requests for files in MediaWiki subdirectories,
     # MediaWiki PHP files, HTTP error documents, favicon.ico, or robots.txt
     RewriteCond %{REQUEST_URI} !^/(stylesheets|images|skins|extensions)/
-    RewriteCond %{REQUEST_URI} !^/(redirect|texvc|index).php
+    RewriteCond %{REQUEST_URI} !^/(api|redirect|texvc|index).php
     RewriteCond %{REQUEST_URI} !^/error/(40(1|3|4)|500).html
     RewriteCond %{REQUEST_URI} !^/favicon.ico
     RewriteCond %{REQUEST_URI} !^/robots.txt
