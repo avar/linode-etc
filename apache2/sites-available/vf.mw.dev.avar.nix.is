@@ -2,17 +2,18 @@
     ServerName vf.mw.dev.avar.nix.is
     DocumentRoot /var/www/vf.mw.dev.avar.nix.is
 
-    # From http://www.mediawiki.org/wiki/Manual:Short_URL/Page_title_--_Aliasing_method--Root_access  
-    <IfModule mod_alias.c>
-        Alias /skins  /var/www/vf.mw.dev.avar.nix.is/skins
-        Alias /images /var/www/vf.mw.dev.avar.nix.is/images
-        Alias /extensions /var/www/vf.mw.dev.avar.nix.is/extensions
-        Alias /index.php /var/www/vf.mw.dev.avar.nix.is/index.php/
-        Alias /robots.txt /var/www/vf.mw.dev.avar.nix.is/robots.txt
-        Alias / /var/www/vf.mw.dev.avar.nix.is/index.php/
-        <Directory /var/www/vf.mw.dev.avar.nix.is>
-            Options -Indexes
-        </Directory>
-    </IfModule>
+    # From http://www.mediawiki.org/wiki/Manual:Short_URL/Page_title_--_Working_method_with_mediawiki-1.11 
+    RewriteEngine On
+    
+    # Don't rewrite requests for files in MediaWiki subdirectories,
+    # MediaWiki PHP files, HTTP error documents, favicon.ico, or robots.txt
+    RewriteCond %{REQUEST_URI} !^/(stylesheets|images|skins|extensions)/
+    RewriteCond %{REQUEST_URI} !^/(redirect|texvc|index).php
+    RewriteCond %{REQUEST_URI} !^/error/(40(1|3|4)|500).html
+    RewriteCond %{REQUEST_URI} !^/favicon.ico
+    RewriteCond %{REQUEST_URI} !^/robots.txt
+    
+    # Rewrite http://wiki.example.com/article properly, this is the main rule
+    RewriteRule ^/(.*)$ /index.php/?title=$1 [L,QSA]
 
 </VirtualHost>
