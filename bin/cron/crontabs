@@ -1,5 +1,5 @@
 #!/bin/sh
-CRONTABS="leech failo"
+CRONTABS="leech failo freenet"
 
 for crontab in $CRONTABS; do
     # Skip cron(1) boilerplate
