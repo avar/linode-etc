@@ -1,3 +1,6 @@
 [submodule "github-backup"]
 	path = github-backup
 	url = git://github.com/avar/github-backup.git
+[submodule "munin/our-plugins/munin-plugin-freenet"]
+	path = munin/our-plugins/munin-plugin-freenet
+	url = git://github.com/avar/munin-plugin-freenet.git
