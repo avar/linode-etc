@@ -1,8 +1,12 @@
-package MuninOSMUtil;
+package Munin::Cache::Tiny;
 use strict;
 use Storable;
+use Exporter 'import';
 
-sub osm_cache
+our @EXPORT    = qw(munin_cache_invalidated_on_file_change);
+our @EXPORT_OK = @EXPORT;
+
+sub munin_cache_invalidated_on_file_change
 {
     my ($cache, $file, $generate_data) = @_;
 

@@ -6,8 +6,8 @@ use Munin::Plugin;
 use String::Truncate qw(elide);
 use Encode;
 
-use lib '/etc/munin/our-plugins';
-use MuninOSMUtil;
+use lib '/etc/munin/our-plugins/lib';
+use Munin::Cache::Tiny;
 
 binmode STDOUT, ":utf8";
 
@@ -35,7 +35,7 @@ my $Whats = $What.'s';
 my $title = $ENV{graph_title} // "The number of $what tags in OSM by key=value";
 my $desc = $ENV{graph_info}   // "The number of $what tags in the OpenStreetMap database by key=value";
 
-my $ret = MuninOSMUtil::osm_cache(
+my $ret = munin_cache_invalidated_on_file_change(
     $ENV{MUNIN_STATEFILE},
     '/var/www/osm.nix.is/latest/Iceland.osm.bz2',
     sub {

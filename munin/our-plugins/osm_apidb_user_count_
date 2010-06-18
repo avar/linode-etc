@@ -4,8 +4,8 @@ use 5.010;
 use strict;
 use Munin::Plugin;
 
-use lib '/etc/munin/our-plugins';
-use MuninOSMUtil;
+use lib '/etc/munin/our-plugins/lib';
+use Munin::Cache::Tiny;
 
 my $user = $ENV{PGUSER};
 my $pass = $ENV{PGPASSWORD};
@@ -21,7 +21,7 @@ my $Whats = $What.'s';
 my $title = $ENV{graph_title} // "$What edits by user";
 my $desc = $ENV{graph_info}   // "The number of ${what}s most recently edited by a given user";
 
-my $ret = MuninOSMUtil::osm_cache(
+my $ret = munin_cache_invalidated_on_file_change(
     $ENV{MUNIN_STATEFILE},
     '/var/www/osm.nix.is/latest/Iceland.osm.bz2',
     sub {

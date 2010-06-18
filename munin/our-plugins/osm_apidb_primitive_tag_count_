@@ -2,8 +2,8 @@
 use lib '/usr/share/perl5';
 use 5.010;
 use strict;
-use lib '/etc/munin/our-plugins';
-use MuninOSMUtil;
+use lib '/etc/munin/our-plugins/lib';
+use Munin::Cache::Tiny;
 
 my $user = $ENV{PGUSER};
 my $pass = $ENV{PGPASSWORD};
@@ -30,7 +30,7 @@ $what.type GAUGE
 END
     }
     default {
-        my $count = MuninOSMUtil::osm_cache(
+        my $count = munin_cache_invalidated_on_file_change(
             $ENV{MUNIN_STATEFILE},
             '/var/www/osm.nix.is/latest/Iceland.osm.bz2',
             sub {
