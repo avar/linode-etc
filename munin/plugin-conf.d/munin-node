@@ -261,3 +261,8 @@ env.label Store size
 env.what volatile.storeSize
 env.base 1024
 env.draw AREA
+
+[dirs_home_freenet_freenet_datastore]
+env.dirs Freenet datastore
+env.basename 1
+env.category freenet

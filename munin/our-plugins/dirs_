@@ -12,6 +12,7 @@ my $cache = catfile($statedir, $statefile . '-cache');
 
 my $dirs = $ENV{dirs};
 my $basename = $ENV{basename};
+my $category = $ENV{category} // 'disk';
 my @dirs = parse_du_sk($cache);
 
 given ($ARGV[0]) {
@@ -20,7 +21,7 @@ given ($ARGV[0]) {
 graph_title $dirs usage (in MB)
 graph_args --base 1024 -l 1
 graph_vlabel MBytes
-graph_category disk
+graph_category $category
 graph_info Shows the size of $dirs directories
 END
         for my $dir (@dirs) {
