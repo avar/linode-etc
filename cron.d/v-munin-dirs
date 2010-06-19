@@ -6,5 +6,5 @@ PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/c
 10 5 * * * root /etc/bin/cron/munin-dirs dirs_var_backup_github-cache '/var/backup/github/*'
 15 5 * * * root /etc/bin/cron/munin-dirs dirs_var_lib_openstreetmap_mirror-cache '/var/lib/openstreetmap-mirror/*'
 05 5 * * * root /etc/bin/cron/munin-dirs apache_vhost-cache '' "find /var/log/apache2 -maxdepth 1 -mindepth 1 -type d -exec du -sk {} \\; | sed 's,/.*/,,'"
-*/30 * * * * root /etc/bin/cron/munin-dirs dirs_home_freenet_freenet_datastore-cache ~freenet/freenet/datastore
+*/30 * * * * root /etc/bin/cron/munin-dirs dirs_home_freenet_freenet_datastore-cache /home/avar/freenet/freenet/datastore
 
