@@ -34,6 +34,7 @@ CGI::Simple
 POE::Component::Server::SimpleHTTP
 URI::Title
 WWW::YouTube::Download
+HTML::Entities
 JSON::XS
 YAML::XS
 Net::Twitter::Lite
