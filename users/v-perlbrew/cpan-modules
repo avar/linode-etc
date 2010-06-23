@@ -2,7 +2,8 @@
 
 # These modules need to be installed for various things on v to work.
 
-# Run it like: grep -v ^# cpan-modules | cpanm
+# Run it like: grep -v ^# ~v-perlbrew/cpan-modules | cpanm
+# Not installed: (cd /tmp && for mod in $(grep -v ^# ~v-perlbrew/cpan-modules | grep -v ^$); do perl -m$mod -e1 > /dev/null 2>&1 || echo $mod; done)
 
 # misc
 perl5i::latest
