@@ -40,6 +40,7 @@ JSON::XS
 YAML::XS
 Net::Twitter::Lite
 Scalar::Util
+POE::Quickie
 
 # Twatterhose
 Bot::Twatterhose
