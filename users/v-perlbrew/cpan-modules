@@ -50,6 +50,7 @@ App::QuoteCC
 
 # Misc cron jobs
 App::Cronjob
+Git::Megapull
 
 # osm.nix.is cron jobs
 Data::Validate::URI
