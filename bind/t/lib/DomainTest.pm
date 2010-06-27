@@ -52,7 +52,7 @@ sub run_public_tests {
 
     my $res = $self->dig_at($public, $domain, "NS");
 
-    cmp_ok(scalar(@$res), '==', scalar(@servers), "We should have " . scalar(@servers) . " public servers (<<@servers>>); We got: <<@$res>>");
+    cmp_ok(scalar(@$res), '==', scalar(@servers), "We should have " . scalar(@servers) . " public servers (<<@servers>>); We got " . scalar(@$res) . ": <<@$res>>");
 }
 
 sub dig_at
