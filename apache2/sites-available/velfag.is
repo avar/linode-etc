@@ -1,6 +1,6 @@
 <VirtualHost *:81>
-    ServerName vf.mw.dev.avar.nix.is
-    DocumentRoot /var/www/vf.mw.dev.avar.nix.is
+    ServerName velfag.is
+    DocumentRoot /var/www/velfag.is
 
     # From http://www.mediawiki.org/wiki/Manual:Short_URL/Page_title_--_Working_method_with_mediawiki-1.11 
     RewriteEngine On
