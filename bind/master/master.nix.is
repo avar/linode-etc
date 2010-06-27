@@ -1,16 +1,12 @@
 $TTL 1d
 $ORIGIN nix.is.
-@  1d  IN SOA ns0.1984.is. hostmaster.nix.is. (
-      89  ; serial
+@  1d  IN SOA ns1.linode.com. hostmaster.nix.is. (
+      90  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
       3h  ; minimum
      )
-
-       IN  NS     ns0.1984.is.
-       IN  NS     ns1.1984.is.
-       IN  NS     ns2.1984.is.
 
        IN  NS     ns1.linode.com.
        IN  NS     ns2.linode.com.
@@ -49,8 +45,8 @@ chanmirror           IN  A      109.74.193.250
 lupus                IN  A      194.144.99.91
 
 $ORIGIN v.nix.is.
-@  1D  IN SOA ns0.1984.is. hostmaster.v.nix.is. (
-      6   ; serial
+@  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
+      7   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -60,8 +56,8 @@ $ORIGIN v.nix.is.
 mail   IN  A      109.74.193.250
 
 $ORIGIN avar.nix.is.
-@  1D  IN SOA ns0.1984.is. hostmaster.v.nix.is. (
-      5   ; serial
+@  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
+      6   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -70,8 +66,8 @@ $ORIGIN avar.nix.is.
 dev    IN  A      109.74.193.250
 
 $ORIGIN dev.avar.nix.is.
-@  1D  IN SOA ns0.1984.is. hostmaster.v.nix.is. (
-      5   ; serial
+@  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
+      6   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -80,8 +76,8 @@ $ORIGIN dev.avar.nix.is.
 mw    IN  A      109.74.193.250
 
 $ORIGIN mw.dev.avar.nix.is.
-@  1D  IN SOA ns0.1984.is. hostmaster.v.nix.is. (
-      5   ; serial
+@  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
+      6   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire

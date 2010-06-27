@@ -1,16 +1,12 @@
 $TTL 1d
 $ORIGIN hailo.org.
-@  1d  IN SOA ns0.1984.is. hostmaster.hailo.org. (
-      89  ; serial
+@  1d  IN SOA ns1.linode.com. hostmaster.hailo.org. (
+      90  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
       3h  ; minimum
      )
-
-       IN  NS     ns0.1984.is.
-       IN  NS     ns1.1984.is.
-       IN  NS     ns2.1984.is.
 
        IN  NS     ns1.linode.com.
        IN  NS     ns2.linode.com.

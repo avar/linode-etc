@@ -1,16 +1,12 @@
 $TTL 86400 ; 24 hours could have been written as 24h or 1d
 $ORIGIN xn--var-xla.net.
-@  1D  IN SOA ns0.1984.is. hostmaster.xn--var-xla.net. (
-      41  ; serial
+@  1D  IN SOA ns1.linode.com. hostmaster.xn--var-xla.net. (
+      42  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
       3h  ; minimum
      )
-
-       IN  NS     ns0.1984.is.
-       IN  NS     ns1.1984.is.
-       IN  NS     ns2.1984.is.
 
        IN  NS     ns1.linode.com.
        IN  NS     ns2.linode.com.

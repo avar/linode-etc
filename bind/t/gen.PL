@@ -6,7 +6,7 @@ use FindBin qw[$Bin];
 use File::Path qw[remove_tree make_path];
 
 chomp(my @domains = qx[ grep -h ORIGIN /etc/bind/master/master* | $^X -pe 's/^.*? (.*?)\.\$/\$1/' ]);
-my @ns = (qw(localhost), map({ "ns$_.1984.is" } 0 .. 2), (map { "ns$_.linode.com" } 1..5));
+my @ns = (qw(localhost), map { "ns$_.linode.com" } 1..5);
 
 my @subdomain_tests = qw(A NS MX);
 my @domain_tests    = ("SOA", @subdomain_tests, "AXFR");
