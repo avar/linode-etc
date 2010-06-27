@@ -16,7 +16,6 @@ my @tests = (
     'munin.nix.is'       => qr/Munin/,
     'nix.is'             => qr/logo\.png/,
     'noc.nix.is'         => qr/Network operations/,
-    'openstreetmap.is'   => qr/OpenStreetMap/,
     'osm.nix.is'         => qr/Garmin map of Iceland/,
     'tumi.nix.is'        => qr/Tumi/,
     'v.nix.is'           => qr/vee nix/,
