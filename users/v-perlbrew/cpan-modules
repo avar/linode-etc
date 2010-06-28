@@ -58,6 +58,9 @@ Capture::Tiny
 Date::Calc
 GD
 
+# osm.nix.is munin jobs
+String::Truncate
+
 # avar's cron jobs
 Email::Send
 
