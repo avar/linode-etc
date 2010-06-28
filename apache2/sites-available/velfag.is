@@ -2,6 +2,8 @@
     ServerName velfag.is
     DocumentRoot /var/www/velfag.is
 
+    php_admin_value sendmail_path "/usr/sbin/sendmail -t -i -f velfag-web@sys.velfag.is"
+
     # From http://www.mediawiki.org/wiki/Manual:Short_URL/Page_title_--_Working_method_with_mediawiki-1.11 
     RewriteEngine On
     
