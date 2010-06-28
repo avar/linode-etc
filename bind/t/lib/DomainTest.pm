@@ -1,4 +1,5 @@
 package DomainTest;
+use 5.010;
 use strict;
 use Test::More;
 use Time::HiRes qw< gettimeofday tv_interval >;
@@ -52,7 +53,55 @@ sub run_public_tests {
 
     my $res = $self->dig_at($public, $domain, "NS");
 
-    cmp_ok(scalar(@$res), '==', scalar(@servers), "We should have " . scalar(@servers) . " public servers (<<@servers>>); We got " . scalar(@$res) . ": <<@$res>>");
+    $self->cmp_servers($res, \@servers);
+
+}
+
+sub run_whois_tests {
+    my ($self) = @_;
+
+    my $domain     = $self->{domain};
+    my (@servers)  = @{ $self->{servers} };
+    my ($tld) = $domain =~ m[ \. (?<tld>[^.]+)+ $]x;
+    my $whois_server = "$tld.whois-servers.net";
+
+    plan( tests => 2 );
+
+    my $cmd;
+    given ($tld) {
+        when ('is') {
+            $cmd = qq[whois -p 4343 -h $whois_server $domain];
+            # ISNIC only allows four nameservers
+            @servers = splice(@servers, 0, 4);
+        }
+        default {
+            $cmd = qq[whois $domain];
+        }
+    }
+
+    my @whois = @{ $self->do_cmd($cmd) };
+
+    my @public;
+    for my $who (@whois) {
+        push @public =>    $1 if $who =~ /^nserver:\s+(\S+)/;  # .is
+        push @public => lc $1 if $who =~ /Name Server: (\S+)/; # .net
+        push @public => lc $1 if $who =~ /Name Server:(\S+)/;  # .org
+    }
+
+    $self->cmp_servers(\@public, \@servers);
+}
+
+sub cmp_servers {
+    my ($self, $res, $servers) = @_;
+
+    my $nres     = @$res;
+    my $nservers = @$servers;
+
+    cmp_ok(
+        $nres, '==', $nservers,
+        "We should have $nservers public servers (<<@$servers>>); We got $nres (<<@$res>>)"
+    );
+    return;
 }
 
 sub dig_at
@@ -62,6 +111,13 @@ sub dig_at
     my $recurse = $self->{recurse} ? '' : '+norecurse';
     my $opt = $query eq 'AXFR' ? '' : '+short';
     my $cmd = qq[ dig $recurse $opt \@$host $domain $query | grep -v -e '^\$' -v -e '^;' | sort ];
+
+    return $self->do_cmd($cmd);
+}
+
+sub do_cmd
+{
+    my ($self, $cmd) = @_;
 
     my $t0 = [gettimeofday];
     chomp(my @out = qx[ $cmd ]);
