@@ -122,6 +122,11 @@ env.basename 1
 env.dirs /var/backup/github/*
 env.basename 1
 
+[dirs_var_backup_mysql]
+env.user root
+env.dirs /var/backup/mysql/*
+env.basename 1
+
 [dirs_var_lib_openstreetmap_mirror]
 env.dirs /var/lib/openstreetmap-mirror/*
 env.basename 1

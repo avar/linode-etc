@@ -1,0 +1,36 @@
+#!/bin/sh
+
+if test -z "$database"; then
+    echo "You must supply a database= to dump"
+    exit 1
+fi
+
+if ! test -d /var/lib/mysql/$database; then
+    echo "$database is an invalid database name, it doesn't exist in /var/lib/mysql/"
+    exit 1 
+fi
+
+backup_dir=/var/backup/mysql
+database_dir=$backup_dir/$database
+
+mkdir -p $database_dir 
+cd $database_dir
+
+mysqldump \
+    -u"$user" \
+    -p"$password" \
+    --skip-extended-insert $database \
+    | grep -v '^-- Dump completed on' \
+    > $database.sql
+
+if ! test -d .git; then
+    git init >/dev/null
+fi
+
+
+GIT_AUTHOR_NAME="mysqldump on v.nix.is"
+GIT_AUTHOR_EMAIL="mysqldump@v.nix.is"
+export GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL
+
+git add *.sql
+git commit -m"Bumping $database MySQL dump" > /dev/null

@@ -1,0 +1,1 @@
+@daily root user=root password=$(cat /etc/mysql/passwd/root) /etc/bin/cron/mysqldump-to-git-all

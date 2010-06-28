@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if test -z "$user" || test -z "$password"; then
+    echo "You must supply user= and password="
+    exit 1
+fi
+
+for database in $(echo 'show databases;' | mysql -s -u"$user" -p"$password" | grep -v '^information_schema$'); do
+    database="$database" /etc/bin/cron/mysqldump-to-git
+done
