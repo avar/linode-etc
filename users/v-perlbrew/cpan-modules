@@ -41,6 +41,8 @@ YAML::XS
 Net::Twitter::Lite
 Scalar::Util
 POE::Quickie
+Lingua::Translate::InterTran
+Lingua::Translate::Google
 
 # Twatterhose
 Bot::Twatterhose
