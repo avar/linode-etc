@@ -1,0 +1,2 @@
+@daily root postfix reload
+@daily root postmap /etc/postfix/virtual
