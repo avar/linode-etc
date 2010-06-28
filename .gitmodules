@@ -4,3 +4,6 @@
 [submodule "munin/our-plugins/munin-plugin-freenet"]
 	path = munin/our-plugins/munin-plugin-freenet
 	url = git://github.com/avar/munin-plugin-freenet.git
+[submodule "munin/our-plugins/munin-plugin-multiping_async"]
+	path = munin/our-plugins/munin-plugin-multiping_async
+	url = git://github.com/avar/munin-plugin-multiping_async.git

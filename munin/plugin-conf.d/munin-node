@@ -85,9 +85,14 @@ user root
 [mailman]
 group list
 
-[multiping]
-user root
-env.host vodafone.is 145.254.15.113 telefonica.com.ar 87.194.39.109
+[multiping_async_users]
+#        v         hinrik      avar         hex           andreasg              dsg             
+env.times 5
+env.host localhost vodafone.is 188.105.94.3 87.194.39.109 www.telefonica.com.ar provider.dsg.to
+
+[multiping_async_linode]
+# From http://www.linode.com/speedtest/
+env.host  london1.linode.com newark1.linode.com atlanta1.linode.com dallas1.linode.com fremont1.linode.com
 
 [tor_*]
 user debian-tor
