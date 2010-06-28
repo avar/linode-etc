@@ -86,11 +86,13 @@ user root
 group list
 
 [multiping_async_users]
+env.title Ping times to our Unix users
 #        v         hinrik      avar         hex           andreasg              dsg             
 env.times 5
 env.host localhost vodafone.is 188.105.94.3 87.194.39.109 www.telefonica.com.ar provider.dsg.to
 
 [multiping_async_linode]
+env.title Ping times to all the Linode clusters
 # From http://www.linode.com/speedtest/
 env.host  london1.linode.com newark1.linode.com atlanta1.linode.com dallas1.linode.com fremont1.linode.com
 
