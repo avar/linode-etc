@@ -7,3 +7,6 @@
 [submodule "munin/our-plugins/munin-plugin-multiping_async"]
 	path = munin/our-plugins/munin-plugin-multiping_async
 	url = git://github.com/avar/munin-plugin-multiping_async.git
+[submodule "munin/our-plugins/munin-plugin-hailo_"]
+	path = munin/our-plugins/munin-plugin-hailo_
+	url = git://github.com/avar/munin-plugin-hailo_.git
