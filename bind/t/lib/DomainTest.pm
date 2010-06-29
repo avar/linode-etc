@@ -69,15 +69,12 @@ sub run_whois_tests {
 
     my $cmd;
     given ($tld) {
-        when ('is') {
-            $cmd = qq[whois -p 4343 -h $whois_server $domain];
-            # ISNIC only allows four nameservers
-            @servers = splice(@servers, 0, 4);
-        }
-        default {
-            $cmd = qq[whois $domain];
-        }
+        when ('is') { $cmd = qq[whois -p 4343 -h $whois_server $domain] }
+        default {     $cmd = qq[whois $domain] }
     }
+
+    # ISNIC only allows four nameservers, so does hailo.org's registar
+    @servers = splice(@servers, 0, 4) if $tld eq 'is' or $domain eq 'hailo.org';
 
     my @whois = @{ $self->do_cmd($cmd) };
 
