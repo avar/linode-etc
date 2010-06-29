@@ -96,6 +96,11 @@ env.title Ping times to all the Linode clusters
 # From http://www.linode.com/speedtest/
 env.host  london1.linode.com newark1.linode.com atlanta1.linode.com dallas1.linode.com fremont1.linode.com
 
+[multiping_async_vf_home]
+env.title Ping times to Asabyggd
+env.times 5
+env.host 212.30.222.56
+
 [tor_*]
 user debian-tor
 env.cookiefile /var/lib/tor/control_auth_cookie
