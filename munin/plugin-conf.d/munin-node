@@ -97,9 +97,9 @@ env.title Ping times to all the Linode clusters
 env.host  london1.linode.com newark1.linode.com atlanta1.linode.com dallas1.linode.com fremont1.linode.com
 
 [multiping_async_vf_home]
-env.title Ping times to Asabyggd
+env.title Ping times to Velfag
 env.times 5
-env.host 212.30.222.56
+env.host 212.30.222.56 85.220.32.167
 
 [tor_*]
 user debian-tor
