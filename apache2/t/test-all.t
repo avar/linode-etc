@@ -22,6 +22,8 @@ my @tests = (
     'vnstat.nix.is'      => qr/vnstat\.cgi/,
     'voodootronix.com'   => qr/voodootronix/,
     'xn--var-xla.net'    => qr/Bjarmason/,
+    'velfag.is'          => qr/MediaWiki/,
+    'www.velfag.is'      => qr/MediaWiki/,
 );
 
 plan tests => scalar @tests;
