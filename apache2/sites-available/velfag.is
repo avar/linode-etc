@@ -1,5 +1,6 @@
 <VirtualHost *:81>
     ServerName velfag.is
+    ServerAlias www.velfag.is
     DocumentRoot /var/www/velfag.is
 
     php_admin_value sendmail_path "/usr/sbin/sendmail -t -i -f velfag-web@sys.velfag.is"
