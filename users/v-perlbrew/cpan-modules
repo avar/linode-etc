@@ -26,6 +26,7 @@ DBD::Pg
 DBD::mysql
 
 # failo
+App::Pocoirc
 List::MoreUtils
 App::Bondage
 POE::Component::IRC::Plugin::ImageMirror
