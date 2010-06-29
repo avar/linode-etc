@@ -2,4 +2,5 @@ PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/c
 
 0 22      * * *  pdns     perl -e 'my $out = qx[prove -vr    /etc/bind/t 2>&1]; print $out if $?'
 0 24      * * *  www-data perl -e 'my $out = qx[prove -vr /etc/apache2/t 2>&1]; print $out if $?'
-0 26      * * *  www-data perl -e 'my $out = qx[prove -vr   /etc/mysql/t 2>&1]; print $out if $?'
+0 26      * * *  root     perl -e 'my $out = qx[prove -vr   /etc/mysql/t 2>&1]; print $out if $?'
+0 28      * * *  www-data perl -e 'my $out = qx[prove -vr     /etc/tor/t 2>&1]; print $out if $?'
