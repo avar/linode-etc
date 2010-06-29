@@ -24,7 +24,7 @@ dip:x:30:
 www-data:x:33:hinrik,avar,andreasg,tumi,hex,list
 backup:x:34:
 operator:x:37:
-list:x:38:
+list:x:38:www-data
 irc:x:39:
 src:x:40:
 gnats:x:41:
