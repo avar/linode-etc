@@ -12,7 +12,7 @@ my $cache = catfile($statedir, $statefile . '-cache');
 
 my $dirs = $ENV{dirs};
 my $basename = $ENV{basename};
-my $category = $ENV{category} // 'disk';
+my $category = $ENV{category} // 'directories';
 my @dirs = parse_du_sk($cache);
 
 given ($ARGV[0]) {
