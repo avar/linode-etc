@@ -1,1 +1,1 @@
-../our-plugins/vnstat
+/etc/munin/our-plugins/munin-exchange/vnstat
