@@ -85,6 +85,9 @@ user root
 [mailman]
 group list
 
+[multiping_async_*]
+env.category ping
+
 [multiping_async_users]
 env.title Ping times to our Unix users
 #        v         hinrik      avar         hex           andreasg              dsg             
