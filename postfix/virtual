@@ -12,6 +12,9 @@ bjorn@v.nix.is            bjorn88@simnet.is
 # Cron for the OpenStreetMap mirror. Only avar cares
 osm-mirror@v.nix.is       avarab@gmail.com
 
+# fail2ban's noise is ostensibly unconfigurable , just send it to /dev/null
+fail2ban@v.nix.is         devnull@example.net
+
 ## Aliases
 # Signup address for github.com/mediawiki
 mediawiki-github@v.nix.is avarab@gmail.com
