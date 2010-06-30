@@ -4,6 +4,7 @@ all:
 	wget http://exchange.munin-monitoring.org/plugins/squid_times/version/1/download -O squid_times
 	# Monkeypatch in host/port support to squid_times
 	git show 61b6d0d8df4035f5b00591448167d53c57cc79fe | patch -p3
+	wget http://exchange.munin-monitoring.org/plugins/squid/version/1/download -O squid
 
 	wget http://exchange.munin-monitoring.org/plugins/vnstat/version/1/download -O vnstat
 	wget http://exchange.munin-monitoring.org/plugins/fail2ban_all_jails/version/1/download -O fail2ban_all_jails

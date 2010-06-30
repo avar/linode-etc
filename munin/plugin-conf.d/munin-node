@@ -229,6 +229,10 @@ env.label_v_only 1
 [squid_*]
 env.squidport 80
 
+[squid]
+env.squidhost localhost
+env.squidport 80
+
 [hailo_failo]
 env.name failo
 env.test stats
