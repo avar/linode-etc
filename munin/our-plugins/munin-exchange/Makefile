@@ -30,5 +30,7 @@ all:
 
 	wget http://exchange.munin-monitoring.org/plugins/apache_activity/version/1/download -O apache_activity
 
+	wget http://exchange.munin-monitoring.org/plugins/memcached-multigraph/version/1/download -O memcached_multi_
+
 	# chmod +x
 	chmod +x [a-z_]*
