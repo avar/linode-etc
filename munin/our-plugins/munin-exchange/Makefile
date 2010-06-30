@@ -28,5 +28,7 @@ all:
 	#wget http://exchange.munin-monitoring.org/plugins/tor_traffic/version/1/download -O tor_traffic
 	#wget http://exchange.munin-monitoring.org/plugins/tor_routers/details -O tor_routers
 
+	wget http://exchange.munin-monitoring.org/plugins/apache_activity/version/1/download -O apache_activity
+
 	# chmod +x
 	chmod +x [a-z_]*
