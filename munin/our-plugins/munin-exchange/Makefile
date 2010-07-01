@@ -25,7 +25,6 @@ all:
 	done
 
 	# These are fail, they've been rewritten in another language etc.
-	#wget http://exchange.munin-monitoring.org/plugins/tor-connections/version/1/download -O tor_connections
 	#wget http://exchange.munin-monitoring.org/plugins/tor_traffic/version/1/download -O tor_traffic
 	#wget http://exchange.munin-monitoring.org/plugins/tor_routers/details -O tor_routers
 
