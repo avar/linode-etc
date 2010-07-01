@@ -1,1 +1,0 @@
-*/30 * * * * root cp ~freenet/freenet/freenet.ini /etc/freenet/freenet.ini

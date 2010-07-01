@@ -259,34 +259,3 @@ env.file /var/lib/munin/plugin-state/hailo_/twatterhose-time.json
 
 [vnstat_month]
 env.limittt 800000
-
-[freenet_gauge_threads]
-env.title Freenet Java thread count
-env.vlabel threads
-env.info Number of threads
-env.graph_info How many threads Freenet is using
-env.label threads
-env.what volatile.runningThreadCount
-
-[freenet_gauge_avg_ping]
-env.title Freenet average ping time
-env.vlabel time
-env.info Ping in milliseconds
-env.graph_info How long it takes to ping our peer nodes in milliseconds on average
-env.label milliseconds
-env.what volatile.averagePingTime
-
-[freenet_gauge_store_size]
-env.title Freenet store size
-env.vlabel bytes
-env.info Store size in bytes
-env.graph_info How big the local Freenet store is
-env.label Store size
-env.what volatile.storeSize
-env.base 1024
-env.draw AREA
-
-[dirs_home_freenet_freenet_datastore]
-env.dirs Freenet datastore
-env.basename 1
-env.category freenet

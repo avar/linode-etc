@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Until we start doing anything here
+exit 0
+
 # Outgoing interface
 DEV=eth0
 
