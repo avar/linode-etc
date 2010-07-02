@@ -90,6 +90,28 @@ sub whois_nameservers {
     return \@public;
 }
 
+sub whois_expires {
+    my ($self, $whois) = @_;
+
+    my ($str);
+
+    for my $who (@$whois) {
+        if ($who =~ /^expires:\s+(.*)/           # .is
+            or $who =~ m[Record expires on (.*)] # .net
+            or $who =~ /^Expiration Date:(.*)/) { # .org
+            $str = $1;
+            last;
+        }
+    }
+
+    require Date::Parse;
+    my $time = Date::Parse::str2time($str);
+    if (ok($time, "Got time <<$time>> from string <<$str>>")) {
+        return ($time, $str);
+    }
+    return;
+}
+
 sub run_whois_tests {
     my ($self) = @_;
 
@@ -105,6 +127,31 @@ sub run_whois_tests {
     my @public = @{ $self->whois_nameservers(\@whois) };
 
     $self->cmp_servers(\@public, \@servers);
+}
+
+sub run_whois_expire_tests {
+    my ($self) = @_;
+
+    my $domain     = $self->{domain};
+    my (@servers)  = @{ $self->{servers} };
+
+    plan( tests => 3 );
+
+    my @whois = @{ $self->whois($domain) };
+    if (my ($expires_time, $expires_str) = $self->whois_expires(\@whois)) {
+        my $expires_str_normal = scalar localtime $expires_time;
+        my ($now_time, $now_str) = (time, scalar localtime);
+
+        my $diff = $expires_time - $now_time;
+        my $diff_days = int($diff / (60 ** 2 * 24));
+
+        cmp_ok(
+            $diff_days, '>=', 30,
+            "Domain <$domain> expires in $diff_days days ($diff seconds) at <$expires_time> (<$expires_str_normal> / <'$expires_str'>). Now is <$now_time> (<$now_str>)");
+    } else {
+        my $lns = @whois;
+        fail("Couldn't get the expiration time for domain $domain, got $lns whois lines");
+    }
 }
 
 sub cmp_servers {
