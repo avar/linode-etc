@@ -7,3 +7,6 @@
 [submodule "munin/our-plugins/munin-plugin-hailo_"]
 	path = munin/our-plugins/munin-plugin-hailo_
 	url = git://github.com/avar/munin-plugin-hailo_.git
+[submodule "munin/our-plugins/munin-plugin-cpan-outdated"]
+	path = munin/our-plugins/munin-plugin-cpan-outdated
+	url = git://github.com/avar/munin-plugin-cpan-outdated.git
