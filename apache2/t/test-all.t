@@ -24,6 +24,8 @@ my @tests = (
     'xn--var-xla.net'    => qr/Bjarmason/,
     'velfag.is'          => qr/MediaWiki/,
     'www.velfag.is'      => qr/MediaWiki/,
+    'xn--vlfag-bsa.is.'  => qr/MediaWiki/,
+    'www.xn--vlfag-bsa.is.' => qr/MediaWiki/,
 );
 
 plan tests => scalar @tests;
