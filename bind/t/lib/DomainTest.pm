@@ -54,18 +54,19 @@ sub run_public_tests {
     my $res = $self->dig_at($public, $domain, "NS");
 
     $self->cmp_servers($res, \@servers);
-
 }
 
-sub run_whois_tests {
-    my ($self) = @_;
-
-    my $domain     = $self->{domain};
-    my (@servers)  = @{ $self->{servers} };
+sub tld {
+    my $domain = shift;
     my ($tld) = $domain =~ m[ \. (?<tld>[^.]+)+ $]x;
-    my $whois_server = "$tld.whois-servers.net";
+    return $tld;
+}
 
-    plan( tests => 2 );
+sub whois {
+    my ($self, $domain) = @_;
+
+    my $tld = tld($domain);
+    my $whois_server = "$tld.whois-servers.net";
 
     my $cmd;
     given ($tld) {
@@ -73,17 +74,35 @@ sub run_whois_tests {
         default {     $cmd = qq[whois $domain] }
     }
 
-    # ISNIC only allows four nameservers, so does hailo.org's registar
-    @servers = splice(@servers, 0, 4) if $tld eq 'is' or $domain eq 'hailo.org';
+    return $self->do_cmd($cmd);
+}
 
-    my @whois = @{ $self->do_cmd($cmd) };
+sub whois_nameservers {
+    my ($self, $whois) = @_;
 
     my @public;
-    for my $who (@whois) {
+    for my $who (@$whois) {
         push @public =>    $1 if $who =~ /^nserver:\s+(\S+)/;  # .is
         push @public => lc $1 if $who =~ /Name Server: (\S+)/; # .net
         push @public => lc $1 if $who =~ /Name Server:(\S+)/;  # .org
     }
+
+    return \@public;
+}
+
+sub run_whois_tests {
+    my ($self) = @_;
+
+    my $domain     = $self->{domain};
+    my (@servers)  = @{ $self->{servers} };
+
+    plan( tests => 2 );
+
+    # ISNIC only allows four nameservers, so does hailo.org's registar
+    @servers = splice(@servers, 0, 4) if tld($domain) eq 'is' or $domain eq 'hailo.org';
+
+    my @whois = @{ $self->whois($domain) };
+    my @public = @{ $self->whois_nameservers(\@whois) };
 
     $self->cmp_servers(\@public, \@servers);
 }
