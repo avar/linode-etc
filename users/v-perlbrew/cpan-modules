@@ -67,6 +67,9 @@ String::Truncate
 # avar's cron jobs
 Email::Send
 
+# /etc/bind/t DomainTest
+Date::Parse
+
 # v-awstats-make-configs
 Apache::ConfigParser
 
