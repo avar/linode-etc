@@ -1,0 +1,1 @@
+/etc/profile.d/v-language.sh
