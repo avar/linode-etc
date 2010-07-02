@@ -2,4 +2,3 @@
 postmaster: root
 webmaster:  root
 root:       andreasg,tumi,hinrik,avar
-devnull:    /dev/null
