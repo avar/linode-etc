@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN nix.is.
 @  1d  IN SOA ns1.linode.com. hostmaster.nix.is. (
-      90  ; serial
+      91  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -57,7 +57,7 @@ mail   IN  A      109.74.193.250
 
 $ORIGIN avar.nix.is.
 @  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
-      6   ; serial
+      7   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -67,7 +67,7 @@ dev    IN  A      109.74.193.250
 
 $ORIGIN dev.avar.nix.is.
 @  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
-      6   ; serial
+      7   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -77,7 +77,7 @@ mw    IN  A      109.74.193.250
 
 $ORIGIN mw.dev.avar.nix.is.
 @  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
-      6   ; serial
+      7   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -85,4 +85,3 @@ $ORIGIN mw.dev.avar.nix.is.
      )
 trunk  IN  A      109.74.193.250
 hw     IN  A      109.74.193.250
-vf     IN  A      109.74.193.250
