@@ -1,7 +1,7 @@
 # Configure the Firewall and trafficshaping at boot time and keep
 # refreshing it after that.
 
-@reboot /etc/bin/iptables-conf.sh
-@hourly /etc/bin/iptables-conf.sh
-@reboot /etc/bin/tc-conf.sh
-@hourly /etc/bin/tc-conf.sh
+@reboot root /etc/bin/iptables-conf.sh
+@hourly root /etc/bin/iptables-conf.sh
+@reboot root /etc/bin/tc-conf.sh
+@hourly root /etc/bin/tc-conf.sh
