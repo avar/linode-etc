@@ -1,2 +1,2 @@
 0 */6 * * * root user=root password=$(cat /etc/mysql/passwd/root) /etc/bin/cron/mysqldump-to-git-all
-5 */6 * * * root /etc/bin/cron/git-repack-and-gc-dir
+5 */6 * * * root /etc/bin/cron/git-repack-and-gc-dir /var/backup/mysql
