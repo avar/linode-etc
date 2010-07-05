@@ -21,7 +21,6 @@ mysqldump \
     -p"$password" \
     --skip-extended-insert $database \
     --compact \
-    | grep -v '^-- Dump completed on' \
     > $database.sql
 
 if ! test -d .git; then
