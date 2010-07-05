@@ -20,7 +20,7 @@ mysqldump \
     -u"$user" \
     -p"$password" \
     --skip-extended-insert $database \
-    --skip-comments \
+    --compact \
     | grep -v '^-- Dump completed on' \
     > $database.sql
 
