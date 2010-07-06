@@ -16,3 +16,13 @@
 		fi
 	endscript
 }
+
+/var/log/php/error.log {
+	weekly
+	missingok
+	rotate 52
+	compress
+	delaycompress
+	notifempty
+	create 640 root www-data
+}
