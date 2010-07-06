@@ -35,3 +35,5 @@ mailman_destination_recipient_limit = 1
 
 # Check headers
 header_checks = regexp:/etc/postfix/header_checks
+readme_directory = /usr/share/doc/postfix
+html_directory = /usr/share/doc/postfix/html
