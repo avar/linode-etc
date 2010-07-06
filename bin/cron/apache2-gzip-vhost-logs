@@ -1,5 +1,6 @@
 #!/usr/bin/env perl
-use perl5i::latest;
+use 5.10.0;
+use strict;
 
 our $apache2_logs = "/var/log/apache2";
 our @vhosts = map { s[^.*/][]; $_ } grep { -d } glob "$apache2_logs/*";

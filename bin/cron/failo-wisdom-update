@@ -1,5 +1,6 @@
 #!/usr/bin/env perl
-use perl5i::latest;
+use 5.10.0;
+use strict;
 
 my @format = qw< C Perl Lua >;
 my $format = $format[rand @format];
