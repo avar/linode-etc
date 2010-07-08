@@ -2,10 +2,10 @@
 #	Logrotate fragment for squid.
 #
 /var/log/squid/*.log {
-	daily
+	weekly
 	compress
 	delaycompress
-	rotate 2
+	rotate 52
 	missingok
 	nocreate
 	sharedscripts
