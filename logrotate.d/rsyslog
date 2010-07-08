@@ -23,6 +23,8 @@
 /var/log/cron.log
 /var/log/debug
 /var/log/messages
+/var/log/pdns.log
+/var/log/pdns_recursor.log
 {
 	rotate 48
 	weekly
