@@ -1,0 +1,4 @@
+# Remove various temporary stuff that accumulates on v
+
+# Delete old cpanm build files
+@weekly root find /home/*/.cpanm/work -mindepth 1 -maxdepth 1 -mtime +1 -type d -exec rm -rf {} \;
