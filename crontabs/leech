@@ -1,5 +1,11 @@
 SHELL=/bin/bash
 PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/usr/local/bin:/usr/bin:/bin
 
+# Backup queued torrents
 */5 * * * * rsync -aq --progress ~/torrent/queue/ ~/torrent/queue-powerseeding/ ~/torrent/queue-archive/
-@reboot screen -d -m
+
+# Start the rtorrent screen on system startup
+@reboot screen -U -d -m
+
+# Whine if rtorrent has died
+*/10 * * * * (ps aux | grep -q '^leech.* rtorrent' || (echo 'rtorrent not running' && exit 1))
