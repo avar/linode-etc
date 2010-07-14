@@ -30,7 +30,8 @@ Upgrade the condfig for a new kernel:
  
 Compile the kernel:
     
-    make ARCH=x86_64 -j 4 all modules modules_install
+    make ARCH=x86_64 -j 4 all modules
+    sudo make install modules_install
 
 # Installing the kernel
 
