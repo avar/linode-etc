@@ -1,20 +1,57 @@
+This is how to build and install a custom kernel on Debian testing:
+
 # Installing GRUB
 
-Install `grub-legacy`, not the GRUB 2.0:
+Install `grub-legacy`, *not* the GRUB 2.0 package in `grub`:
 
     sudo aptitude install grub-legacy
 
 # Compiling a kernel
 
-Clone the linux-2.6 repository:
+Clone the linux-2.6 repository somewhere in your `~/`:
 
-    git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux-2.6.git
+    git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux-2.6.git
+    
+Optionally, add some custom patches, e.g.:
 
-Copy the config:
+    git remote add avar git://github.com/avar/linux-2.6.git
+    git fetch avar
+    git checkout -b xen-x86-tsc-unstable remotes/avar/xen-x86-tsc-unstable
+
+Copy the config (or
+[from the web](http://github.com/avar/linode-etc/tree/master/linux/)):
 
     cd linux-2.6
     cp /etc/linux/config .config
- 
-Make the kernel:
     
-    make ARCH=x86_64 -j 4
+Upgrade the condfig for a new kernel:
+
+    make oldconfig
+ 
+Compile the kernel:
+    
+    make ARCH=x86_64 -j 4 all modules modules_install
+
+# Installing the kernel
+
+Configure a `/boot/grub/menu.lst`, e.g. with the lines from
+[here](http://github.com/avar/linode-etc/blob/master/boot/grub/menu.lst)
+but *without* everything after "BEGIN AUTOMAGIC KERNELS LIST".
+
+Then run `update-grub`:
+
+    $ sudo update-grub /boot/vmlinuz*
+    Searching for GRUB installation directory ... found: /boot/grub
+    Searching for default file ... found: /boot/grub/default
+    Testing for an existing GRUB menu.lst file ... found: /boot/grub/menu.lst
+    Searching for splash image ... none found, skipping ...
+    Found kernel: /etc/boot/vmlinuz-2.6.35-rc5+
+    Updating /boot/grub/menu.lst ... done
+
+# Rebooting
+
+Configure the kernel
+[to pv-grub](http://library.linode.com/advanced/pv-grub-howto#setting_your_linode_to_use_pv_grub)
+in the Linode manager, then:
+
+    sudo reboot
