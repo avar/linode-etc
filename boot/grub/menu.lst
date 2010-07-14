@@ -1,3 +1,86 @@
 title    Debian GNU/Linux, kernel v2.6.35-rc5-1-g561c5e8
 root     (hd0)
-kernel   /boot/vmlinuz-2.6.35-rc5-00001-g561c5e8 root=/dev/xvda
+kernel   /boot/vmlinuz-2.6.35-rc5+ root=/dev/xvda
+### BEGIN AUTOMAGIC KERNELS LIST
+## lines between the AUTOMAGIC KERNELS LIST markers will be modified
+## by the debian update-grub script except for the default options below
+
+## DO NOT UNCOMMENT THEM, Just edit them to your needs
+
+## ## Start Default Options ##
+## default kernel options
+## default kernel options for automagic boot options
+## If you want special options for specific kernels use kopt_x_y_z
+## where x.y.z is kernel version. Minor versions can be omitted.
+## e.g. kopt=root=/dev/hda1 ro
+##      kopt_2_6_8=root=/dev/hdc1 ro
+##      kopt_2_6_8_2_686=root=/dev/hdc2 ro
+# kopt=root=UUID=3529f8c9-9878-47d7-9b22-d97d327a5b85 ro
+
+## default grub root device
+## e.g. groot=(hd0,0)
+# groot=(hd0)
+
+## should update-grub create alternative automagic boot options
+## e.g. alternative=true
+##      alternative=false
+# alternative=true
+
+## should update-grub lock alternative automagic boot options
+## e.g. lockalternative=true
+##      lockalternative=false
+# lockalternative=false
+
+## additional options to use with the default boot option, but not with the
+## alternatives
+## e.g. defoptions=vga=791 resume=/dev/hda5
+# defoptions=
+
+## should update-grub lock old automagic boot options
+## e.g. lockold=false
+##      lockold=true
+# lockold=false
+
+## Xen hypervisor options to use with the default Xen boot option
+# xenhopt=
+
+## Xen Linux kernel options to use with the default Xen boot option
+# xenkopt=console=tty0
+
+## altoption boot targets option
+## multiple altoptions lines are allowed
+## e.g. altoptions=(extra menu suffix) extra boot options
+##      altoptions=(single-user) single
+# altoptions=(single-user mode) single
+
+## controls how many kernels should be put into the menu.lst
+## only counts the first occurence of a kernel, not the
+## alternative kernel options
+## e.g. howmany=all
+##      howmany=7
+# howmany=all
+
+## should update-grub create memtest86 boot option
+## e.g. memtest86=true
+##      memtest86=false
+# memtest86=true
+
+## should update-grub adjust the value of the default booted system
+## can be true or false
+# updatedefaultentry=false
+
+## should update-grub add savedefault to the default options
+## can be true or false
+# savedefault=false
+
+## ## End Default Options ##
+
+title		Debian GNU/Linux, kernel 2.6.35-rc5+
+root		(hd0)
+kernel		/etc/boot/vmlinuz-2.6.35-rc5+ root=UUID=3529f8c9-9878-47d7-9b22-d97d327a5b85 ro 
+
+title		Debian GNU/Linux, kernel 2.6.35-rc5+ (single-user mode)
+root		(hd0)
+kernel		/etc/boot/vmlinuz-2.6.35-rc5+ root=UUID=3529f8c9-9878-47d7-9b22-d97d327a5b85 ro single
+
+### END DEBIAN AUTOMAGIC KERNELS LIST
