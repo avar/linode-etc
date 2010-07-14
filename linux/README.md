@@ -11,6 +11,7 @@ Install `grub-legacy`, *not* the GRUB 2.0 package in `grub`:
 Clone the linux-2.6 repository somewhere in your `~/`:
 
     git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux-2.6.git
+    cd linux-2.6
     
 Optionally, add some custom patches, e.g.:
 
@@ -21,7 +22,6 @@ Optionally, add some custom patches, e.g.:
 Copy the config (or
 [from the web](http://github.com/avar/linode-etc/tree/master/linux/)):
 
-    cd linux-2.6
     cp /etc/linux/config .config
     
 Upgrade the condfig for a new kernel:
