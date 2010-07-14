@@ -1,3 +1,5 @@
+default  0
+timeout  2
 title    Debian GNU/Linux, kernel v2.6.35-rc5-1-g561c5e8
 root     (hd0)
 kernel   /boot/vmlinuz-2.6.35-rc5+ root=/dev/xvda
