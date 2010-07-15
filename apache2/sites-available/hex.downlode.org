@@ -1,0 +1,9 @@
+<VirtualHost *:81>
+    ServerName hex.downlode.org
+    DocumentRoot /var/www/hex.downlode.org
+
+    RewriteEngine On
+    
+    RewriteCond %{HTTP_ACCEPT} text/html
+    RewriteRule ^/$ http://downlode.org/ [R=303]
+</VirtualHost>
