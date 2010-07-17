@@ -33,6 +33,7 @@ all:
 	wget http://exchange.munin-monitoring.org/plugins/memcached-multigraph/version/1/download -O memcached_multi_
 
 	wget http://exchange.munin-monitoring.org/plugins/mysql_connections/version/1/download -O mysql_connections
+	wget http://exchange.munin-monitoring.org/plugins/cpu/version/1/download -O cpu_utilisation
 
 	# chmod +x
 	chmod +x [a-z_]*
