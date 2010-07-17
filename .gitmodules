@@ -13,3 +13,6 @@
 [submodule "munin/our-plugins/munin-plugin-munin_stats_plugins"]
 	path = munin/our-plugins/munin-plugin-munin_stats_plugins
 	url = git://github.com/avar/munin-plugin-munin_stats_plugins.git
+[submodule "munin/our-plugins/munin-plugin-vnstat_month"]
+	path = munin/our-plugins/munin-plugin-vnstat_month
+	url = git://github.com/avar/munin-plugin-vnstat_month.git
