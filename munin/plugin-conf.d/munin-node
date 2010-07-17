@@ -70,6 +70,9 @@ user root
 user munin
 group munin
 
+[munin_stats_plugins]
+user root
+
 [postgres_*]
 user postgres
 env.PGUSER postgres

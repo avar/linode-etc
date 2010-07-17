@@ -10,3 +10,6 @@
 [submodule "munin/our-plugins/munin-plugin-cpan_outdated"]
 	path = munin/our-plugins/munin-plugin-cpan_outdated
 	url = git://github.com/avar/munin-plugin-cpan_outdated.git
+[submodule "munin/our-plugins/munin-plugin-munin_stats_plugins"]
+	path = munin/our-plugins/munin-plugin-munin_stats_plugins
+	url = git://github.com/avar/munin-plugin-munin_stats_plugins.git
