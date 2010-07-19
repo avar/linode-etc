@@ -262,3 +262,9 @@ env.file /var/lib/munin/plugin-state/hailo_/twatterhose-time.json
 
 [vnstat_month]
 env.limittt 800000
+
+
+[proftpd*]
+user root
+# XXX: Doesn't work
+env.logfile /var/log/proftpd/xferlog

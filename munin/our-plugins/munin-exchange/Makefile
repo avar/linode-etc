@@ -35,5 +35,11 @@ all:
 	wget http://exchange.munin-monitoring.org/plugins/mysql_connections/version/1/download -O mysql_connections
 	wget http://exchange.munin-monitoring.org/plugins/cpu/version/1/download -O cpu_utilisation
 
+	# proftpd
+	wget http://exchange.munin-monitoring.org/plugins/proftpd/version/1/download -O proftpd
+	perl -pi -e 's/\r\n/\n/g; s/graph_title \KServeur FTP/FTP logins/; s/graph_category \KFtp/FTP/;' proftpd
+	wget http://exchange.munin-monitoring.org/plugins/proftpd_count/version/1/download -O proftpd_count
+	wget http://exchange.munin-monitoring.org/plugins/proftpd_bytes/version/1/download -O proftpd_bytes
+
 	# chmod +x
 	chmod +x [a-z_]*
