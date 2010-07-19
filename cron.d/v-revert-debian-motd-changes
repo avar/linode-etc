@@ -1,0 +1,1 @@
+@daily root git --git-dir=/etc/.git checkout /etc/motd
