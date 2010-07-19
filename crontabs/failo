@@ -4,3 +4,6 @@ LANG="en_US.utf8"
 PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/usr/local/bin:/usr/bin:/bin
 
 @reboot screen -d -m
+
+# Update munin statistics
+*/5 * * * * /etc/bin/cron/failo-munin-stats
