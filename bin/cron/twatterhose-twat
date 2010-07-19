@@ -1,7 +1,9 @@
 #!/bin/bash
 
-export brain=~/g/bot-twatterhose/twatterhose.brn
+export brain=/var/tmp/ramdisk/twatterhose/twatterhose.brn
 password=$(cat ~/.twatterhose.password)
+
+mkdir -p "$(dirname $dir)"
 
 # Run Twatterhose
 cronjob --errors-only --jobname twatterhose --command "
