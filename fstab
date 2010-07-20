@@ -1,5 +1,5 @@
-# <file system> <mount point>    <type>  <options>       <dump>      <pass>
-proc            /proc            proc    defaults        0           0
-/dev/xvda       /                ext3    noatime,errors=remount-ro   0       1
-/swapfile.256MB swap             swap    defaults        0           0
-none            /var/tmp/ramdisk tmpfs   size=500m       0           0
+# <file system> <mount point>    <type>  <options>                                    <dump>  <pass>
+proc            /proc            proc    defaults                                     0       0
+/dev/xvda       /                ext3    noatime,errors=remount-ro,usrquota,grpquota  0       1
+/swapfile.256MB swap             swap    defaults                                     0       0
+none            /var/tmp/ramdisk tmpfs   size=500m                                    0       0
