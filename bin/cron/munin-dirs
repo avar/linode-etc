@@ -1,5 +1,7 @@
 #!/usr/bin/env perl
-use perl5i::latest;
+use 5.10.0;
+use strict;
+use warnings;
 
 my $cache   = "/var/lib/munin/plugin-state/$ARGV[0]";
 my $path    = $ARGV[1];
