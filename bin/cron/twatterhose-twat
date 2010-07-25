@@ -6,7 +6,7 @@ password=$(cat ~/.twatterhose.password)
 mkdir -p "$(dirname $brain)"
 
 # Run Twatterhose
-cronjob --errors-only --jobname twatterhose --command "
+cronjob --errors-only --ignore-errors lock --jobname twatterhose --rcpt twatterhose --command "
     perl -I ~/g/bot-twatterhose/lib ~/g/bot-twatterhose/bin/twatterhose \
         --username twatterhose \
         --password $password \
