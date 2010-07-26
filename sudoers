@@ -1,4 +1,6 @@
 Defaults	env_reset
+Defaults        insults
+Defaults        lecture=never
 root	ALL=(ALL:ALL) ALL
 
 # members of group sudo can do as they please

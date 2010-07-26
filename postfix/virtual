@@ -56,7 +56,8 @@ apt-listchanges@v.nix.is           v-admins@lists.nix.is
 
 ## These cron E-Mails are way too chatty, but might be useful to keep
 ## around for reference.
-fail2ban@v.nix.is  v-cron-swamp@lists.nix.is
+fail2ban@v.nix.is    v-cron-swamp@lists.nix.is
+osm-mirror@v.nix.is  v-cron-swamp@lists.nix.is
 
 ## Send cron E-Mails to v-cron
 @v.nix.is         v-cron@lists.nix.is
