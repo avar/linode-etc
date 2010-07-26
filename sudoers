@@ -8,3 +8,6 @@ root	ALL=(ALL:ALL) ALL
 
 # for users who like to provide a password
 %fail   ALL=(ALL:ALL) ALL
+
+# The leech user can chown files to indicate who downloaded them
+leech   ALL=(ALL:ALL) NOPASSWD: /bin/chown
