@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Add all admin ssh keys to v-* users
-for user in $(grep ^v- /etc/passwd | perl -F: -anlE 'say $F[0]'); do
+for user in $(grep ^v-slaves /etc/group | perl -F: -anlE 'my @u = split /,/, $F[3]; say "@u"'); do
     ssh=/home/$user/.ssh
     keys=$ssh/authorized_keys
     mkdir $ssh 2>/dev/null
