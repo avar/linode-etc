@@ -1,0 +1,18 @@
+nethack on
+
+# Turn off the startup banner
+startup_message off
+
+# Emacs keybindings on C-a [
+markkeys "h=^B:l=^F:$=^E"
+
+caption always "%{= kw}%-w%{= gW}%n %t%{-}%+w %-= %{= r}%H%{-} %{= g}%l%{-} %D %Y-%m-%d %c:%s"
+
+# let root connect to this session, so we can do "sudo screen -x leech/"
+# to attach without having to log in as the leech user first
+multiuser on
+acladd root
+
+sessionname smolder
+screen -t smolder  0 HOSTNAME=localhost smolder --port 4000 --log_file /home/smolder/log/log.log --data_dir /home/smolder/data
+detach
