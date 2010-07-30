@@ -3,5 +3,5 @@
 5 */6 * * * root /etc/bin/cron/git-repack-and-gc-dir /var/backup/mysql
 
 # SQLite dumps
-#2 */6 * * * root type=sqlite shortname=smolder database=/home/avar/g/smolder/data/smolder.sqlite /etc/bin/cron/sqldump-to-git
-#7 */6 * * * root /etc/bin/cron/git-repack-and-gc-dir /var/backup/sqlite
+2 */6 * * * root type=sqlite shortname=smolder database=/home/smolder/smolder/smolder.sqlite /etc/bin/cron/sqldump-to-git
+7 */6 * * * root /etc/bin/cron/git-repack-and-gc-dir /var/backup/sqlite
