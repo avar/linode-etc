@@ -56,3 +56,4 @@ mysql:x:112:avar
 ah62:x:1004:avar,smueller
 smueller:x:1005:
 smolder:x:1006:
+v-slaves:x:1007:v-perlbrew,smolder
