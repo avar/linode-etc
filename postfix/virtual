@@ -16,6 +16,9 @@ mediawiki@v.nix.is avarab@gmail.com
 hailo@v.nix.is            avarab@gmail.com
 # Signup address for github.com/openstreetmap
 openstreetmap@v.nix.is    avarab@gmail.com
+# Signup address for github.com/gitsmoke / smolder user
+gitsmoke@v.nix.is    avarab@gmail.com
+smolder@v.nix.is    avarab@gmail.com
 # Contact address for the Tor bridge
 tor@v.nix.is              avarab@gmail.com
 
