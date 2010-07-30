@@ -11,6 +11,7 @@ Task::BeLike::AVAR
 App::Nopaste::Service::Linode
 App::Ack
 Devel::NYTProf
+Devel::Dwarn
 
 # perl / CPAN
 App::perlbrew
