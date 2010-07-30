@@ -65,5 +65,5 @@ osm-mirror:x:1005:
 v-perlbrew:x:1006:avar,hinrik
 odin:x:1007:
 cl-builder:x:121:
-smolder:x:1008:avar
+smolder:x:1008:
 v-slaves:x:1009:v-admin,v-perlbrew,leech,failo,smolder,osm-mirror
