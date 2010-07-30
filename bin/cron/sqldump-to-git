@@ -76,4 +76,4 @@ GIT_AUTHOR_EMAIL="sqldump@v.nix.is"
 export GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL
 
 git add *.sql
-git commit -m"Bumping $database MySQL dump" > /dev/null
+git commit -m"Bumping $database dump" > /dev/null
