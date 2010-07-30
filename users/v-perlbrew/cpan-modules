@@ -82,3 +82,6 @@ Catalyst::View::TT
 Catalyst::Model::Adaptor
 Catalyst::Log::Log4perl
 Catalyst::Controller::REST
+
+# smoke.git.nix.is
+Smolder
