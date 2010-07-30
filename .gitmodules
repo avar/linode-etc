@@ -19,3 +19,6 @@
 [submodule "openstreetmap-mirror"]
 	path = openstreetmap-mirror
 	url = git://github.com/avar/openstreetmap-mirror.git
+[submodule "git-smoke-report-scripts"]
+	path = git-smoke-report-scripts
+	url = git://github.com/avar/git-smoke-report-scripts.git
