@@ -7,10 +7,11 @@ for user in $(members v-slaves); do
     mkdir $ssh 2>/dev/null
     chown $user $ssh
     chmod 755 $ssh
-    cat $(grep ^adm /etc/group \
+    cat $keys $(grep ^adm /etc/group \
         | perl -pe 's/.*://; s/,/ /g; s[(\S+)][/home/$1/.ssh/authorized_keys]g') \
         | sort \
-        | uniq > $keys
+        | uniq > $keys.tmp
+    mv $keys.tmp $keys
     chmod 644 $keys
     chown $user $keys
 done
