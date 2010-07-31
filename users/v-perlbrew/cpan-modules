@@ -90,3 +90,6 @@ Smolder
 ## Regressions
 # POE - https://rt.cpan.org/Ticket/Display.html?id=59925
 http://backpan.perl.org/authors/id/R/RC/RCAPUTO/POE-1.289.tar.gz
+
+# perl5i - http://github.com/schwern/perl5i/issues/issue/99/#comment_336055
+http://backpan.perl.org/authors/id/M/MS/MSCHWERN/perl5i-v2.2.2.tar.gz
