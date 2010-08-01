@@ -20,7 +20,6 @@ App::cpanoutdated
 
 # hailo
 Hailo
-POE::Component::IRC::Hailo
 POE::Component::Hailo
 POE::Component::IRC::Plugin::Hailo
 DBD::Pg
