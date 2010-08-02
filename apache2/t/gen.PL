@@ -33,7 +33,10 @@ use WebTest;
 TEMPLATE
 
 my @tests = (
-    # 'ap.nix.is'              => qr/This server could not verify/, # TODO 401
+    'ap.nix.is'                => {
+        content_like => qr/This server could not verify/,
+        success      => 0,
+    },
     'aevar.net'                => qr/Bjarmason/,
     'awstats.nix.is'           => qr/Awstats/,
     'blog.nix.is'              => qr/literal thoughts/,
@@ -93,8 +96,13 @@ while (my ($domain, $tests) = splice @tests, 0, 2) {
 
     if (ref $tests eq 'Regexp') {
         # Just a basic test
-        $tests = { content_like => $tests };
+        $tests = {
+            content_like => $tests,
+        };
     }
+
+    # Should be OK by default
+    $tests->{success} = 1 unless exists $tests->{success};
 
     my $args = Dumper($tests);
     my $test = <<TEST;
