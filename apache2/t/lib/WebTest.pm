@@ -19,15 +19,18 @@ sub run_tests {
 
     my $domain       = $self->{domain};
     my $content_like = $self->{content_like};
+    my $base         = $self->{base_url};
+    my $site         = "http://$domain/";
+    my $base_is      = $base // $site;
 
-    plan( tests => 2 );
+    plan( tests => 3 );
 
     my $mech = Test::WWW::Mechanize->new(
         agent => __FILE__
     );
 
-    my $site = "http://$domain/";
     $mech->get_ok( $site );
+    $mech->base_is( $base_is, "The base for <$site> is <$base_is>");
     $mech->content_like( $content_like, "$site has content like $content_like");
 
     return;
