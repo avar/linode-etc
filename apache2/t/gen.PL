@@ -8,9 +8,16 @@ use File::Path qw[remove_tree make_path];
 remove_tree("$Bin/gen");
 
 # All enabled sites in apache
-chomp(my @sites_enabled = qx[ ack -h --follow 'ServerName\\s+(\\S+)' --output '\$1' /etc/apache2/sites-enabled/ | sort ]);
+chomp(my @ServerName = qx[ ack -h --follow 'ServerName\\s+(\\S+)' --output '\$1' /etc/apache2/sites-enabled/ | sort ]);
+
+# All enabled aliases in apache
+chomp(my @ServerAlias = qx[ ack -h --follow 'ServerAlias\\s+(.*)' --output '\$1'  /etc/apache2/sites-enabled/ | sort ]);
+# Some have multiple aliases
+@ServerAlias = map { split /\s+/, $_ } @ServerAlias;
+
+# All enabled sites
 my %sites_enabled;
-@sites_enabled{@sites_enabled} = ();
+@sites_enabled{@ServerName, @ServerAlias} = ();
 
 my $TEMPLATE = <<"TEMPLATE";
 #!$^X
@@ -69,7 +76,7 @@ WebTest->new(
     domain       => q[$domain],
 )->run_todo_test;
 TEST
-    my $dir = "$Bin/gen/TODO";
+    my $dir = "$Bin/gen/content-like-TODO";
     make_path($dir);
     open my $th, ">", "$dir/$domain.t";
     print $th $test;

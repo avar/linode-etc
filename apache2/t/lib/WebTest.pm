@@ -37,7 +37,7 @@ sub run_todo_test {
     my ($self) = @_;
 
     my $domain       = $self->{domain};
-    plan( skip_all => "No tests for domain $domain yet" );
+    plan( skip_all => "No tests for domain or alias $domain yet" );
     return;
 }
 
