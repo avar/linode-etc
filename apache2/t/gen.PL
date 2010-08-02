@@ -42,6 +42,7 @@ my @tests = (
     'awstats.nix.is'           => qr/Awstats/,
     'blog.nix.is'              => {
         content_like => qr/literal thoughts/,
+        # Due to broken S26 link
         follow_links => 0,
     },
     'hex.downlode.org'         => qr/Go here/,
