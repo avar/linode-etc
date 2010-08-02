@@ -8,6 +8,7 @@ PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/c
 2 22      * * *  www-data perl -e 'my $out = qx[prove -vr /etc/apache2/t 2>&1]; print $out if $?'
 4 22      * * *  root     perl -e 'my $out = qx[prove -vr   /etc/mysql/t 2>&1]; print $out if $?'
 6 22      * * *  www-data perl -e 'my $out = qx[prove -vr     /etc/tor/t 2>&1]; print $out if $?'
+8 22      * * *  www-data perl -e 'my $out = qx[prove -vr   /etc/linux/t 2>&1]; print $out if $?'
 
 # Regenerate tests
 @daily               root find /etc -name 'gen.PL' -exec perl {} \;
