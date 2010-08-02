@@ -12,6 +12,7 @@ App::Nopaste::Service::Linode
 App::Ack
 Devel::NYTProf
 Devel::Dwarn
+POE
 
 # perl / CPAN
 App::perlbrew
