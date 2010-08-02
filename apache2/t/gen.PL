@@ -36,10 +36,15 @@ my @tests = (
     'ap.nix.is'                => {
         content_like => qr/This server could not verify/,
         success      => 0,
+        follow_links => 0,
     },
     'aevar.net'                => qr/Bjarmason/,
     'awstats.nix.is'           => qr/Awstats/,
-    'blog.nix.is'              => qr/literal thoughts/,
+    'blog.nix.is'              => {
+        content_like => qr/literal thoughts/,
+        follow_links => 0,
+    },
+    'hex.downlode.org'         => qr/Go here/,
     'chanmirror.nix.is'        => qr[Index of /],
     'ci.nix.is'                => qr/Powered by phpBB/,
     'dev.velfag.is'            => qr/MediaWiki/,
@@ -48,6 +53,7 @@ my @tests = (
     'git.nix.is'               => {
         content_like => qr/GitHub/,
         base_url     => "http://github.com/avar",
+        follow_links => 0,
     },
     'grault.net'               => qr/Gosling Emacs documentation/,
     'hailo.nix.is'             => qr/Hailo Chat/,
@@ -57,9 +63,19 @@ my @tests = (
     },
     'leech.nix.is'             => qr/wTorrent/,
     'lists.nix.is'             => qr/Mailman/,
-    'localhost'                => qr/How do I runned vee nix\?/,
+    'localhost'                => {
+        content_like => qr/How do I runned vee nix\?/,
+        follow_links => 0,
+    },
+    'v.nix.is'                 => {
+        content_like => qr/How do I runned vee nix\?/,
+        follow_links => 0,
+    },
     'munin.nix.is'             => qr/Munin/,
-    'nix.is'                   => qr/logo\.png/,
+    'nix.is'                   => {
+        content_like => qr/logo\.png/,
+        follow_links => 0,
+    },
     'noc.nix.is'               => qr/Network operations/,
     'osm.nix.is'               => qr/Garmin map of Iceland/,
     'smoke.git.nix.is'         => {
@@ -67,9 +83,12 @@ my @tests = (
         base_url     => "http://smoke.git.nix.is/app",
     },
     'tms.nix.is'               => qr/Tumi/,
-    'trunk.mw.dev.avar.nix.is' => qr/MediaWiki/,
+    'trunk.mw.dev.avar.nix.is' => {
+        content_like => qr/MediaWiki/,
+        follow_links => 0,
+    },
     'tumi.nix.is'              => qr/Tumi/,
-    'v.nix.is'                 => qr/vee nix/,
+
     'velfag.is'                => qr/MediaWiki/,
     'vnstat.nix.is'            => qr/vnstat\.cgi/,
     'voodootronix.com'         => qr/voodootronix/,
@@ -91,8 +110,6 @@ my @tests = (
 );
 
 while (my ($domain, $tests) = splice @tests, 0, 2) {
-    # We done tested
-    delete $sites_enabled{$domain};
 
     if (ref $tests eq 'Regexp') {
         # Just a basic test
@@ -102,22 +119,29 @@ while (my ($domain, $tests) = splice @tests, 0, 2) {
     }
 
     # Should be OK by default
-    $tests->{success} = 1 unless exists $tests->{success};
+    $tests->{success}      = 1 unless exists $tests->{success};
+    $tests->{follow_links} = 1 unless exists $tests->{follow_links};
 
     my $args = Dumper($tests);
-    my $test = <<TEST;
+    for my $t (qw(content_like base_is follow_links)) {
+        my $test = <<TEST;
 $TEMPLATE
 my \$tests = $args;
 WebTest->new(
     domain       => q[$domain],
     %\$tests,
-)->run_tests;
+)->run_${t}_tests;
 TEST
-    my $dir = "$Bin/gen/content-like";
-    make_path($dir);
-    open my $th, ">", "$dir/$domain.t";
-    print $th $test;
-    close $th;
+        my $dir = "$Bin/gen/$t";
+        $dir =~ s/_/-/g;
+        make_path($dir);
+        open my $th, ">", "$dir/$domain.t";
+        print $th $test;
+        close $th;
+    }
+
+    # We've tested this one
+    delete $sites_enabled{$domain};
 }
 
 for my $domain (sort keys %sites_enabled) {
