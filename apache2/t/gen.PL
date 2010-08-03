@@ -125,6 +125,8 @@ while (my ($domain, $tests) = splice @tests, 0, 2) {
 
     my $args = Dumper($tests);
     for my $t (qw(content_like base_is follow_links)) {
+        my $dashy = $t; $dashy =~ s/_/-/g;
+
         my $test = <<TEST;
 $TEMPLATE
 my \$tests = $args;
@@ -133,10 +135,9 @@ WebTest->new(
     %\$tests,
 )->run_${t}_tests;
 TEST
-        my $dir = "$Bin/gen/$t";
-        $dir =~ s/_/-/g;
+        my $dir = "$Bin/gen/$domain";
         make_path($dir);
-        open my $th, ">", "$dir/$domain.t";
+        open my $th, ">", "$dir/$dashy.t";
         print $th $test;
         close $th;
     }
@@ -152,9 +153,9 @@ WebTest->new(
     domain       => q[$domain],
 )->run_todo_test;
 TEST
-    my $dir = "$Bin/gen/content-like-TODO";
+    my $dir = "$Bin/gen/$domain";
     make_path($dir);
-    open my $th, ">", "$dir/$domain.t";
+    open my $th, ">", "$dir/TODO.t";
     print $th $test;
     close $th;
 }
