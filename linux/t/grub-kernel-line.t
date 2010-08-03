@@ -1,8 +1,14 @@
 #!/usr/bin/env perl
 use 5.012;
+use strict;
+use autodie;
 use Test::More tests => 2;
 
-chomp(my ($kernel, $root) = qx[ ack '^kernel\\s*(\\S+) root=(/dev\\S+)' --output='\$1\\n\$2' /boot/grub/menu.lst 2>/dev/null ]);
+open my $menu, "<", "/boot/grub/menu.lst";
 
-ok(-f $kernel, "current kernel image $kernel exists");
-ok(-b $root, "current root device $root exists");
+while (my $line = <$menu>) {
+    next unless $line ~~ m[^ kernel \s* (?<image>\S+) \s+ root=(?<device>/dev\S+) ]x;
+
+    ok(-f $+{image},  "current kernel image $+{image} exists");
+    ok(-b $+{device}, "current root device $+{device} exists");
+}
