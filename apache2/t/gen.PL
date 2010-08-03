@@ -11,10 +11,10 @@ $Data::Dumper::Terse = 1;
 remove_tree("$Bin/gen");
 
 # All enabled sites in apache
-chomp(my @ServerName = qx[ ack -h --follow 'ServerName\\s+(\\S+)' --output '\$1' /etc/apache2/sites-enabled/ | sort ]);
+chomp(my @ServerName = qx[ ack -h --follow 'ServerName\\s+(\\S+)' --output '\$1' /etc/apache2/sites-enabled/ 2>/dev/null | sort ]);
 
 # All enabled aliases in apache
-chomp(my @ServerAlias = qx[ ack -h --follow 'ServerAlias\\s+(.*)' --output '\$1'  /etc/apache2/sites-enabled/ | sort ]);
+chomp(my @ServerAlias = qx[ ack -h --follow 'ServerAlias\\s+(.*)' --output '\$1'  /etc/apache2/sites-enabled/ 2>/dev/null | sort ]);
 # Some have multiple aliases
 @ServerAlias = map { split /\s+/, $_ } @ServerAlias;
 
