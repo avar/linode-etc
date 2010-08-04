@@ -2,7 +2,8 @@
 
 # Add all admin ssh keys to v-* users
 for user in $(members v-slaves); do
-    ssh=/home/$user/.ssh
+    home=$(perl -le 'print ((getpwuid(getpwnam(shift)))[7])' $user)
+    ssh=$home/.ssh
     keys=$ssh/authorized_keys
     mkdir $ssh 2>/dev/null
     chown $user $ssh
