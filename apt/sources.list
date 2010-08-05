@@ -1,15 +1,15 @@
 # Stable
-deb http://mirror.sov.uk.goscomb.net/debian/ stable main contrib non-free
-deb-src http://mirror.sov.uk.goscomb.net/debian/ stable main contrib non-free
+deb http://ftp.us.debian.org/debian/ stable main contrib non-free
+deb-src http://ftp.us.debian.org/debian/ stable main contrib non-free
 
 # Testing
-deb http://mirror.sov.uk.goscomb.net/debian/ testing main contrib non-free
-deb-src http://mirror.sov.uk.goscomb.net/debian/ testing main contrib non-free
+deb http://ftp.us.debian.org/debian/ testing main contrib non-free
+deb-src http://ftp.us.debian.org/debian/ testing main contrib non-free
 
 # Unstable
-deb http://mirror.sov.uk.goscomb.net/debian/ unstable main contrib non-free
-deb-src http://mirror.sov.uk.goscomb.net/debian/ unstable main contrib non-free
+deb http://ftp.us.debian.org/debian/ unstable main contrib non-free
+deb-src http://ftp.us.debian.org/debian/ unstable main contrib non-free
 
 # Experimental
-deb http://mirror.sov.uk.goscomb.net/debian/ experimental main contrib non-free
-deb-src http://mirror.sov.uk.goscomb.net/debian/ experimental main contrib non-free
+deb http://ftp.us.debian.org/debian/ experimental main contrib non-free
+deb-src http://ftp.us.debian.org/debian/ experimental main contrib non-free
