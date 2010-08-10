@@ -1,0 +1,51 @@
+#!/bin/sh
+
+# Exit on errors
+trap 'fail' ERR
+fail () {
+    code=$?
+    echo "Failed with exit code $code"
+    exit 1
+}
+
+j=10
+prefix=/opt/git/pu
+
+dir=$(mktemp -d --tmpdir=/tmp "$(basename $0)-XXXX")
+echo "Working in $dir"
+rm -rfv $dir
+mkdir $dir
+
+git clone --reference /home/avar/g/git git://git.kernel.org/pub/scm/git/git.git $dir
+cd $dir
+git checkout -b pu-smoke origin/pu
+git remote add avar /home/avar/g/git
+git remote update
+git chrp 855a1f88363406a2f1948a88ebe02056a8f22d35
+
+make -j$j prefix=$prefix CC=clang CFLAGS=-O3 SHELL_PATH=/bin/bash V=1 all
+cd $dir/t
+
+# Smoke it
+if test -n "$SMOKE"
+then
+    SMOKE_USERNAME=avar
+    SMOKE_PASSWORD="$(cat ~avar/.smoke-git-password)"
+    SMOKE_COMMENT="Automated smoking of the pu branch on v.nix.is"
+    SMOKE_TAGS="Debian GNU/Linux testing,pu,no-SANITY,GETTEXT,PERL,PYTHON,root,git-svn,clang"
+    export SMOKE_USERNAME SMOKE_PASSWORD SMOKE_COMMENT SMOKE_TAGS
+
+    GIT_TEST_OPTS='--root=/dev/shm' TEST_JOBS=$j make clean smoke
+    make smoke_report
+fi
+
+# test it (again)
+prove --exec /bin/bash -j $j ./t[0-9]*.sh :: --root=/dev/shm || exit 1
+
+# Install it
+cd $dir
+make -j $(($j / 3)) prefix=$prefix V=1 doc info
+make -j $(($j / 3)) prefix=$prefix V=1 install install-doc install-html install-info
+rm -rf $dir
+
+echo "Finished in $dir"

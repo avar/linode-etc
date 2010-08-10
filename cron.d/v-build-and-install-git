@@ -1,0 +1,3 @@
+PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/bin:/usr/bin
+
+@daily avar SMOKE=YesPlease cronjob -E -r build-and-install-git -j build-and-install-git -c '/etc/bin/cron/build-and-install-git'
