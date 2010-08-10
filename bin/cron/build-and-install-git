@@ -10,6 +10,7 @@ fail () {
 
 j=10
 prefix=/opt/git/pu
+export GIT_NOTES_TIMING_TESTS=YesPlease
 
 dir=$(mktemp -d --tmpdir=/tmp "$(basename $0)-XXXX")
 echo "Working in $dir"
