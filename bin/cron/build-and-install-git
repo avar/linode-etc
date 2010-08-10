@@ -44,8 +44,8 @@ prove --exec /bin/bash -j $j ./t[0-9]*.sh :: --root=/dev/shm || exit 1
 
 # Install it
 cd $dir
-make -j $(($j / 3)) prefix=$prefix V=1 doc info
-make -j $(($j / 3)) prefix=$prefix V=1 install install-doc install-html install-info
+make -j $(($j / 3)) prefix=$prefix V=1 CC=clang CFLAGS=-O3 SHELL_PATH=/bin/bash V=1 doc info
+make -j $(($j / 3)) prefix=$prefix V=1 CC=clang CFLAGS=-O3 SHELL_PATH=/bin/bash V=1 install install-doc install-html install-info
 rm -rf $dir
 
 echo "Finished in $dir"
