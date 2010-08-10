@@ -21,7 +21,10 @@ cd $dir
 git checkout -b pu-smoke origin/pu
 git remote add avar /home/avar/g/git
 git remote update
-git chrp 855a1f88363406a2f1948a88ebe02056a8f22d35
+
+git cherry-pick 041bc904d274b44be925735ff3e874c601301eb4 # t/lib-git-svn.sh: use $PERL_PATH for perl, not perl from $PATH
+git cherry-pick 855a1f88363406a2f1948a88ebe02056a8f22d35 # commit: fix test broken by jn/commit-no-change-wo-status
+
 
 make -j$j prefix=$prefix CC=clang CFLAGS=-O3 SHELL_PATH=/bin/bash V=1 all
 cd $dir/t
