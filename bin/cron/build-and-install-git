@@ -38,7 +38,7 @@ then
     SMOKE_TAGS="Debian GNU/Linux testing,pu,no-SANITY,GETTEXT,PERL,PYTHON,root,git-svn,clang"
     export SMOKE_USERNAME SMOKE_PASSWORD SMOKE_COMMENT SMOKE_TAGS
 
-    GIT_TEST_OPTS='--root=/dev/shm' TEST_JOBS=$j make clean smoke
+    SHELL_PATH=/bin/bash GIT_TEST_OPTS='--root=/dev/shm' TEST_JOBS=$j make clean smoke
     make smoke_report
 fi
 
