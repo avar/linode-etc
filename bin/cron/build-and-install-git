@@ -35,7 +35,7 @@ then
     SMOKE_USERNAME=avar
     SMOKE_PASSWORD="$(cat ~avar/.smoke-git-password)"
     SMOKE_COMMENT="Automated smoking of the pu branch on v.nix.is"
-    SMOKE_TAGS="Debian GNU/Linux testing,pu,no-SANITY,GETTEXT,PERL,PYTHON,root,git-svn,clang"
+    SMOKE_TAGS="Debian GNU/Linux testing,pu,no-SANITY,GETTEXT,PERL,PYTHON,git-svn,clang"
     export SMOKE_USERNAME SMOKE_PASSWORD SMOKE_COMMENT SMOKE_TAGS
 
     make clean
