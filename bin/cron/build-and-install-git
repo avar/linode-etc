@@ -45,7 +45,7 @@ then
 fi
 
 # test it (again)
-prove -j $j ./t[0-9]*.sh :: --root=/dev/shm || exit 1
+prove --shuffle -j $j ./t[0-9]*.sh :: --root=/dev/shm
 
 # Install it
 cd $dir
