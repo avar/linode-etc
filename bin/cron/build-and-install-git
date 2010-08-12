@@ -50,6 +50,5 @@ prove -j $j ./t[0-9]*.sh :: --root=/dev/shm || exit 1
 cd $dir
 make -j $(($j / 3)) prefix=$prefix V=1 CC=clang CFLAGS=-O3 V=1 doc info
 make -j $(($j / 3)) prefix=$prefix V=1 CC=clang CFLAGS=-O3 V=1 install install-doc install-html install-info
-rm -rf $dir
 
 echo "Finished in $dir"
