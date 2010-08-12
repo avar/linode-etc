@@ -12,7 +12,8 @@ j=10
 prefix=/opt/git/pu
 export GIT_NOTES_TIMING_TESTS=YesPlease
 
-dir=$(mktemp -d --tmpdir=/tmp "$(basename $0)-XXXX")
+dir=$(mktemp -d --tmpdir=/tmp "$(basename $0)-$(date --iso-8601)-XXXX")
+test -n "$dir" || exit 1
 echo "Working in $dir"
 rm -rfv $dir
 mkdir $dir
