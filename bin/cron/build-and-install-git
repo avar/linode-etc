@@ -26,8 +26,7 @@ git remote update
 git cherry-pick 041bc904d274b44be925735ff3e874c601301eb4 # t/lib-git-svn.sh: use $PERL_PATH for perl, not perl from $PATH
 git cherry-pick 855a1f88363406a2f1948a88ebe02056a8f22d35 # commit: fix test broken by jn/commit-no-change-wo-status
 
-
-make -j$j prefix=$prefix CC=clang CFLAGS=-O3 SHELL_PATH=/bin/bash V=1 all
+make -j$j prefix=$prefix CC=clang CFLAGS=-O3 V=1 all
 cd $dir/t
 
 # Smoke it
@@ -39,17 +38,18 @@ then
     SMOKE_TAGS="Debian GNU/Linux testing,pu,no-SANITY,GETTEXT,PERL,PYTHON,root,git-svn,clang"
     export SMOKE_USERNAME SMOKE_PASSWORD SMOKE_COMMENT SMOKE_TAGS
 
-    SHELL_PATH=/bin/bash GIT_TEST_OPTS='--root=/dev/shm' TEST_JOBS=$j make clean smoke
+    make clean
+    GIT_TEST_OPTS='--root=/dev/shm' TEST_JOBS=$j make smoke
     make smoke_report
 fi
 
 # test it (again)
-prove --exec /bin/bash -j $j ./t[0-9]*.sh :: --root=/dev/shm || exit 1
+prove -j $j ./t[0-9]*.sh :: --root=/dev/shm || exit 1
 
 # Install it
 cd $dir
-make -j $(($j / 3)) prefix=$prefix V=1 CC=clang CFLAGS=-O3 SHELL_PATH=/bin/bash V=1 doc info
-make -j $(($j / 3)) prefix=$prefix V=1 CC=clang CFLAGS=-O3 SHELL_PATH=/bin/bash V=1 install install-doc install-html install-info
+make -j $(($j / 3)) prefix=$prefix V=1 CC=clang CFLAGS=-O3 V=1 doc info
+make -j $(($j / 3)) prefix=$prefix V=1 CC=clang CFLAGS=-O3 V=1 install install-doc install-html install-info
 rm -rf $dir
 
 echo "Finished in $dir"
