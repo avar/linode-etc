@@ -1,1 +1,0 @@
-@daily root /etc/init.d/mailman restart > /dev/null

@@ -1,0 +1,2 @@
+PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/bin:/usr/bin:/usr/sbin
+@hourly root nice -n 10 cronjob -E  -j v-mail-restart -c '/etc/bin/cron/mail-restart'
