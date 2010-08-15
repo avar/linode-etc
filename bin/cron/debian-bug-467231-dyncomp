@@ -1,6 +1,6 @@
 BASH_COMPLETION=/etc/bash_completion
-BASH_DYNCOMPLETION=/etc/bash_dyncompletion
-BASH_DYNCOMPLETION_DIR=/etc/bash_dyncompletion.d
+BASH_DYNCOMPLETION=/dev/shm/bash_dyncompletion
+BASH_DYNCOMPLETION_DIR=/dev/shm/bash_dyncompletion.d
 
 echo "Read static completions from $BASH_COMPLETION"
 . "$BASH_COMPLETION" || exit 1
