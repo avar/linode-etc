@@ -70,8 +70,8 @@ sub whois {
 
     my $cmd;
     given ($tld) {
-        when ('is') { $cmd = qq[whois -p 4343 -h $whois_server $domain] }
-        default {     $cmd = qq[whois $domain] }
+        when ('is') { $cmd = qq[whois -p 4343 -h $whois_server $domain 2>&1] }
+        default {     $cmd = qq[whois $domain 2>&1] }
     }
 
     return $self->do_cmd($cmd);
@@ -124,9 +124,15 @@ sub run_whois_tests {
     @servers = splice(@servers, 0, 4) if tld($domain) eq 'is' or $domain eq 'hailo.org';
 
     my @whois = @{ $self->whois($domain) };
-    my @public = @{ $self->whois_nameservers(\@whois) };
 
+  SKIP: {
+    if (@whois == 1 && $whois[0] =~ /Connection refused/) {
+        skip "Can't contact the whois server: @whois", 1;
+    }
+    my @public = @{ $self->whois_nameservers(\@whois) };
     $self->cmp_servers(\@public, \@servers);
+  }
+
 }
 
 sub run_whois_expire_tests {
@@ -138,6 +144,10 @@ sub run_whois_expire_tests {
     plan( tests => 3 );
 
     my @whois = @{ $self->whois($domain) };
+  SKIP: {
+    if (@whois == 1 && $whois[0] =~ /Connection refused/) {
+        skip "Can't contact the whois server: @whois", 2;
+    }
     if (my ($expires_time, $expires_str) = $self->whois_expires(\@whois)) {
         my $expires_str_normal = scalar localtime $expires_time;
         my ($now_time, $now_str) = (time, scalar localtime);
@@ -152,6 +162,7 @@ sub run_whois_expire_tests {
         my $lns = @whois;
         fail("Couldn't get the expiration time for domain $domain, got $lns whois lines");
     }
+  }
 }
 
 sub cmp_servers {
