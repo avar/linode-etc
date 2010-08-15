@@ -11,6 +11,8 @@ fail () {
 j=10
 prefix=/opt/git/pu
 export GIT_NOTES_TIMING_TESTS=YesPlease
+export GIT_TEST_HTTPD=YesPlease
+export SVNSERVE_PORT=9876
 
 dir=$(mktemp -d --tmpdir=/tmp "$(basename $0)-$(date --iso-8601)-XXXX")
 test -n "$dir" || exit 1
@@ -23,10 +25,6 @@ cd $dir
 git checkout -b pu-smoke origin/pu
 git remote add avar /home/avar/g/git
 git remote update
-
-# Monkeypatches
-git cherry-pick 855a1f88363406a2f1948a88ebe02056a8f22d35 # commit: fix test broken by jn/commit-no-change-wo-status
-git cherry-pick 9f8ba869af672d91dff264dd46f43ff1cc91a3aa # t/Makefile: Create test-results dir for smoke target
 
 make -j$j prefix=$prefix CC=clang CFLAGS=-O3 V=1 all
 cd $dir/t
