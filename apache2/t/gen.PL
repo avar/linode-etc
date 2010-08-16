@@ -41,19 +41,12 @@ my @tests = (
         success      => 0,
         follow_links => 0,
     },
-    'aevar.net'                => qr/Bjarmason/,
     'awstats.nix.is'           => qr/Awstats/,
     'blog.nix.is'              => {
         content_like => qr/literal thoughts/,
         # Due to broken S26 link
         follow_links => 0,
     },
-    'hex.downlode.org'         => qr/Go here/,
-    'chanmirror.nix.is'        => qr[Index of /],
-    'ci.nix.is'                => qr/Powered by phpBB/,
-    'dev.velfag.is'            => qr/MediaWiki/,
-    'dev.xn--vlfag-bsa.is'     => qr/MediaWiki/,
-    'downlode.org'             => qr/downlode/,
     'git.nix.is'               => {
         content_like => qr/GitHub/,
         base_url     => "http://github.com/avar",
@@ -93,25 +86,29 @@ my @tests = (
     },
     'tumi.nix.is'              => qr/Tumi/,
 
-    'velfag.is'                => qr/MediaWiki/,
     'vnstat.nix.is'            => qr/vnstat\.cgi/,
-    'voodootronix.com'         => qr/voodootronix/,
-    'www.aevar.net'            => qr/Bjarmason/,
-    'www.hailo.org'            => {
+
+    'chanmirror.nix.is'        => qr[Index of /],
+    'ci.nix.is'                => qr/Powered by phpBB/,
+
+    [ and_www qw/hailo.org/ ]  => {
         content_like => qr/Hailo is a a pluggable/,
         base_url     => "http://hailo.github.com/",
     },
-    'hailo.org'                => {
-        content_like => qr/Hailo is a a pluggable/,
-        base_url     => "http://hailo.github.com/",
-    },
-    'www.velfag.is'            => qr/MediaWiki/,
-    'www.voodootronix.com'     => qr/voodootronix/,
-    'www.xn--var-xla.net'      => qr/Bjarmason/,
-    'www.xn--vlfag-bsa.is'     => qr/MediaWiki/,
-    'xn--var-xla.net'          => qr/Bjarmason/,
-    'xn--vlfag-bsa.is'         => qr/MediaWiki/,
+
+    # Ævar
+    [ and_www qw(aevar.net xn--var-xla.net) ] => qr/Bjarmason/,
     [ and_www qw(hjolavefsja.is xn--hjlavefsj-81a4q.is) ] => qr/Fyrirspurnir um verkefni/,
+
+    # Vélfag
+    [ and_www qw/velfag.is xn--vlfag-bsa.is/ ]  => qr/MediaWiki/,
+    [ qw/dev.velfag.is dev.xn--vlfag-bsa.is/ ]  => qr/MediaWiki/,
+
+    # Earle
+    [ and_www qw/voodootronix.com/ ] => qr/voodootronix/,
+    'hex.downlode.org'               => qr/Go here/,
+    'downlode.org'                   => qr/downlode/,
+
 );
 
 # Generate expanded tests for Perl
