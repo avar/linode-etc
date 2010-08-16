@@ -40,11 +40,18 @@ Configure a `/boot/grub/menu.lst`, e.g. with the lines from
 but *without* everything after "BEGIN AUTOMAGIC KERNELS LIST".
 
 *MAKE SURE* the `kernel` line in `/boot/grub/menu.lst` actually points
- to your new kernel image. E.g.:
- 
-    $ file /boot/vmlinuz-2.6.35-rc5-Avar-Akbar+
-    /boot/vmlinuz-2.6.35-rc5-Avar-Akbar+: Linux kernel x86 boot executable bzImage
+ to your new kernel image:
 
+    $ prove -v -r /etc/linux/t
+    /etc/linux/t/grub-kernel-line.t .. 
+    1..2
+    ok 1 - current kernel image /boot/vmlinuz-2.6.35-rc5-Avar-Akbar+ exists
+    ok 2 - current root device /dev/xvda exists
+    ok
+    All tests successful.
+    Files=1, Tests=2,  0 wallclock secs ( 0.02 usr  0.01 sys +  0.07 cusr  0.02 csys =  0.12 CPU)
+    Result: PASS
+    
 and:
 
     $ grep ^kernel /boot/grub/menu.lst
