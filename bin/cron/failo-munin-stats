@@ -2,6 +2,9 @@
 
 export brain=/var/tmp/ramdisk/failo/failo.sqlite
 
+# We've just rebooted and the brain doesn't exist yet
+test -f $brain || exit 0
+
 export name=Failo
 export mode=dump
 
