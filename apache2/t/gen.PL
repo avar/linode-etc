@@ -32,6 +32,9 @@ use lib qq[\$Bin/../../lib];
 use WebTest;
 TEMPLATE
 
+# The domain tests
+sub and_www { map { $_, "www.$_" } @_ }
+
 my @tests = (
     'ap.nix.is'                => {
         content_like => qr/This server could not verify/,
@@ -108,9 +111,19 @@ my @tests = (
     'www.xn--vlfag-bsa.is'     => qr/MediaWiki/,
     'xn--var-xla.net'          => qr/Bjarmason/,
     'xn--vlfag-bsa.is'         => qr/MediaWiki/,
+    [ and_www qw(hjolavefsja.is xn--hjlavefsj-81a4q.is) ] => qr/Fyrirspurnir um verkefni/,
 );
 
+# Generate expanded tests for Perl
+my %tests;
 while (my ($domain, $tests) = splice @tests, 0, 2) {
+    my @d = ref $domain eq 'ARRAY' ? @$domain : $domain;
+    for my $d (@d) {
+        $tests{$d} = $tests;
+    }
+}
+
+while (my ($domain, $tests) = each %tests) {
 
     if (ref $tests eq 'Regexp') {
         # Just a basic test
