@@ -24,7 +24,7 @@ Copy the config (or
 
     cp /etc/linux/config .config
     
-Upgrade the condfig for a new kernel:
+Upgrade the config for a new kernel:
 
     make oldconfig
  
