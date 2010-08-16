@@ -1,0 +1,10 @@
+<VirtualHost *:81>
+    ServerName xn--hjlavefsj-81a4q.is
+    ServerAlias www.xn--hjlavefsj-81a4q.is hjolavefsja.is www.hjolavefsja.is
+    DocumentRoot /var/www/xn--hjlavefsj-81a4q.is
+
+    <FilesMatch "\.(ico|jpg|jpeg|gif|png|css|js)$">
+        ExpiresActive on  
+        ExpiresDefault "access plus 11 days"
+    </FilesMatch>
+</VirtualHost>
