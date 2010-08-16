@@ -1,8 +1,8 @@
 default  0
 timeout  2
-title    Debian GNU/Linux, kernel v2.6.35-rc5-1-g561c5e8
+title    Debian GNU/Linux, kernel v2.6.36-rc1
 root     (hd0)
-kernel   /boot/vmlinuz-2.6.35-rc5-Avar-Akbar+ root=/dev/xvda
+kernel   /etc/boot/vmlinuz-2.6.36-rc1-Avar-Akbar root=/dev/xvda
 ### BEGIN AUTOMAGIC KERNELS LIST
 ## lines between the AUTOMAGIC KERNELS LIST markers will be modified
 ## by the debian update-grub script except for the default options below
