@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # Linux kernel version: 2.6.36-rc1
-# Mon Aug 16 21:09:36 2010
+# Mon Aug 16 21:16:05 2010
 #
 CONFIG_64BIT=y
 # CONFIG_X86_32 is not set
@@ -288,8 +288,8 @@ CONFIG_IOMMU_HELPER=y
 CONFIG_NR_CPUS=8
 # CONFIG_SCHED_SMT is not set
 CONFIG_SCHED_MC=y
-CONFIG_PREEMPT_NONE=y
-# CONFIG_PREEMPT_VOLUNTARY is not set
+# CONFIG_PREEMPT_NONE is not set
+CONFIG_PREEMPT_VOLUNTARY=y
 # CONFIG_PREEMPT is not set
 CONFIG_X86_LOCAL_APIC=y
 CONFIG_X86_IO_APIC=y
