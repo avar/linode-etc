@@ -57,7 +57,7 @@ munin:x:112:hinrik,avar,tumi,andreasg
 debian-tor:x:115:
 oident:x:116:
 qpsmtpd:x:117:
-failo:x:1004:hinrik,avar
+failo:x:1004:failo,hinrik,avar
 fuse:x:118:
 tomcat6:x:119:
 hex:x:1003:
