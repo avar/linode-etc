@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # Linux kernel version: 2.6.36-rc1
-# Mon Aug 16 21:06:05 2010
+# Mon Aug 16 21:09:36 2010
 #
 CONFIG_64BIT=y
 # CONFIG_X86_32 is not set
@@ -277,7 +277,7 @@ CONFIG_X86_MINIMUM_CPU_FAMILY=64
 CONFIG_X86_DEBUGCTLMSR=y
 CONFIG_PROCESSOR_SELECT=y
 CONFIG_CPU_SUP_INTEL=y
-CONFIG_CPU_SUP_AMD=y
+# CONFIG_CPU_SUP_AMD is not set
 # CONFIG_CPU_SUP_CENTAUR is not set
 CONFIG_HPET_TIMER=y
 CONFIG_DMI=y
