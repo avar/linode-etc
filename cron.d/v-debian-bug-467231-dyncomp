@@ -1,2 +1,3 @@
 PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/bin:/usr/bin
-@daily root nice -n 10 cronjob -E v-debian-bug-467231-dyncomp -c 'bash /etc/bin/cron/debian-bug-467231-dyncomp'
+@reboot root nice -n 10 cronjob -E v-debian-bug-467231-dyncomp -c 'bash /etc/bin/cron/debian-bug-467231-dyncomp'
+@daily  root nice -n 10 cronjob -E v-debian-bug-467231-dyncomp -c 'bash /etc/bin/cron/debian-bug-467231-dyncomp'
