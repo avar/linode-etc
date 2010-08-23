@@ -98,7 +98,7 @@ my @tests = (
 
     # Ævar
     [ and_www qw(aevar.net xn--var-xla.net) ] => qr/Bjarmason/,
-    [ and_www qw(hjolavefsja.is xn--hjlavefsj-81a4q.is) ] => qr/Fyrirspurnir um verkefni/,
+    [ and_www qw(hjolavefsja.is xn--hjlavefsj-81a4q.is) ] => qr/Ride the City/,
 
     # Vélfag
     [ and_www qw/velfag.is xn--vlfag-bsa.is/ ]  => qr/MediaWiki/,
