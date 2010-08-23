@@ -1,7 +1,7 @@
 $TTL 86400 ; 24 hours could have been written as 24h or 1d
 $ORIGIN xn--hjlavefsj-81a4q.is.
 @  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
-      1          ; serial
+      3          ; serial
       3h         ; refresh
       30m        ; retry
       1w         ; expire
@@ -16,6 +16,6 @@ $ORIGIN xn--hjlavefsj-81a4q.is.
 
        IN  MX  10 mail.xn--hjlavefsj-81a4q.is.
 
-xn--hjlavefsj-81a4q.is. IN  A      109.74.193.250
+xn--hjlavefsj-81a4q.is. IN  A      209.123.234.190
 www                     IN  CNAME  xn--hjlavefsj-81a4q.is.
-mail                    IN  CNAME  xn--hjlavefsj-81a4q.is.
+mail                    IN  A      109.74.193.250
