@@ -1,5 +1,5 @@
 SHELL=/bin/bash
 PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/bin:/usr/bin
 
-*/35 * * * * avar (sleep $(($RANDOM \% 600))) && nice -n 19 ionice -c 2 -n 6 /etc/bin/cron/twatterhose-twat
-@daily       avar rm /var/tmp/ramdisk/twatterhose/twatterhose.brn
+#*/35 * * * * avar (sleep $(($RANDOM \% 600))) && nice -n 19 ionice -c 2 -n 6 /etc/bin/cron/twatterhose-twat
+#@daily       avar rm /var/tmp/ramdisk/twatterhose/twatterhose.brn
