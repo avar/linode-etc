@@ -1,1 +1,1 @@
-18 */4 * * * root (chgrp -R leech /home/leech/torrent/complete/* && chmod -R g+rw /home/leech/torrent/complete/*)
+18 */4 * * * root (chgrp -R leech /home/leech/torrent/complete/ && chmod -R g+rw /home/leech/torrent/complete/)
