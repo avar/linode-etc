@@ -86,3 +86,7 @@ Configure the kernel
 in the Linode manager, then:
 
     sudo reboot
+    
+Or, more kindly:
+
+    sudo shutdown -r '+360' "We're rebooting in 6 hours kernel and libc updates"
