@@ -46,25 +46,20 @@ Configure a `/boot/grub/menu.lst`, e.g. with the lines from
 but *without* everything after "BEGIN AUTOMAGIC KERNELS LIST".
 
 *MAKE SURE* the `kernel` line in `/boot/grub/menu.lst` actually points
- to your new kernel image:
-
+to your new kernel image. You must manually edit `/boot/grub/menu.lst`
+and update the kernel entry:
+   
     $ prove -v -r /etc/linux/t
-    /etc/linux/t/grub-kernel-line.t .. 
-    1..2
-    ok 1 - current kernel image /boot/vmlinuz-2.6.35-rc5-Avar-Akbar+ exists
+    /etc/linux/t/grub-kernel-line.t ..
+    1..3
+    ok 1 - current kernel image /etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+ exists
     ok 2 - current root device /dev/xvda exists
+    ok 3 - Our latest kernel /etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+ is listed among the grub kernels: </etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+>
     ok
     All tests successful.
-    Files=1, Tests=2,  0 wallclock secs ( 0.02 usr  0.01 sys +  0.07 cusr  0.02 csys =  0.12 CPU)
+    Files=1, Tests=3,  0 wallclock secs ( 0.03 usr  0.01 sys +  0.05 cusr  0.02 csys =  0.11 CPU)
     Result: PASS
-    
-and:
-
-    $ grep ^kernel /boot/grub/menu.lst
-    kernel   /boot/vmlinuz-2.6.35-rc5-Avar-Akbar+ root=/dev/xvda
-    kernel          /etc/boot/vmlinuz-2.6.35-rc5-Avar-Akbar+ root=UUID=3529f8c9-9878-47d7-9b22-d97d327a5b85 ro 
-    kernel          /etc/boot/vmlinuz-2.6.35-rc5-Avar-Akbar+ root=UUID=3529f8c9-9878-47d7-9b22-d97d327a5b85 ro single
-
+   
 Then run `update-grub`:
 
     $ sudo update-grub /boot/vmlinuz*
