@@ -41,34 +41,43 @@ Compile the kernel:
 
 # Installing the kernel
 
-Configure a `/boot/grub/menu.lst`, e.g. with the lines from
-[here](http://github.com/avar/linode-etc/blob/master/boot/grub/menu.lst)
-but *without* everything after "BEGIN AUTOMAGIC KERNELS LIST".
+Edit the lines before "BEGIN AUTOMAGIC KERNELS LIST" in
+`/boot/grub/menu.lst` to point to your new kernel.
 
-*MAKE SURE* the `kernel` line in `/boot/grub/menu.lst` actually points
-to your new kernel image. You must manually edit `/boot/grub/menu.lst`
-and update the kernel entry:
-   
-    $ prove -v -r /etc/linux/t
-    /etc/linux/t/grub-kernel-line.t ..
-    1..3
-    ok 1 - current kernel image /etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+ exists
-    ok 2 - current root device /dev/xvda exists
-    ok 3 - Our latest kernel /etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+ is listed among the grub kernels: </etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+>
-    ok
-    All tests successful.
-    Files=1, Tests=3,  0 wallclock secs ( 0.03 usr  0.01 sys +  0.05 cusr  0.02 csys =  0.11 CPU)
-    Result: PASS
-   
-Then run `update-grub`:
+Then run `update-grub` to generate the rest of the `menu.lst` based on
+that:
 
-    $ sudo update-grub /boot/vmlinuz*
+    $ sudo update-grub
     Searching for GRUB installation directory ... found: /boot/grub
     Searching for default file ... found: /boot/grub/default
     Testing for an existing GRUB menu.lst file ... found: /boot/grub/menu.lst
     Searching for splash image ... none found, skipping ...
-    Found kernel: /etc/boot/vmlinuz-2.6.35-rc5+
+    Found kernel: /etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+
+    Found kernel: /etc/boot/vmlinuz-2.6.36-rc1-Avar-Akbar
+    Found kernel: /etc/boot/vmlinuz-2.6.35-rc5-Avar-Akbar+
     Updating /boot/grub/menu.lst ... done
+    
+You can see if it worked by running the /etc/linux/t tests:
+
+    $ prove -v -r /etc/linux/t
+    /etc/linux/t/grub-kernel-line.t ..
+    1..4
+    ok 1 - current kernel image /etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+ exists
+    ok 2 - current root device /dev/xvda exists
+    ok 3 - Our latest kernel /etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+ is listed among the grub kernels: </etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+>
+        1..7
+        ok 1 - Got generated kernel: /etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+
+        ok 2 - Got generated kernel: /etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+
+        ok 3 - Got generated kernel: /etc/boot/vmlinuz-2.6.36-rc1-Avar-Akbar
+        ok 4 - Got generated kernel: /etc/boot/vmlinuz-2.6.36-rc1-Avar-Akbar
+        ok 5 - Got generated kernel: /etc/boot/vmlinuz-2.6.35-rc5-Avar-Akbar+
+        ok 6 - Got generated kernel: /etc/boot/vmlinuz-2.6.35-rc5-Avar-Akbar+
+        ok 7 - Our latest kernel /etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+ is listed among the generated kernels ^^
+    ok 4 - We ran update-grub
+    ok
+    All tests successful.
+    Files=1, Tests=4,  0 wallclock secs ( 0.03 usr  0.01 sys +  0.08 cusr  0.02 csys =  0.14 CPU)
+    Result: PASS
 
 # Rebooting
 
