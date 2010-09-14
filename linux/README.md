@@ -27,7 +27,13 @@ Copy the config (or
 Upgrade the config for a new kernel:
 
     make oldconfig
- 
+
+If something changed we should check that into git:
+
+    cp .config /etc/linux/config
+    git diff /etc/linux/config
+    git commit ...
+    
 Compile the kernel:
     
     make ARCH=x86_64 -j 4 all modules
