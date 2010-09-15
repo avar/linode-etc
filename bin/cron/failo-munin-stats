@@ -5,6 +5,12 @@ export brain=/var/tmp/ramdisk/failo/failo.sqlite
 # We've just rebooted and the brain doesn't exist yet
 test -f $brain || exit 0
 
+# The brain is locked
+if ! sqlite3 $brain '.schema' >/dev/null 2>&1
+then
+    exit 0
+fi
+
 export name=Failo
 export mode=dump
 
