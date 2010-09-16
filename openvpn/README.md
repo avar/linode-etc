@@ -54,8 +54,18 @@ Then start openvpn:
 
 # GUI client network-manager setup
 
-Get the server's ca.crt and ta.key, in addition to your user's cert and key.
-Then set things up like this in GNOME's NetworkManager.
+First you need to get the keys generated for your user. We generate
+keys for your user with a cronjob. To fetch them do *on your machine*:
+
+    cd /tmp
+    scp v:/etc/openvpn/user-keys/avar-keys.tar.gz .
+    tar xzvf avar-keys.tar.gz
+    sudo mv v-openvpn-keys-avar /etc/openvpn/
+
+Adjusting "avar" for the name of your user, now you should have all
+the keys in `/etc/openvpn/v-openvpn-keys-avar`.
+
+Now set things up like this in GNOME's NetworkManager:
 
 ![Main VPN screen in NetworkManager](http://github.com/avar/linode-etc/raw/master/openvpn/vpn-networkmanager-main.png)
 ![Advanced VPN screen in NetworkManager](http://github.com/avar/linode-etc/raw/master/openvpn/vpn-networkmanager-advanced.png)
