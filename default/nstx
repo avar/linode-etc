@@ -1,0 +1,25 @@
+# Defaults for nstx initscript
+# sourced by /etc/init.d/nstx
+# installed at /etc/default/nstx by the maintainer scripts
+
+#
+# This is a POSIX shell fragment
+#
+
+# The name of the domain for the tunnel - needed for client and server
+NSTX_DOMAIN=""
+
+# The IP address of the DNS server - needed for client only
+NSTX_DNS_SERVER=`grep nameserver /etc/resolv.conf |head -1|awk '{print $2}'`
+
+# uncomment to start nstxd on system startup
+#start_nstxd=yes
+
+# uncomment to start nstxcd on system startup
+#start_nstxcd=yes
+
+# uncomment to bring up tun0 automatically
+#ifup_tun=tun0
+
+# uncomment to tell nstx to bind to a specific interface
+#NSTX_IFACE="1.2.3.4"
