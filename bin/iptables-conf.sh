@@ -40,7 +40,7 @@ iptables \
     -A PREROUTING -t nat -p udp \
     --destination 109.74.193.250 --dport 53 \
     -j REDIRECT \
-    --to-ports 5353
+    --to-ports 5252
 
 # redirect avar's strange web requests to port 80
 iptables \
