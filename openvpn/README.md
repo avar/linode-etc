@@ -1,7 +1,7 @@
 # OpenVPN server setup
 
 Authentication-related parts of the server config
-(/etc/openvpn/tun0.conf in our case):
+(`/etc/openvpn/tun0.conf` in our case):
 
     # multi-user setup with certs and TLS auth
     server 10.9.8.0 255.255.255.0
@@ -14,26 +14,44 @@ Authentication-related parts of the server config
     ca ca.crt
 
 Now, we must generate a few files. Follow the instructions in
-http://openvpn.net/index.php/open-source/documentation/howto.html#pki. You 
-have to change a few parameters in a file called "vars" and then run scripts
-which generate the relevant files. Our changes to "vars" are currently:
+[the OpenVPN CA multi-client howto](http://openvpn.net/index.php/open-source/documentation/howto.html#pki).
 
-    KEY_COUNTRY="IS"
-    KEY_PROVINCE="IS"
-    KEY_CITY="Reykjavik"
-    KEY_ORG="nix.is"
-    KEY_EMAIL="hostmaster@nix.is"
+You have to change a few parameters in a file called `vars` and then
+run scripts which generate the relevant files. Our changes to the
+original Debian files in
+`/usr/share/doc/openvpn/examples/easy-rsa/2.0/` are:
+    
+    -export KEY_COUNTRY="US"
+    -export KEY_PROVINCE="CA"
+    -export KEY_CITY="SanFrancisco"
+    -export KEY_ORG="Fort-Funston"
+    -export KEY_EMAIL="me@myhost.mydomain"
+    +export KEY_COUNTRY="IS"
+    +export KEY_PROVINCE="IS"
+    +export KEY_CITY="Reykjavik"
+    +export KEY_ORG="nix.is"
+    +export KEY_EMAIL="hostmaster@nix.is"
 
-Once you've run the scripts according to the aforementioned documentation,
-you should have dh1024.pem, server.key, server.crt, and ca.crt, in addition
-to some client keys and certs. Put them all (except the client files) in
-/etc/openvpn.
+Once you've run the scripts according to the aforementioned
+documentation, you should have `dh1024.pem`, `server.key`,
+`server.crt`, and `ca.crt`, in addition to some client keys and
+certs. Put them all (except the client files) in
+`/etc/openvpn/keys`.
 
+The `tun0.conf` file has to reference these files, from our config:
+    
+    tls-auth keys/ta.key
+    dh       keys/dh1024.pem
+    key      keys/server.key
+    cert     keys/server.crt
+    ca       keys/ca.crt
+    
 The only remaining file is the TLS auth key. Generate it:
 
     openvpn --genkey --secret /etc/openvpn/ta.key
 
-Now you have to have done this (perhaps in a script that runs on boot):
+Now you have to have done this (perhaps in a script that runs on
+boot):
 
     echo 1 > /proc/sys/net/ipv4/ip_forward
     iptables -t nat -A POSTROUTING -s 10.9.8.0/24 -o eth0 -j MASQUERADE
