@@ -7,11 +7,11 @@ Authentication-related parts of the server config
     server 10.9.8.0 255.255.255.0
     ifconfig-pool-persist ipp.txt
     tls-server
-    tls-auth ta.key
-    dh dh1024.pem
-    key server.key
-    cert server.crt
-    ca ca.crt
+    tls-auth keys/ta.key
+    dh       keys/dh1024.pem
+    key      keys/server.key
+    cert     keys/server.crt
+    ca       keys/ca.crt
 
 Now, we must generate a few files. Follow the instructions in
 [the OpenVPN CA multi-client howto](http://openvpn.net/index.php/open-source/documentation/howto.html#pki).
@@ -20,7 +20,7 @@ You have to change a few parameters in a file called `vars` and then
 run scripts which generate the relevant files. Our changes to the
 original Debian files in
 `/usr/share/doc/openvpn/examples/easy-rsa/2.0/` are:
-    
+
     -export KEY_COUNTRY="US"
     -export KEY_PROVINCE="CA"
     -export KEY_CITY="SanFrancisco"
@@ -38,14 +38,6 @@ documentation, you should have `dh1024.pem`, `server.key`,
 certs. Put them all (except the client files) in
 `/etc/openvpn/keys`.
 
-The `tun0.conf` file has to reference these files, from our config:
-    
-    tls-auth keys/ta.key
-    dh       keys/dh1024.pem
-    key      keys/server.key
-    cert     keys/server.crt
-    ca       keys/ca.crt
-    
 The only remaining file is the TLS auth key. Generate it:
 
     openvpn --genkey --secret /etc/openvpn/ta.key
