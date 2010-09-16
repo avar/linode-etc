@@ -1,0 +1,2 @@
+# A transient file which openvpn uses to keep tracked of logged in clients
+/ipp.txt
