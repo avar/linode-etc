@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN nix.is.
 @  1d  IN SOA ns1.linode.com. hostmaster.nix.is. (
-      99  ; serial
+      100 ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -45,68 +45,24 @@ chanmirror           IN  A      109.74.193.250
 lupus                IN  A      194.144.99.91
 home                 IN  A      212.30.192.157
 
-$ORIGIN gg.nix.is.
-@  1D  IN SOA ns.gg.nix.is. hostmaster.v.nix.is. (
-      5   ; serial
-      3h  ; refresh
-      30m ; retry
-      1w  ; expire
-      3h  ; minimum
-     )
-
-       IN  NS     ns.gg.nix.is.
-
+;;; gg.nix.is
+    IN  NS     ns.gg.nix.is.
 gg.nix.is. IN  A      109.74.193.250
 ns         IN  A      109.74.193.250
 
-$ORIGIN v.nix.is.
-@  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
-      8   ; serial
-      3h  ; refresh
-      30m ; retry
-      1w  ; expire
-      3h  ; minimum
-     )
-       IN  MX  10 mail
+;; v.nix.is
+    IN  MX  10 mail
 mail   IN  A      109.74.193.250
 
-$ORIGIN git.nix.is.
-@  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
-      8   ; serial
-      3h  ; refresh
-      30m ; retry
-      1w  ; expire
-      3h  ; minimum
-     )
-smoke    IN  A      109.74.193.250
+;; git.nix.is
+smoke.git    IN  A      109.74.193.250
 
-$ORIGIN avar.nix.is.
-@  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
-      8   ; serial
-      3h  ; refresh
-      30m ; retry
-      1w  ; expire
-      3h  ; minimum
-     )
-dev    IN  A      109.74.193.250
+;; avar.nix.is
+dev.avar    IN  A      109.74.193.250
 
-$ORIGIN dev.avar.nix.is.
-@  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
-      8   ; serial
-      3h  ; refresh
-      30m ; retry
-      1w  ; expire
-      3h  ; minimum
-     )
-mw    IN  A      109.74.193.250
+;; dev.avar.nix.is
+mw.dev.avar IN  A      109.74.193.250
 
-$ORIGIN mw.dev.avar.nix.is.
-@  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
-      8   ; serial
-      3h  ; refresh
-      30m ; retry
-      1w  ; expire
-      3h  ; minimum
-     )
-trunk  IN  A      109.74.193.250
-hw     IN  A      109.74.193.250
+;; mw.dev.avar.nix.is.
+trunk.mw.dev.avar  IN  A      109.74.193.250
+hw.mw.dev.avar     IN  A      109.74.193.250
