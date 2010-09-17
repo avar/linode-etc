@@ -98,6 +98,7 @@ sub whois_expires {
     for my $who (@$whois) {
         if ($who =~ /^expires:\s+(.*)/           # .is
             or $who =~ m[Record expires on (.*)] # .net
+            or $who =~ m[Expiration Date:\s*(.*)] # aevar.net
             or $who =~ /^Expiration Date:(.*)/) { # .org
             $str = $1;
             last;
