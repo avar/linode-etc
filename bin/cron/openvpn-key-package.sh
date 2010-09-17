@@ -18,7 +18,7 @@ TO=/etc/openvpn/user-keys
 chown root:root $TO_TMP
 chmod 700 $TO_TMP
 
-for user in $(ack 'CN=([^/]+)' --output='$1' $INDEX | grep -v ^server$)
+for user in $(perl -nle 'm[CN=([^/]+)] and print $1' <$INDEX | grep -v ^server$)
 do
     to_user=v-openvpn-keys-$user
     to_user_dir=$TO_TMP/$to_user
