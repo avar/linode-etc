@@ -7,7 +7,7 @@
 #
 
 # The name of the domain for the tunnel - needed for client and server
-NSTX_DOMAIN="tunnel.nix.is"
+NSTX_DOMAIN="gg.nix.is"
 
 # The IP address of the DNS server - needed for client only
 NSTX_DNS_SERVER=`grep nameserver /etc/resolv.conf |head -1|awk '{print $2}'`
