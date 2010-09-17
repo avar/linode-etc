@@ -9,13 +9,19 @@ chomp(my @domains = qx[ grep -h ORIGIN /etc/bind/master/master* | $^X -pe 's/^.*
 my @ns = (qw(localhost), map { "ns$_.linode.com" } 1..5);
 
 my @subdomain_tests = qw(A NS MX);
+my @sub_zone_tests  = qw(A MX);
 my @domain_tests    = ("SOA", @subdomain_tests, "AXFR");
 
 remove_tree("$Bin/gen");
 
 # Check slaves against localhost
 for my $domain (@domains) {
-    my @tests = is_subdomain($domain) ? @subdomain_tests : @domain_tests;
+    my @tests =
+        is_subdomain($domain)
+        ? (is_sub_zone($domain)
+           ? @sub_zone_tests
+           : @subdomain_tests)
+        : @domain_tests;
 
     for my $ns (@ns[1..$#ns]) {
         my $test = <<TEST;
@@ -115,4 +121,12 @@ sub is_subdomain
     my $dots  = () = $domain =~ /\./g;
 
     $dots != 1;
+}
+
+sub is_sub_zone
+{
+    my $domain = shift;
+    chomp(my $maybe_ns = qx[ grep -A1 -h 'ORIGIN $domain' /etc/bind/master/master* ]);
+    my $is_subzone = $maybe_ns =~ /IN +NS/;
+    return $is_subzone;
 }
