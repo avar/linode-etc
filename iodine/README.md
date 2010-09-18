@@ -143,10 +143,49 @@ And of course do things like set up a SOCKS proxy through ssh:
     $ ssh -D 9999 10.0.0.1
     The lulz expands consciousness. The lulz is vital to every heist.
     v ~ (master) $
+    
+## Using the VPN on v
 
-I haven't been able to connect to the VPN server on v. Connecting to
-`10.0.0.1` directly doesn't work, and forwarding the VPN port to
-`localhost` from `10.0.0.1` will ruin the routing table.
+I haven't been able to connect to the VPN server on `v`. To recap this
+is what my normal routing table looks like with iodine up:
 
-There are probably some options to work around both of those that I
-haven't explored yet.
+    $ route -n
+    Kernel IP routing table
+    Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+    10.0.0.0        0.0.0.0         255.255.255.224 U     0      0        0 dns0
+    192.168.2.0     0.0.0.0         255.255.255.0   U     2      0        0 wlan0
+    169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 wlan0
+    0.0.0.0         192.168.2.1     0.0.0.0         UG    0      0        0 wlan0
+
+When I connect directly to the `v.nix.is` with iodine up I get this:
+    
+    $ route -n
+    Kernel IP routing table
+    Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+    109.74.193.250  192.168.2.1     255.255.255.255 UGH   0      0        0 wlan0
+    10.9.8.1        10.9.8.9        255.255.255.255 UGH   0      0        0 tun2
+    10.9.8.9        0.0.0.0         255.255.255.255 UH    0      0        0 tun2
+    10.0.0.0        0.0.0.0         255.255.255.224 U     0      0        0 dns0
+    192.168.2.0     0.0.0.0         255.255.255.0   U     2      0        0 wlan0
+    169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 wlan0
+    0.0.0.0         10.9.8.9        0.0.0.0         UG    0      0        0 tun2
+    
+I.e. `0.0.0.0` is tunneled through `10.9.8.9` as expected, but we
+don't use the `iodine` tunnel.
+
+However, connecting to the VPN server at `10.0.0.1`, i.e. `v.nix.is`
+over `iodine(1)` instead of over the normal network connection gives:
+    
+    $ route -n
+    Kernel IP routing table
+    Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+    10.0.0.1        192.168.2.1     255.255.255.255 UGH   0      0        0 wlan0
+    10.9.8.1        10.9.8.9        255.255.255.255 UGH   0      0        0 tun2
+    10.9.8.9        0.0.0.0         255.255.255.255 UH    0      0        0 tun2
+    10.0.0.0        0.0.0.0         255.255.255.224 U     0      0        0 dns0
+    192.168.2.0     0.0.0.0         255.255.255.0   U     2      0        0 wlan0
+    169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 wlan0
+    0.0.0.0         10.9.8.9        0.0.0.0         UG    0      0        0 tun2
+    
+The VPN manages to connect, but I get connection timeouts when trying
+to use it.
