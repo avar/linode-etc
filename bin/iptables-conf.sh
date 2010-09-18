@@ -25,11 +25,11 @@ iptables -t nat -A POSTROUTING -s 10.9.8.0/24 -o eth0 -j MASQUERADE
 # For reference: https://wiki.koumbit.net/DnsTunnel
 
 ## Redirect ns*.linode.com to the real DNS server, they're our slaves
-ns1=69.93.127.10
-ns2=65.19.178.10
-ns3=75.127.96.10
-ns4=207.192.70.10
-ns5=109.74.194.10
+ns1=ns1.linode.com
+ns2=ns2.linode.com
+ns3=ns3.linode.com
+ns4=ns4.linode.com
+ns5=ns5.linode.com
 
 # redirect ns*.linode.com to PowerDNS
 iptables \
