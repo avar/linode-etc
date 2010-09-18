@@ -14,11 +14,15 @@ iptables -t nat -F
 iptables -t nat -A POSTROUTING -s 10.9.8.0/24 -o eth0 -j MASQUERADE
 
 ###
-### NSTX (IP-over-DNS)
+### iodine (IP-over-DNS)
 ###
 
-# This is a setup for a IP-over-DNS tunnel. See
-# http://thomer.com/howtos/nstx.html
+# This is a setup for a IP-over-DNS tunnel using iodine. Since we run
+# a shadow master that Linode's DNS servers talk to on 0.0.0.0:53 we
+# use iptables to pass Linode traffic through, and send everything
+# else to iodine at port 53.
+
+# For reference: https://wiki.koumbit.net/DnsTunnel
 
 ## Redirect ns*.linode.com to the real DNS server, they're our slaves
 ns1=69.93.127.10
