@@ -5,11 +5,6 @@
 # Run it like: grep -v ^# ~v-perlbrew/cpan-modules | cpanm
 # Not installed: (cd /tmp && for mod in $(grep -v ^# ~v-perlbrew/cpan-modules | grep -v ^$); do perl -m$mod -e1 > /dev/null 2>&1 || echo $mod; done)
 
-# Work around <error: ‘sv_yes’ undeclared (first use in this function>
-# when DBI-1.613 was still the stable DBI
-http://search.cpan.org/CPAN/authors/id/T/TI/TIMB/DBI-1.613_93.tar.gz
-DBI
-
 # misc
 perl5i::latest
 Task::BeLike::AVAR
