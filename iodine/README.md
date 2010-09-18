@@ -186,6 +186,35 @@ over `iodine(1)` instead of over the normal network connection gives:
     192.168.2.0     0.0.0.0         255.255.255.0   U     2      0        0 wlan0
     169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 wlan0
     0.0.0.0         10.9.8.9        0.0.0.0         UG    0      0        0 tun2
-    
+
 The VPN manages to connect, but I get connection timeouts when trying
-to use it.
+to use it. This is presumably because the routes are wrong. When I
+connect with "Ignore automatically obtained routes" and "Use this
+connection only for resources on its network" I get these routes
+instead:
+    
+    $ route -n
+    Kernel IP routing table
+    Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+    10.0.0.1        192.168.2.1     255.255.255.255 UGH   0      0        0 wlan0
+    10.9.8.9        0.0.0.0         255.255.255.255 UH    0      0        0 tun2
+    10.0.0.0        0.0.0.0         255.255.255.224 U     0      0        0 dns0
+    192.168.2.0     0.0.0.0         255.255.255.0   U     2      0        0 wlan0
+    169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 wlan0
+    0.0.0.0         192.168.2.1     0.0.0.0         UG    0      0        0 wlan
+    
+Which is different from the above in this regard:
+    
+    --- a/tmp/with-routes
+    +++ b/tmp/without-automatic-routes
+    @@ -4,3 +4,2 @@
+         10.0.0.1        192.168.2.1     255.255.255.255 UGH   0      0        0 wlan0
+    -    10.9.8.1        10.9.8.9        255.255.255.255 UGH   0      0        0 tun2
+         10.9.8.9        0.0.0.0         255.255.255.255 UH    0      0        0 tun2
+    @@ -9,2 +8,2 @@
+         169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 wlan0
+    -    0.0.0.0         10.9.8.9        0.0.0.0         UG    0      0        0 tun2
+    +    0.0.0.0         192.168.2.1     0.0.0.0         UG    0      0        0 wlan
+    
+Presumably `10.9.8.0/24` traffic should get routed through `10.0.0.1`
+somehow for this to work.
