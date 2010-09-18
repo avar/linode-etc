@@ -41,5 +41,8 @@ all:
 	wget http://exchange.munin-monitoring.org/plugins/proftpd_count/version/1/download -O proftpd_count
 	wget http://exchange.munin-monitoring.org/plugins/proftpd_bytes/version/1/download -O proftpd_bytes
 
+	# openvpn
+	wget http://exchange.munin-monitoring.org/plugins/openvpn_multi/version/1/download -O openvpn_multi
+
 	# chmod +x
 	chmod +x [a-z_]*
