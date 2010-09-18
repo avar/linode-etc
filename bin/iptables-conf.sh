@@ -43,12 +43,5 @@ iptables \
 iptables \
     -A PREROUTING -t nat -p udp \
     --destination 109.74.193.250 --dport 53 \
-    -j LOG \
-    --log-level 4 \
-    --log-prefix "non-linode request to :53"
-
-iptables \
-    -A PREROUTING -t nat -p udp \
-    --destination 109.74.193.250 --dport 53 \
     -j REDIRECT \
     --to-ports 5252
