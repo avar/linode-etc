@@ -25,6 +25,7 @@
 /var/log/messages
 /var/log/pdns.log
 /var/log/pdns_recursor.log
+/var/log/openvpn.log
 {
 	rotate 48
 	weekly
