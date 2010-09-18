@@ -26,6 +26,7 @@
 /var/log/pdns.log
 /var/log/pdns_recursor.log
 /var/log/openvpn.log
+/var/log/iodined.log
 {
 	rotate 48
 	weekly
