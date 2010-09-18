@@ -1,7 +1,15 @@
-# iodine server
+# Overview
 
 We run an [iodine](http://code.kryo.se/iodine/) IPv4 over DNS server
-on `v`. This is useful for:
+on `v`.
+
+This documentation compliments the documentation in
+`/usr/share/doc/iodine` and the `iodine(8)` manual page, you might
+want to read those for context.
+
+# Why?
+
+Having IP-over-DNS is useful for:
 
  * Getting past a paywall on wifi networks that require payment.
  
@@ -25,11 +33,16 @@ on `v`. This is useful for:
 
    Note that doing this may incite a BOFH pitchfork attack aimed at
    your derriere.
+   
+# Server
 
-# iodine client
+The `iodined(1)` server is already set up and running on `v`. It logs
+to `/var/log/iodined.log`.
+   
+# Client
 
-You need to have some forethought and do most of this before you need
-to use `iodine`. So set this up today:
+You need to have some forethought and do most of this *before* you
+need to use `iodine` on some restricted network. So set this up today:
 
 ## Installing the client
 
