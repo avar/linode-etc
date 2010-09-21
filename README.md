@@ -51,7 +51,7 @@ the `postfix/` directory.
 There may also be some documentation in subdirectories of `/etc`. To
 check it out look at:
 
-    sudo find /etc -name 'README.mkdn'  
+    sudo find /etc -name 'README.md'
 
 # Issues
 
