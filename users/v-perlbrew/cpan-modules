@@ -6,7 +6,6 @@
 # Not installed: (cd /tmp && for mod in $(grep -v ^# ~v-perlbrew/cpan-modules | grep -v ^$); do perl -m$mod -e1 > /dev/null 2>&1 || echo $mod; done)
 
 # misc
-perl5i::latest
 Task::BeLike::AVAR
 App::Nopaste::Service::Linode
 App::Ack
@@ -87,8 +86,3 @@ Catalyst::Controller::REST
 
 # smoke.git.nix.is
 Smolder
-
-## Regressions
-
-# perl5i - http://github.com/schwern/perl5i/issues/issue/99/#comment_336055
-http://backpan.perl.org/authors/id/M/MS/MSCHWERN/perl5i-v2.2.2.tar.gz
