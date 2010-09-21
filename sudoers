@@ -1,4 +1,6 @@
 Defaults	env_reset
+Defaults	env_keep += HARNESS_OPTIONS
+
 Defaults        insults
 Defaults        lecture=never
 root	ALL=(ALL:ALL) ALL
