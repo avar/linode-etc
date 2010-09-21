@@ -24,8 +24,6 @@
         AuthUserFile /etc/apache2/passwd/ap.nix.is
         <Limit GET POST>
             require valid-user
-            Allow from 94.216.112.230
-            Satisfy Any
         </Limit>
     </Location>
 </VirtualHost>
