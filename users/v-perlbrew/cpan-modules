@@ -11,6 +11,7 @@ App::Nopaste::Service::Linode
 App::Ack
 Devel::NYTProf
 Devel::Dwarn
+Test::Perl::Critic
 POE
 
 # perl / CPAN
