@@ -8,6 +8,10 @@
 # POE-API-Peek-1.34 doesn't pass tests on 5.13.5
 http://search.cpan.org/CPAN/authors/id/S/SU/SUNGO/POE-API-Peek-2.16_2.tar.gz
 
+# Multiple AUTHOR support broke Pod::Constants -
+# https://rt.cpan.org/Ticket/Display.html?id=61779
+http://search.cpan.org/CPAN/authors/id/M/MS/MSCHWERN/ExtUtils-MakeMaker-6.57_01.tar.gz
+
 # misc
 Task::BeLike::AVAR
 App::Nopaste::Service::Linode
