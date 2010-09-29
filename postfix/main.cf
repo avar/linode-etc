@@ -25,7 +25,7 @@ alias_maps = $alias_database
 mydestination =
 
 # use virtual aliases for our domains
-virtual_alias_domains = localhost nix.is v.nix.is aevar.net xn--var-xla.net hjolavefsja.is xn--hjlavefsj-81a4q.is
+virtual_alias_domains = localhost nix.is v.nix.is aevar.net xn--var-xla.net hjolavefsja.is xn--hjlavefsj-81a4q.is pocoirc.net
 virtual_alias_maps = hash:/etc/postfix/virtual
 
 # mailman setup
