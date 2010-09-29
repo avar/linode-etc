@@ -1,0 +1,11 @@
+<VirtualHost *:81>
+    ServerName pocoirc.net
+    ServerAlias www.pocoirc.net
+
+    # Close connection after 302 is sent
+    KeepAlive Off
+
+    # Redirect everything to the CPAN dist for now
+    RewriteEngine On
+    RewriteRule .* http://search.cpan.org/perldoc?POE::Component::IRC#NAME [R=302,L,NE]
+</VirtualHost>
