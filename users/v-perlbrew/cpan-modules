@@ -5,6 +5,9 @@
 # Run it like: grep -v ^# ~v-perlbrew/cpan-modules | cpanm
 # Not installed: (cd /tmp && for mod in $(grep -v ^# ~v-perlbrew/cpan-modules | grep -v ^$); do perl -m$mod -e1 > /dev/null 2>&1 || echo $mod; done)
 
+# POE-API-Peek-1.34 doesn't pass tests on 5.13.5
+http://search.cpan.org/CPAN/authors/id/S/SU/SUNGO/POE-API-Peek-2.16_2.tar.gz
+
 # misc
 Task::BeLike::AVAR
 App::Nopaste::Service::Linode
