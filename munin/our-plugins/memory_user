@@ -1,6 +1,7 @@
 #!/home/v-perlbrew/perl5/perlbrew/bin/perl
 use lib '/usr/share/perl5';
-use perl5i::latest;
+use 5.012;
+use warnings;
 use Munin::Plugin;
 
 my %mem = mem_user();
