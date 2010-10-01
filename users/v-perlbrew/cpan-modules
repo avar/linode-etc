@@ -36,6 +36,7 @@ List::MoreUtils
 App::Bondage
 POE::Component::IRC::Plugin::ImageMirror
 POE::Component::IRC::Plugin::RTorrentStatus
+App::EvalServer
 POE::Component::IRC::Plugin::Eval
 String::Approx
 CGI::Simple
