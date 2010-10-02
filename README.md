@@ -55,6 +55,6 @@ check it out look at:
 
 # Issues
 
-Issues and TODOs are tracked [in the issue
-tracker](http://github.com/avar/linode-etc/issues) which is hosted on
-Github.
+Some issues and TODO items are tracked
+[in the issue tracker](http://github.com/avar/linode-etc/issues) which
+is hosted on Github.
