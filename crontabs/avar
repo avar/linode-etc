@@ -1,0 +1,10 @@
+SHELL=/bin/bash
+LANGUAGE="en_US:en"
+LANG="en_US.utf8"
+PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/bin:/usr/bin
+
+## Run my screen at boot
+@reboot screen -U -c ~/.screenrc.d/v-emacs-irssi -d -m
+
+## Restart the screen if it crashed
+#*/2 * * * * screen -ls | egrep -q '[0-9]+\.em' || screen -U -c ~/.screenrc.d/v-emacs-irssi -d -m
