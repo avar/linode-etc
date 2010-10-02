@@ -77,6 +77,14 @@ kernel   /etc/boot/vmlinuz-2.6.36-rc6-Avar-Akbar+ root=/dev/xvda
 
 ## ## End Default Options ##
 
+title		Debian GNU/Linux, kernel 2.6.36-rc6-Avar-Akbar+
+root		(hd0)
+kernel		/etc/boot/vmlinuz-2.6.36-rc6-Avar-Akbar+ root=UUID=3529f8c9-9878-47d7-9b22-d97d327a5b85 ro 
+
+title		Debian GNU/Linux, kernel 2.6.36-rc6-Avar-Akbar+ (single-user mode)
+root		(hd0)
+kernel		/etc/boot/vmlinuz-2.6.36-rc6-Avar-Akbar+ root=UUID=3529f8c9-9878-47d7-9b22-d97d327a5b85 ro single
+
 title		Debian GNU/Linux, kernel 2.6.36-rc4-Avar-Akbar+
 root		(hd0)
 kernel		/etc/boot/vmlinuz-2.6.36-rc4-Avar-Akbar+ root=UUID=3529f8c9-9878-47d7-9b22-d97d327a5b85 ro 
