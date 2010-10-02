@@ -89,4 +89,4 @@ in the Linode manager, then:
     
 Or, more kindly:
 
-    sudo shutdown -r '+360' "We're rebooting in 6 hours kernel and libc updates"
+    sudo shutdown -r '+360' "We're rebooting in 6 hours for kernel and libc updates"
