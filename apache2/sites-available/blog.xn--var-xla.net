@@ -1,5 +1,0 @@
-<VirtualHost *:81>
-    ServerName blog.xn--var-xla.net
-    ServerAlias blog.aevar.net
-    DocumentRoot /var/www/blog.xn--var-xla.net
-</VirtualHost>
