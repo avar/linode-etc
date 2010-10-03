@@ -5,6 +5,7 @@ PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/c
 
 ## Run my screen at boot
 @reboot screen -U -c ~/.screenrc.d/v-emacs-irssi -d -m
+@hourly cronjob -E -j avar-website -c '/var/lib/gems/1.8/bin/jekyll ~/g/website/ /var/www/xn--var-xla.net/'
 
 ## Restart the screen if it crashed
 #*/2 * * * * screen -ls | egrep -q '[0-9]+\.em' || screen -U -c ~/.screenrc.d/v-emacs-irssi -d -m
