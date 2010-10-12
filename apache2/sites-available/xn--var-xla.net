@@ -7,4 +7,8 @@
         ExpiresActive on  
         ExpiresDefault "access plus 11 days"
     </FilesMatch>
+
+    RewriteEngine On
+    # Cool URIs don't change. Ours aren't cool, but at least they don't break.
+    RewriteRule ^/2010/10/12/Ready-for-Amsterdam/      /2010/10/12/Moving-to-Amsterdam/         [R=301,L]
 </VirtualHost>
