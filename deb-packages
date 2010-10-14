@@ -76,6 +76,7 @@ gvfs-bin
 hamster-applet
 network-manager-gnome
 network-manager-openvpn-gnome
+pulseaudio
 remmina
 seahorse
 seahorse-plugins
