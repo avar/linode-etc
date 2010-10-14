@@ -11,6 +11,8 @@ sysfsutils
 ethtool
 tp-smapi-dkms
 laptop-detect
+iotop
+htop
 
 # coding
 screen
