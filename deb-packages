@@ -1,0 +1,84 @@
+# This is list of Debian packages I install on top of the base system.
+# Do it like this:
+# 
+# sudo aptitude install $(perl -ne 'chomp; print "$1 " if /^([^#\s]+)/' /etc/deb-packages)
+
+# keyrings from 3rd-party repositories
+debian-multimedia-keyring
+
+# system utilities
+sysfsutils
+ethtool
+tp-smapi-dkms
+
+# coding
+screen
+git
+build-essential
+vim
+
+# internet
+pidgin
+ekiga
+gwibber
+iceweasel
+flashplugin-nonfree
+sun-java6-plugin
+
+# graphics
+gimp
+
+# audio
+banshee
+
+# misc
+tomboy
+
+# The "gnome-desktop" task is full of (official) bloat like evolution and
+# epiphany, so here is a lightweight GNOME desktop, ~1GB smaller
+alacarte
+baobab
+brasero
+cheese
+deskbar-applet
+evince
+file-roller
+gcalctool
+gconf-editor
+gdm3
+gksu
+gnome-about
+gnome-bluetooth
+gnome-color-manager
+gnome-core
+gnome-disk-utility
+gnome-keyring
+gnome-media
+gnome-netstatus-applet
+gnome-screensaver
+gnome-screenshot
+gnome-system-log
+gnome-system-monitor
+gnome-system-tools
+gnome-themes
+gnome-user-share
+gparted
+gstreamer0.10-gnomevfs
+gstreamer0.10-plugins-base
+gstreamer0.10-plugins-good
+gstreamer0.10-pulseaudio
+gstreamer0.10-tools
+gtk2-engines
+gucharmap
+gvfs-backends
+gvfs-bin
+hamster-applet
+network-manager-gnome
+network-manager-openvpn-gnome
+remmina
+seahorse
+seahorse-plugins
+system-config-printer
+totem
+totem-plugins
+vino
