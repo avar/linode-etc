@@ -23,8 +23,3 @@ Package: *
 Pin: release a=experimental
 Pin-Priority: 200
 
-Explanation: We want a fairly recent iodine
-Package: iodine
-Pin: release a=unstable
-Pin-Priority: 600
-
