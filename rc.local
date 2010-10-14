@@ -16,4 +16,9 @@ if type ethtool >/dev/null 2>&1; then
     ethtool -s eth0 wol d
 fi
 
+# drop AHCI link power level
+for ctl in /sys/class/scsi_host/host*/link_power_management_policy; do
+    echo "min_power" > $ctl
+done
+
 exit 0
