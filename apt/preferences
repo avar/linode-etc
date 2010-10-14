@@ -1,7 +1,7 @@
 # We use a priority of 500 for testing, because that is the default
-# priority. If don't use the default one then testing will always trump
-# packages in sources.list.d/ which don't have a release tag like
-# 'testing' (e.g. the IceWeasel repository).
+# priority. If we don't use the default one then testing will always trump
+# packages in sources.list.d/ which don't have a release tag like 'testing'
+# (e.g. the IceWeasel repository).
 
 Explanation: We normally use testing for everything
 Package: *
