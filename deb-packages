@@ -10,9 +10,24 @@ debian-multimedia-keyring
 sysfsutils
 ethtool
 tp-smapi-dkms
-laptop-detect
 iotop
 htop
+
+# laptop support
+# mostly stolen from "tasksel --task-packages laptop"
+laptop-detect
+wireless-tools
+acpi-support
+cpufrequtils
+acpi
+wpasupplicant
+powertop
+vbetool
+acpid
+pm-utils
+radeontool
+avahi-autoipd
+bluetooth
 
 # coding
 screen
