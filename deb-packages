@@ -55,6 +55,10 @@ gimp
 # audio
 banshee
 
+# office
+abiword
+gnumeric
+
 # misc
 tomboy
 
