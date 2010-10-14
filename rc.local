@@ -11,4 +11,9 @@
 #
 # By default this script does nothing.
 
+# turn off wakeup-on-lan, saves power
+if type ethtool >/dev/null 2>&1; then
+    ethtool -s eth0 wol d
+fi
+
 exit 0
