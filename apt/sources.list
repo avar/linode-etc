@@ -1,0 +1,11 @@
+deb http://ftp.is.debian.org/debian/ stable main non-free contrib
+#deb-src http://ftp.is.debian.org/debian/ stable main non-free contrib
+
+deb http://ftp.is.debian.org/debian/ testing main non-free contrib
+#deb-src http://ftp.is.debian.org/debian/ testing main non-free contrib
+
+deb http://ftp.is.debian.org/debian/ unstable main non-free contrib
+#deb-src http://ftp.is.debian.org/debian/ unstable main non-free contrib
+
+deb http://ftp.is.debian.org/debian/ experimental main non-free contrib
+#deb-src http://ftp.is.debian.org/debian/ experimental main non-free contrib

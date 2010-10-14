@@ -1,0 +1,25 @@
+Explanation: We normally use testing for everything
+Package: *
+Pin: release a=testing
+Pin-Priority: 500
+
+Explanation: If we install anything not from testing it's usually from unstable
+Package: *
+Pin: release a=unstable
+Pin-Priority: 400
+
+Explanation: We install select broken packages from stable
+Package: *
+Pin: release a=stable
+Pin-Priority: 300
+
+Explanation: Experimental has the lowest priority, for obvious reasons
+Package: *
+Pin: release a=experimental
+Pin-Priority: 200
+
+Explanation: We want a fairly recent iodine
+Package: iodine
+Pin: release a=unstable
+Pin-Priority: 600
+
