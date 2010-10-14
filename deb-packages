@@ -1,6 +1,6 @@
-# This is list of Debian packages I install on top of the base system.
+# These are the Debian packages I install on top of the base system.
 # Do it like this:
-# 
+#
 # sudo aptitude install $(perl -ne 'chomp; print "$1 " if /^([^#\s]+)/' /etc/deb-packages)
 
 # keyrings from 3rd-party repositories
