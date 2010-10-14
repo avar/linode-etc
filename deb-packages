@@ -12,6 +12,8 @@ ethtool
 tp-smapi-dkms
 iotop
 htop
+virtualbox-ose-qt
+virtualbox-ose-dkms
 
 # laptop support
 # mostly stolen from "tasksel --task-packages laptop"
