@@ -38,6 +38,7 @@ build-essential
 vim
 
 # internet
+iodine
 pidgin
 ekiga
 gwibber
