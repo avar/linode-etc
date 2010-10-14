@@ -21,4 +21,12 @@ for ctl in /sys/class/scsi_host/host*/link_power_management_policy; do
     echo "min_power" > $ctl
 done
 
+# keep bluetooth turned off by default
+# the numbering is inconsistent between boots, so we check the name
+for radio in /sys/devices/platform/thinkpad_acpi/rfkill/rfkill*; do
+    if [ $(cat $radio/name) = "tpacpi_bluetooth_sw" ]; then
+        echo 0 > $radio/state
+    fi
+done
+
 exit 0
