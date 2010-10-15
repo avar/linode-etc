@@ -1,7 +1,7 @@
 # These are the Debian packages I install on top of the base system.
 # Do it like this:
 #
-# sudo aptitude install $(perl -ne 'chomp; print "$1 " if /^([^#\s]+)/' /etc/deb-packages)
+# sudo /etc/bin/install-deb-packages
 
 # keyrings from 3rd-party repositories
 debian-multimedia-keyring
