@@ -23,3 +23,7 @@ Package: *
 Pin: release a=experimental
 Pin-Priority: 200
 
+Explanation: We need these for the latest IceWeasel
+Package: libnspr4-0d libnss3-1d
+Pin: release a=unstable
+Pin-Priority: 600
