@@ -52,6 +52,8 @@ sun-java6-plugin
 
 # graphics
 gimp
+lensfun: liblensfun0 liblensfun-data liblensfun-dev
+darktable: darktable
 
 # audio
 banshee
