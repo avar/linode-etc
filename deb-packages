@@ -64,6 +64,7 @@ gnumeric
 
 # misc
 tomboy
+ttf-unifont # this has some Unicode symbols which are missing from ttf-dejavu
 
 # The "gnome-desktop" task is full of (official) bloat like evolution and
 # epiphany, so here is a lightweight GNOME desktop, ~1GB smaller
