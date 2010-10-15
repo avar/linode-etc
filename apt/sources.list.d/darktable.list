@@ -1,0 +1,12 @@
+#
+#   # some setup tasks
+#   sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C07EE05F
+#   aptitude build-dep darktable lensfun
+#
+#   # do this every once in a while, these packages are evolving quickly
+#   sudo apt-get source -b lensfun
+#   sudo dpkg -i liblensfun{0,-data,-dev}*.deb
+#   sudo apt-get source -b darktable
+#   sudo dpkg -i darktable_*.deb
+#
+deb-src http://ppa.launchpad.net/pmjdebruijn/darktable-unstable/ubuntu lucid main
