@@ -14,7 +14,7 @@ iotop
 htop
 virtualbox-ose-qt
 virtualbox-ose-dkms
-ecryptfs
+ecryptfs-utils
 
 # laptop support
 # mostly stolen from "tasksel --task-packages laptop"
