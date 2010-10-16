@@ -1,5 +1,8 @@
-# These are the Debian packages I install on top of the base system.
-# Do it like this:
+# These are the Debian packages I install on top of the base system. Source
+# packages and their resulting binary packages you want to install are
+# described like "src-package: src-package src-package-dev"
+#
+# You can install the packages in this file like this:
 #
 # sudo /etc/bin/install-deb-packages
 
