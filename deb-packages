@@ -112,6 +112,7 @@ hamster-applet
 network-manager-gnome
 network-manager-openvpn-gnome
 pulseaudio
+python-vte
 remmina
 seahorse
 seahorse-plugins
