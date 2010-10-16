@@ -1,4 +1,4 @@
 #
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C07EE05F
 #
-deb-src http://ppa.launchpad.net/pmjdebruijn/darktable-unstable/ubuntu lucid main
+deb-src http://ppa.launchpad.net/pmjdebruijn/darktable-unstable/ubuntu maverick main
