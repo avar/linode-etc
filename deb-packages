@@ -97,8 +97,11 @@ gnome-themes
 gnome-user-share
 gparted
 gstreamer0.10-gnomevfs
+gstreamer0.10-ffmpeg
+gstreamer0.10-plugins-bad
 gstreamer0.10-plugins-base
 gstreamer0.10-plugins-good
+gstreamer0.10-plugins-ugly
 gstreamer0.10-pulseaudio
 gstreamer0.10-tools
 gtk2-engines

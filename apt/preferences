@@ -27,3 +27,8 @@ Explanation: We need these for the latest IceWeasel
 Package: libnspr4-0d libnss3-1d
 Pin: release a=unstable
 Pin-Priority: 600
+
+Explanation: We need a version compiled against ffmpeg-0.6 to play .mov
+Package: gstreamer0.10-ffmpeg
+Pin: release a=experimental
+Pin-Priority: 600
