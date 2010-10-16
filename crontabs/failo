@@ -3,8 +3,9 @@ LANGUAGE="en_US:en"
 LANG="en_US.utf8"
 PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/usr/local/bin:/usr/bin:/bin
 
-@reboot nice -n 19 ionice -c 3 cronjob -E -j failo-retrain-on-reboot -c '/home/failo/failo/utils/retrain-on-reboot.sh'
-@reboot until test -f /var/tmp/ramdisk/failo/failo.trained; do sleep 15; done && screen -d -m
+#@reboot nice -n 19 ionice -c 3 cronjob -E -j failo-retrain-on-reboot -c '/home/failo/failo/utils/retrain.sh'
+#@reboot until test -f /var/tmp/ramdisk/failo/failo.trained; do sleep 15; done && screen -d -m
+@reboot screen -d -m
 
 # Update munin statistics
 */15 * * * * /etc/bin/cron/failo-munin-stats
