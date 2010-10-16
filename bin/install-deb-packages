@@ -12,7 +12,7 @@ GetOptions() or pod2usage();
 
 die "$0 needs to run with root privileges\n" if $> != '0';
 
-my @explicit;
+my @explicit = @ARGV;
 my $cfg = '/etc/deb-packages';
 my (@src, @bin);
 
@@ -43,10 +43,10 @@ if (@src) {
         my ($src_pack, $bin_packs) = @$source;
 
         if (@explicit) {
-            last if !grep { $_ eq $src_pack } @explicit;
+            next if !grep { $_ eq $src_pack } @explicit;
         }
         else {
-            last if are_installed(@$bin_packs);
+            next if are_installed(@$bin_packs);
         }
 
         system "aptitude build-dep $src_pack";
