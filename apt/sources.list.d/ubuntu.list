@@ -1,0 +1,4 @@
+#
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
+#
+deb-src http://ftp.is.debian.org/ubuntu/ maverick main universe multiverse
