@@ -6,3 +6,6 @@
 
 firewire-sbp2
 loop
+
+# for ThinkPad charge inhibiting/thresholds
+tp-smapi
