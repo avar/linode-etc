@@ -123,3 +123,6 @@ system-config-printer
 totem
 totem-plugins
 vino
+xdg-utils
+xdg-user-dirs
+xdg-user-dirs-gtk
