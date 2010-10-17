@@ -63,7 +63,8 @@ sub are_installed {
     my @packages = @_;
     no autodie 'system';
     for my $package (@packages) {
-        return 0 if system qq/aptitude show $package|grep -q "^State: installed"/;
+	chomp (my $result = qx/dpkg --get-selections $package|awk '{print \$2}'/);
+	return if $result ne 'install';
     }
     return 1;
 }
