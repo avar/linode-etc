@@ -60,7 +60,7 @@ sun-java6-plugin
 # graphics
 gimp
 gnome-raw-thumbnailer: gnome-raw-thumbnailer
-lensfun: liblensfun0 liblensfun-data liblensfun-dev
+lensfun: liblensfun-data liblensfun0 liblensfun-dev
 darktable: darktable
 
 # audio
