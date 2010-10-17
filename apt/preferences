@@ -32,3 +32,8 @@ Explanation: We need a version compiled against ffmpeg-0.6 to play .mov
 Package: gstreamer0.10-ffmpeg
 Pin: release a=experimental
 Pin-Priority: 600
+
+Explanation: The gwibber version in testing is pretty old
+Package: gwibber
+Pin: release a=unstable
+Pin-Priority: 600
