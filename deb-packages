@@ -36,6 +36,7 @@ pm-utils
 radeontool
 avahi-autoipd
 bluetooth
+firmware-iwlwifi
 
 # coding
 screen
