@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use autodie;
+use autodie ':all';
 use Cwd 'getcwd';
 use File::Temp 'tempdir';
 use Getopt::Long qw(:config auto_help pass_through);
