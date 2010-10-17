@@ -109,6 +109,7 @@ gnome-system-tools
 gnome-themes
 gnome-user-share
 gparted
+ffmpeg
 gstreamer0.10-ffmpeg
 gstreamer0.10-plugins-bad
 gstreamer0.10-plugins-base
