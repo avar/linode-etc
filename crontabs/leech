@@ -10,4 +10,4 @@ PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/c
 @reboot screen -U -d -m
 
 # Whine if rtorrent has died
-*/10 * * * * (ps aux | grep '^leech.* rtorrent' | grep -qv grep || (echo 'rtorrent not running' && exit 1))
+*/10 * * * * pgrep -u leech rtorrent >/dev/null || echo 'rtorrent not running'
