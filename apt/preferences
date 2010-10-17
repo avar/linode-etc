@@ -37,3 +37,8 @@ Explanation: The gwibber version in testing is pretty old
 Package: gwibber
 Pin: release a=unstable
 Pin-Priority: 600
+
+Explanation: The latest version of pokerth is needed for online play
+Package: pokerth pokerth-data
+Pin: release a=experimental
+Pin-Priority: 600
