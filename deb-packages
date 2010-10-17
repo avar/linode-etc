@@ -12,9 +12,10 @@ debian-multimedia-keyring
 # system utilities
 sysfsutils
 ethtool
-tp-smapi-dkms
 iotop
 htop
+linux-headers-2.6-amd64
+tp-smapi-dkms
 virtualbox-ose-qt
 virtualbox-ose-dkms
 ecryptfs-utils
