@@ -19,6 +19,7 @@ tp-smapi-dkms
 virtualbox-ose-qt
 virtualbox-ose-dkms
 ecryptfs-utils
+hdparm
 
 # laptop support
 # mostly stolen from "tasksel --task-packages laptop"
