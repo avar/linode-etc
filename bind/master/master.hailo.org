@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN hailo.org.
 @  1d  IN SOA ns1.linode.com. hostmaster.hailo.org. (
-      90  ; serial
+      91  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -16,6 +16,6 @@ $ORIGIN hailo.org.
 
        IN  MX  10 mail.nix.is.
 
-hailo.org.           IN  A      109.74.193.250
+hailo.org.           IN  A      207.97.227.245
 www                  IN  CNAME  hailo.org.
 

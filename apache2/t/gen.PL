@@ -91,9 +91,13 @@ my @tests = (
     'chanmirror.nix.is'        => qr[Index of /],
     'ci.nix.is'                => qr/Powered by phpBB/,
 
-    [ and_www qw/hailo.org/ ]  => {
+    'hailo.org'                => {
         content_like => qr/Hailo is a a pluggable/,
-        base_url     => "http://hailo.github.com/",
+        base_url     => "http://hailo.org",
+    },
+    'www.hailo.org'                => {
+        content_like => qr/Hailo is a a pluggable/,
+        base_url     => "http://hailo.org/",
     },
 
     # Ævar
