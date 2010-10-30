@@ -13,8 +13,6 @@
 # example, any plugin which issues a hard-DENY to any SMTP stage will preempt
 # the execution of any others for that stage.
 
-logtersish
-
 ## Filtering/SMTP exchange plugins
 
 dont_require_anglebrackets
