@@ -2,6 +2,15 @@
 
 use strict;
 use warnings;
+BEGIN {
+    eval {
+        require autodie;
+        autodie->import(":all");
+    };
+    if ($@) {
+            system "aptitude install libipc-system-simple-perl" and die "Can't install this";
+    }
+}
 use autodie ':all';
 use Cwd 'getcwd';
 use File::Temp 'tempdir';
