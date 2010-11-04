@@ -49,7 +49,7 @@ my @tests = (
     },
     'git.nix.is'               => {
         content_like => qr/GitHub/,
-        base_url     => "http://github.com/avar",
+        base_url     => "https://github.com/avar",
         follow_links => 0,
     },
     'grault.net'               => qr/Gosling Emacs documentation/,
