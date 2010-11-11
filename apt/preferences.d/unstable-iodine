@@ -1,0 +1,4 @@
+Explanation: Ævar likes being on the bleeding iodine edge
+Package: iodine
+Pin: release a=unstable
+Pin-Priority: 1001
