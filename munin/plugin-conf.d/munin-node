@@ -93,9 +93,9 @@ env.category ping
 
 [multiping_async_users]
 env.title Ping times to our Unix users
-#        v         hinrik      avar         hex           andreasg              dsg             
+#        v         hinrik      avar            hex           andreasg              dsg             
 env.times 5
-env.host localhost home.nix.is 94.216.112.230 87.194.39.109 www.telefonica.com.ar provider.dsg.to
+env.host localhost home.nix.is 212.182.132.170 87.194.39.109 www.telefonica.com.ar provider.dsg.to 
 
 [multiping_async_linode]
 env.title Ping times to all the Linode clusters
