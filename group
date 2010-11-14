@@ -69,3 +69,4 @@ smolder:x:1008:
 v-slaves:x:1009:v-admin,v-perlbrew,leech,failo,smolder,osm-mirror,root
 dovecot:x:120:
 evalserver:x:1013:
+ah62:x:1014:avar
