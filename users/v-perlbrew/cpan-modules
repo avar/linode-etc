@@ -5,10 +5,6 @@
 # Run it like: grep -v ^# ~v-perlbrew/cpan-modules | cpanm
 # Not installed: (cd /tmp && for mod in $(grep -v ^# ~v-perlbrew/cpan-modules | grep -v ^$); do perl -m$mod -e1 > /dev/null 2>&1 || echo $mod; done)
 
-# Multiple AUTHOR support broke Pod::Constants -
-# https://rt.cpan.org/Ticket/Display.html?id=61779
-http://search.cpan.org/CPAN/authors/id/M/MS/MSCHWERN/ExtUtils-MakeMaker-6.57_01.tar.gz
-
 # misc
 Task::BeLike::AVAR
 App::Nopaste::Service::Linode
