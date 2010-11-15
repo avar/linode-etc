@@ -52,11 +52,10 @@ fail:x:1002:tumi,hex
 postgres:x:113:
 pdns:x:114:
 postfix:x:108:
-postdrop:x:111:qpsmtpd
+postdrop:x:111:
 munin:x:112:hinrik,avar,tumi,andreasg
 debian-tor:x:115:
 oident:x:116:
-qpsmtpd:x:117:
 failo:x:1004:failo,hinrik,avar
 fuse:x:118:
 tomcat6:x:119:
