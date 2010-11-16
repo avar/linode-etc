@@ -47,6 +47,7 @@ Scalar::Util
 POE::Quickie
 Lingua::Translate::InterTran
 Lingua::Translate::Google
+Web::Scraper
 
 # Twatterhose
 Bot::Twatterhose
