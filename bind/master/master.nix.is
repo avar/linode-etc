@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN nix.is.
 @  1d  IN SOA ns1.linode.com. hostmaster.nix.is. (
-      108 ; serial
+      109 ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -44,7 +44,7 @@ chanmirror           IN  A      109.74.193.250
 
 lupus                IN  A      194.144.99.91
 home                 IN  A      212.30.192.157
-ah62                 IN  A      212.182.132.170
+ah                   IN  A      212.182.132.170
 
 $ORIGIN gg.nix.is.
 @          IN  NS     ns.gg.nix.is.
@@ -60,7 +60,7 @@ smoke  IN  A      109.74.193.250
 $ORIGIN avar.nix.is.
 dev    IN  A      109.74.193.250
 
-$ORIGIN ah62.nix.is.
+$ORIGIN ah.nix.is.
 org    IN  A      109.74.193.250
 
 $ORIGIN dev.avar.nix.is.
