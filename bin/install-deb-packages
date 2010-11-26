@@ -23,7 +23,7 @@ die "$0 needs to run with root privileges\n" if $> != '0';
 
 my @explicit = @ARGV;
 my $cfg = '/etc/deb-packages';
-my (@src, @bin);
+my (@build_dep, @src, @bin);
 
 open my $fh, '<', $cfg;
 while (my $line = <$fh>) {
@@ -31,7 +31,12 @@ while (my $line = <$fh>) {
 
     if (my ($src, $bin_list) = $line =~ /^([^#\s]+): (.+?)\s*(?:$|#)/) {
         my @packages = split /\s/, $bin_list;
-        push @src, [$src, \@packages];
+        if ($src eq 'build-dep') {
+            # Only accept one value
+            push @build_dep, $packages[0];
+        } else {
+            push @src, [$src, \@packages];
+        }
     }
     elsif ($line =~ /^([^#\s]+)/) {
         push @bin, $1;
@@ -40,6 +45,10 @@ while (my $line = <$fh>) {
 
 if (!@explicit) {
     system "aptitude install @bin";
+}
+
+if (@build_dep) {
+    system "aptitude build-dep @build_dep";
 }
 
 if (@src) {
