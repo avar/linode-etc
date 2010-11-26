@@ -1,7 +1,83 @@
 #!/usr/bin/env perl
+package Deb::Packages;
+use v5.10.1;
+BEGIN {
+    eval { require Mouse } or do {
+        system "aptitude install libmouse-perl" and die "Can't install this";
+    }
+}
+use Mouse;
+use autodie ':all';
+use Cwd 'getcwd';
+use File::Temp 'tempdir';
 
+has config_file => (
+    is => 'ro',
+    isa => 'Str',
+    documentation => 'The config file to read from',
+);
+
+has config => (
+    is => 'ro',
+    isa => 'HashRef[ArrayRef]',
+    lazy_build => 1,
+);
+
+sub _build_config {
+    my ($self) = @_;
+    my $config;
+
+    open my $fh, '<', $self->config_file;
+
+    while (my $line = <$fh>) {
+        chomp $line;
+        given ($line) {
+            # comment
+            when (/^#/ or /^$/) { next }
+            # Custom action
+            when (/^ (?<action> [^#\s]+ ): \s* (?<package> .+? ) \s* (?:$|\#) /x) {
+                push @{$config->{ $+{action} }} => $+{package};
+            }
+            # Install is the default action
+            when (/^ (?<package>[^#\s]+ ) /x) {
+                push @{$config->{install}} => $+{package};
+            }
+            default { die "Can't parse line:<$line>" }
+        }
+    }
+
+    return $config;
+}
+
+sub run {
+    my ($self) = @_;
+    my $config = $self->config;
+
+    for my $action (qw/ install src build-dep remove /) {
+        my @packages = @{ delete $config->{$action} || [] };
+        if (@packages) {
+            given ($action) {
+                # TODO build from source
+                when ("src") { $self->build_from_source( @packages ); }
+                # Everything else is simple
+                default { system "aptitude $action -y @packages"; }
+            }
+        }
+    }
+
+    return;
+}
+
+sub build_from_source {
+    my ($self, @packages) = @_;
+    die "TODO: build source for @packages";
+}
+
+package main;
 use strict;
 use warnings;
+use Getopt::Long qw(:config auto_help pass_through);
+use Pod::Usage;
 BEGIN {
     eval {
         require autodie;
@@ -11,88 +87,16 @@ BEGIN {
             system "aptitude install libipc-system-simple-perl" and die "Can't install this";
     }
 }
-use autodie ':all';
-use Cwd 'getcwd';
-use File::Temp 'tempdir';
-use Getopt::Long qw(:config auto_help pass_through);
-use Pod::Usage;
 
 GetOptions() or pod2usage();
 
-die "$0 needs to run with root privileges\n" if $> != '0';
+die "$0 needs to run with root privileges\n" if $> != 0;
 
-my @explicit = @ARGV;
-my $cfg = '/etc/deb-packages';
-my (@build_dep, @src, @bin, @remove);
+my $deb_packages = Deb::Packages->new(
+    config_file => '/etc/deb-packages'
+);
 
-open my $fh, '<', $cfg;
-while (my $line = <$fh>) {
-    chomp $line;
-
-    if (my ($src, $bin_list) = $line =~ /^([^#\s]+): (.+?)\s*(?:$|#)/) {
-        my @packages = split /\s/, $bin_list;
-        if ($src eq 'build-dep') {
-            # Only accept one value
-            push @build_dep, $packages[0];
-        } elsif ($src eq 'remove') {
-            # Only accept one value
-            push @remove, $packages[0];
-        } else {
-            push @src, [$src, \@packages];
-        }
-    }
-    elsif ($line =~ /^([^#\s]+)/) {
-        push @bin, $1;
-    }
-}
-
-if (!@explicit) {
-    system "aptitude install @bin";
-}
-
-if (@build_dep) {
-    system "aptitude build-dep @build_dep";
-}
-
-if (@src) {
-    my $old_dir = getcwd() or die "Can't get current directory\n";
-    my $build_dir = tempdir('install-deb-packages.XXXXX',
-                            TMPDIR  => 1,
-                            CLEANUP => 1);
-    chdir $build_dir;
-    for my $source (@src) {
-        my ($src_pack, $bin_packs) = @$source;
-
-        if (@explicit) {
-            next if !grep { $_ eq $src_pack } @explicit;
-        }
-        else {
-            next if are_installed(@$bin_packs);
-        }
-
-        system "aptitude build-dep $src_pack";
-        system "apt-get source -b $src_pack";
-        for my $binary (@$bin_packs) {
-            my $deb = (glob "${binary}_*.deb")[0];
-            system "dpkg -i $deb";
-        }
-    }
-    chdir $old_dir;
-}
-
-if (@remove) {
-    system "aptitude remove @remove";
-}
-
-sub are_installed {
-    my @packages = @_;
-    no autodie 'system';
-    for my $package (@packages) {
-        chomp (my $result = qx/dpkg --get-selections $package|awk '{print \$2}'/);
-        return if $result ne 'install';
-    }
-    return 1;
-}
+$deb_packages->run;
 
 =encoding utf8
 
