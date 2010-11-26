@@ -23,7 +23,7 @@ die "$0 needs to run with root privileges\n" if $> != '0';
 
 my @explicit = @ARGV;
 my $cfg = '/etc/deb-packages';
-my (@build_dep, @src, @bin);
+my (@build_dep, @src, @bin, @remove);
 
 open my $fh, '<', $cfg;
 while (my $line = <$fh>) {
@@ -34,6 +34,9 @@ while (my $line = <$fh>) {
         if ($src eq 'build-dep') {
             # Only accept one value
             push @build_dep, $packages[0];
+        } elsif ($src eq 'remove') {
+            # Only accept one value
+            push @remove, $packages[0];
         } else {
             push @src, [$src, \@packages];
         }
@@ -75,6 +78,10 @@ if (@src) {
         }
     }
     chdir $old_dir;
+}
+
+if (@remove) {
+    system "aptitude remove @remove";
 }
 
 sub are_installed {
