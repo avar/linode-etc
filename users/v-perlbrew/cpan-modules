@@ -64,6 +64,15 @@ Data::Validate::URI
 Capture::Tiny
 Date::Calc
 GD
+Text::Unidecode
+Math::Polygon
+# cpanm couldn't find the Math::Polygon::Tree tarball
+http://search.cpan.org/CPAN/authors/id/L/LI/LIOSHA/Math-Polygon-Tree-0.04_1.tar.gz
+# See https://rt.cpan.org/Public/Bug/Display.html?id=53572
+Inline::MakeMaker
+Math::Geometry::Planar::GPC::Polygon
+
+Tree::R
 
 # osm.nix.is munin jobs
 String::Truncate
