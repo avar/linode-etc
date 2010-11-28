@@ -1,0 +1,2 @@
+AH62=/var/lib/git/ah62
+*/2 * * * * root chown -R avar:ah62 $AH62 && chmod -R g+rw $AH62
