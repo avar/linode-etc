@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export brain=/var/tmp/ramdisk/failo/failo.sqlite
+export brain=/home/failo/failo/brain.sqlite
 
 # We've just rebooted and the brain doesn't exist yet
 test -f $brain || exit 0
