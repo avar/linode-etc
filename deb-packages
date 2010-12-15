@@ -9,6 +9,7 @@ apg
 
 # general
 file
+bind9-host
 
 ## Editors
 
