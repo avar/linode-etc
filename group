@@ -41,3 +41,5 @@ libuuid:x:101:
 crontab:x:102:
 ssh:x:103:
 ntp:x:104:
+bitlbee:x:105:
+ntpd:x:106:
