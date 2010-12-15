@@ -48,3 +48,13 @@ if [ -x /usr/lib/command-not-found -o -x /usr/share/command-not-found ]; then
 		fi
 	}
 fi
+
+# Evaluate vspecific things
+if [ -d /etc/bash.bashrc.d ]; then
+    for i in /etc/bash.bashrc.d/v*.sh; do
+        if [ -r $i ]; then
+            . $i
+        fi
+    done
+    unset i
+fi

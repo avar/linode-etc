@@ -1,22 +1,15 @@
-# /etc/sudoers
-#
-# This file MUST be edited with the 'visudo' command as root.
-#
-# See the man page for details on how to write a sudoers file.
-#
-
 Defaults	env_reset
+Defaults	env_keep += HARNESS_OPTIONS
 
-# Host alias specification
+Defaults	insults
+Defaults	lecture=never
+root		ALL=(ALL:ALL) ALL
 
-# User alias specification
+# members of group sudo can do as they please
+%sudo   ALL=(ALL:ALL) NOPASSWD: ALL
 
-# Cmnd alias specification
+# for users who like to provide a password
+%fail   ALL=(ALL:ALL) ALL
 
-# User privilege specification
-root	ALL=(ALL) ALL
-
-# Uncomment to allow members of group sudo to not need a password
-# (Note that later entries override this, so you might need to move
-# it further down)
-%sudo ALL= NOPASSWD: ALL
+# The leech user can chown files to indicate who downloaded them
+leech   ALL=(ALL:ALL) NOPASSWD: /bin/chown
