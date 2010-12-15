@@ -2,7 +2,7 @@
 # nameserver config
 # IPv4
 127.0.0.1 localhost
-188.40.98.140  Debian-50-lenny-64-minimal
+188.40.98.140  w.nix.is w
 #
 # IPv6
 ::1 ip6-localhost ip6-loopback
