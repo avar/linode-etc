@@ -1,5 +1,56 @@
+## System utilities
+
+# top-like utilities
+htop
+iotop
+
+# generate passwords
+apg
+
+## Editors
+
+# avar
+emacs23-nox
+
+## Development tools
 screen
 git-core
-hdparm
+curl
+xmlstarlet
+gdb
+strace
+ack-grep
+pv
+
+# Documentation
+manpages-dev
+glibc-doc
+emacs23-common-non-dfsg
+
+# C compilation
+build-essential
+ccache
+clang
+
+# C libraries
+gettext
+libc6-dev
+libcurl4-openssl-dev
+libexpat1-dev
+
+## Perl
+
+# Core utilities
+perl-doc
+
+# daemons
+openntpd
+bitlbee
+
+# internet
+iodine
+irssi
+tcpflow
+
+## Debian Multimedia
 debian-multimedia-keyring
-emacs23-nox
