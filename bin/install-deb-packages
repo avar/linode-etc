@@ -2,9 +2,20 @@
 package Deb::Packages;
 use v5.10.1;
 BEGIN {
-    eval { require Mouse } or do {
+    eval {
+        require autodie;
+        autodie->import(":all");
+        1
+    } or do {
+        system "aptitude install libipc-system-simple-perl" and die "Can't install this";
+    };
+
+    eval {
+        require Mouse;
+        1;
+    } or do {
         system "aptitude install libmouse-perl" and die "Can't install this";
-    }
+    };
 }
 use Mouse;
 use autodie ':all';
