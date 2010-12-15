@@ -11,6 +11,11 @@ apg
 file
 bind9-host
 
+## System monitoring
+
+munin
+munin-plugins-extra
+
 ## Editors
 
 # avar
