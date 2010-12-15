@@ -47,7 +47,7 @@ PermitEmptyPasswords no
 ChallengeResponseAuthentication no
 
 # Change to no to disable tunnelled clear text passwords
-PasswordAuthentication yes
+#PasswordAuthentication yes
 
 # Kerberos options
 #KerberosAuthentication no
@@ -62,7 +62,7 @@ PasswordAuthentication yes
 X11Forwarding yes
 X11DisplayOffset 10
 PrintMotd no
-PrintLastLog no
+PrintLastLog yes
 TCPKeepAlive yes
 #UseLogin no
 
@@ -75,6 +75,3 @@ AcceptEnv LANG LC_*
 Subsystem sftp /usr/lib/openssh/sftp-server
 
 UsePAM yes
-
-# Allow ssh -R :3000:v:3000 v. I.e. listen on 0.0.0.0
-GatewayPorts yes 

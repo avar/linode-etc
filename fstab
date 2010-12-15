@@ -1,5 +1,5 @@
-# <file system> <mount point>    <type>  <options>                                    <dump>  <pass>
-proc            /proc            proc    defaults                                     0       0
-/dev/xvda       /                ext3    noatime,errors=remount-ro,usrquota,grpquota  0       1
-/swapfile.1GB   swap             swap    defaults                                     0       0
-none            /var/tmp/ramdisk tmpfs   size=500m                                    0       0
+proc /proc proc defaults 0 0
+none /dev/pts devpts gid=5,mode=620 0 0
+/dev/md0 none swap sw 0 0
+/dev/md1 /boot ext3 defaults 0 0
+/dev/md2 / ext3 defaults 0 0

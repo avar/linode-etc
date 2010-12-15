@@ -1,11 +1,16 @@
-# Used by ifup(8) and ifdown(8). See the interfaces(5) manpage or
-# /usr/share/doc/ifupdown/examples for more information.
-
+### Hetzner Online AG - installimage
+# Loopback device:
 auto lo
 iface lo inet loopback
 
-auto eth0
+# device: eth0
+auto  eth0
 iface eth0 inet static
-    address 109.74.193.250
-    netmask 255.255.255.0
-    gateway 109.74.193.1
+  address   188.40.98.140
+  broadcast 188.40.98.191
+  netmask   255.255.255.192
+  gateway   188.40.98.129
+
+# default route to access subnet
+up route add -net 188.40.98.128 netmask 255.255.255.192 gw 188.40.98.129 eth0
+
