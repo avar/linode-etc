@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN nix.is.
 @  1d  IN SOA ns1.linode.com. hostmaster.nix.is. (
-      110 ; serial
+      111 ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -22,6 +22,7 @@ nix.is.              IN  A      109.74.193.250
 t                    IN  A      208.78.101.240
 u                    IN  A      64.71.167.207
 v                    IN  A      109.74.193.250
+w                    IN  A      188.40.98.140
 
 www                  IN  CNAME  nix.is.
 mail                 IN  A      109.74.193.250
