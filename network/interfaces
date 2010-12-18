@@ -11,6 +11,10 @@ iface eth0 inet static
   netmask   255.255.255.192
   gateway   188.40.98.129
 
+auto eth0:0
+  address   188.40.98.164
+  broadcast 188.40.98.191
+  netmask   255.255.255.192
+
 # default route to access subnet
 up route add -net 188.40.98.128 netmask 255.255.255.192 gw 188.40.98.129 eth0
-
