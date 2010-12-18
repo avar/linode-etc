@@ -9,7 +9,10 @@ apg
 
 # general
 file
+
+# dns
 bind9-host
+dnsutils
 
 ## System monitoring
 
