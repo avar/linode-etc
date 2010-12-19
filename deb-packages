@@ -71,3 +71,6 @@ debian-multimedia-keyring
 
 # GD
 libgd2-xpm-dev
+
+# DBD::Pg
+libpq-dev
