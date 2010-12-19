@@ -29,9 +29,9 @@ virtual_alias_domains = localhost nix.is v.nix.is w.nix.is aevar.net xn--var-xla
 virtual_alias_maps = hash:/etc/postfix/virtual
 
 # mailman setup
-relay_domains = lists.nix.is sys.velfag.is
-transport_maps = hash:/etc/postfix/transport
-mailman_destination_recipient_limit = 1
+#relay_domains = lists.nix.is sys.velfag.is
+#transport_maps = hash:/etc/postfix/transport
+#mailman_destination_recipient_limit = 1
 
 # Check headers
 header_checks = regexp:/etc/postfix/header_checks
