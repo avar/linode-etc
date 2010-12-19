@@ -1,3 +1,18 @@
+# How to create the user
+
+     sudo adduser --disabled-login --disabled-password v-perlbrew
+     
+# Install cpanm for the system perl
+
+    curl -L http://cpanmin.us | perl - -S -v --self-upgrade
+    cpanm -S App::perlbrew
+    
+# Initialize v-perlbrew
+
+    sudo -u v-perlbrew -s -H
+    perlbrew init
+    perlbrew install -v perl-5.13.7
+
 # How you upgrade the perl on v:
 
 sudo to `v-perlbrew`:
