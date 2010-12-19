@@ -74,6 +74,9 @@ libgd2-xpm-dev
 # DBD::Pg
 libpq-dev
 
+# XML::LibXML
+libxml2-dev
+
 ## Services
 locate
 iodine
