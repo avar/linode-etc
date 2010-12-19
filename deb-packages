@@ -75,4 +75,5 @@ libgd2-xpm-dev
 libpq-dev
 
 ## Services
+locate
 iodine
