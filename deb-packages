@@ -84,3 +84,8 @@ liblua5.1-posix1
 ## Services
 locate
 iodine
+
+# apache
+apache2
+apache2-mpm-prefork
+libapache2-mod-php5 
