@@ -17,6 +17,9 @@ dnsutils
 # mail
 bsd-mailx
 
+# utility to renice processes
+reniced
+
 ## System monitoring
 
 munin
