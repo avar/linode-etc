@@ -50,3 +50,4 @@ failo:x:1002:
 ssl-cert:x:108:
 postfix:x:109:
 postdrop:x:110:
+w-backup:x:1003:
