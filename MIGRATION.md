@@ -1,11 +1,5 @@
 What needs to be done to migrate `v.nix.is` to `w.nix.is`
 
-* Install v-perlbrew
-
-   This is needed for quotecc for `failo-wisdom` and numerous other
-   things. Create the user and see the v-perlbrew README for how to
-   install it.
-   
 * Set up a backup job for v
 
    generate a ssh keypair for a new v-backup user on w, and add its
