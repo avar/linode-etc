@@ -1,5 +1,10 @@
 What needs to be done to migrate `v.nix.is` to `w.nix.is`
 
+* A working mail system
+
+   Set up postfix and mailman on w. We need to have cron E-Mails
+   etc. sent out for all the stuff that's failing to run.
+
 * Set up a backup job for v
 
    generate a ssh keypair for a new v-backup user on w, and add its
