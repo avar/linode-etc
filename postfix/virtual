@@ -1,13 +1,28 @@
 # remember to run "sudo postmap /etc/postfix/virtual" after making changes
 
 ## "Real" users
+avar@w.nix.is             avarab@gmail.com
 avar@v.nix.is             avarab@gmail.com
+
+hinrik@w.nix.is           hinrik.sig@gmail.com
 hinrik@v.nix.is           hinrik.sig@gmail.com
+
+tumi@w.nix.is             tumi.st@gmail.com
 tumi@v.nix.is             tumi.st@gmail.com
+
+andreasg@w.nix.is         andreassonurgudmunds@gmail.com
 andreasg@v.nix.is         andreassonurgudmunds@gmail.com
+
+hex@w.nix.is              hex@downlode.org
 hex@v.nix.is              hex@downlode.org
+
+bjorn@w.nix.is            bjorn88@simnet.is
 bjorn@v.nix.is            bjorn88@simnet.is
+
+smueller@w.nix.is         smueller@cpan.org
 smueller@v.nix.is         smueller@cpan.org
+
+buccia@w.nix.is           vnixis@repnz.net
 buccia@v.nix.is           vnixis@repnz.net
 
 ## Aliases
