@@ -85,6 +85,9 @@ liblua5.1-posix1
 locate
 iodine
 
+# squid
+squid
+
 # apache
 apache2
 apache2-mpm-prefork
