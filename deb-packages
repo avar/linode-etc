@@ -14,6 +14,9 @@ file
 bind9-host
 dnsutils
 
+# mail
+bsd-mailx
+
 ## System monitoring
 
 munin
