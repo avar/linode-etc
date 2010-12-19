@@ -45,3 +45,4 @@ bitlbee:x:105:
 ntpd:x:106:
 munin:x:107:
 v-perlbrew:x:1000:
+tumi:x:1001:
