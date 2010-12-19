@@ -60,7 +60,6 @@ openntpd
 bitlbee
 
 # internet
-iodine
 irssi
 tcpflow
 
@@ -74,3 +73,6 @@ libgd2-xpm-dev
 
 # DBD::Pg
 libpq-dev
+
+## Services
+iodine
