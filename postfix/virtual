@@ -85,6 +85,7 @@ osm-mirror@v.nix.is  v-cron-swamp@lists.nix.is
 
 ## Send cron E-Mails to v-cron
 @v.nix.is         v-cron@lists.nix.is
+@w.nix.is         v-cron@lists.nix.is
 @localhost        v-cron@lists.nix.is
 
 ## faggot, come in faggot
