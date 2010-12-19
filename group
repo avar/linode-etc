@@ -46,3 +46,4 @@ ntpd:x:106:
 munin:x:107:
 v-perlbrew:x:1000:
 tumi:x:1001:
+failo:x:1002:
