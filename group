@@ -10,7 +10,7 @@ mail:x:8:
 news:x:9:
 uucp:x:10:
 man:x:12:
-proxy:x:13:
+proxy:x:13:avar
 kmem:x:15:
 dialout:x:20:
 fax:x:21:
@@ -21,7 +21,7 @@ tape:x:26:
 sudo:x:27:hinrik,avar,tumi
 audio:x:29:
 dip:x:30:
-www-data:x:33:
+www-data:x:33:avar
 backup:x:34:
 operator:x:37:
 list:x:38:
@@ -43,8 +43,8 @@ ssh:x:103:
 ntp:x:104:
 bitlbee:x:105:
 ntpd:x:106:
-munin:x:107:
-v-perlbrew:x:1000:
+munin:x:107:avar
+v-perlbrew:x:1000:avar
 tumi:x:1001:
 failo:x:1002:
 ssl-cert:x:108:
@@ -52,6 +52,6 @@ postfix:x:109:
 postdrop:x:110:
 ejabberd:x:111:
 w-backup:x:1003:
-mysql:x:112:
+mysql:x:112:avar
 ah62:x:1004:avar,smueller
 smueller:x:1005:
