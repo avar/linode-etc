@@ -148,15 +148,17 @@ php5-sqlite
 php5-tidy
 phpunit
 
-# vnstat
-vnstat
-vnstati
+## Sites
+
+# velfag & others
+memcached
+
+# awstats.nix.is
+awstats
 
 # noc.nix.is
 srg
 
-# memcached
-memcached
-
-# awstats
-awstats
+# vnstat.nix.is
+vnstat
+vnstati
