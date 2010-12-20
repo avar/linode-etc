@@ -36,3 +36,14 @@ What needs to be done to migrate `v.nix.is` to `w.nix.is`
 * Migrate MySQL
 
    This needs to be a dump/restore. Several www sites depend on this.
+   
+      Plan:
+   
+       1. reduce the dns refresh time
+       2. shut down the sites on v
+       3. mysqldump
+       4. switch dns
+       5. power up the sites on w
+       
+   blog.nix.is, velfag.is, and ci.nix.is use mysql for their
+   databases. So we need to have PHP + MySQL working first.
