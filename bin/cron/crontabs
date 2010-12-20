@@ -1,5 +1,5 @@
 #!/bin/sh
-CRONTABS="avar hinrik leech failo smolder"
+CRONTABS="avar hinrik leech failo smolder v-perlbrew"
 
 for crontab in $CRONTABS; do
     if test -f $crontab
