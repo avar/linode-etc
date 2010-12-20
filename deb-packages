@@ -89,6 +89,9 @@ libgd2-xpm-dev
 # DBD::Pg
 libpq-dev
 
+# DBD::mysql
+libmysqlclient-dev
+
 # XML::LibXML
 libxml2-dev
 
