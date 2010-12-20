@@ -1,7 +1,7 @@
 $TTL 1h
 $ORIGIN nix.is.
 @  1d  IN SOA ns1.linode.com. hostmaster.nix.is. (
-      116 ; serial
+      117 ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -32,7 +32,7 @@ munin                IN  A      188.40.98.140
 awstats              IN  A      188.40.98.140
 vnstat               IN  A      188.40.98.140
 leech                IN  A      188.40.98.140
-hailo                IN  A      109.74.193.250
+hailo                IN  A      188.40.98.140
 ci                   IN  A      109.74.193.250
 osm                  IN  A      109.74.193.250
 tms                  IN  A      188.40.98.140
