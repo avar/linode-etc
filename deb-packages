@@ -162,3 +162,10 @@ srg
 # vnstat.nix.is
 vnstat
 vnstati
+
+# osm.nix.is
+mkgmap
+sun-java6-bin
+sun-java6-jre
+sun-java6-jdk
+zip
