@@ -1,0 +1,1 @@
+@weekly echo 'export PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:${PATH}' >~v-perlbrew/perl5/perlbrew/etc/bashrc
