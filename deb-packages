@@ -157,3 +157,6 @@ srg
 
 # memcached
 memcached
+
+# awstats
+awstats
