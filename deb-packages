@@ -95,6 +95,9 @@ liblua5.1-posix1
 ruby-full
 rubygems
 
+# sudo gem install jekyll
+# sudo gem install rdiscount
+
 ## leech
 rtorrent
 unrar
