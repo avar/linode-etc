@@ -25,8 +25,8 @@ v                    IN  A      109.74.193.250
 w                    IN  A      188.40.98.140
 
 www                  IN  CNAME  nix.is.
-mail                 IN  A      109.74.193.250
-lists                IN  A      109.74.193.250
+mail                 IN  A      188.40.98.140
+lists                IN  A      188.40.98.140
 noc                  IN  A      188.40.98.140
 munin                IN  A      188.40.98.140
 awstats              IN  A      188.40.98.140
@@ -54,7 +54,7 @@ ns         IN  A      188.40.98.140
 
 $ORIGIN v.nix.is.
 @      IN  MX  10 mail
-mail   IN  A      109.74.193.250
+mail   IN  A      188.40.98.140
 
 $ORIGIN git.nix.is.
 smoke  IN  A      109.74.193.250
