@@ -1,7 +1,7 @@
-$TTL 1d
+$TTL 1h
 $ORIGIN nix.is.
 @  1d  IN SOA ns1.linode.com. hostmaster.nix.is. (
-      112 ; serial
+      113 ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire

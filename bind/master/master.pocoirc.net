@@ -1,7 +1,7 @@
-$TTL 1d
+$TTL 1h
 $ORIGIN pocoirc.net.
 @  1d  IN SOA ns1.linode.com. hostmaster.pocoirc.net. (
-      1 ; serial
+      2   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
