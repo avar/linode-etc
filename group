@@ -52,3 +52,4 @@ postfix:x:109:
 postdrop:x:110:
 ejabberd:x:111:
 w-backup:x:1003:
+mysql:x:112:
