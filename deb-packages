@@ -33,6 +33,11 @@ munin-plugins-extra
 
 # avar
 emacs23-nox
+aspell
+aspell-de
+aspell-en
+aspell-is
+aspell-nl
 
 ## Development tools
 screen
