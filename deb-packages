@@ -154,3 +154,6 @@ vnstati
 
 # noc.nix.is
 srg
+
+# memcached
+memcached
