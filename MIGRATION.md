@@ -1,10 +1,5 @@
 What needs to be done to migrate `v.nix.is` to `w.nix.is`
 
-* A working mail system
-
-   Set up postfix and mailman on w. We need to have cron E-Mails
-   etc. sent out for all the stuff that's failing to run.
-
 * Set up munin-w.nix.is, noc-w.nix.is etc.
 
    Everything listed on http://noc.nix.is should be duplicated for w,
