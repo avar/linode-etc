@@ -1,7 +1,7 @@
 $TTL 1h
 $ORIGIN nix.is.
 @  1d  IN SOA ns1.linode.com. hostmaster.nix.is. (
-      113 ; serial
+      114 ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -39,7 +39,7 @@ tms                  IN  A      109.74.193.250
 tumi                 IN  A      109.74.193.250
 avar                 IN  A      109.74.193.250
 ap                   IN  A      109.74.193.250
-git                  IN  A      109.74.193.250
+git                  IN  A      188.40.98.140
 blog                 IN  A      109.74.193.250
 chanmirror           IN  A      109.74.193.250
 kviklekar            IN  A      109.74.193.250
