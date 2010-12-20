@@ -1,5 +1,9 @@
 ## System utilities
 
+# shells
+bash
+bash-completion
+
 # top-like utilities
 htop
 iotop
