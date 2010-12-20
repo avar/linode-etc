@@ -31,6 +31,8 @@ munin-plugins-extra
 
 apt-listchanges
 
+fail2ban
+
 ## Editors
 
 # avar
