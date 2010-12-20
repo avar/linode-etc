@@ -91,6 +91,10 @@ libxml2-dev
 lua5.1
 liblua5.1-posix1
 
+## leech
+rtorrent
+unrar
+
 ## Services
 locate
 iodine
