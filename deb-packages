@@ -114,6 +114,9 @@ iodine
 # postfix
 postfix
 
+# mailman
+mailman
+
 # squid
 squid
 
