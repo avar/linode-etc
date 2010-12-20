@@ -1,4 +1,0 @@
-<VirtualHost *:81>
-    ServerName kviklekar.nix.is
-    DocumentRoot /var/www/kviklekar.nix.is
-</VirtualHost>
