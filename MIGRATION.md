@@ -5,15 +5,6 @@ What needs to be done to migrate `v.nix.is` to `w.nix.is`
    Set up postfix and mailman on w. We need to have cron E-Mails
    etc. sent out for all the stuff that's failing to run.
 
-* Set up a backup job for v
-
-   generate a ssh keypair for a new v-backup user on w, and add its
-   public ssh key to v:/root/.ssh/authorized_keys.
-   
-   Then set up a rsync job in cron that copies over the entire
-   contents of v.nix.is to w.nix.is. We can afford the space, and
-   having a complete local copy is nice.
-   
 * Set up munin-w.nix.is, noc-w.nix.is etc.
 
    Everything listed on http://noc.nix.is should be duplicated for w,
