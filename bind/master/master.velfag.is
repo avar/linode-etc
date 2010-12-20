@@ -1,7 +1,7 @@
 $TTL 1h
 $ORIGIN velfag.is.
 @  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
-      2010122011 ; serial
+      2010122021 ; serial
       3h         ; refresh
       30m        ; retry
       1w         ; expire
@@ -18,9 +18,9 @@ $ORIGIN velfag.is.
        IN  MX  10 mx-hmc-01.simnetpro.is.
        IN  MX  10 mx-hmc-02.simnetpro.is.
 
-velfag.is. IN  A      109.74.193.250
-sys        IN  A      109.74.193.250
-dev        IN  A      109.74.193.250
+velfag.is. IN  A      188.40.98.140
+sys        IN  A      188.40.98.140
+dev        IN  A      188.40.98.140
 www        IN  CNAME  velfag.is.
 mail       IN  CNAME  mail-fw-2.simnetpro.is.
 
@@ -33,4 +33,4 @@ $ORIGIN sys.velfag.is.
       3h  ; minimum
      )
        IN  MX  10 mail
-mail   IN  A      109.74.193.250
+mail   IN  A      188.40.98.140
