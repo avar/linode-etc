@@ -147,3 +147,6 @@ php5-mysql
 php5-sqlite
 php5-tidy
 phpunit
+
+# vnstat
+vnstat
