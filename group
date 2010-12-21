@@ -18,7 +18,7 @@ voice:x:22:
 cdrom:x:24:
 floppy:x:25:
 tape:x:26:
-sudo:x:27:hinrik,avar,tumi
+sudo:x:27:hinrik,avar,tumi,hex
 audio:x:29:
 dip:x:30:
 www-data:x:33:avar
@@ -60,3 +60,5 @@ v-slaves:x:1007:v-perlbrew,smolder
 pdns:x:113:
 oident:x:114:
 postgres:x:115:
+hex:x:1008:
+leech:x:1010:hinrik,avar,tumi,hex
