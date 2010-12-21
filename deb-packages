@@ -181,9 +181,8 @@ sun-java6-jre
 sun-java6-jdk
 zip
 
-# PostgreSQL
+# PostgreSQL, for osm.nix.is / munin.nix.is
 postgresql-9.0
-postgresql-9.0-debversion
 
 # oidentd (hinrik)
 oidentd
