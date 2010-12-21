@@ -47,7 +47,7 @@ munin:x:107:avar
 v-perlbrew:x:1000:avar
 tumi:x:1001:
 failo:x:1002:
-ssl-cert:x:108:
+ssl-cert:x:108:postgres
 postfix:x:109:
 postdrop:x:110:
 ejabberd:x:111:
@@ -58,3 +58,5 @@ smueller:x:1005:
 smolder:x:1006:
 v-slaves:x:1007:v-perlbrew,smolder
 pdns:x:113:
+oident:x:114:
+postgres:x:115:

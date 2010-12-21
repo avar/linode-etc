@@ -180,3 +180,10 @@ sun-java6-bin
 sun-java6-jre
 sun-java6-jdk
 zip
+
+# PostgreSQL
+postgresql-9.0
+postgresql-9.0-debversion
+
+# oidentd (hinrik)
+oidentd
