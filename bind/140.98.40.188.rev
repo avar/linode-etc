@@ -1,5 +1,5 @@
 $TTL 86400 ; 24 hours could have been written as 24h or 1d
-$ORIGIN 250.193.74.109.IN-ADDR.ARPA.
+$ORIGIN 140.98.40.188.IN-ADDR.ARPA.
 @  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
       5  ; serial
       3H ; refresh
@@ -8,4 +8,4 @@ $ORIGIN 250.193.74.109.IN-ADDR.ARPA.
       3h ; minimum
      )
 ; server host definitions
-250.193.74.109.in-addr.arpa.    IN  PTR    v.nix.is.
+140.98.40.188.in-addr.arpa.    IN  PTR    w.nix.is.
