@@ -8,7 +8,7 @@ my $format = $format[rand @format];
 my $out = "/usr/local/bin/failo-wisdom";
 
 my $program = do {
-    open my $fh, qq[ curl --silent --user-agent 'cron/failo-wisdom-update' http://v.nix.is/~failo/quotes.yml | quotecc -i - -I YAML -o - -O $format | ];
+    open my $fh, qq[ curl --silent --user-agent 'cron/failo-wisdom-update' http://w.nix.is/~failo/quotes.yml | quotecc -i - -I YAML -o - -O $format | ];
 
     join '', <$fh>;
 };
