@@ -5,7 +5,7 @@
 * Add a zone for the domain in
   [Linode's DNS manager](https://www.linode.com/members/dns/)
 
-* Set `v.nix.is` IP followed by a semicolon (i.e. `109.74.193.250;`)
+* Set `w.nix.is` IP followed by a semicolon (i.e. `188.40.98.140;`)
   as the master, with domain transfer (AXFR) enabled.
 
 * Add a zone for the domain in `/etc/bind/named.conf`
