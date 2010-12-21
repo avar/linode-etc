@@ -17,6 +17,7 @@ file
 # dns
 bind9-host
 dnsutils
+whois
 
 # mail
 bsd-mailx
