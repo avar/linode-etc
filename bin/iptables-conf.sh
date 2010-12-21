@@ -29,11 +29,12 @@ iptables -t nat -A POSTROUTING -s 10.9.8.0/24 -o eth0 -j MASQUERADE
 ns1=ns1.first-ns.de.
 ns2=robotns2.second-ns.de.
 ns3=robotns3.second-ns.com.
+nsdebug=109.74.193.250
 
 # redirect ns*.linode.com to PowerDNS
 iptables \
     -A PREROUTING -t nat -p udp \
-    --source $ns1,$ns2,$ns3 \
+    --source $ns1,$ns2,$ns3,$nsdebug \
     --destination 188.40.98.140 --dport 53 \
     -j REDIRECT \
     --to-ports 53
