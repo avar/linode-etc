@@ -129,6 +129,10 @@ mailman
 # squid
 squid
 
+# powerdns
+pdns-server
+pdns-recursor
+
 # apache
 apache2
 apache2-mpm-prefork
