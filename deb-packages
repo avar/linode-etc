@@ -183,6 +183,7 @@ zip
 
 # PostgreSQL, for osm.nix.is / munin.nix.is
 postgresql-9.0
+postgresql-contrib-9.0
 
 # oidentd (hinrik)
 oidentd
