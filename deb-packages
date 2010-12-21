@@ -13,6 +13,7 @@ apg
 
 # general
 file
+tree
 
 # dns
 bind9-host
