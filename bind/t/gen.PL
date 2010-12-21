@@ -6,11 +6,16 @@ use FindBin qw[$Bin];
 use File::Path qw[remove_tree make_path];
 
 chomp(my @domains = qx[ grep -h ORIGIN /etc/bind/master/master* | $^X -pe 's/^.*? (.*?)\.\$/\$1/' ]);
-my @ns = (qw(localhost), map { "ns$_.linode.com" } 1..5);
+my @ns = qw(
+    localhost
+    ns1.first-ns.de
+    robotns2.second-ns.de
+    robotns3.second-ns.com
+);
 
 my @subdomain_tests = qw(A NS MX);
 my @sub_zone_tests  = qw(A MX);
-my @domain_tests    = ("SOA", @subdomain_tests, "AXFR");
+my @domain_tests    = ("SOA", @subdomain_tests);
 
 remove_tree("$Bin/gen");
 
@@ -55,7 +60,7 @@ use lib qq[\$FindBin::Bin/../../../lib];
 use DomainTest;
 DomainTest->new(
     domain  => q[$domain],
-    servers => [ 'resolver1.london.linode.com.', qw[ @ns ] ],
+    servers => [ 'ns1-coloc.hetzner.de', qw[ @ns ] ],
     recurse => 1,
 )->run_public_tests;
 TEST
