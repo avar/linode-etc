@@ -12,6 +12,7 @@ iface eth0 inet static
   gateway   188.40.98.129
 
 auto eth0:0
+iface eth0:0 inet static
   address   188.40.98.164
   broadcast 188.40.98.191
   netmask   255.255.255.192
