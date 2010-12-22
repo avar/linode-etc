@@ -3,4 +3,3 @@ none /dev/pts devpts gid=5,mode=620 0 0
 /dev/md0 none swap sw 0 0
 /dev/md1 /boot ext3 defaults 0 0
 /dev/md2 / ext3 defaults 0 0
-/dev/md3 /home/leech ext4 defaults 0 0
