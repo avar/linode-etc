@@ -1,18 +1,16 @@
 $TTL 1h
 $ORIGIN xn--hjlavefsj-81a4q.is.
 @  1D  IN SOA ns1.first-ns.de. hostmaster.v.nix.is. (
-      5          ; serial
+      6          ; serial
       3h         ; refresh
       30m        ; retry
       1w         ; expire
       3h         ; minimum
      )
 
-       IN  NS     ns1.linode.com.
-       IN  NS     ns2.linode.com.
-       IN  NS     ns3.linode.com.
-       IN  NS     ns4.linode.com.
-       IN  NS     ns5.linode.com.
+       IN  NS     ns1.first-ns.de.
+       IN  NS     robotns2.second-ns.de.
+       IN  NS     robotns3.second-ns.com.
 
        IN  MX  10 mail.xn--hjlavefsj-81a4q.is.
 
