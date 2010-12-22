@@ -1,7 +1,7 @@
-$TTL 1h
+$TTL 1d
 $ORIGIN xn--hjlavefsj-81a4q.is.
 @  1D  IN SOA ns1.first-ns.de. hostmaster.v.nix.is. (
-      6          ; serial
+      7          ; serial
       3h         ; refresh
       30m        ; retry
       1w         ; expire

@@ -1,7 +1,7 @@
-$TTL 1h
+$TTL 1d
 $ORIGIN velfag.is.
 @  1D  IN SOA ns1.first-ns.de. hostmaster.v.nix.is. (
-      2010122222 ; serial
+      2010122223 ; serial
       3h         ; refresh
       30m        ; retry
       1w         ; expire
@@ -24,7 +24,7 @@ mail       IN  CNAME  mail-fw-2.simnetpro.is.
 
 $ORIGIN sys.velfag.is.
 @  1H  IN SOA ns1.first-ns.de. hostmaster.v.nix.is. (
-      1   ; serial
+      2   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
