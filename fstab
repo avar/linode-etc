@@ -4,6 +4,6 @@ none /dev/pts devpts gid=5,mode=620 0 0
 /dev/sdb1 none swap sw 0 0
 /dev/md1 /boot ext3 defaults 0 0
 /dev/md2 / ext3 defaults 0 0
-# /dev/md3 /tmp ext4 defaults 0 0
-/dev/md4 /dns ext4 defaults 0 0
+/dev/md3 /tmp ext4 defaults 0 1
+/dev/md4 /dns ext4 defaults 0 1
 
