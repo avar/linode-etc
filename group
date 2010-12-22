@@ -62,3 +62,4 @@ oident:x:114:
 postgres:x:115:
 hex:x:1008:
 leech:x:1010:hinrik,avar,tumi,hex
+evalserver:x:1011:
