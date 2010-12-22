@@ -11,4 +11,4 @@ PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/c
 6  */4      * * *  nobody  perl -e 'my $out = qx[prove -vr /etc/apache2/t 2>&1]; print $out if $?'
 10 */4      * * *  nobody  perl -e 'my $out = qx[prove -vr   /etc/mysql/t 2>&1]; print $out if $?'
 14 */4      * * *  nobody  perl -e 'my $out = qx[prove -vr     /etc/tor/t 2>&1]; print $out if $?'
-18 */4      * * *  nobody  perl -e 'my $out = qx[prove -vr   /etc/linux/t 2>&1]; print $out if $?'
+
