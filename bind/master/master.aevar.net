@@ -1,6 +1,6 @@
 $TTL 1h
 $ORIGIN aevar.net.
-@  1D  IN SOA ns1.linode.com. hostmaster.aevar.net. (
+@  1D  IN SOA ns1.first-ns.de. hostmaster.aevar.net. (
       45  ; serial
       3h  ; refresh
       30m ; retry

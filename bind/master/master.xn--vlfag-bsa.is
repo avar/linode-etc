@@ -1,6 +1,6 @@
 $TTL 1h
 $ORIGIN xn--vlfag-bsa.is.
-@  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
+@  1D  IN SOA ns1.first-ns.de. hostmaster.v.nix.is. (
       2010122021 ; serial
       3h         ; refresh
       30m        ; retry
@@ -25,7 +25,7 @@ www        IN  CNAME  xn--vlfag-bsa.is.
 mail       IN  CNAME  mail-fw-2.simnetpro.is.
 
 $ORIGIN sys.xn--vlfag-bsa.is.
-@  1H  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
+@  1H  IN SOA ns1.first-ns.de. hostmaster.v.nix.is. (
       1   ; serial
       3h  ; refresh
       30m ; retry

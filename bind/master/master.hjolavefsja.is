@@ -1,6 +1,6 @@
 $TTL 1h
 $ORIGIN hjolavefsja.is.
-@  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
+@  1D  IN SOA ns1.first-ns.de. hostmaster.v.nix.is. (
       5          ; serial
       3h         ; refresh
       30m        ; retry
