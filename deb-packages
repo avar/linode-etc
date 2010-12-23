@@ -161,6 +161,9 @@ php5-sqlite
 php5-tidy
 phpunit
 
+# proftpd
+proftpd
+
 ## Sites
 
 # velfag & others
