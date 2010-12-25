@@ -64,8 +64,8 @@ my @tests = (
         content_like => qr/How do I runned vee nix\?/,
         follow_links => 0,
     },
-    'v.nix.is'                 => {
-        content_like => qr/How do I runned vee nix\?/,
+    'w.nix.is'                 => {
+        content_like => qr/How do I runned wee nix\?/,
         follow_links => 0,
     },
     'munin.nix.is'             => qr/Munin/,
