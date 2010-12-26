@@ -114,6 +114,7 @@ rubygems
 
 # sudo gem install jekyll
 # sudo gem install rdiscount
+# sudo gem install pg
 
 ## leech
 rtorrent
