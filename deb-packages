@@ -198,4 +198,5 @@ oidentd
 sqlite3
 
 # osm-mirror
+subversion
 git-svn
