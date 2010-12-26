@@ -50,7 +50,7 @@ failo:x:1002:
 ssl-cert:x:108:postgres
 postfix:x:109:
 postdrop:x:110:
-ejabberd:x:111:
+ejabberd:x:111:avar
 w-backup:x:1003:
 mysql:x:112:avar
 ah62:x:1004:avar,smueller
