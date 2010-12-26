@@ -196,3 +196,6 @@ oidentd
 
 # smoke.git.nix.is
 sqlite3
+
+# osm-mirror
+git-svn
