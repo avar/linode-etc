@@ -56,10 +56,11 @@ mysql:x:112:avar
 ah62:x:1004:avar,smueller
 smueller:x:1005:
 smolder:x:1006:
-v-slaves:x:1007:v-perlbrew,smolder
+v-slaves:x:1007:v-perlbrew,smolder,osm-mirror
 pdns:x:113:
 oident:x:114:
 postgres:x:115:
 hex:x:1008:
 leech:x:1010:hinrik,avar,tumi,hex
 evalserver:x:1011:
+osm-mirror:x:1009:
