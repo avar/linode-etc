@@ -19,6 +19,9 @@ App::perlbrew
 App::cpanminus
 App::cpanoutdated
 
+# /etc/munin/our-plugins/munin-plugin-multiping_async/multiping_async
+MooseX::POE
+
 # hailo
 Hailo
 POE::Component::Hailo
