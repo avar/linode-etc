@@ -31,6 +31,7 @@ reniced
 
 munin
 munin-plugins-extra
+sockstat
 
 apt-listchanges
 
