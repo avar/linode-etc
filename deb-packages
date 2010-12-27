@@ -11,6 +11,9 @@ iotop
 # generate passwords
 apg
 
+# users
+members
+
 # general
 file
 hdparm
