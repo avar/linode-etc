@@ -1,4 +1,4 @@
-PATH=/usr/sbin
+PATH=/usr/sbin:/usr/bin
 @daily root service postfix reload
 @daily root postmap /etc/postfix/virtual
 @daily root postmap /etc/postfix/transport
