@@ -59,6 +59,7 @@ curl
 xmlstarlet
 gdb
 strace
+lsof
 ack-grep
 pv
 
