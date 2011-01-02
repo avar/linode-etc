@@ -18,6 +18,7 @@ members
 file
 hdparm
 tree
+bc
 
 # dns
 bind9-host
