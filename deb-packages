@@ -85,7 +85,8 @@ libexpat1-dev
 perl-doc
 
 # daemons
-openntpd
+remove: openntpd
+ntp
 bitlbee
 
 # internet
