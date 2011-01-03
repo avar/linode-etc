@@ -57,6 +57,9 @@ aspell-nl
 screen
 git-core
 git-email
+libemail-valid-perl
+libnet-smtp-ssl-perl
+libauthen-sasl-perl
 curl
 xmlstarlet
 gdb
