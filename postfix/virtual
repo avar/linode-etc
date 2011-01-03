@@ -25,6 +25,8 @@ smueller@v.nix.is         smueller@cpan.org
 buccia@w.nix.is           vnixis@repnz.net
 buccia@v.nix.is           vnixis@repnz.net
 
+hawley@w.nix.is           rubbershotgun@gmail.com
+
 ## Aliases
 # Signup address for github.com/mediawiki
 mediawiki-github@v.nix.is avarab@gmail.com
@@ -47,6 +49,7 @@ andreasg@localhost      andreassonurgudmunds@gmail.com
 hex@localhost           hex@downlode.org
 smueller@localhost      smueller@cpan.org
 buccia@localhost        vnixis@repnz.net
+hawley@localhost        rubbershotgun@gmail.com
 
 ## Catch-all for domains
 @aevar.net        avarab@gmail.com
