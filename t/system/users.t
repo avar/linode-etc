@@ -2,7 +2,7 @@
 use v5.12;
 use strict;
 use warnings;
-use Test::More;
+use Test::More 'no_plan';
 
 chomp(my @uid = qx[cut -d: -f3 /etc/passwd]);
 
