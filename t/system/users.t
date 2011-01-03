@@ -15,6 +15,9 @@ for my $passwd_uid (@uid) {
     # Skip root
     next if $user eq "root";
 
+    # Skip the leech user
+    next if $user eq "leech";
+
     my ($name, undef, undef, undef, $other) = split /,/, $gecos;
     ok($name, "User $user has a defined name");
 }
