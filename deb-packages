@@ -56,6 +56,7 @@ aspell-nl
 ## Development tools
 screen
 git-core
+git-email
 curl
 xmlstarlet
 gdb
