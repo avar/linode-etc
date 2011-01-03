@@ -1,4 +1,4 @@
 PATH=/usr/sbin:/usr/bin
-@daily root service postfix reload
+@daily root service postfix reload | grep -v '^Reloading'
 @daily root postmap /etc/postfix/virtual
 @daily root postmap /etc/postfix/transport
