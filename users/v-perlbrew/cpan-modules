@@ -104,3 +104,7 @@ Catalyst::Controller::REST
 
 # smoke.git.nix.is
 Smolder
+
+# todo.nix.is
+Time::Duration
+CGI::Session
