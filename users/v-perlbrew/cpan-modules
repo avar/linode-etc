@@ -108,3 +108,6 @@ Smolder
 # todo.nix.is
 Time::Duration
 CGI::Session
+
+# avar - modules I use in one-off scripts
+Text::Table
