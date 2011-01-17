@@ -61,7 +61,7 @@ pdns:x:113:
 oident:x:114:
 postgres:x:115:
 hex:x:1008:
-leech:x:1010:hinrik,avar,tumi,hex,hawley,vab,buccia
+leech:x:1010:hinrik,avar,tumi,hex,hawley,vab,buccia,david
 evalserver:x:1011:
 osm-mirror:x:1009:
 vab:x:1012:
