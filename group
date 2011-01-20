@@ -46,7 +46,7 @@ ntpd:x:106:
 munin:x:107:avar
 v-perlbrew:x:1000:avar
 tumi:x:1001:
-failo:x:1002:
+failo:x:1002:avar,hinrik,failo
 ssl-cert:x:108:postgres
 postfix:x:109:
 postdrop:x:110:
