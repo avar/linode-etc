@@ -134,6 +134,9 @@ unrar
 p7zip-full
 unzip
 
+# to encode FLAC and WAV to Ogg
+vorbis-tools
+
 ## Services
 locate
 iodine
