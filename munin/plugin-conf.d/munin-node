@@ -261,7 +261,7 @@ env.name Twatterhose
 env.file /var/lib/munin/plugin-state/hailo_/twatterhose-time.json
 
 [vnstat_month]
-env.limittt 800000
+env.limittt 5000000
 
 
 [proftpd*]
