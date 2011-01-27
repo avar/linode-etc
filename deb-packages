@@ -161,6 +161,9 @@ libapache2-mod-php5
 libapache2-mod-fastcgi 
 libapache2-mod-scgi
 
+# tor
+tor
+
 # php
 php-apc
 php-benchmark
