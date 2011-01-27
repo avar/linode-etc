@@ -46,6 +46,7 @@ gitsmoke@v.nix.is    avarab@gmail.com
 smolder@v.nix.is    avarab@gmail.com
 # Contact address for the Tor bridge
 tor@v.nix.is              avarab@gmail.com
+tor@w.nix.is              avarab@gmail.com
 
 ## Send cron e-mails to the relevant people
 avar@localhost          avarab@gmail.com

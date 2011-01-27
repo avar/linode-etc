@@ -80,7 +80,7 @@ CookieAuthentication 1
 ## See https://www.torproject.org/docs/tor-doc-relay for details.
 
 ## Required: what port to advertise for incoming Tor connections.
-ORPort 9001
+ORPort 443
 ## If you want to listen on a port other than the one advertised
 ## in ORPort (e.g. to advertise 443 but bind to 9090), uncomment the
 ## line below too. You'll need to do ipchains or other port forwarding
@@ -88,7 +88,7 @@ ORPort 9001
 #ORListenAddress 0.0.0.0:9090
 
 ## A handle for your relay, so people don't have to refer to it by key.
-Nickname vee
+Nickname wee
 
 ## The IP address or full DNS name for your relay. Leave commented out
 ## and Tor will guess.
@@ -103,12 +103,12 @@ RelayBandwidthBurst 1000 KBytes
 # Don't suck up all our bandwidth. Note that the total bandwidth tor
 # might use will be ~ AccountingMax * 2. See torrc(5)
 AccountingStart day 02:00
-AccountingMax 1 GB
+AccountingMax 5 GB
 
 ## Contact info to be published in the directory, so we can contact you
 ## if your relay is misconfigured or something else goes wrong. Google
 ## indexes this, so spammers might also collect it.
-ContactInfo v.nix.is tor <tor@v.nix.is>
+ContactInfo w.nix.is tor <tor@w.nix.is>
 ## You might also include your PGP or GPG fingerprint if you have one:
 #ContactInfo 1234D/FFFFFFFF Random Person <nobody AT example dot com>
 
@@ -149,7 +149,7 @@ ContactInfo v.nix.is tor <tor@v.nix.is>
 ##
 #ExitPolicy accept *:6660-6667,reject *:* # allow irc ports but no more
 #ExitPolicy accept *:119 # accept nntp as well as default exit policy
-ExitPolicy reject *:* # no exits allowed
+#ExitPolicy reject *:* # no exits allowed
 #
 ## Bridge relays (or "bridges") are Tor relays that aren't listed in the
 ## main directory. Since there is no complete public list of them, even if an
@@ -157,8 +157,8 @@ ExitPolicy reject *:* # no exits allowed
 ## won't be able to block all the bridges. Also, websites won't treat you
 ## differently because they won't know you're running Tor. If you can
 ## be a real relay, please do; but if not, be a bridge!
-#BridgeRelay 1
-#ExitPolicy reject *:*
+BridgeRelay 1
+ExitPolicy reject *:*
 
 # How many processes to use at once for decrypting onionskins. (Default: 1)
 NumCPUs 4
