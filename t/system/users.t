@@ -12,11 +12,8 @@ for my $passwd_uid (@uid) {
     # Skip non-normal users
     next unless $shell eq "/bin/bash";
 
-    # Skip root
-    next if $user eq "root";
-
-    # Skip the leech user
-    next if $user eq "leech";
+    # Skip these users
+    pass "skipping $user", next if $user ~~ [ qw( root leech debian-tor ) ];
 
     # Make sure we have a Real Name
     my ($name, undef, undef, undef, $other) = split /,/, $gecos;
