@@ -206,9 +206,10 @@ sun-java6-bin
 sun-java6-jre
 sun-java6-jdk
 zip
-osmosis
 build-dep: librmagick-ruby
 libxslt1-dev
+ant
+ant-optional
 
 # PostgreSQL, for osm.nix.is / munin.nix.is
 postgresql-9.0
