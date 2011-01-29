@@ -90,6 +90,9 @@ libexpat1-dev
 # Core utilities
 perl-doc
 
+# for re::engine::PCRE
+libpcre3-dev
+
 ## daemons
 remove: openntpd
 ntp
