@@ -90,12 +90,12 @@ libexpat1-dev
 # Core utilities
 perl-doc
 
-# daemons
+## daemons
 remove: openntpd
 ntp
 bitlbee
 
-# internet
+## internet
 irssi
 tcpflow
 
