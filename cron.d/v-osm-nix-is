@@ -1,4 +1,4 @@
-PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/bin:/usr/bin:/usr/sbin
+PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/bin:/usr/bin:/usr/sbin:/var/lib/gems/1.8/bin
 
 ##
 ## avar's daily mkgmap generation
