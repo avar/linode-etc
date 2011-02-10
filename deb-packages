@@ -58,6 +58,7 @@ screen
 git-core
 git-email
 mercurial
+bzr
 libemail-valid-perl
 libnet-smtp-ssl-perl
 libauthen-sasl-perl
