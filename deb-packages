@@ -31,6 +31,9 @@ bsd-mailx
 # utility to renice processes
 reniced
 
+# report bugs
+reportbug
+
 ## System monitoring
 
 munin
