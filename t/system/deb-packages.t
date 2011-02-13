@@ -2,11 +2,12 @@
 use v5.12;
 use strict;
 use warnings;
-use Text::Table;
+use Test::More qw(no_plan);
 
 my $lines = get_auth_log_lines();
 my @dpkg_i = dpkg_installed();
 my @deb_packages = deb_packages();
+chomp(my @ignore_list = <DATA>);
 
 my @install;
 my %who_installed;
@@ -24,11 +25,8 @@ for my $line (@$lines) {
     }
 }
 
-my $tt = Text::Table->new(
-    "Who", "Package"
-);
-
-my @rows;
+my $ok = 1;
+my %fail;
 for my $installed (@install) {
     my $was_removed = $installed ~~ @remove;
     my $dpkg_installed = $installed ~~ @dpkg_i;
@@ -39,16 +37,23 @@ for my $installed (@install) {
         warn "We think $installed was removed, but it's currently installed says dpkg. This might be a problem.";
     }
 
-    if (not $was_removed and $dpkg_installed and not(grep { $_ eq $installed } @deb_packages)) {
-        push @rows => [
-            $who_installed{$installed},
-            $installed,
-        ];
+    if (not $was_removed and $dpkg_installed and
+        not (grep { $_ eq $installed } @deb_packages) and
+        not (grep { $_ eq $installed } @ignore_list)) {
+        my $user = $who_installed{$installed};
+        push @{ $fail{ $user } } => $installed;
+        $ok = 0;
     }
 }
 
-$tt->load(@rows);
-print $tt;
+for my $user (sort keys %fail) {
+    subtest "$user knows how to install packages" => sub {
+        fail "$user installed $_ but didn't add it to /etc/deb-packages" for sort @{ $fail{$user} };
+        done_testing();
+    };
+}
+
+pass("Everything we've installed is either ignored or listed in /etc/deb-packages") if $ok;
 
 sub get_auth_log_lines {
     my @logs = (
@@ -81,4 +86,5 @@ sub deb_packages {
     @deb;
 }
 
-#for package in $(sudo zgrep "aptitude install" /var/log/auth.log.*gz | perl -pe 's/.*aptitude install (\S+).*/$1/g'); do grep -q $i /etc/deb-packages || echo "$i is not in deb-packages"; done
+# Add packages to ignore here
+__DATA__
