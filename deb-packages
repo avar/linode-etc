@@ -167,7 +167,7 @@ pdns-recursor
 apache2
 apache2-mpm-prefork
 libapache2-mod-php5
-libapache2-mod-fastcgi 
+libapache2-mod-fastcgi
 libapache2-mod-scgi
 
 # tor
