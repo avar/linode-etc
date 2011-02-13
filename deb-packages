@@ -66,6 +66,7 @@ bzr
 libemail-valid-perl
 libnet-smtp-ssl-perl
 libauthen-sasl-perl
+libmodule-install-perl
 curl
 xmlstarlet
 gdb
