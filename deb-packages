@@ -73,6 +73,9 @@ strace
 lsof
 ack-grep
 pv
+cdecl
+indent
+pbzip2
 
 # Documentation
 manpages-dev
