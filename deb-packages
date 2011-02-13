@@ -46,6 +46,8 @@ fail2ban
 
 uptimed
 
+lm-sensors
+
 ## Editors
 
 # avar
