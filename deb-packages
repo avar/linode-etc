@@ -94,6 +94,7 @@ emacs23-common-non-dfsg
 build-essential
 ccache
 clang
+bison
 
 # C libraries
 gettext
