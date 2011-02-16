@@ -85,6 +85,9 @@ cdecl
 indent
 pbzip2
 
+### Tools I hack on
+build-dep: git
+
 # Documentation
 manpages-dev
 glibc-doc
