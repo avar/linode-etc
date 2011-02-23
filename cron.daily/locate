@@ -22,7 +22,7 @@ FINDOPTIONS='-ignore_readdir_race'
 PRUNEFS="NFS nfs nfs4 afs binfmt_misc proc smbfs autofs iso9660 ncpfs coda devpts ftpfs devfs mfs shfs sysfs cifs lustre_lite tmpfs usbfs udf ocfs2"
 # paths which are pruned from updatedb database
 PRUNEPATHS="/tmp /usr/tmp /var/tmp /afs /amd /alex /var/spool /sfs /media /var/lib/schroot/mount"
-PRUNEPATHS="$PRUNEPATHS /home/leech /home/avar/g/gitpan /var/cache /var/lib"
+PRUNEPATHS="$PRUNEPATHS /var/cache /var/lib"
 # netpaths which are added
 NETPATHS=""
 # run find as this user
