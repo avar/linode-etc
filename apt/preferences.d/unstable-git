@@ -1,0 +1,4 @@
+Explanation: Ævar likes being on the bleeding bitlbee edge
+Package: git-core git-svn git-email
+Pin: release a=unstable
+Pin-Priority: 1001
