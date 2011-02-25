@@ -150,7 +150,7 @@ ContactInfo w.nix.is tor <tor@w.nix.is>
 ##
 #ExitPolicy accept *:6660-6667,reject *:* # allow irc ports but no more
 #ExitPolicy accept *:119 # accept nntp as well as default exit policy
-#ExitPolicy reject *:* # no exits allowed
+ExitPolicy reject *:* # no exits allowed
 #
 ## Bridge relays (or "bridges") are Tor relays that aren't listed in the
 ## main directory. Since there is no complete public list of them, even if an
@@ -158,8 +158,6 @@ ContactInfo w.nix.is tor <tor@w.nix.is>
 ## won't be able to block all the bridges. Also, websites won't treat you
 ## differently because they won't know you're running Tor. If you can
 ## be a real relay, please do; but if not, be a bridge!
-BridgeRelay 1
-ExitPolicy reject *:*
 
 # How many processes to use at once for decrypting onionskins. (Default: 1)
 NumCPUs 4
