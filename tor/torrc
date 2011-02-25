@@ -98,13 +98,13 @@ Nickname wee
 ## Define these to limit how much relayed traffic you will allow. Your
 ## own traffic is still unthrottled. Note that RelayBandwidthRate must
 ## be at least 20 KBytes.
-RelayBandwidthRate 500 KBytes
-RelayBandwidthBurst 1000 KBytes
+RelayBandwidthRate 5 MB 
+RelayBandwidthBurst 8 MB
 
 # Don't suck up all our bandwidth. Note that the total bandwidth tor
 # might use will be ~ AccountingMax * 2. See torrc(5)
 AccountingStart day 02:00
-AccountingMax 5 GB
+AccountingMax 500 GB
 
 ## Contact info to be published in the directory, so we can contact you
 ## if your relay is misconfigured or something else goes wrong. Google
@@ -160,4 +160,4 @@ ExitPolicy reject *:* # no exits allowed
 ## be a real relay, please do; but if not, be a bridge!
 
 # How many processes to use at once for decrypting onionskins. (Default: 1)
-NumCPUs 4
+NumCPUs 6
