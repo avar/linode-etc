@@ -5,6 +5,11 @@
 # Run it like: grep -v ^# ~v-perlbrew/cpan-modules | cpanm
 # Not installed: (cd /tmp && for mod in $(grep -v ^# ~v-perlbrew/cpan-modules | grep -v ^$); do perl -m$mod -e1 > /dev/null 2>&1 || echo $mod; done)
 
+# Temporary: Install dev versions of things that are broken in their
+# main releases on v5.13.10
+http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/DBD-SQLite-1.32_01.tar.gz
+http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/Test-Output-0.16_03.tar.gz
+
 # misc
 Task::BeLike::AVAR
 App::Nopaste::Service::Linode
