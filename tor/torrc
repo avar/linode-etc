@@ -89,7 +89,7 @@ ORPort 443
 #ORListenAddress 0.0.0.0:9090
 
 ## A handle for your relay, so people don't have to refer to it by key.
-Nickname wee
+Nickname w
 
 ## The IP address or full DNS name for your relay. Leave commented out
 ## and Tor will guess.
