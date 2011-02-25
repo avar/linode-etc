@@ -80,12 +80,13 @@ CookieAuthentication 1
 ## See https://www.torproject.org/docs/tor-doc-relay for details.
 
 ## Required: what port to advertise for incoming Tor connections.
+ORListenAddress 188.40.98.164
 ORPort 443
 ## If you want to listen on a port other than the one advertised
 ## in ORPort (e.g. to advertise 443 but bind to 9090), uncomment the
 ## line below too. You'll need to do ipchains or other port forwarding
 ## yourself to make this work.
-ORListenAddress 188.40.98.164:443
+#ORListenAddress 0.0.0.0:9090
 
 ## A handle for your relay, so people don't have to refer to it by key.
 Nickname wee
