@@ -3,6 +3,7 @@
 # shells
 bash
 bash-completion
+zsh
 
 # top-like utilities
 htop
