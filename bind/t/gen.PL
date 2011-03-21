@@ -100,6 +100,9 @@ TEST
 for my $domain (@domains) {
     next if is_subdomain($domain);
 
+    # Because Hinrik is not renewing it, or something.
+    next if $domain eq 'hailo.org';
+
     # Not localhost
     my @pns = @ns[1..$#ns];
 
