@@ -35,8 +35,14 @@ david@w.nix.is            david@dsg.to
 
 ## Aliases
 # Signup address for github.com/mediawiki
-mediawiki-github@v.nix.is avarab@gmail.com
 mediawiki@v.nix.is avarab@gmail.com
+
+# Some other address, don't recall what I used it for
+mediawiki-github@v.nix.is avarab@gmail.com
+
+# The user address
+mediawiki-mirror@w.nix.is avarab@gmail.com
+
 # Signup address for github.com/hailo
 hailo@v.nix.is            avarab@gmail.com
 # Signup address for github.com/openstreetmap
