@@ -53,7 +53,6 @@ my @tests = (
         follow_links => 0,
     },
     'grault.net'               => qr/Gosling Emacs documentation/,
-    'hailo.nix.is'             => qr/Hailo Chat/,
     'hw.mw.dev.avar.nix.is'    => {
         content_like => qr/MediaWiki/,
         base_url     => "http://hw.mw.dev.avar.nix.is/index.php/Hauptseite",
