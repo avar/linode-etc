@@ -104,6 +104,7 @@ my @tests = (
     [ and_www qw(hjolavefsja.is xn--hjlavefsj-81a4q.is) ] => {
         content_like => qr/Ride the City/,
         base_url => 'http://is.ridethecity.com/iceland',
+        follow_links => 0,
     },
 
     # Vélfag
