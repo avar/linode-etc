@@ -20,6 +20,7 @@ file
 hdparm
 tree
 bc
+sl
 
 # dns
 bind9-host
@@ -28,6 +29,7 @@ whois
 
 # mail
 bsd-mailx
+mutt
 
 # utility to renice processes
 reniced
@@ -53,6 +55,8 @@ fail2ban
 uptimed
 
 lm-sensors
+
+lshw
 
 ## Editors
 
@@ -89,6 +93,7 @@ pv
 cdecl
 indent
 pbzip2
+yasm
 
 ### Tools I hack on
 build-dep: git
@@ -103,6 +108,7 @@ build-essential
 ccache
 clang
 bison
+automake
 
 # C libraries
 gettext
@@ -127,6 +133,9 @@ bitlbee
 irssi
 tcpflow
 lynx
+
+## DB
+mysql-server
 
 ## Debian Multimedia
 debian-multimedia-keyring
