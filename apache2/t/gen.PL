@@ -79,10 +79,6 @@ my @tests = (
         base_url     => "http://smoke.git.nix.is/app",
     },
     'tms.nix.is'               => qr/Tumi/,
-    'trunk.mw.dev.avar.nix.is' => {
-        content_like => qr/MediaWiki/,
-        follow_links => 0,
-    },
     'tumi.nix.is'              => qr/Tumi/,
 
     'vnstat.nix.is'            => qr/vnstat\.cgi/,
