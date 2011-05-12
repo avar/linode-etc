@@ -83,6 +83,7 @@ libemail-valid-perl
 libnet-smtp-ssl-perl
 libauthen-sasl-perl
 libmodule-install-perl
+libtime-duration-perl
 curl
 xmlstarlet
 gdb
@@ -93,7 +94,7 @@ pv
 cdecl
 indent
 pbzip2
-yasm
+build-dep: yasm
 
 ### Tools I hack on
 build-dep: git
@@ -176,6 +177,7 @@ unzip
 
 # to encode FLAC and WAV to Ogg
 vorbis-tools
+flac
 
 ## Services
 locate
@@ -200,6 +202,9 @@ apache2-mpm-prefork
 libapache2-mod-php5
 libapache2-mod-fastcgi
 libapache2-mod-scgi
+
+# openvpn
+openvpn
 
 # tor
 tor
@@ -254,6 +259,7 @@ ant-optional
 # PostgreSQL, for osm.nix.is / munin.nix.is
 postgresql-9.0
 postgresql-contrib-9.0
+postgresql-server-dev-9.0
 
 # oidentd (hinrik)
 oidentd
@@ -268,3 +274,5 @@ git-svn
 # misc
 cowsay
 wamerican-huge
+geoip-bin
+links
