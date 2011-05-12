@@ -109,12 +109,14 @@ ccache
 clang
 bison
 automake
+asciidoc
 
 # C libraries
 gettext
 libc6-dev
 libcurl4-openssl-dev
 libexpat1-dev
+libaprutil1
 
 ## Perl
 
@@ -262,3 +264,7 @@ sqlite3
 # osm-mirror
 subversion
 git-svn
+
+# misc
+cowsay
+wamerican-huge
