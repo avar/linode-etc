@@ -107,6 +107,7 @@ emacs23-common-non-dfsg
 # C compilation
 build-essential
 ccache
+gcc-doc
 clang
 bison
 automake
