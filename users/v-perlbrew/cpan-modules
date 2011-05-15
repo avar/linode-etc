@@ -8,7 +8,6 @@
 # Temporary: Install dev versions of things that are broken in their
 # main releases on v5.13.10
 http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/DBD-SQLite-1.32_01.tar.gz
-http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/Test-Output-0.16_03.tar.gz
 
 # misc
 Task::BeLike::AVAR
@@ -18,6 +17,7 @@ Devel::NYTProf
 Devel::Dwarn
 Test::Perl::Critic
 POE
+Test::Output
 
 # perl / CPAN
 App::perlbrew
@@ -74,8 +74,7 @@ Date::Calc
 GD
 Text::Unidecode
 Math::Polygon
-# cpanm couldn't find the Math::Polygon::Tree tarball
-http://search.cpan.org/CPAN/authors/id/L/LI/LIOSHA/Math-Polygon-Tree-0.04_1.tar.gz
+Math::Polygon::Tree
 # See https://rt.cpan.org/Public/Bug/Display.html?id=53572
 Inline::MakeMaker
 Math::Geometry::Planar::GPC::Polygon
