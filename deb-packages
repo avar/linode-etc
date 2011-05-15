@@ -101,13 +101,14 @@ build-dep: git
 
 # Documentation
 manpages-dev
+gcc-doc
+gdb-doc
 glibc-doc
 emacs23-common-non-dfsg
 
 # C compilation
 build-essential
 ccache
-gcc-doc
 clang
 bison
 automake
