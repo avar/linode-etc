@@ -7,7 +7,7 @@ use Test::More;
 # Get the list of exit nodes
 my ($request_ip) = qx[ /sbin/ifconfig eth0 | grep 'inet addr' ] =~ m[inet addr:(\S+)];
 my $url  = qq[https://check.torproject.org/cgi-bin/TorBulkExitList.py?ip=$request_ip];
-chomp(my (@list) = qx[wget -q '$url' -O- | grep -v '^#' ]);
+chomp(my (@list) = qx[wget --timeout=10 -q '$url' -O- | grep -v '^#' ]);
 
 # Get all the interfaces I could exit through
 my @all_ip = qx[ /sbin/ifconfig | grep 'inet addr' ] =~ m[inet addr:(\S+)]g;
