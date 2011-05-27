@@ -1,1 +1,2 @@
-@hourly root for repo in $(find /etc -name '.git'); do chown -R root:adm $repo && chmod -R u+rw,g+rw,o-w $repo; done
+PATH=/bin
+* * * * * root chown root:root /etc/sudoers && chmod 0440 /etc/sudoers
