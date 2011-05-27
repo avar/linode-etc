@@ -57,22 +57,22 @@ If you don't you need to:
 
  * Get the source on `v`:
 
-    ssh v
-    cd /tmp
-    apt-get source iodine
-    exit
+    `ssh v`
+    `cd /tmp`
+    `apt-get source iodine`
+    `exit`
 
  * Compile it on your computer:
 
-    cd /tmp
-    scp v:/tmp/iodine-* .
-    cd iodine-*
-    dpkg-buildpackage -rfakeroot -uc -b
+    `cd /tmp`
+    `scp v:/tmp/iodine-* .`
+    `cd iodine-*`
+    `dpkg-buildpackage -rfakeroot -uc -b`
 
  * Install it:
 
-    cd /tmp
-    sudo dpkg -i iodine_*deb
+    `cd /tmp`
+    `sudo dpkg -i iodine_*deb`
 
 ## Grab the password from v
 
