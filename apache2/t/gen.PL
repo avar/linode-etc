@@ -47,11 +47,6 @@ my @tests = (
         # Due to broken S26 link
         follow_links => 0,
     },
-    'git.nix.is'               => {
-        content_like => qr/GitHub/,
-        base_url     => "https://github.com/avar",
-        follow_links => 0,
-    },
     'grault.net'               => qr/Gosling Emacs documentation/,
     'hw.mw.dev.avar.nix.is'    => {
         content_like => qr/MediaWiki/,
