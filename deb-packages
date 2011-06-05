@@ -75,6 +75,7 @@ aspell-de
 aspell-en
 aspell-is
 aspell-nl
+magit
 
 ## Development tools
 screen
