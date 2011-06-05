@@ -47,6 +47,7 @@ reportbug
 nmap
 iptables
 lftp
+telnet
 
 ## System monitoring
 
