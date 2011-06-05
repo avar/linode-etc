@@ -147,6 +147,7 @@ libpcre3-dev
 remove: openntpd
 ntp
 bitlbee
+bitcoind
 
 ## internet
 irssi
