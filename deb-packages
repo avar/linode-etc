@@ -103,6 +103,10 @@ indent
 pbzip2
 build-dep: yasm
 
+### Python tools
+python-pyopencl
+python-twisted
+
 ### Tools I hack on
 build-dep: git
 
