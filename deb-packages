@@ -50,17 +50,13 @@ lftp
 munin
 munin-plugins-extra
 sockstat
-
 apt-listchanges
-
 fail2ban
-
 uptimed
-
 lm-sensors
-
 lshw
 
+### network monitoring
 slurm
 
 ## Editors
