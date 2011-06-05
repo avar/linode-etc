@@ -124,6 +124,7 @@ clang
 bison
 automake
 asciidoc
+cmake
 
 # C libraries
 gettext
