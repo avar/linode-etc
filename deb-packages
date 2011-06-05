@@ -89,6 +89,7 @@ libnet-smtp-ssl-perl
 libauthen-sasl-perl
 libmodule-install-perl
 libtime-duration-perl
+libtest-script-run-perl
 curl
 xmlstarlet
 gdb
