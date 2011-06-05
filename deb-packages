@@ -9,6 +9,9 @@ zsh
 htop
 iotop
 
+# file utilities
+multitail
+
 # generate passwords
 apg
 
