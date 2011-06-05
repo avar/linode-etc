@@ -93,6 +93,8 @@ Date::Parse
 
 # /etc/apache2/t WebTest
 Crypt::SSLeay
+IO::Socket::SSL
+LWP::Protocol::https
 
 # v-awstats-make-configs
 Apache::ConfigParser
