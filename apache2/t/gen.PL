@@ -54,10 +54,6 @@ my @tests = (
     },
     'leech.nix.is'             => qr/wTorrent/,
     'lists.nix.is'             => qr/Mailman/,
-    'localhost'                => {
-        content_like => qr/How do I runned vee nix\?/,
-        follow_links => 0,
-    },
     'w.nix.is'                 => {
         content_like => qr/How do I runned wee nix\?/,
         follow_links => 0,
