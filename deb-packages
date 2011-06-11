@@ -199,6 +199,7 @@ flac
 ## Services
 locate
 iodine
+httptunnel
 
 # postfix
 postfix
