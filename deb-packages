@@ -43,6 +43,9 @@ tmpreaper
 # report bugs
 reportbug
 
+# better than screen
+tmux
+
 ## Network utilities
 nmap
 iptables
