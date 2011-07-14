@@ -19,6 +19,16 @@
         </Limit>
     </Location>
 
+    Alias /provider /dns/provider
+    <Location /provider>
+        AuthName "leech"
+        AuthType Basic
+        AuthUserFile /etc/apache2/passwd/leech.nix.is
+        <Limit GET POST>
+            require valid-user
+        </Limit>
+    </Location>
+
     # Alias for leech.nix.is/rna.torrent -> http://helgafell.rhi.hi.is/rna.torrent
     RewriteEngine On
     RewriteRule /rna\.torrent$ http://helgafell.rhi.hi.is/rna.torrent [R=302,L]
