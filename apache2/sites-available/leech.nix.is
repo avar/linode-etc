@@ -7,8 +7,6 @@
     ServerName leech.nix.is
     DocumentRoot /var/www/leech.nix.is/wtorrent
 
-    Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
-
     Alias /torrent /home/leech/torrent/
     <Location /torrent>
         AuthName "leech"
