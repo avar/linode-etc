@@ -230,10 +230,11 @@ env.k_whitelist source
 env.label_v_only 1
 
 [squid_*]
+env.squidhost 188.40.98.140
 env.squidport 80
 
 [squid]
-env.squidhost localhost
+env.squidhost 188.40.98.140
 env.squidport 80
 
 [hailo_failo]
