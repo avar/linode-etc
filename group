@@ -53,7 +53,7 @@ postdrop:x:110:
 ejabberd:x:111:avar
 w-backup:x:1003:
 mysql:x:112:avar
-ah62:x:1004:avar,smueller
+ah62:x:1004:avar,smueller,matt
 smueller:x:1005:
 smolder:x:1006:
 v-slaves:x:1007:v-perlbrew,smolder,osm-mirror
