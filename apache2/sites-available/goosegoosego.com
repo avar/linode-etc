@@ -1,5 +1,6 @@
 <VirtualHost *:81>
     ServerName goosegoosego.com
+    ServerAlias www.goosegoosego.com
 
     Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
 
