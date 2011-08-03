@@ -103,6 +103,8 @@ for my $domain (@domains) {
     # Because Hinrik is not renewing it, or something.
     next if $domain eq 'hailo.org';
 
+    next if $domain ~~ [ qw( hjolavefsja.is xn--hjlavefsj-81a4q.is ) ];
+
     # Not localhost
     my @pns = @ns[1..$#ns];
 
