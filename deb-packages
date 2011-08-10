@@ -113,6 +113,23 @@ python-twisted
 ### Tools I hack on
 build-dep: git
 
+### Building OSRM
+libstxxl-dev
+libprotobuf-dev
+protobuf-compiler
+scons
+libboost-system1.46-dev
+libboost-system1.46
+libboost-filesystem1.46.1
+libboost-system1.46.1
+libboost-thread1.46-dev
+libsparsehash-dev
+libboost1.46-dev
+
+### Offline IMAP
+dovecot-imapd
+offlineimap
+
 # Documentation
 manpages-dev
 gcc-doc
