@@ -99,9 +99,18 @@ my @tests = (
     [ qw/dev.velfag.is dev.xn--vlfag-bsa.is/ ]  => qr/MediaWiki/,
 
     # Earle
-    [ and_www qw/voodootronix.com/ ] => qr/voodootronix/,
-    'hex.downlode.org'               => qr/Go here/,
-    'downlode.org'                   => qr/downlode/,
+    [ and_www qw/voodootronix.com/ ] => {
+        content_like => qr/voodootronix/,
+        follow_links => 0,
+    },
+    'hex.downlode.org'               => {
+        content_like => qr/Go here/,
+        follow_links => 0,
+    },
+    'downlode.org'                   => {
+        content_like => qr/downlode/,
+        follow_links => 0,
+    },
 
 );
 
