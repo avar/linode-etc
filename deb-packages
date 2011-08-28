@@ -107,7 +107,6 @@ pbzip2
 build-dep: yasm
 
 ### Python tools
-python3.2
 python-pyopencl
 python-twisted
 
