@@ -1,6 +1,6 @@
 #!/bin/sh
 
 # spread failo's wisdom to interactive shells
-if [[ $- == *i* ]] ; then
+if [[ $- == *i* ]] && [[ "$(groups)" != *gcf* ]]; then
     failo-wisdom
 fi
