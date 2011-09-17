@@ -1,12 +1,8 @@
 # Adding a new domain
 
-* Tell the domain registrar that `ns[1-5].linode.com` are your nameservers
+* Tell the domain registrar that (`ns1.first-ns.de`, `robotns2.second-ns.de`, `robotns3.second-ns.com`) are your nameservers
 
-* Add a zone for the domain in
-  [Linode's DNS manager](https://www.linode.com/members/dns/)
-
-* Set `w.nix.is` IP followed by a semicolon (i.e. `188.40.98.140;`)
-  as the master, with domain transfer (AXFR) enabled.
+* Go to https://robot.your-server.de/dns and add a new slave DNS entry for the domain, with w.nix.is' IP as the IP address
 
 * Add a zone for the domain in `/etc/bind/named.conf`
 
