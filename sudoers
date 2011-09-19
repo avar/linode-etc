@@ -1,5 +1,6 @@
 Defaults	env_reset
 Defaults	env_keep += HARNESS_OPTIONS
+Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 Defaults	insults
 Defaults	lecture=never
