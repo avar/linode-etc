@@ -75,7 +75,6 @@ my @tests = (
     'vnstat.nix.is'            => qr/vnstat\.cgi/,
 
     'chanmirror.nix.is'        => qr[Index of /],
-    'ci.nix.is'                => qr/Powered by phpBB/,
 
     'hailo.org'                => {
         content_like => qr/Hailo is a a pluggable/,
