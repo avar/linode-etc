@@ -93,10 +93,6 @@ my @tests = (
         follow_links => 0,
     },
 
-    # Vélfag
-    [ and_www qw/velfag.is xn--vlfag-bsa.is/ ]  => qr/MediaWiki/,
-    [ qw/dev.velfag.is dev.xn--vlfag-bsa.is/ ]  => qr/MediaWiki/,
-
     # Earle
     [ and_www qw/voodootronix.com/ ] => {
         content_like => qr/voodootronix/,
