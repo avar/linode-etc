@@ -320,3 +320,6 @@ geoip-bin
 links
 w3m
 hello
+
+# Ruby on Rails
+libsqlite3-dev
