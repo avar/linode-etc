@@ -1,5 +1,0 @@
-<VirtualHost *:81>
-        ServerName nigger.nix.is
-        DocumentRoot /var/www/nigger.nix.is/
-        Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
-</VirtualHost>
