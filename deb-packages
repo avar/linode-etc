@@ -323,3 +323,6 @@ hello
 
 # Ruby on Rails
 libsqlite3-dev
+
+# Rubinius
+libreadline6-dev
