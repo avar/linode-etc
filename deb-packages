@@ -171,6 +171,7 @@ remove: openntpd
 ntp
 bitlbee
 bitcoind
+nodejs
 
 ## internet
 irssi
@@ -320,6 +321,7 @@ geoip-bin
 links
 w3m
 hello
+stunnel
 
 # Ruby on Rails
 libsqlite3-dev
