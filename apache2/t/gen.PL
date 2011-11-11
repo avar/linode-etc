@@ -87,11 +87,6 @@ my @tests = (
 
     # Ævar
     [ and_www qw(aevar.net xn--var-xla.net) ] => qr/Bjarmason/,
-    [ and_www qw(hjolavefsja.is xn--hjlavefsj-81a4q.is) ] => {
-        content_like => qr/Ride the City/,
-        base_url => 'http://is.ridethecity.com/iceland',
-        follow_links => 0,
-    },
 
     # Earle
     [ and_www qw/voodootronix.com/ ] => {
