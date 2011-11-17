@@ -1,0 +1,6 @@
+<VirtualHost *:81>
+        ServerName bytta.is
+	ServerAlias www.bytta.is
+        DocumentRoot /var/www/bytta.is/
+        Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
+</VirtualHost>
