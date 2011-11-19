@@ -15,4 +15,4 @@ set -eu
 MDADM=/sbin/mdadm
 [ -x $MDADM ] || exit 0 # package may be removed but not purged
 
-exec $MDADM --monitor --scan --oneshot
+exec $MDADM --monitor --scan --oneshot --no-sharing
