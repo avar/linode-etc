@@ -176,6 +176,7 @@ nodejs
 ## internet
 irssi
 tcpflow
+tshark
 lynx
 
 ## DB
