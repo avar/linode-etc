@@ -18,7 +18,7 @@ voice:x:22:
 cdrom:x:24:
 floppy:x:25:
 tape:x:26:
-sudo:x:27:hinrik,avar,tumi,hex,pjesi,matt,buccia,hawley
+sudo:x:27:hinrik,avar,tumi,hex,pjesi,matt,buccia,joi
 audio:x:29:
 dip:x:30:
 www-data:x:33:avar
@@ -61,7 +61,7 @@ pdns:x:113:
 oident:x:114:
 postgres:x:115:
 hex:x:1008:
-leech:x:1010:hinrik,avar,tumi,hex,hawley,vab,buccia,david,matt
+leech:x:1010:hinrik,avar,tumi,hex,vab,buccia,david,matt,joi
 evalserver:x:1011:
 osm-mirror:x:1009:
 vab:x:1012:
