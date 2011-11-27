@@ -83,6 +83,7 @@ my @tests = (
     'www.hailo.org'                => {
         content_like => qr/Hailo is a a pluggable/,
         base_url     => "http://hailo.org/",
+        follow_links => 0,
     },
 
     # Ævar
