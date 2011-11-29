@@ -1,10 +1,17 @@
 <VirtualHost *:81>
         ServerName term.nix.is
         DocumentRoot /var/www/nix.is/
+	Redirect permanent / https://term.nix.is
+</VirtualHost>
+<VirtualHost *:443>
+        ServerName term.nix.is
+        DocumentRoot /var/www/nix.is/
 	<Location />
 		ProxyPass http://localhost:4200/
 		Order allow,deny
 		Allow from all
 	</Location>
+	SSLEngine on
+	SSLCertificateFile /home/hinrik/term.nix.is.pem
         Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
 </VirtualHost>
