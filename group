@@ -75,3 +75,4 @@ libvirt:x:119:
 kvm:x:120:
 stunnel4:x:121:
 shellinabox:x:122:
+eythor:x:1016:
