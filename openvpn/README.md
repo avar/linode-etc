@@ -54,6 +54,10 @@ Then start openvpn:
 
 # GUI client network-manager setup
 
+Now you need to set up your client to connect to x.nix.is:443 TCP, with TLS
+authentication, and use the appropriate TLS key file, user certificate, and
+private key.
+
 First you need to get the keys generated for your user. We generate
 keys for your user with a cronjob. To fetch them do *on your machine*:
 
