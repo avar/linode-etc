@@ -84,6 +84,7 @@ aspell-en
 aspell-is
 aspell-nl
 magit
+sbcl
 
 ## Development tools
 screen
@@ -157,6 +158,7 @@ libexpat1-dev
 libaprutil1
 libv8-dev
 libv8-3.1.8.10
+libpam0g-dev
 
 ## Perl
 
@@ -324,6 +326,7 @@ w3m
 hello
 stunnel
 po4a
+fakeroot
 
 # Ruby on Rails
 libsqlite3-dev
