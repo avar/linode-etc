@@ -109,9 +109,6 @@ Catalyst::Model::Adaptor
 Catalyst::Log::Log4perl
 Catalyst::Controller::REST
 
-# smoke.git.nix.is
-Smolder
-
 # todo.nix.is
 Time::Duration
 CGI::Session

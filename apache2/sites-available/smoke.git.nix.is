@@ -1,8 +1,0 @@
-<VirtualHost *:81>
-        ServerName smoke.git.nix.is
-
-        ProxyRequests Off
-
-        ProxyPass / http://localhost:4000/
-        ProxyPassReverse / http://localhost:4000/
-</VirtualHost>

@@ -65,10 +65,6 @@ my @tests = (
     },
     'noc.nix.is'               => qr/Network operations/,
     'osm.nix.is'               => qr/Garmin map of Iceland/,
-    'smoke.git.nix.is'         => {
-        content_like => qr/Increase the visibility of your Smoke Tests/,
-        base_url     => "http://smoke.git.nix.is/app",
-    },
     'tms.nix.is'               => qr/Tumi/,
     'tumi.nix.is'              => qr/Tumi/,
 
