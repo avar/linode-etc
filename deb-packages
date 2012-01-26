@@ -113,6 +113,7 @@ build-dep: yasm
 ### Python tools
 python-pyopencl
 python-twisted
+ipython
 
 ### Tools I hack on
 build-dep: git
