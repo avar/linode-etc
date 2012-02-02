@@ -54,6 +54,8 @@ openstreetmap@v.nix.is    avarab@gmail.com
 openstreetmap-mirror@v.nix.is    avarab@gmail.com
 # Signup address for "ourFootPrints import" on openstreetmap.org
 openstreetmap-ourfootprints-import@nix.is avarab@gmail.com
+# Signup address for http://github.com/git-deploy
+git-deploy@nix.is       avarab@gmail.com
 
 # Signup address for github.com/gitsmoke / smolder user
 gitsmoke@v.nix.is    avarab@gmail.com
