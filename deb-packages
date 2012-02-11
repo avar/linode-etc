@@ -160,6 +160,7 @@ libaprutil1
 libv8-dev
 libv8-3.1.8.10
 libpam0g-dev
+libgmp-dev
 
 ## Perl
 
@@ -328,6 +329,7 @@ hello
 stunnel
 po4a
 fakeroot
+fontforge
 
 # Ruby on Rails
 libsqlite3-dev
