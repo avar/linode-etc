@@ -320,6 +320,7 @@ subversion
 git-svn
 
 # misc
+poppler-utils
 cowsay
 wamerican-huge
 geoip-bin
