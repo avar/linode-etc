@@ -114,6 +114,8 @@ build-dep: yasm
 python-pyopencl
 python-twisted
 ipython
+python-setuptools
+python-pycurl
 
 ### Tools I hack on
 build-dep: git
