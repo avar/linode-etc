@@ -70,7 +70,7 @@ mediawiki-mirror:x:1013:
 matt:x:1014:
 _cvsadmin:x:117:
 dovecot:x:118:
-gcf:x:1015:tumi
+gcf:x:1015:tumi,eythor
 libvirt:x:119:
 kvm:x:120:
 stunnel4:x:121:
