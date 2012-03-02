@@ -1,6 +1,0 @@
-<VirtualHost *:81>
-        ServerName xn--btta-5ra.is
-	ServerAlias www.xn--btta-5ra.is
-        DocumentRoot /var/www/bytta.is/
-        Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
-</VirtualHost>
