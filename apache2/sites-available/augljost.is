@@ -1,0 +1,49 @@
+<VirtualHost *:81>
+    ServerName xn--augljst-p0a.is
+    ServerAlias www.xn--augljst-p0a.is augljost.is www.augljost.is
+    DocumentRoot /home/passenger/sites/augljost.is/current/public
+    Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
+
+    RewriteEngine On
+
+    # redirect everyone to non-www
+    RewriteCond %{HTTP_HOST} xn--augljst-p0a\.is
+    RewriteCond %{HTTP_HOST} !^xn--augljst-p0a\.is
+    RewriteRule (.*) http://xn--augljst-p0a.is$1 [R=301,L]
+    RewriteCond %{HTTP_HOST} augljost\.is
+    RewriteCond %{HTTP_HOST} !^augljost\.is
+    RewriteRule (.*) http://augljost.is$1 [R=301,L]
+
+    # redirect everyone with 'is' in Accept-Language to the IDN domain
+    RewriteCond %{HTTP_HOST} !^xn--augljst-p0a\.is
+    RewriteCond %{HTTP:Accept-Language} is [NC]
+    RewriteRule (.*) http://xn--augljst-p0a.is$1 [R=301,L]
+
+    # redirect all Firefox users to the IDN domain regardless of
+    # Accept-Language because Firefox will always show IDN names correctly
+    RewriteCond %{HTTP_HOST} !^xn--augljst-p0a\.is
+    RewriteCond %{HTTP_USER_AGENT} (Firefox|Iceweasel)
+    RewriteRule (.*) http://xn--augljst-p0a.is$1 [R=301,L]
+
+    <Location />
+        AuthName "protected"
+        AuthType Basic
+        AuthUserFile /etc/apache2/passwd/augljost.is
+        <Limit GET POST>
+            require valid-user
+        </Limit>
+    </Location>
+
+    <Directory /home/passenger/sites/augljost.is/current>
+        Allow from all
+        Options -MultiViews
+    </Directory>
+
+    <LocationMatch "^/assets/.*$">
+        Header unset ETag
+        FileETag None
+        # RFC says only cache for 1 year
+        ExpiresActive On
+        ExpiresDefault "access plus 1 year"
+    </LocationMatch>
+</VirtualHost>
