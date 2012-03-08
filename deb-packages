@@ -110,6 +110,8 @@ indent
 pbzip2
 build-dep: yasm
 
+## Perl 6
+mono-complete
 ### Python tools
 python-pyopencl
 python-twisted
@@ -333,6 +335,7 @@ stunnel
 po4a
 fakeroot
 fontforge
+gitstats
 
 # Ruby on Rails
 libsqlite3-dev
