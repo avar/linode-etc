@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN nix.is.
 @  1d  IN SOA ns1.first-ns.de. hostmaster.nix.is. (
-      136 ; serial
+      138 ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -43,6 +43,7 @@ chanmirror           IN  A      188.40.98.140
 jesus                IN  A      188.40.98.140
 ggg                  IN  A      188.40.98.140
 term                 IN  A      188.40.98.140
+errbit               IN  A      188.40.98.140
 kviklekar            IN  A      109.74.193.250
 tor                  IN  A      188.40.98.164
 

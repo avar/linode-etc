@@ -1,0 +1,18 @@
+<VirtualHost *:81>
+    ServerName errbit.nix.is
+    DocumentRoot /home/passenger/sites/errbit.nix.is/current/public
+    Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
+
+    <Directory /home/passenger/sites/errbit.nix.is/current>
+        Allow from all
+        Options -MultiViews
+    </Directory>
+
+    <LocationMatch "^/assets/.*$">
+        Header unset ETag
+        FileETag None
+        # RFC says only cache for 1 year
+        ExpiresActive On
+        ExpiresDefault "access plus 1 year"
+    </LocationMatch>
+</VirtualHost>
