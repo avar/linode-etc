@@ -61,10 +61,9 @@ pdns:x:113:
 oident:x:114:
 postgres:x:115:
 hex:x:1008:
-leech:x:1010:hinrik,avar,tumi,hex,vab,buccia,david,matt,joi
+leech:x:1010:hinrik,avar,tumi,hex,buccia,david,matt,joi
 evalserver:x:1011:
 osm-mirror:x:1009:
-vab:x:1012:
 debian-tor:x:116:
 mediawiki-mirror:x:1013:
 matt:x:1014:
