@@ -48,10 +48,6 @@ my @tests = (
         follow_links => 0,
     },
     'grault.net'               => qr/Gosling Emacs documentation/,
-    'hw.mw.dev.avar.nix.is'    => {
-        content_like => qr/MediaWiki/,
-        base_url     => "http://hw.mw.dev.avar.nix.is/index.php/Hauptseite",
-    },
     'leech.nix.is'             => qr/wTorrent/,
     'lists.nix.is'             => qr/Mailman/,
     'w.nix.is'                 => {
