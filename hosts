@@ -1,5 +1,6 @@
 ### Hetzner Online AG installimage
 # nameserver config
+188.40.43.6 z.nix.is z
 # IPv4
 127.0.0.1 localhost
 188.40.98.140  w.nix.is w
