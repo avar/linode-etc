@@ -165,6 +165,7 @@ libv8-dev
 libv8-3.1.8.10
 libpam0g-dev
 libgmp-dev
+libxml2
 
 ## Perl
 
@@ -189,6 +190,7 @@ lynx
 
 ## DB
 mysql-server
+mongodb
 
 ## Debian Multimedia
 debian-multimedia-keyring
@@ -342,3 +344,4 @@ libsqlite3-dev
 
 # Rubinius
 libreadline6-dev
+
