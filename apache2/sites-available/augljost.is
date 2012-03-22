@@ -16,7 +16,7 @@
 
     # If the user is trying to log in via Facebook, always use the non-IDN
     # domain since Facebook only allows login from one top-level domain.
-    # If that ever changes, uncomment these 3 lines and uncomment the
+    # If that ever changes, remove these 3 lines and uncomment the
     # others below.
     RewriteCond %{REQUEST_URI} ^/users/auth/facebook$
     RewriteCond %{HTTP_HOST} !^augljost\.is
