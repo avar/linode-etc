@@ -341,6 +341,7 @@ gitstats
 
 # Ruby on Rails
 libsqlite3-dev
+sphinxsearch
 
 # Rubinius
 libreadline6-dev
