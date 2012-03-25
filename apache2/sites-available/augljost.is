@@ -33,6 +33,10 @@
     #RewriteCond %{HTTP_USER_AGENT} (Firefox|Iceweasel)
     #RewriteRule (.*) http://xn--augljst-p0a.is$1 [R=301,L]
 
+    PassengerHighPerformance on
+    PassengerMinInstances 1
+    PassengerPreStart http://augljost.is:81
+
     <Location />
         AuthName "protected"
         AuthType Basic
