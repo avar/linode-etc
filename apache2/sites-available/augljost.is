@@ -41,9 +41,7 @@
         AuthName "protected"
         AuthType Basic
         AuthUserFile /etc/apache2/passwd/augljost.is
-        <Limit GET POST>
-            require valid-user
-        </Limit>
+        Require valid-user
     </Location>
 
     <Directory /home/passenger/sites/augljost.is/current>
