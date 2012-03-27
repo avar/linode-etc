@@ -37,6 +37,7 @@
     PassengerMinInstances 1
     PassengerPreStart http://augljost.is:81
 
+    PassengerPoolIdleTime 0
     <Location />
         AuthName "protected"
         AuthType Basic
