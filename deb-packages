@@ -346,3 +346,6 @@ sphinxsearch
 # Rubinius
 libreadline6-dev
 
+# Redis
+libjemalloc1
+redis-server
