@@ -2,11 +2,9 @@
     ServerName goosegoosego.com
     ServerAlias www.goosegoosego.com
 
-    ProxyPass / http://localhost:3333/
-    ProxyPassReverse / http://localhost:3333/
-
-    <Proxy *>
-      Order allow,deny
-      Allow from all
-    </Proxy>
+    <Location />
+        SetHandler perl-script
+        PerlHandler Plack::Handler::Apache2
+        PerlSetVar psgi_app /home/avar/g/gist-ggg/ggg.pl
+    </Location>
 </VirtualHost>
