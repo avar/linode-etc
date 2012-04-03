@@ -264,7 +264,6 @@ openvpn
 tor
 
 # php
-php-apc
 php-benchmark
 php-pear
 php5
