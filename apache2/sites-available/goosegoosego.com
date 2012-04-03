@@ -7,4 +7,6 @@
         PerlHandler Plack::Handler::Apache2
         PerlSetVar psgi_app /home/avar/g/gist-ggg/ggg.pl
     </Location>
+
+    CustomLog /dev/null common
 </VirtualHost>
