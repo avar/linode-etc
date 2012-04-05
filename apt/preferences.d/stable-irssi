@@ -1,0 +1,4 @@
+Explanation: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=667014
+Package: irssi
+Pin: release a=stable
+Pin-Priority: 1001
