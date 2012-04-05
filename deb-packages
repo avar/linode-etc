@@ -354,3 +354,6 @@ libapache2-mod-perl2
 libplack-perl
 libdancer-perl
 # Also needs Plack::Handler::Apache2 from the CPAN
+
+# workarounds
+libssl0.9.8
