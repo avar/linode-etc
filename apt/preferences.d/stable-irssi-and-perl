@@ -1,4 +1,4 @@
 Explanation: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=667014
-Package: irssi
+Package: perl perl-modules perl-base perl-doc irssi lib*-perl lib*perl2 debhelper dpkg-dev
 Pin: release a=stable
 Pin-Priority: 1001
