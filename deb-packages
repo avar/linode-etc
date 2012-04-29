@@ -109,6 +109,7 @@ cdecl
 indent
 pbzip2
 build-dep: yasm
+docbook2x
 
 ## Perl 6
 mono-complete
