@@ -22,6 +22,3 @@
 [submodule "smoke-server-cronjobs"]
 	path = smoke-server-cronjobs
 	url = git://github.com/gitsmoke/smoke-server-cronjobs.git
-[submodule "mediawiki-mirror"]
-	path = mediawiki-mirror
-	url = git://github.com/avar/mediawiki-mirror.git
