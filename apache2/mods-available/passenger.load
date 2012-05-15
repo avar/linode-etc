@@ -1,3 +1,3 @@
-LoadModule passenger_module /home/passenger/.rvm/gems/ruby-1.9.3-p125/gems/passenger-3.0.11/ext/apache2/mod_passenger.so
-PassengerRoot /home/passenger/.rvm/gems/ruby-1.9.3-p125/gems/passenger-3.0.11
-PassengerRuby /home/passenger/.rvm/wrappers/ruby-1.9.3-p125/ruby
+LoadModule passenger_module /home/passenger/.rvm/gems/ruby-1.9.3-p194/gems/passenger-3.0.12/ext/apache2/mod_passenger.so
+PassengerRoot /home/passenger/.rvm/gems/ruby-1.9.3-p194/gems/passenger-3.0.12
+PassengerRuby /home/passenger/.rvm/wrappers/ruby-1.9.3-p194/ruby
