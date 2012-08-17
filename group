@@ -83,3 +83,5 @@ mongodb:x:124:mongodb
 sphinxsearch:x:125:
 redis:x:126:
 utempter:x:127:
+btc:x:1022:tumi,eythor
+jwhois:x:128:
