@@ -115,3 +115,8 @@ CGI::Session
 
 # avar - modules I use in one-off scripts
 Text::Table
+
+# iblot
+Calendar::Simple
+Date::Simple
+Config::File
