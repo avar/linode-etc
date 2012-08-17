@@ -11,14 +11,13 @@ fail () {
 OPENVPN=/etc/openvpn
 SERVER_KEYS=/etc/openvpn/keys
 USER_KEYS=$OPENVPN/easy-rsa-2.0/keys
-INDEX=$USER_KEYS/index.txt
 TO_TMP=$(mktemp -d /tmp/openvpn-keys-XXXX)
 TO=/etc/openvpn/user-keys
 
 chown root:root $TO_TMP
 chmod 700 $TO_TMP
 
-for user in $(perl -nle 'm[CN=([^/]+)] and print $1' <$INDEX | grep -v ^server$)
+for user in hinrik avar
 do
     to_user=v-openvpn-keys-$user
     to_user_dir=$TO_TMP/$to_user
