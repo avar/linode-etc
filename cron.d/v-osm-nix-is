@@ -10,7 +10,7 @@ PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/c
 0 8      * * *  avar perl /var/www/osm.nix.is/script/download-osm-with-retry --out-dir /var/www/osm.nix.is/dump --fallback http://download.geofabrik.de/osm/europe/iceland.osm.bz2
 
 # Generate Garmin map
-#10  8     * * *  avar /var/www/osm.nix.is/script/generate-garmin-img-from-osm.sh
+10  8     * * *  avar /var/www/osm.nix.is/script/generate-garmin-img-from-osm.sh
 
 # Database import. There's a munin script that scrapes this data from
 # the database
