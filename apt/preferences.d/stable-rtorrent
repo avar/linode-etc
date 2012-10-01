@@ -1,4 +1,0 @@
-Explanation: Let's test rtorrent in stable
-Package: rtorrent
-Pin: release a=stable
-Pin-Priority: 1001
