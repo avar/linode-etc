@@ -358,3 +358,7 @@ libdancer-perl
 
 # workarounds
 libssl0.9.8
+
+# Bucciarati
+diamond
+graphite-carbon
