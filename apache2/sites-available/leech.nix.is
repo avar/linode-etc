@@ -26,8 +26,4 @@
             require valid-user
         </Limit>
     </Location>
-
-    # Alias for leech.nix.is/rna.torrent -> http://helgafell.rhi.hi.is/rna.torrent
-    RewriteEngine On
-    RewriteRule /rna\.torrent$ http://helgafell.rhi.hi.is/rna.torrent [R=302,L]
 </VirtualHost>
