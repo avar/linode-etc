@@ -61,7 +61,7 @@ pdns:x:113:
 oident:x:114:
 postgres:x:115:
 hex:x:1008:
-leech:x:1010:hinrik,avar,tumi,hex,buccia,david,matt,joi
+leech:x:1010:hinrik,avar,tumi,hex,buccia,david,matt,joi,antab
 evalserver:x:1011:
 osm-mirror:x:1009:
 debian-tor:x:116:
@@ -86,3 +86,4 @@ utempter:x:127:
 btc:x:1022:tumi,eythor
 jwhois:x:128:
 _graphite:x:129:
+antab:x:1012:
