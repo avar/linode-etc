@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN hinrik.net.
 @  1d  IN SOA ns1.first-ns.de. hostmaster.hinrik.net. (
-      5   ; serial
+      6   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -14,6 +14,6 @@ $ORIGIN hinrik.net.
 
        IN  MX  10 mail.hinrik.net.
 
-hinrik.net.          IN  A      188.40.98.140
+hinrik.net.          IN  A      204.232.175.78
 www                  IN  CNAME  hinrik.net.
 mail                 IN  A      188.40.98.140
