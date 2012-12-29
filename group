@@ -2,7 +2,7 @@ root:x:0:
 daemon:x:1:
 bin:x:2:
 sys:x:3:
-adm:x:4:hinrik,avar,tumi,buccia
+adm:x:4:hinrik,avar,tumi,buccia,nicholas
 tty:x:5:
 disk:x:6:
 lp:x:7:
@@ -18,7 +18,7 @@ voice:x:22:
 cdrom:x:24:
 floppy:x:25:
 tape:x:26:
-sudo:x:27:hinrik,avar,pjesi,matt,buccia,joi
+sudo:x:27:hinrik,avar,pjesi,matt,buccia,joi,nicholas
 audio:x:29:
 dip:x:30:
 www-data:x:33:avar
@@ -88,3 +88,4 @@ jwhois:x:128:
 _graphite:x:129:
 antab:x:1012:
 eric:x:1019:
+nicholas:x:1020:
