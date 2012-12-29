@@ -47,6 +47,8 @@ mediawiki-github@v.nix.is avarab@gmail.com
 # The user address
 mediawiki-mirror@w.nix.is avarab@gmail.com
 
+erryllexpeld@w.nix.is avarab@gmail.com
+
 # Signup address for github.com/hailo
 hailo@v.nix.is            avarab@gmail.com
 # Signup address for github.com/openstreetmap
