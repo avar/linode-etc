@@ -9,28 +9,16 @@
 
 # delete files in /tmp during boot older than x days.
 # '0' means always, -1 or 'infinite' disables the feature
-TMPTIME=0
+#TMPTIME=0
 
 # spawn sulogin during boot, continue normal boot if not used in 30 seconds
-SULOGIN=no
+#SULOGIN=no
 
 # do not allow users to log in until the boot has completed
-DELAYLOGIN=no
-
-# assume that the BIOS clock is set to UTC time (recommended)
-#UTC=yes # OBSOLETE; see /etc/adjtime and hwclock(8).
+#DELAYLOGIN=no
 
 # be more verbose during the boot process
-VERBOSE=no
+#VERBOSE=no
 
 # automatically repair filesystems with inconsistencies during boot
-FSCKFIX=no
-
-# mount /run/lock as a tmpfs (separately from /run)
-RAMLOCK=yes
-
-# mount /run/shm as a tmpfs (separately from /run)
-RAMSHM=yes
-
-# mount /tmp as a tmpfs
-RAMTMP=yes
+#FSCKFIX=no
