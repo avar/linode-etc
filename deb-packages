@@ -359,6 +359,14 @@ libdancer-perl
 # workarounds
 libssl0.9.8
 
+# tumi
+build-dep: bitcoind
+python-django
+python-django-tinymce
+python-jinja2
+python-twisted
+python-twisted-web
+
 # Bucciarati
 diamond
 graphite-carbon
