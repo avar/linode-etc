@@ -136,10 +136,6 @@ libboost-thread1.46-dev
 libsparsehash-dev
 libboost1.46-dev
 
-### Offline IMAP
-dovecot-imapd
-offlineimap
-
 # Documentation
 manpages-dev
 gcc-doc
