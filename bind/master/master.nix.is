@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN nix.is.
 @  1d  IN SOA ns1.first-ns.de. hostmaster.nix.is. (
-      139 ; serial
+      140 ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -16,9 +16,13 @@ $ORIGIN nix.is.
 
 nix.is.              IN  A      188.40.98.140
 
-t                    IN  A      208.78.101.240
-u                    IN  A      64.71.167.207
-v                    IN  A      109.74.193.250
+t-old                IN  A      208.78.101.240
+u-old                IN  A      64.71.167.207
+v-old                IN  A      109.74.193.250
+
+t                    IN  A      188.40.98.140
+u                    IN  A      5.9.157.150
+v                    IN  A      188.40.98.140
 w                    IN  A      188.40.98.140
 x                    IN  A      188.40.98.164
 
