@@ -1,16 +1,22 @@
-What needs to be done to migrate `v.nix.is` to `w.nix.is`
+What needs to be done to migrate `w.nix.is` to `u.nix.is`
 
-* OpenVPN - Move it to w
+Things that have been done already:
 
-   Also tweak the account creation so it's easy to add new accounts by
-   just adding a username to a list.
-   
-* Move over users
+ * Basic partition setup, same as w, just larger
+ * Created user accounts for all paying users, synced over their .ssh directory
+ * Set up an ssh key for the root user, its public key is in authorized keys on w, makes it easy to rsync over
+ * Installed the packages in /etc/deb-packages
+ * Set up a clone of linode-etc.git in /etc. Most stuff not sorted out (see git status)
 
-   E.g. hex isn't here yet, check /home/* on v and `git diff master..hetzner -- passwd`.
-   
-* Migrate PostgreSQL data
-   
-* Migrate leech/failo
+TODO:
 
-   Our torrent and robot setup.
+ * Move over failo/rtorrent/leech
+
+   Easiest just to create the relevant users, stop it on w, rsync over etc.
+
+ * Move over squid/Apache
+
+   Just rsync over /var/www etc. Needs some munging. Also needs MySQLdump
+   etc. for the stuff using MySQL.
+
+ * Move everything else. Add TODO items here.
