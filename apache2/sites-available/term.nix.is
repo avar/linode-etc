@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
         ServerName term.nix.is
         DocumentRoot /var/www/nix.is/
 	Redirect permanent / https://term.nix.is

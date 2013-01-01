@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
     ServerName goosegoosego.com
     ServerAlias www.goosegoosego.com
 

@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
     ServerName hailo.nix.is
 
     DocumentRoot /var/www/hailo.nix.is/root

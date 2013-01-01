@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
     ServerName voodootronix.com
     ServerAlias www.voodootronix.com
     DocumentRoot /var/www/voodootronix.com

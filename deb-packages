@@ -240,9 +240,6 @@ postfix
 # mailman
 mailman
 
-# squid
-squid
-
 # powerdns
 pdns-server
 pdns-recursor

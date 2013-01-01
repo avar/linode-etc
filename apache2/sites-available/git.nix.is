@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
         ServerName git.nix.is
 
         # Close connection after 301 is sent

@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
     ServerName org.ah.nix.is
     DocumentRoot /var/www/org.ah.nix.is
 

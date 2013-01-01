@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
     ServerName xn--var-xla.net
     ServerAlias www.xn--var-xla.net aevar.net www.aevar.net
     DocumentRoot /var/www/xn--var-xla.net

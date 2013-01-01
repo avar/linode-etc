@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
     ServerName lists.nix.is
     DocumentRoot /usr/lib/cgi-bin/mailman
 

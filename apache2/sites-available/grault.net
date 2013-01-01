@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
     ServerName grault.net
     DocumentRoot /var/www/grault.net
 

@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
     ServerName chanmirror.nix.is
     DocumentRoot /home/failo/www/chanmirror/
     Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt

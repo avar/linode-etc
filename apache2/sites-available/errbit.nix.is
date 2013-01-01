@@ -1,11 +1,11 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
     ServerName errbit.nix.is
     DocumentRoot /home/passenger/sites/errbit.nix.is/current/public
     Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
 
     PassengerHighPerformance on
     PassengerMinInstances 1
-    PassengerPreStart http://errbit.nix.is:81
+    PassengerPreStart http://errbit.nix.is:80
 
     <Directory /home/passenger/sites/errbit.nix.is/current>
         Allow from all

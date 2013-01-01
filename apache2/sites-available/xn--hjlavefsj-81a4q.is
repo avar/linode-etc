@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
     ServerName xn--hjlavefsj-81a4q.is
     ServerAlias www.xn--hjlavefsj-81a4q.is hjolavefsja.is www.hjolavefsja.is
 

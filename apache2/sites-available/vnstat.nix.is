@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
     ServerName vnstat.nix.is
     DocumentRoot /var/www/vnstat.nix.is
     ScriptAlias / /var/www/vnstat.nix.is/vnstat.cgi

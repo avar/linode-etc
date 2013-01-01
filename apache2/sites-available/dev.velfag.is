@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
     ServerName dev.velfag.is
     ServerAlias dev.xn--vlfag-bsa.is
     DocumentRoot /var/www/dev.velfag.is
