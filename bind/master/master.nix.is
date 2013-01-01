@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN nix.is.
 @  1d  IN SOA ns1.first-ns.de. hostmaster.nix.is. (
-      141 ; serial
+      142 ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -45,7 +45,6 @@ git                  IN  A      188.40.98.140
 blog                 IN  A      188.40.98.140
 chanmirror           IN  A      188.40.98.140
 jesus                IN  A      188.40.98.140
-ggg                  IN  A      188.40.98.140
 term                 IN  A      188.40.98.140
 errbit               IN  A      188.40.98.140
 piratelogs           IN  A      188.40.98.140
