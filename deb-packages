@@ -280,9 +280,6 @@ proftpd-basic
 # velfag & others
 memcached
 
-# awstats.nix.is
-awstats
-
 # vnstat.nix.is
 vnstat
 vnstati

@@ -90,9 +90,6 @@ Crypt::SSLeay
 IO::Socket::SSL
 LWP::Protocol::https
 
-# v-awstats-make-configs
-Apache::ConfigParser
-
 # Catalyst apps
 FCGI
 Catalyst::Devel
