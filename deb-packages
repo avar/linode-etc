@@ -87,6 +87,7 @@ sbcl
 ## Development tools
 screen
 git-core
+git-annex
 git-email
 mercurial
 bzr
