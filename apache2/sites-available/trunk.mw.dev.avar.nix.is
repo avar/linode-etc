@@ -1,4 +1,0 @@
-<VirtualHost *:80>
-        ServerName trunk.mw.dev.avar.nix.is
-        DocumentRoot /home/avar/g/phase3/
-</VirtualHost>
