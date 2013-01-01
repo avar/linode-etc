@@ -1,5 +1,5 @@
 # Package generated configuration file
-# See the sshd(8) manpage for details
+# See the sshd_config(5) manpage for details
 
 # What ports, IPs and protocols we listen for
 # Use these options to restrict which interfaces/protocols sshd will bind to
@@ -65,7 +65,7 @@ PasswordAuthentication yes
 X11Forwarding yes
 X11DisplayOffset 10
 PrintMotd no
-PrintLastLog no
+PrintLastLog yes
 TCPKeepAlive yes
 #UseLogin no
 
@@ -77,7 +77,16 @@ AcceptEnv LANG LC_*
 
 Subsystem sftp /usr/lib/openssh/sftp-server
 
+# Set this to 'yes' to enable PAM authentication, account processing,
+# and session processing. If this is enabled, PAM authentication will
+# be allowed through the ChallengeResponseAuthentication and
+# PasswordAuthentication.  Depending on your PAM configuration,
+# PAM authentication via ChallengeResponseAuthentication may bypass
+# the setting of "PermitRootLogin without-password".
+# If you just want the PAM account and session checks to run without
+# PAM authentication, then enable this but set PasswordAuthentication
+# and ChallengeResponseAuthentication to 'no'.
 UsePAM yes
 
-# Allow ssh -R :3000:v:3000 v. I.e. listen on 0.0.0.0
+# Allow ssh -R :3000:v:3000 v. I.e. listen on 0.0.0.0                                                                                                 
 GatewayPorts yes
