@@ -6,16 +6,14 @@ iface lo inet loopback
 # device: eth0
 auto  eth0
 iface eth0 inet static
-  address   188.40.98.140
-  broadcast 188.40.98.191
-  netmask   255.255.255.192
-  gateway   188.40.98.129
+  address   5.9.157.150
+  broadcast 5.9.157.159
+  netmask   255.255.255.224
+  gateway   5.9.157.129
+  # default route to access subnet
+  up route add -net 5.9.157.128 netmask 255.255.255.224 gw 5.9.157.129 eth0
 
-auto eth0:0
-iface eth0:0 inet static
-  address   188.40.98.164
-  broadcast 188.40.98.191
-  netmask   255.255.255.192
-
-# default route to access subnet
-up route add -net 188.40.98.128 netmask 255.255.255.192 gw 188.40.98.129 eth0
+iface eth0 inet6 static
+  address 2a01:4f8:190:5095::2
+  netmask 64
+  gateway fe80::1

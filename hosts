@@ -3,7 +3,7 @@
 188.40.43.6 z.nix.is z
 # IPv4
 127.0.0.1 localhost
-188.40.98.140  w.nix.is w
+5.9.157.150  u.nix.is
 #
 # IPv6
 ::1 ip6-localhost ip6-loopback
@@ -12,3 +12,4 @@ ff00::0 ip6-mcastprefix
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ff02::3 ip6-allhosts
+2a01:4f8:190:5095::2  u.nix.is
