@@ -13,12 +13,3 @@ cronjob --errors-only --ignore-errors lock --jobname twatterhose --rcpt twatterh
         --brain $brain \
     | grep '^Got twat' >> ~/g/bot-twatterhose/twatterhose.txt
 "
-
-# Update munin stats
-
-export name=Twatterhose
-export mode=dump
-state_dir=/var/lib/munin/plugin-state/hailo_
-
-test=stats file=$state_dir/twatterhose-stats.json perl /etc/munin/our-plugins/munin-plugin-hailo_/hailo_
-test=time  file=$state_dir/twatterhose-time.json  perl /etc/munin/our-plugins/munin-plugin-hailo_/hailo_

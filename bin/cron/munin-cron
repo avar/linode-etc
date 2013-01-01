@@ -1,6 +1,0 @@
-#!/bin/sh
-
-/usr/share/munin/munin-update $@ || exit 1
-
-/usr/share/munin/munin-limits $@ || exit 1
-

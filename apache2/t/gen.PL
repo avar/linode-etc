@@ -41,7 +41,6 @@ my @tests = (
         success      => 0,
         follow_links => 0,
     },
-    'awstats.nix.is'           => qr/Awstats/,
     'blog.nix.is'              => {
         content_like => qr/literal thoughts/,
         # Due to broken S26 link
@@ -54,7 +53,6 @@ my @tests = (
         content_like => qr/How do I runned wee nix\?/,
         follow_links => 0,
     },
-    'munin.nix.is'             => qr/Munin/,
     'nix.is'                   => {
         content_like => qr/logo\.png/,
         follow_links => 0,

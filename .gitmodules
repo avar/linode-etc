@@ -1,21 +1,6 @@
 [submodule "github-backup"]
 	path = github-backup
 	url = git://github.com/avar/github-backup.git
-[submodule "munin/our-plugins/munin-plugin-multiping_async"]
-	path = munin/our-plugins/munin-plugin-multiping_async
-	url = git://github.com/avar/munin-plugin-multiping_async.git
-[submodule "munin/our-plugins/munin-plugin-hailo_"]
-	path = munin/our-plugins/munin-plugin-hailo_
-	url = git://github.com/avar/munin-plugin-hailo_.git
-[submodule "munin/our-plugins/munin-plugin-cpan_outdated"]
-	path = munin/our-plugins/munin-plugin-cpan_outdated
-	url = git://github.com/avar/munin-plugin-cpan_outdated.git
-[submodule "munin/our-plugins/munin-plugin-munin_stats_plugins"]
-	path = munin/our-plugins/munin-plugin-munin_stats_plugins
-	url = git://github.com/avar/munin-plugin-munin_stats_plugins.git
-[submodule "munin/our-plugins/munin-plugin-vnstat_month"]
-	path = munin/our-plugins/munin-plugin-vnstat_month
-	url = git://github.com/avar/munin-plugin-vnstat_month.git
 [submodule "openstreetmap-mirror"]
 	path = openstreetmap-mirror
 	url = git://github.com/openstreetmap/openstreetmap-mirror.git

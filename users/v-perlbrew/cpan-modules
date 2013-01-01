@@ -24,9 +24,6 @@ App::perlbrew
 App::cpanminus
 App::cpanoutdated
 
-# /etc/munin/our-plugins/munin-plugin-multiping_async/multiping_async
-MooseX::POE
-
 # hailo
 Hailo
 POE::Component::Hailo
@@ -81,9 +78,6 @@ Inline::MakeMaker
 Math::Geometry::Planar::GPC::Polygon
 
 Tree::R
-
-# osm.nix.is munin jobs
-String::Truncate
 
 # avar's cron jobs
 Email::Send

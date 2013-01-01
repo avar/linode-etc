@@ -1,3 +1,0 @@
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-
-40 4  * * * root MUNIN_STATS_PLUGINS_RELOAD=1 munin-run munin_stats_plugins

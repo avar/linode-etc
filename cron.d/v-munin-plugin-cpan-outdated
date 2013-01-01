@@ -1,3 +1,0 @@
-PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/bin:/usr/bin:/usr/sbin
-
-@daily root sudo -u v-perlbrew -s -H $(which cpan-outdated) > /var/lib/munin/plugin-state/cpan_outdated-cache

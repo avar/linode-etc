@@ -57,8 +57,6 @@ telnet
 
 ## System monitoring
 
-munin
-munin-plugins-extra
 sockstat
 apt-listchanges
 fail2ban
@@ -303,7 +301,7 @@ libxslt1-dev
 ant
 ant-optional
 
-# PostgreSQL, for osm.nix.is / munin.nix.is
+# PostgreSQL, for osm.nix.is
 postgresql-9.0
 postgresql-contrib-9.0
 postgresql-server-dev-9.0
