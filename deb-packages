@@ -283,9 +283,6 @@ memcached
 # awstats.nix.is
 awstats
 
-# noc.nix.is
-srg
-
 # vnstat.nix.is
 vnstat
 vnstati
