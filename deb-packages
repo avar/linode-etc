@@ -57,6 +57,8 @@ telnet
 
 ## System monitoring
 
+munin
+munin-plugins-extra
 sockstat
 apt-listchanges
 fail2ban
@@ -239,6 +241,9 @@ postfix
 # mailman
 mailman
 
+# squid
+squid
+
 # powerdns
 pdns-server
 pdns-recursor
@@ -273,13 +278,16 @@ php5-sqlite
 php5-tidy
 phpunit
 
-# proftpd
-proftpd-basic
-
 ## Sites
 
 # velfag & others
 memcached
+
+# awstats.nix.is
+awstats
+
+# noc.nix.is
+srg
 
 # vnstat.nix.is
 vnstat
@@ -296,7 +304,7 @@ libxslt1-dev
 ant
 ant-optional
 
-# PostgreSQL, for osm.nix.is
+# PostgreSQL, for osm.nix.is / munin.nix.is
 postgresql-9.0
 postgresql-contrib-9.0
 postgresql-server-dev-9.0
@@ -352,6 +360,7 @@ python-django-tinymce
 python-jinja2
 python-twisted
 python-twisted-web
+libapache2-mod-wsgi
 
 # Bucciarati
 diamond

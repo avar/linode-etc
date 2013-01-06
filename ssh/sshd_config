@@ -2,13 +2,12 @@
 # See the sshd_config(5) manpage for details
 
 # What ports, IPs and protocols we listen for
+Port 22
 # Use these options to restrict which interfaces/protocols sshd will bind to
 #ListenAddress ::
 #ListenAddress 0.0.0.0
-ListenAddress 188.40.98.140:22
-ListenAddress 188.40.98.164:443
-ListenAddress 172.31.255.1:22
-ListenAddress 127.0.0.1:22
+ListenAddress 5.9.157.150
+ListenAddress 127.0.0.1
 Protocol 2
 # HostKeys for protocol version 2
 HostKey /etc/ssh/ssh_host_rsa_key
