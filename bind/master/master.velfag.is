@@ -16,9 +16,9 @@ $ORIGIN velfag.is.
        IN  MX  10 mx-hmc-01.simnetpro.is.
        IN  MX  10 mx-hmc-02.simnetpro.is.
 
-velfag.is. IN  A      188.40.98.140
-sys        IN  A      188.40.98.140
-dev        IN  A      188.40.98.140
+velfag.is. IN  A      5.9.157.150
+sys        IN  A      5.9.157.150
+dev        IN  A      5.9.157.150
 www        IN  CNAME  velfag.is.
 mail       IN  CNAME  mail-fw-2.simnetpro.is.
 
@@ -31,4 +31,4 @@ $ORIGIN sys.velfag.is.
       3h  ; minimum
      )
        IN  MX  10 mail
-mail   IN  A      188.40.98.140
+mail   IN  A      5.9.157.150

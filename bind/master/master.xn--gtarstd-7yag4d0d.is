@@ -14,5 +14,5 @@ $ORIGIN xn--gtarstd-7yag4d0d.is.
 
        IN  MX  10 mail.nix.is.
 
-xn--gtarstd-7yag4d0d.is.            IN  A      188.40.98.140
+xn--gtarstd-7yag4d0d.is.            IN  A      5.9.157.150
 www                  IN  CNAME  xn--gtarstd-7yag4d0d.is.

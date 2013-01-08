@@ -14,6 +14,6 @@ $ORIGIN goosegoosego.com.
 
        IN  MX     10 mail.goosegoosego.com.
 
-goosegoosego.com.    IN  A      188.40.98.140
+goosegoosego.com.    IN  A      5.9.157.150
 www                  IN  CNAME  goosegoosego.com.
-www                  IN  A      188.40.98.140
+www                  IN  A      5.9.157.150

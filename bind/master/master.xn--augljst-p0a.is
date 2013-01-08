@@ -14,5 +14,5 @@ $ORIGIN xn--augljst-p0a.is.
 
        IN  MX  10 mail.nix.is.
 
-xn--augljst-p0a.is.  IN  A      188.40.98.140
+xn--augljst-p0a.is.  IN  A      5.9.157.150
 www                  IN  CNAME  xn--augljst-p0a.is.

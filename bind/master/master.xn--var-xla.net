@@ -14,7 +14,7 @@ $ORIGIN xn--var-xla.net.
 
        IN  MX  10 mail.xn--var-xla.net.
 
-xn--var-xla.net. IN  A      188.40.98.140
+xn--var-xla.net. IN  A      5.9.157.150
 www              IN  CNAME  xn--var-xla.net.
-mail             IN  A      188.40.98.140
+mail             IN  A      5.9.157.150
 

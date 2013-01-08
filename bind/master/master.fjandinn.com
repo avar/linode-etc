@@ -14,5 +14,5 @@ $ORIGIN fjandinn.com.
 
        IN  MX  10 mail.nix.is.
 
-fjandinn.com.            IN  A      188.40.98.140
+fjandinn.com.            IN  A      5.9.157.150
 www                  IN  CNAME  fjandinn.com.

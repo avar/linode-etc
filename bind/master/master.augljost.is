@@ -14,5 +14,5 @@ $ORIGIN augljost.is.
 
        IN  MX  10 mail.nix.is.
 
-augljost.is.         IN  A      188.40.98.140
+augljost.is.         IN  A      5.9.157.150
 www                  IN  CNAME  augljost.is.

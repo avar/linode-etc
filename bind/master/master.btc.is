@@ -14,5 +14,5 @@ $ORIGIN btc.is.
 
        IN  MX  10 mail.nix.is.
 
-btc.is.            IN  A      188.40.98.140
+btc.is.            IN  A      5.9.157.150
 www                  IN  CNAME  btc.is.

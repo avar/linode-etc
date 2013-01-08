@@ -14,38 +14,38 @@ $ORIGIN nix.is.
 
        IN  MX  10 mail.nix.is.
 
-nix.is.              IN  A      188.40.98.140
+nix.is.              IN  A      5.9.157.150
 
 t-old                IN  A      208.78.101.240
 u-old                IN  A      64.71.167.207
 v-old                IN  A      109.74.193.250
 
-t                    IN  A      188.40.98.140
+t                    IN  A      5.9.157.150
 u                    IN  A      5.9.157.150
-v                    IN  A      188.40.98.140
-w                    IN  A      188.40.98.140
+v                    IN  A      5.9.157.150
+w                    IN  A      5.9.157.150
 x                    IN  A      188.40.98.164
 
 www                  IN  CNAME  nix.is.
-mail                 IN  A      188.40.98.140
-lists                IN  A      188.40.98.140
-noc                  IN  A      188.40.98.140
-vnstat               IN  A      188.40.98.140
-leech                IN  A      188.40.98.140
-hailo                IN  A      188.40.98.140
-ci                   IN  A      188.40.98.140
-osm                  IN  A      188.40.98.140
-tms                  IN  A      188.40.98.140
-tumi                 IN  A      188.40.98.140
-avar                 IN  A      188.40.98.140
-ap                   IN  A      188.40.98.140
-git                  IN  A      188.40.98.140
-blog                 IN  A      188.40.98.140
-chanmirror           IN  A      188.40.98.140
-jesus                IN  A      188.40.98.140
-term                 IN  A      188.40.98.140
-errbit               IN  A      188.40.98.140
-piratelogs           IN  A      188.40.98.140
+mail                 IN  A      5.9.157.150
+lists                IN  A      5.9.157.150
+noc                  IN  A      5.9.157.150
+vnstat               IN  A      5.9.157.150
+leech                IN  A      5.9.157.150
+hailo                IN  A      5.9.157.150
+ci                   IN  A      5.9.157.150
+osm                  IN  A      5.9.157.150
+tms                  IN  A      5.9.157.150
+tumi                 IN  A      5.9.157.150
+avar                 IN  A      5.9.157.150
+ap                   IN  A      5.9.157.150
+git                  IN  A      5.9.157.150
+blog                 IN  A      5.9.157.150
+chanmirror           IN  A      5.9.157.150
+jesus                IN  A      5.9.157.150
+term                 IN  A      5.9.157.150
+errbit               IN  A      5.9.157.150
+piratelogs           IN  A      5.9.157.150
 kviklekar            IN  A      109.74.193.250
 tor                  IN  A      188.40.98.164
 photos		     IN  A	209.15.228.200
@@ -57,24 +57,24 @@ ah                   IN  A      212.182.132.170
 fedora		     IN  A	213.190.110.151
 $ORIGIN gg.nix.is.
 @          IN  NS     ns.gg.nix.is.
-ns         IN  A      188.40.98.140
+ns         IN  A      5.9.157.150
 
 $ORIGIN v.nix.is.
 @      IN  MX  10 mail
-mail   IN  A      188.40.98.140
+mail   IN  A      5.9.157.150
 
 $ORIGIN git.nix.is.
-smoke  IN  A      188.40.98.140
+smoke  IN  A      5.9.157.150
 
 $ORIGIN avar.nix.is.
-dev    IN  A      188.40.98.140
+dev    IN  A      5.9.157.150
 
 $ORIGIN ah.nix.is.
-org    IN  A      188.40.98.140
+org    IN  A      5.9.157.150
 
 $ORIGIN dev.avar.nix.is.
-mw     IN  A      188.40.98.140
+mw     IN  A      5.9.157.150
 
 $ORIGIN mw.dev.avar.nix.is.
-trunk  IN  A      188.40.98.140
-hw     IN  A      188.40.98.140
+trunk  IN  A      5.9.157.150
+hw     IN  A      5.9.157.150

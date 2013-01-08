@@ -16,4 +16,4 @@ $ORIGIN hinrik.net.
 
 hinrik.net.          IN  A      204.232.175.78
 www                  IN  CNAME  hinrik.net.
-mail                 IN  A      188.40.98.140
+mail                 IN  A      5.9.157.150

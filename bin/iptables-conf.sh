@@ -35,13 +35,13 @@ nsdebug=109.74.193.250
 iptables \
     -A PREROUTING -t nat -p udp \
     --source $ns1,$ns2,$ns3,$nsdebug \
-    --destination 188.40.98.140 --dport 53 \
+    --destination 5.9.157.150 --dport 53 \
     -j REDIRECT \
     --to-ports 53
 
 ## redirect all non-ns*.linode.com traffic to gg.nix.is
 iptables \
     -A PREROUTING -t nat -p udp \
-    --destination 188.40.98.140 --dport 53 \
+    --destination 5.9.157.150 --dport 53 \
     -j REDIRECT \
     --to-ports 5252
