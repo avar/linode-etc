@@ -2,7 +2,7 @@ root:x:0:
 daemon:x:1:
 bin:x:2:
 sys:x:3:
-adm:x:4:avar,hinrik,tumi,pjesi,hex,joi,matt,buccia,nicholas,eric
+adm:x:4:avar,hinrik,tumi,hex,joi,matt,buccia,nicholas,eric
 tty:x:5:
 disk:x:6:
 lp:x:7:
@@ -77,3 +77,4 @@ osm-mirror:x:1013:
 passenger:x:1014:
 leech:x:1015:
 postgres:x:124:
+v-slaves:x:1016:v-perlbrew,osm-mirror,failo,leech
