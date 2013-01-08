@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN hailo.org.
 @  1d  IN SOA ns1.first-ns.de. hostmaster.hailo.org. (
-      96  ; serial
+      97  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire

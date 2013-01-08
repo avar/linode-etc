@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN fjandinn.com.
 @  1d  IN SOA ns1.first-ns.de. hostmaster.fjandinn.com. (
-      1   ; serial
+      2   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire

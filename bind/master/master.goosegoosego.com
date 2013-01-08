@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN goosegoosego.com.
 @  1d  IN SOA ns1.first-ns.de. hostmaster.goosegoosego.com. (
-      2   ; serial
+      3   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire

@@ -1,7 +1,7 @@
 $TTL 86400 ; 24 hours could have been written as 24h or 1d
 $ORIGIN 150.157.9.5.IN-ADDR.ARPA.
 @  1D  IN SOA ns1.linode.com. hostmaster.v.nix.is. (
-      1  ; serial
+      2  ; serial
       3H ; refresh
       15 ; retry
       1w ; expire

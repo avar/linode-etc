@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN pocoirc.net.
 @  1d  IN SOA ns1.first-ns.de. hostmaster.pocoirc.net. (
-      5   ; serial
+      6   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
