@@ -17,12 +17,40 @@ TODO:
 
    Easiest just to create the relevant users, stop it on w, rsync over etc.
 
- * Move over squid/Apache
+ * Move over Apache
 
    Just rsync over /var/www etc. Needs some munging. Also needs MySQLdump
    etc. for the stuff using MySQL.
 
- * Move everything else. Add TODO items here.
+ * bitlbee, needs syncing of data files
+ 
+ * mailmain, ditto
+ 
+ * shellinabox, if hinrik still cares
+ 
+ * uptimed, install & migrate
+ 
+ * vnstatd, ditto
+ 
+ * memcached, just install
+ 
+ * mysql, data & start
+ 
+ * apache, data & start
+ 
+ * fail2ban, data in etc and start
+ 
+ * openvpn, needs reconfiguration etc.
+ 
+ * redis-server, re-install?
+ 
+ * postgresql, migrate data files & start at version 9
+ 
+ * iodine, data in /etc/ and start
+ 
+ * tor, just leave unconfigured
+ 
+ * postfix
 
  * These daemons need configuring/checking:
     
