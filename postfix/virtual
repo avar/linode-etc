@@ -1,18 +1,22 @@
 # remember to run "sudo postmap /etc/postfix/virtual" after making changes
 
 ## "Real" users
+avar@u.nix.is             avarab@gmail.com
 avar@w.nix.is             avarab@gmail.com
 avar@v.nix.is             avarab@gmail.com
 
+hinrik@u.nix.is           hinrik.sig@gmail.com
 hinrik@w.nix.is           hinrik.sig@gmail.com
 hinrik@v.nix.is           hinrik.sig@gmail.com
 
+tumi@u.nix.is             tumi.st@gmail.com
 tumi@w.nix.is             tumi.st@gmail.com
 tumi@v.nix.is             tumi.st@gmail.com
 
 andreasg@w.nix.is         andreassonurgudmunds@gmail.com
 andreasg@v.nix.is         andreassonurgudmunds@gmail.com
 
+hex@u.nix.is              hex@downlode.org
 hex@w.nix.is              hex@downlode.org
 hex@v.nix.is              hex@downlode.org
 
@@ -22,21 +26,27 @@ bjorn@v.nix.is            bjorn88@simnet.is
 smueller@w.nix.is         smueller@cpan.org
 smueller@v.nix.is         smueller@cpan.org
 
+buccia@u.nix.is           vnixis@repnz.net
 buccia@w.nix.is           vnixis@repnz.net
 buccia@v.nix.is           vnixis@repnz.net
 
+matt@u.nix.is             matt.koscica@gmail.com
 matt@w.nix.is             matt.koscica@gmail.com
 matt@v.nix.is             matt.koscica@gmail.com
 
+joi@u.nix.is           rubbershotgun@gmail.com
 joi@w.nix.is           rubbershotgun@gmail.com
 
+eythor@u.nix.is           eythor88@gmail.com
 eythor@w.nix.is           eythor88@gmail.com
 
+pjesi@u.nix.is            vidarsvans@gmail.com
 pjesi@w.nix.is            vidarsvans@gmail.com
 
 david@w.nix.is            david@dsg.to
 jonas@w.nix.is            jonasreynir@gmail.com
 
+nicholas@u.nix.is             nick@nickandperla.net
 nicholas@w.nix.is             nick@nickandperla.net
 nicholas@v.nix.is             nick@nickandperla.net
 
@@ -67,8 +77,9 @@ git-deploy@nix.is       avarab@gmail.com
 gitsmoke@v.nix.is    avarab@gmail.com
 smolder@v.nix.is    avarab@gmail.com
 # Contact address for the Tor bridge
-tor@v.nix.is              avarab@gmail.com
+tor@u.nix.is              avarab@gmail.com
 tor@w.nix.is              avarab@gmail.com
+tor@v.nix.is              avarab@gmail.com
 
 ## Send cron e-mails to the relevant people
 avar@localhost          avarab@gmail.com
@@ -127,17 +138,21 @@ debian-popularity-contest@v.nix.is v-admins@lists.nix.is
 apt-listchanges@localhost          v-admins@lists.nix.is
 apt-listchanges@v.nix.is           v-admins@lists.nix.is
 apt-listchanges@w.nix.is           v-admins@lists.nix.is
+apt-listchanges@u.nix.is           v-admins@lists.nix.is
 
 ## These cron E-Mails are way too chatty, but might be useful to keep
 ## around for reference.
 fail2ban@v.nix.is    v-cron-swamp@lists.nix.is
 fail2ban@w.nix.is    v-cron-swamp@lists.nix.is
+fail2ban@u.nix.is    v-cron-swamp@lists.nix.is
 osm-mirror@v.nix.is  v-cron-swamp@lists.nix.is
 osm-mirror@w.nix.is  v-cron-swamp@lists.nix.is
+osm-mirror@u.nix.is  v-cron-swamp@lists.nix.is
 
 ## Send cron E-Mails to v-cron
 @v.nix.is         v-cron@lists.nix.is
 @w.nix.is         v-cron@lists.nix.is
+@u.nix.is         v-cron@lists.nix.is
 @localhost        v-cron@lists.nix.is
 
 ## faggot, come in faggot
