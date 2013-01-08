@@ -17,36 +17,38 @@ TODO:
 
    Easiest just to create the relevant users, stop it on w, rsync over etc.
 
- * Move over Apache
+ * DONE Move over Apache
 
    Just rsync over /var/www etc. Needs some munging. Also needs MySQLdump
    etc. for the stuff using MySQL.
 
- * bitlbee, needs syncing of data files
+ * DONE bitlbee, needs syncing of data files
  
- * mailmain, ditto
+ * DONE mailmain, ditto
  
  * shellinabox, if hinrik still cares
  
- * uptimed, install & migrate
+ * DONE uptimed, install & migrate
  
- * vnstatd, ditto
+ * DONE vnstatd, ditto
  
- * memcached, just install
+ * DONE memcached, just install
  
- * mysql, data & start
+ * DONE -- mysql, data & start
  
- * apache, data & start
+ * DONE apache, data & start
  
- * fail2ban, data in etc and start
+ * DONE fail2ban, data in etc and start
  
  * openvpn, needs reconfiguration etc.
  
- * redis-server, re-install?
+ * DONE redis-server, re-install?
  
- * postgresql, migrate data files & start at version 9
+ * BROKEN postgresql, migrate data files & start at version 9
  
- * iodine, data in /etc/ and start
+   Copying over data files from pg 9.0 to use in 9.1: fail whale
+ 
+ * DONE iodine, data in /etc/ and start
  
  * tor, just leave unconfigured
  
@@ -55,15 +57,15 @@ TODO:
  * These daemons need configuring/checking:
     
     $ history|grep init.d
-      113  2012-12-31 16:40:15  sudo /etc/init.d/mysql stop
-      114  2012-12-31 16:40:19  sudo /etc/init.d/redis-server stop
-      115  2012-12-31 16:40:24  sudo /etc/init.d/squid stop
-      118  2012-12-31 16:40:37  sudo /etc/init.d/memcached stop
-      119  2012-12-31 16:40:42  sudo /etc/init.d/pdns-recursor stop
-      121  2012-12-31 16:41:26  sudo /etc/init.d/pdns stop
-      122  2012-12-31 16:41:31  sudo /etc/init.d/apache2 stop
-      124  2012-12-31 16:41:45  sudo /etc/init.d/munin stop
-      125  2012-12-31 16:41:47  sudo /etc/init.d/munin-node stop
-      129  2012-12-31 16:43:09  sudo /etc/init.d/avahi-daemon stop
-      130  2012-12-31 16:43:12  sudo /etc/init.d/oidentd stop
-      132  2012-12-31 16:43:20  sudo /etc/init.d/proftpd stop
+      DONE 113  2012-12-31 16:40:15  sudo /etc/init.d/mysql stop
+      DONE 114  2012-12-31 16:40:19  sudo /etc/init.d/redis-server stop
+      DONE 115  2012-12-31 16:40:24  sudo /etc/init.d/squid stop
+      DONE 118  2012-12-31 16:40:37  sudo /etc/init.d/memcached stop
+      DONE 119  2012-12-31 16:40:42  sudo /etc/init.d/pdns-recursor stop
+      DONE 121  2012-12-31 16:41:26  sudo /etc/init.d/pdns stop
+      MAYBE 12`12  2012-12-31 16:41:31  sudo /etc/init.d/apache2 stop
+      DROPPED 124  2012-12-31 16:41:45  sudo /etc/init.d/munin stop
+      DROPPED 125  2012-12-31 16:41:47  sudo /etc/init.d/munin-node stop
+      DROPPED 129  2012-12-31 16:43:09  sudo /etc/init.d/avahi-daemon stop
+      DROPPED 130  2012-12-31 16:43:12  sudo /etc/init.d/oidentd stop
+      DROPPED 132  2012-12-31 16:43:20  sudo /etc/init.d/proftpd stop
