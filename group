@@ -55,7 +55,7 @@ eric:x:1009:
 mysql:x:106:
 redis:x:107:
 stunnel4:x:108:
-ssl-cert:x:109:
+ssl-cert:x:109:postgres
 postfix:x:110:
 postdrop:x:111:
 messagebus:x:112:
@@ -74,3 +74,6 @@ eythor:x:1010:
 failo:x:1011:
 v-perlbrew:x:1012:
 osm-mirror:x:1013:
+passenger:x:1014:
+leech:x:1015:
+postgres:x:124:
