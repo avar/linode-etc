@@ -75,6 +75,6 @@ failo:x:1011:
 v-perlbrew:x:1012:
 osm-mirror:x:1013:
 passenger:x:1014:
-leech:x:1015:
+leech:x:1015:avar,hinrik,tumi,pjesi,hex,joi,matt,buccia,nicholas,eric
 postgres:x:124:
 v-slaves:x:1016:v-perlbrew,osm-mirror,failo,leech
