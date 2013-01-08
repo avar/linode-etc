@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN nix.is.
 @  1d  IN SOA ns1.first-ns.de. hostmaster.nix.is. (
-      146 ; serial
+      147 ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -23,7 +23,7 @@ v-old                IN  A      109.74.193.250
 t                    IN  A      5.9.157.150
 u                    IN  A      5.9.157.150
 v                    IN  A      5.9.157.150
-w                    IN  A      5.9.157.150
+w                    IN  A      188.40.98.140
 x                    IN  A      188.40.98.164
 
 www                  IN  CNAME  nix.is.
