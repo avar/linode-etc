@@ -20,7 +20,7 @@ for my $passwd_uid (@uid) {
     ok($name, "User $user has a defined name");
 
     # Make sure we have an E-Mail forwarding address
-    my ($alias, $email) = qx[grep "$user\@w.nix.is" /etc/postfix/virtual] =~ /^(\S+) \s+ (\S+)$/x;
+    my ($alias, $email) = qx[grep "$user\@u.nix.is" /etc/postfix/virtual] =~ /^(\S+) \s+ (\S+)$/x;
     if ($user !~ /^(?: v-perlbrew | failo | smolder | postgres | passenger)$/x) {
         no warnings 'uninitialized';
         ok($email, "We have an E-Mail $email under the alias $alias for user $user");
