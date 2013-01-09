@@ -305,9 +305,9 @@ ant
 ant-optional
 
 # PostgreSQL, for osm.nix.is / munin.nix.is
-postgresql-9.0
-postgresql-contrib-9.0
-postgresql-server-dev-9.0
+postgresql-9.1
+postgresql-contrib-9.1
+postgresql-server-dev-9.1
 
 # oidentd (hinrik)
 oidentd
@@ -360,6 +360,8 @@ python-django-tinymce
 python-jinja2
 python-twisted
 python-twisted-web
+python-beautifulsoup
+python-mysqldb
 libapache2-mod-wsgi
 
 # Bucciarati
