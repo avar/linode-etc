@@ -1,0 +1,4 @@
+<VirtualHost *:80>
+        ServerName btc.is
+        DocumentRoot /var/www/btc.is
+</VirtualHost>
