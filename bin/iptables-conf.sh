@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# Flush everything
-iptables -F 
-iptables -t nat -F
-
 ## Logging
 
 ## Logging
