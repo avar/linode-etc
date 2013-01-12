@@ -1,4 +1,4 @@
 Explanation: Ævar likes being on the bleeding bitlbee edge
-Package: bitlbee
+Package: bitlbee bitlbee-common
 Pin: release a=unstable
 Pin-Priority: 1001
