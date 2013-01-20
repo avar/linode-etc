@@ -121,6 +121,7 @@ python-twisted
 ipython
 python-setuptools
 python-pycurl
+python-dev
 
 ### Tools I hack on
 build-dep: git
