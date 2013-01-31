@@ -12,6 +12,7 @@ scponly
 # top-like utilities
 htop
 iotop
+sysstat
 
 # file utilities
 multitail
