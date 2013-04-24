@@ -39,6 +39,7 @@ whois
 # mail
 bsd-mailx
 mutt
+procmail
 
 # utility to renice processes
 reniced
@@ -309,9 +310,9 @@ ant
 ant-optional
 
 # PostgreSQL, for osm.nix.is / munin.nix.is
-postgresql-9.1
-postgresql-contrib-9.1
-postgresql-server-dev-9.1
+postgresql-9.2
+postgresql-contrib-9.2
+postgresql-server-dev-9.2
 
 # oidentd (hinrik)
 oidentd
@@ -371,3 +372,14 @@ libapache2-mod-wsgi
 # Bucciarati
 diamond
 graphite-carbon
+inotail
+tcpdump
+
+# eythor
+ruby1.9.1-dev
+apache2-prefork-dev
+libapr1-dev
+libaprutil1-dev
+
+
+
