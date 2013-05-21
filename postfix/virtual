@@ -81,6 +81,9 @@ tor@u.nix.is              avarab@gmail.com
 tor@w.nix.is              avarab@gmail.com
 tor@v.nix.is              avarab@gmail.com
 
+# Sigrup address for twitter.com/_IcelandMan
+icelandman@u.nix.is avarab@gmail.com
+
 ## Send cron e-mails to the relevant people
 avar@localhost          avarab@gmail.com
 hinrik@localhost        hinrik.sig@gmail.com
