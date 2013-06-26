@@ -81,3 +81,5 @@ v-slaves:x:1016:v-perlbrew,osm-mirror,failo,leech
 fjandinn.com:x:1017:jonas,tumi
 book:x:1018:
 david:x:1019:
+rdma:x:125:
+shellinabox:x:126:
