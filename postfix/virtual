@@ -26,10 +26,6 @@ bjorn@v.nix.is            bjorn88@simnet.is
 smueller@w.nix.is         smueller@cpan.org
 smueller@v.nix.is         smueller@cpan.org
 
-buccia@u.nix.is           vnixis@repnz.net
-buccia@w.nix.is           vnixis@repnz.net
-buccia@v.nix.is           vnixis@repnz.net
-
 matt@u.nix.is             matt.koscica@gmail.com
 matt@w.nix.is             matt.koscica@gmail.com
 matt@v.nix.is             matt.koscica@gmail.com
@@ -91,7 +87,6 @@ tumi@localhost          tumi.st@gmail.com
 andreasg@localhost      andreassonurgudmunds@gmail.com
 hex@localhost           hex@downlode.org
 smueller@localhost      smueller@cpan.org
-buccia@localhost        vnixis@repnz.net
 joi@localhost        rubbershotgun@gmail.com
 vab@localhost           loktacar@gmail.com
 pjesi@localhost         vidarsvans@gmail.com
