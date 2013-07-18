@@ -3,4 +3,4 @@
 lists.nix.is    mailman:
 sys.velfag.is   mailman:
 
-repnz.net	repnz:
+repnz.net	local:
