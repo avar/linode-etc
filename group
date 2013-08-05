@@ -71,7 +71,7 @@ oident:x:121:
 pdns:x:122:
 _cvsadmin:x:123:
 eythor:x:1010:
-failo:x:1011:
+failo:x:1011:hinrik
 v-perlbrew:x:1012:
 osm-mirror:x:1013:
 passenger:x:1014:
