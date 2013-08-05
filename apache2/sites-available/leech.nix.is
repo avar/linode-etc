@@ -18,6 +18,17 @@
     </Location>
 
     Alias /provider /dns/provider
+
+    <Location /piracy>
+        AuthName "leech"
+        AuthType Basic
+        AuthUserFile /etc/apache2/passwd/leech.nix.is
+        <Limit GET POST>
+            require valid-user
+        </Limit>
+    </Location>
+    Alias /piracy   /dns/annex/piracy
+    
     <Location /provider>
         AuthName "leech"
         AuthType Basic
