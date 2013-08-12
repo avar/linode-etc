@@ -5,10 +5,12 @@
 	compress
 	delaycompress
 	notifempty
-	create 640 root www-data
+	create 640 root adm
 	sharedscripts
 	postrotate
-		/etc/init.d/apache2 reload > /dev/null
+                if /etc/init.d/apache2 status > /dev/null ; then \
+                    /etc/init.d/apache2 reload > /dev/null; \
+                fi;
 	endscript
 	prerotate
 		if [ -d /etc/logrotate.d/httpd-prerotate ]; then \
