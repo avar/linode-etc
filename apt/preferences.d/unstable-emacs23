@@ -1,4 +1,0 @@
-Explanation: Ævar likes being on the bleeding Emacs edge
-Package: emacs23 emacs23-bin-common emacs23-common emacs23-common-non-dfsg emacs23-nox
-Pin: release a=unstable
-Pin-Priority: 1001

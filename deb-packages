@@ -81,7 +81,9 @@ id3v2
 
 # avar
 mg
-emacs23-nox
+emacs24-nox
+emacs-goodies-el
+magit
 aspell
 aspell-de
 aspell-en
@@ -147,7 +149,7 @@ manpages-dev
 gcc-doc
 gdb-doc
 glibc-doc
-emacs23-common-non-dfsg
+emacs24-common-non-dfsg
 
 # C compilation
 build-essential
