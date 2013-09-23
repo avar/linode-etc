@@ -9,9 +9,10 @@ hinrik@u.nix.is           hinrik.sig@gmail.com
 hinrik@w.nix.is           hinrik.sig@gmail.com
 hinrik@v.nix.is           hinrik.sig@gmail.com
 
-tumi@u.nix.is             tumi.st@gmail.com
-tumi@w.nix.is             tumi.st@gmail.com
-tumi@v.nix.is             tumi.st@gmail.com
+tumi@nix.is               tumi@local.nix.is
+tumi@u.nix.is             tumi@local.nix.is
+tumi@w.nix.is             tumi@local.nix.is
+tumi@v.nix.is             tumi@local.nix.is
 
 andreasg@w.nix.is         andreassonurgudmunds@gmail.com
 andreasg@v.nix.is         andreassonurgudmunds@gmail.com
@@ -39,7 +40,9 @@ eythor@w.nix.is           eythor88@gmail.com
 pjesi@u.nix.is            vidarsvans@gmail.com
 pjesi@w.nix.is            vidarsvans@gmail.com
 
-david@w.nix.is            david@dsg.to
+david@nix.is	david@local.nix.is
+david@u.nix.is	david@local.nix.is
+david@w.nix.is	david@local.nix.is
 jonas@w.nix.is            jonasreynir@gmail.com
 
 nicholas@u.nix.is             nick@nickandperla.net
@@ -154,6 +157,7 @@ osm-mirror@u.nix.is  v-cron-swamp@lists.nix.is
 @w.nix.is         v-cron@lists.nix.is
 @u.nix.is         v-cron@lists.nix.is
 @localhost        v-cron@lists.nix.is
+
 
 ## faggot, come in faggot
 faggot@nix.is     hex@downlode.org

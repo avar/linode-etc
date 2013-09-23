@@ -21,10 +21,11 @@ mynetworks = 127.0.0.0/8
 # only use the local aliases database, not NIS
 alias_maps = $alias_database
 
-# don't do local delivery for any domains
-mydestination =
+# Users who want local delivery can alias their addresses/domains
+# to @local.nix.is
+mydestination = local.nix.is
 
-# use virtual aliases for our domains
+# use virtual aliases for other domains
 virtual_alias_domains = localhost nix.is v.nix.is w.nix.is u.nix.is aevar.net xn--var-xla.net hjolavefsja.is xn--hjlavefsj-81a4q.is pocoirc.net goosegoosego.com repnz.net
 virtual_alias_maps = hash:/etc/postfix/virtual
 
@@ -37,4 +38,5 @@ mailman_destination_recipient_limit = 1
 header_checks = regexp:/etc/postfix/header_checks
 readme_directory = /usr/share/doc/postfix
 html_directory = /usr/share/doc/postfix/html
-message_size_limit = 0
+
+
