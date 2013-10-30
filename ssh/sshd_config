@@ -88,4 +88,4 @@ Subsystem sftp /usr/lib/openssh/sftp-server
 UsePAM yes
 
 # Allow ssh -R :3000:v:3000 v. I.e. listen on 0.0.0.0                                                                                                 
-GatewayPorts yes
+GatewayPorts clientspecified
