@@ -10,8 +10,6 @@
 http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/DBD-SQLite-1.32_01.tar.gz
 
 # misc
-Task::BeLike::AVAR
-App::Nopaste::Service::Linode
 App::Ack
 Devel::NYTProf
 Devel::Dwarn
