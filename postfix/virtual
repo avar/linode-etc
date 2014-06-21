@@ -51,6 +51,9 @@ nicholas@w.nix.is             nick@nickandperla.net
 nicholas@v.nix.is             nick@nickandperla.net
 
 @repnz.net	buccia@local.nix.is
+@nazgul.repnz.net	buccia@local.nix.is
+@tp.repnz.net	dipre@local.nix.is
+@bl.repnz.net	dipre@local.nix.is
 @anche.se	buccia@local.nix.is
 
 ## Aliases
@@ -110,6 +113,7 @@ david@localhost         david@dsg.to
 @pocoirc.net     hinrik.sig@gmail.com
 
 @fjandinn.com	 jonasreynir@gmail.com
+@btc.is		tumi@nix.is
 
 ## Don't wildcard catch nix.is due to spam
 testfoobar@nix.is   hinrik.sig@gmail.com
