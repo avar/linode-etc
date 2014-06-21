@@ -86,3 +86,4 @@ shellinabox:x:126:
 vnstat:x:127:
 jwhois:x:128:
 dipre:x:1020:
+rabbitmq:x:129:
