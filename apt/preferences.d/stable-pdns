@@ -1,4 +1,0 @@
-Explanation: pdns 3.3 broke the pdns-server
-Package: pdns pdns-recursor
-Pin: release a=stable
-Pin-Priority: 1001
