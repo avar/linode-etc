@@ -37,7 +37,6 @@ staff:x:50:
 games:x:60:
 users:x:100:tumi,avar,hinrik,eythor,eric,joi,matt,nicholas,pjesi,buccia,david
 nogroup:x:65534:
-libuuid:x:101:
 crontab:x:102:
 ntp:x:103:
 Debian-exim:x:104:
@@ -87,3 +86,5 @@ vnstat:x:127:
 jwhois:x:128:
 dipre:x:1020:
 rabbitmq:x:129:
+bitcoin:x:999:tumi
+uuidd:x:101:
