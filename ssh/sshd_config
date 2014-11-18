@@ -7,6 +7,7 @@ Port 22
 #ListenAddress ::
 #ListenAddress 0.0.0.0
 ListenAddress 5.9.157.150
+ListenAddress 172.31.255.1
 ListenAddress 127.0.0.1
 Protocol 2
 # HostKeys for protocol version 2
