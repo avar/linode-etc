@@ -36,8 +36,8 @@ iptables \
     -A PREROUTING -t nat -p udp \
     --source $ns1,$ns2,$ns3,$nsdebug \
     --destination 5.9.157.150 --dport 53 \
-    -j DNAT \
-    --to-destination 127.0.0.1:53
+    -j REDIRECT \
+    --to-ports 53
 
 ## redirect all non-ns*.linode.com traffic to gg.nix.is
 iptables \
