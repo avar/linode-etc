@@ -29,15 +29,15 @@ iptables -t nat -A POSTROUTING -s 10.9.8.0/24 -o eth0 -j MASQUERADE
 ns1=ns1.first-ns.de.
 ns2=robotns2.second-ns.de.
 ns3=robotns3.second-ns.com.
-nsdebug=109.74.193.250
+nsdebug=140.211.15.157
 
 # redirect ns*.linode.com to PowerDNS
 iptables \
     -A PREROUTING -t nat -p udp \
     --source $ns1,$ns2,$ns3,$nsdebug \
     --destination 5.9.157.150 --dport 53 \
-    -j REDIRECT \
-    --to-ports 53
+    -j DNAT \
+    --to-destination 127.0.0.1:53
 
 ## redirect all non-ns*.linode.com traffic to gg.nix.is
 iptables \
