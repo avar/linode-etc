@@ -4,3 +4,6 @@
 # at boot time, one per line. Lines beginning with "#" are ignored.
 
 loop
+
+# This is needed for iodine (iodined)
+tun
