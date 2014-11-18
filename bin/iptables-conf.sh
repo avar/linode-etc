@@ -32,12 +32,15 @@ ns3=robotns3.second-ns.com.
 nsdebug=140.211.15.157
 
 # redirect ns*.linode.com to PowerDNS
-iptables \
-    -A PREROUTING -t nat -p udp \
-    --source $ns1,$ns2,$ns3,$nsdebug \
-    --destination 5.9.157.150 --dport 53 \
-    -j REDIRECT \
-    --to-ports 53
+for proto in tcp udp
+do
+    iptables \
+        -A PREROUTING -t nat -p $proto \
+        --source $ns1,$ns2,$ns3,$nsdebug \
+        --destination 5.9.157.150 --dport 53 \
+        -j DNAT \
+        --to-destination 127.0.0.1:53
+done
 
 ## redirect all non-ns*.linode.com traffic to gg.nix.is
 iptables \
