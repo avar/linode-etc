@@ -18,7 +18,7 @@ voice:x:22:
 cdrom:x:24:
 floppy:x:25:
 tape:x:26:
-sudo:x:27:avar,hinrik,tumi,pjesi,hex,joi,matt,buccia,nicholas,eric,eythor,david
+sudo:x:27:avar,hinrik,tumi,pjesi,hex,joi,matt,buccia,nicholas,eric,david
 audio:x:29:
 dip:x:30:
 www-data:x:33:
@@ -35,7 +35,7 @@ sasl:x:45:
 plugdev:x:46:
 staff:x:50:
 games:x:60:
-users:x:100:tumi,avar,hinrik,eythor,eric,joi,matt,nicholas,pjesi,buccia,david
+users:x:100:tumi,avar,hinrik,eric,joi,matt,nicholas,pjesi,buccia,david
 nogroup:x:65534:
 crontab:x:102:
 ntp:x:103:
@@ -69,12 +69,11 @@ debian-tor:x:120:
 oident:x:121:
 pdns:x:122:
 _cvsadmin:x:123:
-eythor:x:1010:
 failo:x:1011:hinrik
 v-perlbrew:x:1012:
 osm-mirror:x:1013:
 passenger:x:1014:
-leech:x:1015:avar,hinrik,tumi,pjesi,hex,joi,matt,buccia,nicholas,eric,book,eythor,david
+leech:x:1015:avar,hinrik,tumi,pjesi,hex,joi,matt,buccia,nicholas,eric,book,david
 postgres:x:124:
 v-slaves:x:1016:v-perlbrew,osm-mirror,failo,leech
 fjandinn.com:x:1017:jonas,tumi
