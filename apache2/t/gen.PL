@@ -41,15 +41,9 @@ my @tests = (
         success      => 0,
         follow_links => 0,
     },
-    'blog.nix.is'              => {
-        content_like => qr/literal thoughts/,
-        # Due to broken S26 link
-        follow_links => 0,
-    },
-    'grault.net'               => qr/Gosling Emacs documentation/,
     'leech.nix.is'             => qr/wTorrent/,
     'lists.nix.is'             => qr/Mailman/,
-    'w.nix.is'                 => {
+    'u.nix.is'                 => {
         content_like => qr/How do I runned wee nix\?/,
         follow_links => 0,
     },
@@ -64,36 +58,10 @@ my @tests = (
 
     'vnstat.nix.is'            => qr/vnstat\.cgi/,
 
-    'chanmirror.nix.is'        => qr[Index of /],
-
-    'hailo.org'                => {
-        content_like => qr/Hailo is a a pluggable/,
-        base_url     => "http://hailo.org",
-        follow_links => 0,
-    },
-    'www.hailo.org'                => {
-        content_like => qr/Hailo is a a pluggable/,
-        base_url     => "http://hailo.org/",
-        follow_links => 0,
-    },
+    'chanmirror.nix.is'        => qr[Forbidden],
 
     # Ævar
     [ and_www qw(aevar.net xn--var-xla.net) ] => qr/Bjarmason/,
-
-    # Earle
-    [ and_www qw/voodootronix.com/ ] => {
-        content_like => qr/voodootronix/,
-        follow_links => 0,
-    },
-    'hex.downlode.org'               => {
-        content_like => qr/Go here/,
-        follow_links => 0,
-    },
-    'downlode.org'                   => {
-        content_like => qr/downlode/,
-        follow_links => 0,
-    },
-
 );
 
 # Generate expanded tests for Perl
