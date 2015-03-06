@@ -88,7 +88,13 @@ sub whois_nameservers {
         push @public => lc $1 if $who =~ /Name Server:(\S+)/;  # .org
     }
 
-    return \@public;
+    my @public_uniq;
+    my %seen;
+    for my $public (@public) {
+        push @public_uniq => $public unless $seen{$public}++;
+    }
+
+    return \@public_uniq;
 }
 
 sub whois_expires {
