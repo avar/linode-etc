@@ -69,9 +69,10 @@ sub whois {
     my $whois_server = "$tld.whois-servers.net";
 
     my $cmd;
-    given ($tld) {
-        when ('is') { $cmd = qq[whois -p 4343 -h $whois_server $domain 2>&1] }
-        default {     $cmd = qq[whois $domain 2>&1] }
+    if ($tld eq 'is') {
+        $cmd = qq[whois -p 4343 -h $whois_server $domain 2>&1];
+    } else {
+        $cmd = qq[whois $domain 2>&1];
     }
 
     return $self->do_cmd($cmd);
