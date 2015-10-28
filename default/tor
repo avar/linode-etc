@@ -5,7 +5,7 @@
 #
 # This is a bash shell fragment
 #
-RUN_DAEMON="no"
+RUN_DAEMON="yes"
 
 #
 # Servers sometimes may need more than the default 1024 file descriptors
