@@ -4,6 +4,10 @@
 # IPv4
 127.0.0.1 localhost
 5.9.157.150  u.nix.is
+
+# Bucciarati trying to make mutt not get its connection closed
+5.57.20.136	mail.booking.com
+
 #
 # IPv6
 ::1 ip6-localhost ip6-loopback
