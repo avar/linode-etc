@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN nix.is.
 @  1d  IN SOA ns1.first-ns.de. hostmaster.nix.is. (
-      151 ; serial
+      152 ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -40,6 +40,7 @@ tumi                 IN  A      5.9.157.150
 avar                 IN  A      5.9.157.150
 ap                   IN  A      5.9.157.150
 git                  IN  A      5.9.157.150
+graphite             IN  A      5.9.157.150
 blog                 IN  CNAME  hinrik.github.io.
 chanmirror           IN  A      5.9.157.150
 jesus                IN  A      5.9.157.150
