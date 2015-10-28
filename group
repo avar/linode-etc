@@ -18,7 +18,7 @@ voice:x:22:
 cdrom:x:24:
 floppy:x:25:
 tape:x:26:
-sudo:x:27:avar,hinrik,tumi,pjesi,hex,joi,matt,buccia,nicholas,eric,david
+sudo:x:27:avar,hinrik,tumi,hex,joi,matt,buccia,nicholas,eric,david
 audio:x:29:
 dip:x:30:
 www-data:x:33:
@@ -35,7 +35,7 @@ sasl:x:45:
 plugdev:x:46:
 staff:x:50:
 games:x:60:
-users:x:100:tumi,avar,hinrik,eric,joi,matt,nicholas,pjesi,buccia,david
+users:x:100:tumi,avar,hinrik,eric,joi,matt,nicholas,buccia,david
 nogroup:x:65534:
 crontab:x:102:
 ntp:x:103:
@@ -44,7 +44,6 @@ ssh:x:105:
 avar:x:1000:
 hinrik:x:1001:
 tumi:x:1002:
-pjesi:x:1003:
 hex:x:1004:
 joi:x:1005:
 matt:x:1006:
@@ -73,7 +72,7 @@ failo:x:1011:hinrik
 v-perlbrew:x:1012:
 osm-mirror:x:1013:
 passenger:x:1014:
-leech:x:1015:avar,hinrik,tumi,pjesi,hex,joi,matt,buccia,nicholas,eric,book,david
+leech:x:1015:avar,hinrik,tumi,hex,joi,matt,buccia,nicholas,eric,book,david
 postgres:x:124:
 v-slaves:x:1016:v-perlbrew,osm-mirror,failo,leech
 fjandinn.com:x:1017:jonas,tumi
@@ -90,3 +89,4 @@ uuidd:x:101:
 input:x:130:
 memcache:x:131:
 wp-firecat:x:1010:
+andreasg:x:1021:
