@@ -178,3 +178,9 @@ ExitPolicy reject *:* # no exits allowed
 
 # How many processes to use at once for decrypting onionskins. (Default: 1)
 NumCPUs 6
+
+# Make u's ssh port accessible as a hidden service
+HiddenServiceDir /var/lib/tor/ssh/
+HiddenServicePort 22 127.0.0.1:22
+
+
