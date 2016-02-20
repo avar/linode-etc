@@ -106,8 +106,15 @@ RelayBandwidthBurst 8 MB
 
 # Don't suck up all our bandwidth. Note that the total bandwidth tor
 # might use will be ~ AccountingMax * 2. See torrc(5)
-AccountingStart day 02:00
-AccountingMax 2 GB
+# Accounting disabled as it's better to run a lower bandwidth 24/7 than
+# a bursty high-bandwidth relay. Also accounting results in the relay
+# hibernating, so the hidden services stop working.
+# Instead, we limit the average bandwidth rate. Tor will still burst up
+# to the full capacity of the pipe. Only relay traffic is capped, not
+# hidden services hosted here or client traffic originating from us.
+#AccountingStart day 02:00
+#AccountingMax 2 GB
+RelayBandwidthRate 300KBytes
 
 ## Contact info to be published in the directory, so we can contact you
 ## if your relay is misconfigured or something else goes wrong. Google
