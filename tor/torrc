@@ -180,6 +180,9 @@ ExitPolicy reject *:* # no exits allowed
 NumCPUs 6
 
 # Make u's ssh port accessible as a hidden service
+# Currently this will print a arning on startup about it being insecure
+# to run a relay and a hidden service on the same node. This is not a
+# concern for our use case, so it can be safely ignored.
 HiddenServiceDir /var/lib/tor/ssh/
 HiddenServicePort 22 127.0.0.1:22
 
