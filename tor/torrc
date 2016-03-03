@@ -15,9 +15,9 @@
 
 ## Replace this with "SocksPort 0" if you plan to run Tor only as a
 ## relay, and not make any local application connections yourself.
-SocksPort 0
-#SocksPort 9050 # what port to open for local application connections
-#SocksListenAddress 127.0.0.1 # accept connections only from localhost
+#SocksPort 0
+SocksPort 9050 # what port to open for local application connections
+SocksListenAddress 127.0.0.1 # accept connections only from localhost
 #SocksListenAddress 192.168.0.1:9100 # listen on this IP:port also
 
 ## Entry policies to allow/deny SOCKS requests based on IP address.
@@ -121,6 +121,9 @@ ContactInfo w.nix.is tor <tor@w.nix.is>
 ## Uncomment this to mirror directory information for others. Please do
 ## if you have enough bandwidth.
 #DirPort 9030 # what port to advertise for directory connections
+
+DirPort 5.9.157.150:9030
+
 ## If you want to listen on a port other than the one advertised in
 ## DirPort (e.g. to advertise 80 but bind to 9091), you can do it as
 ## follows.  below too. You'll need to do ipchains or other port
@@ -182,9 +185,10 @@ ExitPolicy reject *:* # no exits allowed
 NumCPUs 6
 
 # Make u's ssh port accessible as a hidden service
-# Currently this will print a arning on startup about it being insecure
+# Currently this will print a warning on startup about it being insecure
 # to run a relay and a hidden service on the same node. This is not a
-# concern for our use case, so it can be safely ignored.
+# concern for our use case (a publicly-accessible service being additionally
+# exposed as a hidden service), so it can be safely ignored.
 HiddenServiceDir /var/lib/tor/ssh/
 HiddenServicePort 22 127.0.0.1:22
 
