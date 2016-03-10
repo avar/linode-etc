@@ -1,18 +1,3 @@
-## Configuration file for a typical Tor user
-## Last updated 2 September 2014 for Tor 0.2.6.1-alpha.
-## (may or may not work for much older or much newer versions of Tor.)
-##
-## Lines that begin with "## " try to explain what's going on. Lines
-## that begin with just "#" are disabled commands: you can enable them
-## by removing the "#" symbol.
-##
-## See 'man tor', or https://www.torproject.org/docs/tor-manual.html,
-## for more options you can use in this file.
-##
-## Tor will look for this file in various places based on your platform:
-## https://www.torproject.org/docs/faq#torrc
-
-
 ## Replace this with "SocksPort 0" if you plan to run Tor only as a
 ## relay, and not make any local application connections yourself.
 #SocksPort 0
@@ -82,8 +67,8 @@ CookieAuthentication 1
 ## See https://www.torproject.org/docs/tor-doc-relay for details.
 
 ## Required: what port to advertise for incoming Tor connections.
-ORListenAddress 5.9.157.150
-ORPort 9001
+#ORListenAddress 5.9.157.150
+#ORPort 9001
 ## If you want to listen on a port other than the one advertised
 ## in ORPort (e.g. to advertise 443 but bind to 9090), uncomment the
 ## line below too. You'll need to do ipchains or other port forwarding
@@ -122,7 +107,7 @@ ContactInfo w.nix.is tor <tor@w.nix.is>
 ## if you have enough bandwidth.
 #DirPort 9030 # what port to advertise for directory connections
 
-DirPort 5.9.157.150:9030
+#DirPort 5.9.157.150:9030
 
 ## If you want to listen on a port other than the one advertised in
 ## DirPort (e.g. to advertise 80 but bind to 9091), you can do it as
