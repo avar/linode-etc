@@ -48,3 +48,15 @@ iptables \
     --destination 5.9.157.150 --dport 53 \
     -j REDIRECT \
     --to-ports 5252
+
+
+### Tor transparent proxying ###
+# Forbid the user 'david-tor' from making any direct internet
+# connections, and instead hijack them and route over Tor.
+
+iptables -t nat -A OUTPUT ! -o lo -p tcp -m owner --uid-owner david_tor -m tcp -j REDIRECT --to-ports 9040
+iptables -t nat -A OUTPUT ! -o lo -p udp -m owner --uid-owner david_tor -m udp --dport 53 -j REDIRECT --to-ports 9053
+iptables -t filter -A OUTPUT -p tcp -m owner --uid-owner david_tor -m tcp --dport 9040 -j ACCEPT
+iptables -t filter -A OUTPUT -p udp -m owner --uid-owner david_tor -m udp --dport 9053 -j ACCEPT
+iptables -t filter -A OUTPUT ! -o lo -m owner --uid-owner david_tor -j DROP
+

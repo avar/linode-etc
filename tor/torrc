@@ -178,3 +178,10 @@ HiddenServiceDir /var/lib/tor/ssh/
 HiddenServicePort 22 127.0.0.1:22
 
 
+# For transparent Tor proxying (controlled with iptables)
+DNSPort 127.0.0.1:9053
+TransPort 127.0.0.1:9040
+VirtualAddrNetworkIPv4 10.192.0.0/10
+AutomapHostsOnResolve 1
+
+
