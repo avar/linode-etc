@@ -57,7 +57,6 @@ ssl-cert:x:109:postgres
 postfix:x:110:
 postdrop:x:111:
 messagebus:x:112:
-avahi:x:113:
 netdev:x:114:
 bitlbee:x:115:
 _graphite:x:116:
