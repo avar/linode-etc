@@ -6,5 +6,5 @@ sys.velfag.is   mailman:
 
 # This probably doesn't work, whoevers domain this is, you should remove
 # this and add an entry to virtual redirecting mail to @local.nix.is
-repnz.net	local:
+# repnz.net	local:
 

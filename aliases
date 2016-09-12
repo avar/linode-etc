@@ -1,4 +1,7 @@
-# See man 5 aliases for format
+# See man 5 aliases for forma
+contact-spam: /home/buccia/spam/repnz.net-contact
+tumblr-spam: /home/buccia/spam/repnz.net-tumblr
+fv-linuxvar-it-spam: /home/buccia/spam/linuxvar.it-fv
 postmaster: root
 webmaster:  root
 root:       andreasg,tumi,hinrik,avar
