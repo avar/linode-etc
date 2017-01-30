@@ -67,7 +67,7 @@ debian-tor:x:120:
 oident:x:121:
 pdns:x:122:
 _cvsadmin:x:123:
-failo:x:1011:hinrik
+failo:x:1011:hinrik,avar
 v-perlbrew:x:1012:
 osm-mirror:x:1013:
 passenger:x:1014:
