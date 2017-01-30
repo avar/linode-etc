@@ -330,6 +330,7 @@ git-svn
 # misc
 poppler-utils
 cowsay
+cowsay-off
 wamerican-huge
 geoip-bin
 links
