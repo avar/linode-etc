@@ -92,3 +92,5 @@ andreasg:x:1021:
 david_tor:x:1003:
 david_nointernet:x:1022:
 haproxy:x:132:
+diamond:x:113:
+epmd:x:133:
