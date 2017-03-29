@@ -1,0 +1,4 @@
+Explanation: There is some bug in 4.x where dig @localhost hangs
+Package: pdns-server pdns-recursor
+Pin: release a=stable
+Pin-Priority: 1001
