@@ -2,7 +2,7 @@ root:x:0:
 daemon:x:1:
 bin:x:2:
 sys:x:3:
-adm:x:4:avar,hinrik,tumi,joi,matt,buccia,nicholas,eric,david,andreasg
+adm:x:4:avar,hinrik,tumi,hex,joi,matt,buccia,nicholas,eric,david,andreasg
 tty:x:5:
 disk:x:6:
 lp:x:7:
@@ -18,7 +18,7 @@ voice:x:22:
 cdrom:x:24:
 floppy:x:25:
 tape:x:26:
-sudo:x:27:avar,hinrik,tumi,joi,matt,buccia,nicholas,eric,david,andreasg
+sudo:x:27:avar,hinrik,tumi,hex,joi,matt,buccia,nicholas,eric,david,andreasg
 audio:x:29:
 dip:x:30:
 www-data:x:33:
@@ -71,7 +71,7 @@ failo:x:1011:hinrik,avar
 v-perlbrew:x:1012:
 osm-mirror:x:1013:
 passenger:x:1014:
-leech:x:1015:avar,hinrik,tumi,joi,matt,buccia,nicholas,eric,book,david,andreasg
+leech:x:1015:avar,hinrik,tumi,hex,joi,matt,buccia,nicholas,eric,book,david,andreasg
 postgres:x:124:
 v-slaves:x:1016:v-perlbrew,osm-mirror,failo,leech
 fjandinn.com:x:1017:jonas,tumi
