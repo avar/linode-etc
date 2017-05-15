@@ -1,5 +1,6 @@
 # See man 5 aliases for forma
 contact-spam: /home/buccia/spam/repnz.net-contact
+irssi-spam: /home/buccia/spam/repnz.net-irssi
 tumblr-spam: /home/buccia/spam/repnz.net-tumblr
 fv-linuxvar-it-spam: /home/buccia/spam/linuxvar.it-fv
 postmaster: root

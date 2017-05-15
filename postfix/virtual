@@ -59,6 +59,9 @@ fv-linuxvar-it@repnz.net fv-linuxvar-it-spam@local.nix.is
 # some scripts spam contact@any.domain.tld
 contact@repnz.net  contact-spam@local.nix.is
 
+# this ended up on fucking github somehow, now only gets spam
+irssi@repnz.net irssi-spam@local.nix.is
+
 lovenest@repnz.net buccia@local.nix.is, eglesal@gmail.com
 pixel@repnz.net buccia@local.nix.is, eglesal@gmail.com
 lamp@repnz.net buccia@local.nix.is, eglesal@gmail.com
