@@ -1,3 +1,7 @@
+# Oldstable
+deb http://ftp.de.debian.org/debian/ oldstable main contrib non-free
+deb-src http://ftp.de.debian.org/debian/ oldstable main contrib non-free
+
 # Stable
 deb http://ftp.de.debian.org/debian/ stable main contrib non-free
 deb-src http://ftp.de.debian.org/debian/ stable main contrib non-free
