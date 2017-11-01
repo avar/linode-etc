@@ -1,15 +1,15 @@
 /var/log/apache2/*.log {
-	weekly
+	daily
 	missingok
-	rotate 52
+	rotate 14
 	compress
 	delaycompress
 	notifempty
 	create 640 root adm
 	sharedscripts
 	postrotate
-                if /etc/init.d/apache2 status > /dev/null ; then \
-                    /etc/init.d/apache2 reload > /dev/null; \
+                if invoke-rc.d apache2 status > /dev/null 2>&1; then \
+                    invoke-rc.d apache2 reload > /dev/null 2>&1; \
                 fi;
 	endscript
 	prerotate
@@ -17,14 +17,4 @@
 			run-parts /etc/logrotate.d/httpd-prerotate; \
 		fi; \
 	endscript
-}
-
-/var/log/php/error.log {
-	weekly
-	missingok
-	rotate 52
-	compress
-	delaycompress
-	notifempty
-	create 640 root www-data
 }
