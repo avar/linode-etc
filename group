@@ -2,7 +2,7 @@ root:x:0:
 daemon:x:1:
 bin:x:2:
 sys:x:3:
-adm:x:4:avar,hinrik,tumi,hex,joi,matt,buccia,nicholas,eric,david,andreasg
+adm:x:4:avar,hinrik,tumi,hex,joi,matt,buccia,eric,david,andreasg
 tty:x:5:
 disk:x:6:
 lp:x:7:
@@ -18,7 +18,7 @@ voice:x:22:
 cdrom:x:24:
 floppy:x:25:
 tape:x:26:
-sudo:x:27:avar,hinrik,tumi,hex,joi,matt,buccia,nicholas,eric,david,andreasg
+sudo:x:27:avar,hinrik,tumi,hex,joi,matt,buccia,eric,david,andreasg
 audio:x:29:
 dip:x:30:
 www-data:x:33:
@@ -35,7 +35,7 @@ sasl:x:45:
 plugdev:x:46:
 staff:x:50:
 games:x:60:
-users:x:100:tumi,avar,hinrik,eric,joi,matt,nicholas,buccia,david,andreasg
+users:x:100:tumi,avar,hinrik,eric,joi,matt,buccia,david,andreasg
 nogroup:x:65534:
 crontab:x:102:
 ntp:x:103:
@@ -48,7 +48,6 @@ hex:x:1004:
 joi:x:1005:
 matt:x:1006:
 buccia:x:1007:
-nicholas:x:1008:
 eric:x:1009:
 mysql:x:106:
 redis:x:107:
@@ -71,7 +70,7 @@ failo:x:1011:hinrik,avar
 v-perlbrew:x:1012:
 osm-mirror:x:1013:
 passenger:x:1014:
-leech:x:1015:avar,hinrik,tumi,hex,joi,matt,buccia,nicholas,eric,book,david,andreasg
+leech:x:1015:avar,hinrik,tumi,hex,joi,matt,buccia,eric,book,david,andreasg
 postgres:x:124:
 v-slaves:x:1016:v-perlbrew,osm-mirror,failo,leech
 fjandinn.com:x:1017:jonas,tumi
