@@ -15,8 +15,8 @@ biff = no
 # appending .domain is the MUA's job.
 append_dot_mydomain = no
 
-# only relay mail from localhost
-mynetworks = 127.0.0.0/8
+# Networks allowed to relay mail
+mynetworks = 127.0.0.0/8 149.126.83.97/32 149.126.83.48/32
 
 # only use the local aliases database, not NIS
 alias_maps = $alias_database
