@@ -54,14 +54,24 @@ nicholas@v.nix.is             nick@nickandperla.net
 # tumblr was hacked and I receive shitloads of "Desperate for a F*ckbuddy" spams
 tumblr@repnz.net tumblr-spam@local.nix.is
 
+# CCC wiki was hacked
+cccwiki@repnz.net cccwiki-spam@local.nix.is
+
+# only spam goes here
+info@repnz.net info-spam@local.nix.is
+fuog@repnz.net esprit-spam@local.nix.is
+
 # fv@linuxvar.it gets tons of spam and I don't advertise it
 fv-linuxvar-it@repnz.net fv-linuxvar-it-spam@local.nix.is
 
 # some scripts spam contact@any.domain.tld
 contact@repnz.net  contact-spam@local.nix.is
 
-# this ended up on fucking github somehow, now only gets spam
+# it's on github, now only gets spam
 irssi@repnz.net irssi-spam@local.nix.is
+
+# used this somewhere which got hacked, now I get "squeeze my nipples" mails
+rupert.sciamenna@repnz.net rupert-spam@local.nix.is
 
 lovenest@repnz.net buccia@local.nix.is, eglesal@gmail.com
 pixel@repnz.net buccia@local.nix.is, eglesal@gmail.com
