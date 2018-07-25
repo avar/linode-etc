@@ -94,3 +94,4 @@ haproxy:x:132:
 diamond:x:113:
 epmd:x:133:
 tinyproxy:x:134:
+kvm:x:135:
