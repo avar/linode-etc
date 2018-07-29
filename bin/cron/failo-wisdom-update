@@ -3,7 +3,7 @@ use 5.012;
 use autodie;
 use strict;
 
-my @format = qw< C Perl Lua >;
+my @format = qw< C Perl >;
 my $format = $format[rand @format];
 my $out = "/usr/local/bin/failo-wisdom";
 
