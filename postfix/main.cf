@@ -8,6 +8,7 @@ myhostname = u.nix.is
 myorigin = /etc/mailname
 
 smtpd_banner = $myhostname ESMTP $mail_name ($mail_version)
+smtpd_recipient_restrictions = permit_mynetworks, defer_unauth_destination
 
 # disable comsat network service
 biff = no
