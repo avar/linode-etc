@@ -15,6 +15,9 @@ iotop
 iftop
 sysstat
 
+# general utilities
+moreutils
+
 # file utilities
 multitail
 
