@@ -69,9 +69,10 @@ sub whois {
     my $whois_server = "$tld.whois-servers.net";
 
     my $cmd;
-    given ($tld) {
-        when ('is') { $cmd = qq[whois -p 4343 -h $whois_server $domain 2>&1] }
-        default {     $cmd = qq[whois $domain 2>&1] }
+    if ($tld eq 'is') {
+        $cmd = qq[whois -p 4343 -h $whois_server $domain 2>&1];
+    } else {
+        $cmd = qq[whois $domain 2>&1];
     }
 
     return $self->do_cmd($cmd);
@@ -87,7 +88,13 @@ sub whois_nameservers {
         push @public => lc $1 if $who =~ /Name Server:(\S+)/;  # .org
     }
 
-    return \@public;
+    my @public_uniq;
+    my %seen;
+    for my $public (@public) {
+        push @public_uniq => $public unless $seen{$public}++;
+    }
+
+    return \@public_uniq;
 }
 
 sub whois_expires {

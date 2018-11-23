@@ -1,0 +1,4 @@
+Explanation: Due to https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=910343
+Package: cowsay-off
+Pin: release a=stable
+Pin-Priority: 1001
