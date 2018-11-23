@@ -1,0 +1,20 @@
+$TTL 1d
+$ORIGIN xn--var-xla.net.
+@  1D  IN SOA ns1.first-ns.de. hostmaster.xn--var-xla.net. (
+      47  ; serial
+      3h  ; refresh
+      30m ; retry
+      1w  ; expire
+      3h  ; minimum
+     )
+
+       IN  NS     ns1.first-ns.de.
+       IN  NS     robotns2.second-ns.de.
+       IN  NS     robotns3.second-ns.com.
+
+       IN  MX  10 mail.xn--var-xla.net.
+
+xn--var-xla.net. IN  A      188.40.98.140
+www              IN  CNAME  xn--var-xla.net.
+mail             IN  A      188.40.98.140
+
