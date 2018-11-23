@@ -1,113 +1,54 @@
-#!/usr/bin/env perl
-package Deb::Packages;
-use v5.10.1;
-BEGIN {
-    eval {
-        require autodie;
-        autodie->import(":all");
-        1
-    } or do {
-        system "aptitude install libipc-system-simple-perl" and die "Can't install this";
-    };
-
-    eval {
-        require Mouse;
-        1;
-    } or do {
-        system "aptitude install libmouse-perl" and die "Can't install this";
-    };
-}
-use Mouse;
-use autodie ':all';
+#!/usr/bin/perl
+use v5.28.0;
+use strict;
+use warnings FATAL => 'all';
 use Cwd 'getcwd';
 use File::Temp 'tempdir';
 
-has config_file => (
-    is => 'ro',
-    isa => 'Str',
-    documentation => 'The config file to read from',
-);
-
-has config => (
-    is => 'ro',
-    isa => 'HashRef[ArrayRef]',
-    lazy_build => 1,
-);
-
-sub _build_config {
+sub config {
     my ($self) = @_;
-    my $config;
+    my %config;
 
-    open my $fh, '<', $self->config_file;
+    open my $fh, '<', '/etc/deb-packages' or die $!;
 
     while (my $line = <$fh>) {
         chomp $line;
-        given ($line) {
+        for ($line) {
             # comment
-            when (/^#/ or /^$/) { next }
+            if (/^#/ or /^$/) { next }
             # Custom action
-            when (/^ (?<action> [^#\s]+ ): \s* (?<package> .+? ) \s* (?:$|\#) /x) {
-                push @{$config->{ $+{action} }} => $+{package};
+            if (/^ (?<action> [^#\s]+ ): \s* (?<package> .+? ) \s* (?:$|\#) /x) {
+                push @{$config{ $+{action} }} => $+{package};
+                next;
             }
             # Install is the default action
-            when (/^ (?<package>[^#\s]+ ) /x) {
-                push @{$config->{install}} => $+{package};
+            if (/^ (?<package>[^#\s]+ ) /x) {
+                push @{$config{install}} => $+{package};
+                next;
             }
-            default { die "Can't parse line:<$line>" }
+            die "Can't parse line:<$line>";
         }
     }
+    close $fh or die $!;
 
-    return $config;
+    return \%config;
 }
 
 sub run {
-    my ($self) = @_;
-    my $config = $self->config;
+    my $config = config();
 
-    for my $action (qw/ install src build-dep remove /) {
-        my @packages = @{ delete $config->{$action} || [] };
-        if (@packages) {
-            given ($action) {
-                # TODO build from source
-                when ("src") { $self->build_from_source( @packages ); }
-                # Everything else is simple
-                default { system "aptitude $action -y @packages"; }
-            }
+    for my $action (qw/ install build-dep remove /) {
+        if (my @packages = @{ delete $config->{$action} || [] }) {
+            system "apt $action -y @packages" and die $!;
         }
     }
 
     return;
 }
 
-sub build_from_source {
-    my ($self, @packages) = @_;
-    die "TODO: build source for @packages";
-}
-
-package main;
-use strict;
-use warnings;
-use Getopt::Long qw(:config auto_help pass_through);
-use Pod::Usage;
-BEGIN {
-    eval {
-        require autodie;
-        autodie->import(":all");
-    };
-    if ($@) {
-            system "aptitude install libipc-system-simple-perl" and die "Can't install this";
-    }
-}
-
-GetOptions() or pod2usage();
-
 die "$0 needs to run with root privileges\n" if $> != 0;
 
-my $deb_packages = Deb::Packages->new(
-    config_file => '/etc/deb-packages'
-);
-
-$deb_packages->run;
+run();
 
 =encoding utf8
 
@@ -117,8 +58,6 @@ install-deb-packages - Install Debian packages listed in /etc/deb-packages
 
 =head1 SYNOPSIS
 
-Simply run B<install-deb-packages> without arguments and it will install all
-the Debian packages in F</etc/deb-packages> which have not been installed yet.
-
-As arguments, you can supply names of source packages you wish to
-recompile/install.
+Run B<install-deb-packages> without arguments and it will install all
+the Debian packages in F</etc/deb-packages> which have not been
+installed yet.

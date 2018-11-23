@@ -26,7 +26,6 @@ file
 hdparm
 tree
 bc
-sl
 
 # dns
 bind9-host
@@ -37,16 +36,8 @@ whois
 bsd-mailx
 mutt
 
-# utility to renice processes
-reniced
-
-# remove crap from /tmp
-tmpreaper
-
-# report bugs
-reportbug
-
-# better than screen
+# terminal multiplexing
+screen
 tmux
 
 ## Network utilities
@@ -56,46 +47,22 @@ lftp
 telnet
 
 ## System monitoring
-
 sockstat
-apt-listchanges
-fail2ban
-uptimed
-lm-sensors
 lshw
-
-### network monitoring
-slurm
 
 ## Editors
 
-# earle
-joe
-id3v2
-
 # avar
 mg
-emacs23-nox
+emacs-nox
 aspell
-aspell-de
 aspell-en
 aspell-is
-aspell-nl
 magit
-sbcl
 
 ## Development tools
-screen
-git-core
-git-email
+git
 mercurial
-bzr
-libemail-valid-perl
-libnet-smtp-ssl-perl
-libauthen-sasl-perl
-libmodule-install-perl
-libtime-duration-perl
-libtest-script-run-perl
 curl
 xmlstarlet
 gdb
@@ -106,40 +73,16 @@ pv
 cdecl
 indent
 pbzip2
-build-dep: yasm
-docbook2x
-
-## Perl 6
-mono-complete
-### Python tools
-python-pyopencl
-python-twisted
-ipython
-python-setuptools
-python-pycurl
 
 ### Tools I hack on
 build-dep: git
-
-### Building OSRM
-libstxxl-dev
-libprotobuf-dev
-protobuf-compiler
-scons
-libboost-system1.46-dev
-libboost-system1.46
-libboost-filesystem1.46.1
-libboost-system1.46.1
-libboost-thread1.46-dev
-libsparsehash-dev
-libboost1.46-dev
 
 # Documentation
 manpages-dev
 gcc-doc
 gdb-doc
 glibc-doc
-emacs23-common-non-dfsg
+emacs25-common-non-dfsg
 
 # C compilation
 build-essential
@@ -150,67 +93,15 @@ automake
 asciidoc
 cmake
 
-# C libraries
-gettext
-libc6-dev
-libcurl4-openssl-dev
-libexpat1-dev
-libaprutil1
-libv8-dev
-libv8-3.1.8.10
-libpam0g-dev
-libgmp-dev
-libxml2
-
 ## Perl
 
 # Core utilities
 perl-doc
 
-# for re::engine::PCRE
-libpcre3-dev
-
-## daemons
-remove: openntpd
-ntp
-bitlbee
-bitcoind
-nodejs
-
 ## internet
 irssi
 tcpflow
 tshark
-lynx
-
-## DB
-mysql-server
-mongodb
-
-## Debian Multimedia
-debian-multimedia-keyring
-
-## v-perlbrew
-
-# GD
-libgd2-xpm-dev
-
-# DBD::Pg
-libpq-dev
-
-# DBD::mysql
-libmysqlclient-dev
-
-# XML::LibXML
-libxml2-dev
-
-# failo-wisdom
-lua5.1
-liblua5.1-posix1
-
-## Ruby
-ruby-full
-rubygems
 
 # sudo gem install jekyll
 # sudo gem install rdiscount
@@ -227,131 +118,18 @@ unzip
 vorbis-tools
 flac
 
-## Services
-locate
-iodine
-httptunnel
-
 # postfix
 postfix
-
-# mailman
-mailman
 
 # powerdns
 pdns-server
 pdns-recursor
 
-# apache
-apache2
-apache2-mpm-prefork
-libapache2-mod-php5
-libapache2-mod-fastcgi
-libapache2-mod-scgi
-
-# openvpn
-openvpn
-
-# tor
-tor
-
-# php
-php-benchmark
-php-pear
-php5
-php5-cgi
-php5-cli
-php5-common
-php5-curl
-php5-dbg
-php5-gd
-php5-ldap
-php5-mcrypt
-php5-mysql
-php5-sqlite
-php5-tidy
-phpunit
-
-# proftpd
-proftpd-basic
-
 ## Sites
 
-# velfag & others
-memcached
-
-# vnstat.nix.is
-vnstat
-vnstati
-
-# osm.nix.is
-mkgmap
-sun-java6-bin
-sun-java6-jre
-sun-java6-jdk
-zip
-build-dep: librmagick-ruby
-libxslt1-dev
-ant
-ant-optional
-
-# PostgreSQL, for osm.nix.is
-postgresql-9.0
-postgresql-contrib-9.0
-postgresql-server-dev-9.0
-
-# oidentd (hinrik)
-oidentd
-
-# smoke.git.nix.is
-sqlite3
-
-# osm-mirror
-subversion
-git-svn
-
 # misc
-poppler-utils
 cowsay
 wamerican-huge
-geoip-bin
 links
 w3m
-hello
 stunnel
-po4a
-fakeroot
-fontforge
-gitstats
-
-# Ruby on Rails
-libsqlite3-dev
-sphinxsearch
-
-# Rubinius
-libreadline6-dev
-
-# Redis
-libjemalloc1
-redis-server
-
-# GooseGooseGo.com
-libapache2-mod-perl2
-libplack-perl
-libdancer-perl
-# Also needs Plack::Handler::Apache2 from the CPAN
-
-# workarounds
-libssl0.9.8
-
-# tumi
-build-dep: bitcoind
-python-django
-python-django-tinymce
-python-jinja2
-python-twisted
-python-twisted-web
-
-# Bucciarati
-diamond
-graphite-carbon
