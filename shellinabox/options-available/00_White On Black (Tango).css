@@ -1,8 +1,0 @@
-#vt100 #scrollable          { color:            #eeeeec;
-                              background-color: #000000; }
-
-#vt100 #scrollable.inverted { color:            #000000;
-                              background-color: #eeeeec; }
-
-#vt100 .ansiDefault         { color:            #eeeeec; }
-#vt100 .bgAnsiDefault       { background-color: #000000; }

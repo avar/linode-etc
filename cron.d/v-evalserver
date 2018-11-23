@@ -1,3 +1,0 @@
-PATH=/home/v-perlbrew/perl5/perlbrew/bin:/home/v-perlbrew/perl5/perlbrew/perls/current/bin:/usr/bin
-
-@reboot root evalserver -d -u evalserver

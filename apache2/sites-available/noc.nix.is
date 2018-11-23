@@ -1,6 +1,0 @@
-<VirtualHost *:80>
-    ServerName noc.nix.is
-    DocumentRoot /etc/htdocs/noc.nix.is/
-
-    Alias /robots.txt /etc/apache2/sites-common/robots.txt/disallow-all.txt
-</VirtualHost>

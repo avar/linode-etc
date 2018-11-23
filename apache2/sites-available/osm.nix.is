@@ -1,4 +1,0 @@
-<VirtualHost *:80>
-        ServerName osm.nix.is
-        DocumentRoot /var/www/osm.nix.is/
-</VirtualHost>

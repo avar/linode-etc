@@ -1,1 +1,0 @@
-/etc/profile.d/v-90-umask.sh

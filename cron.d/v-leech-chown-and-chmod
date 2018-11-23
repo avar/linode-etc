@@ -1,2 +1,0 @@
-18 */4 * * * root (find /home/leech/torrent/complete/ \! -group leech -print0 | xargs -0r chgrp leech && find /home/leech/torrent/complete/ \! -perm -g+rw -print0 | xargs -0r chmod g+rw)
-20 */4 * * * root (find /dns/provider/ \! -group leech -print0 | xargs -0r chgrp leech && find /dns/provider/ \! -perm -g+rw -print0 | xargs -0r chmod g+rw)

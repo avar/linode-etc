@@ -1,4 +1,0 @@
-#!/bin/sh
-
-service postfix restart &&
-service mailman restart

@@ -1,6 +1,0 @@
-# remember to run "sudo postmap /etc/postfix/transport" after making changes
-
-lists.nix.is    mailman:
-sys.velfag.is   mailman:
-
-repnz.net	repnz:

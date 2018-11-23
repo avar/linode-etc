@@ -1,2 +1,0 @@
-PATH=/bin
-* * * * * root chown root:root /etc/sudoers && chmod 0440 /etc/sudoers

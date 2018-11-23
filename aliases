@@ -1,4 +1,0 @@
-# See man 5 aliases for format
-postmaster: root
-webmaster:  root
-root:       andreasg,tumi,hinrik,avar

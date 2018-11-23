@@ -1,4 +1,0 @@
-Explanation: Ævar likes being on the bleeding clang edge
-Package: clang
-Pin: release a=unstable
-Pin-Priority: 1001

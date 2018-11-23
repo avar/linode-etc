@@ -1,1 +1,0 @@
-/etc/users/skel/.profile

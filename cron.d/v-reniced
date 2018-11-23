@@ -1,4 +1,0 @@
-# Source filter reniced so that it lists cmd instead of comm,
-# i.e. gets the full argument list too
-
-*/10 * * * *    root /etc/bin/cron/wrap-reniced

@@ -1,1 +1,0 @@
-@daily osm-mirror /etc/bin/cron/git-repack-and-gc-dir /home/osm-mirror/mirrors

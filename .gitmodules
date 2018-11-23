@@ -1,9 +1,0 @@
-[submodule "github-backup"]
-	path = github-backup
-	url = git://github.com/avar/github-backup.git
-[submodule "openstreetmap-mirror"]
-	path = openstreetmap-mirror
-	url = git://github.com/openstreetmap/openstreetmap-mirror.git
-[submodule "smoke-server-cronjobs"]
-	path = smoke-server-cronjobs
-	url = git://github.com/gitsmoke/smoke-server-cronjobs.git

@@ -1,6 +1,0 @@
-// Don't automatically install recommended packages. This pulled down e.g. ~600MB of TeX packages
-// for doxygen (which was in some build-dep). It also tries to install GCJ for a lot of Java
-// packages.
-
-Apt::Install-Recommends "false";
-Aptitude::Keep-Recommends "false";

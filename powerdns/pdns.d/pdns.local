@@ -1,3 +1,0 @@
-launch=bind
-bind-check-interval=300
-bind-config=/etc/bind/named.conf

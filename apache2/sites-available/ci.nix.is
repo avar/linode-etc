@@ -1,4 +1,0 @@
-<VirtualHost *:80>
-        ServerName ci.nix.is
-        DocumentRoot /var/www/ci.nix.is
-</VirtualHost>

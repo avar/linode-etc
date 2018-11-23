@@ -1,1 +1,0 @@
-/etc/profile.d/v-80-PS1.sh
