@@ -26,6 +26,7 @@ file
 hdparm
 tree
 bc
+parallel
 
 # dns
 bind9-host
