@@ -63,6 +63,7 @@ magit
 
 ## Development tools
 git
+git-annex
 mercurial
 curl
 xmlstarlet

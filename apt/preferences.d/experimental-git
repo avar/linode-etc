@@ -1,5 +1,5 @@
 Explanation: Ævar likes being on the bleeding bitlbee edge
-Package: git git-doc git-man git-core git-svn git-email
+Package: git git-doc git-man git-core git-svn git-email git-annex
 Pin: release a=experimental
 Pin-Priority: 1001
 
