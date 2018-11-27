@@ -159,6 +159,9 @@ libdist-zilla-plugin-git-perl
 libdist-zilla-plugin-makemaker-awesome-perl
 libterm-ui-perl
 
+## https://github.com/FruitieX/teleirc
+nodejs
+
 # to encode FLAC and WAV to Ogg
 vorbis-tools
 flac
