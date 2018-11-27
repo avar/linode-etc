@@ -121,6 +121,12 @@ libdatetime-format-human-duration-perl
 libformat-human-bytes-perl
 libpoe-component-irc-perl
 
+## failo
+libclass-load-perl
+libyaml-libyaml-perl
+libjson-xs-perl
+libterm-readkey-perl
+
 # to encode FLAC and WAV to Ogg
 vorbis-tools
 flac
