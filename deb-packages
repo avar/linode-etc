@@ -127,6 +127,37 @@ libclass-load-perl
 libyaml-libyaml-perl
 libjson-xs-perl
 libterm-readkey-perl
+libmoose-perl
+libtest-deep-perl
+libtest-fatal-perl
+libtest-warn-perl
+libuniversal-isa-perl
+libtest-mockobject-perl
+libdevel-leak-perl
+libtest-requires-perl
+libtest-without-module-perl
+libjson-any-perl
+libdir-self-perl
+libnet-oauth-perl
+
+## Hailo
+libexpect-perl
+libtest-synopsis-perl
+libtest-expect-perl
+libmoosex-strictconstructor-perl
+libdbd-mysql-perl
+libdbd-pg-perl
+libpod-abstract-perl
+
+## Perl development
+libdist-zilla-perl
+libppix-regexp-perl
+perltidy
+libperl-critic-perl
+libsort-versions-perl
+libdist-zilla-plugin-git-perl
+libdist-zilla-plugin-makemaker-awesome-perl
+libterm-ui-perl
 
 # to encode FLAC and WAV to Ogg
 vorbis-tools

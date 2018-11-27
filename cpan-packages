@@ -11,3 +11,13 @@ POE::Component::IRC::Plugin::RTorrentStatus
 
 # failo:
 App::Pocoirc
+POE::Component::IRC::Plugin::Karma
+POE::Component::IRC::Plugin::Eval
+POE::Quickie
+
+# Hailo
+Pod::Section
+
+# Perl development
+Dist::Zilla::PluginBundle::AVAR
+Dist::Zilla::Plugin::MinimumPerl
