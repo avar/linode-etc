@@ -1,6 +1,9 @@
 server {
     server_name tg.nix.is;
+    listen 80;
     root /home/failo/.teleirc/files/;
     autoindex off;
-    listen 80;
+    location /robots.txt {
+        alias /etc/nginx/sites-common/robots.txt/disallow-all.txt;
+    }
 }
