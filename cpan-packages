@@ -1,0 +1,2 @@
+# leech: needs /usr/local/bin/irctor-queue
+POE::Component::IRC::Plugin::RTorrentStatus

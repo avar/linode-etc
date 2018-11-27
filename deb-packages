@@ -114,6 +114,12 @@ rtorrent
 unrar
 p7zip-full
 unzip
+libpoe-component-irc-perl
+libtest-script-perl
+libdatetime-perl
+libdatetime-format-human-duration-perl
+libformat-human-bytes-perl
+libpoe-component-irc-perl
 
 # to encode FLAC and WAV to Ogg
 vorbis-tools

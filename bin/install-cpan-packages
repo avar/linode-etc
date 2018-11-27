@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -euo pipefail
+
+cpanm $(grep -v -e ^$ -e ^# /etc/cpan-packages)
