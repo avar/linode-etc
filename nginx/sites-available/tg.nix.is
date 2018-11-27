@@ -1,0 +1,6 @@
+server {
+    server_name tg.nix.is;
+    root /home/failo/.teleirc/files/;
+    autoindex off;
+    listen 80;
+}
