@@ -1,2 +1,10 @@
+## Before adding anything here first see if the package is in Debian,
+## then add it to deb-packages, and if it's not first run:
+##
+##   sudo cpanm --test-only <your-package>
+##
+## And if any deps are installed see if those are in Debian, and only
+## install what's absolutely needed from CPAN
+
 # leech: needs /usr/local/bin/irctor-queue
 POE::Component::IRC::Plugin::RTorrentStatus
