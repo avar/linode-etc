@@ -4,7 +4,7 @@ set -euo pipefail
 
 if ! getent passwd leech
 then
-    useradd --create-home --comment "The shared leeching user" --shell /bin/false leech
+    useradd --create-home --comment "The shared leeching user" --shell /bin/bash leech
 fi
 
 if ! getent passwd failo
