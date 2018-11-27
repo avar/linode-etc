@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+echo "We did the one-off rsync already!"
+exit 1
+
 rsync -av --progress --one-file-system --delete \
 	--exclude=/dns \
 	--exclude=/boot \
