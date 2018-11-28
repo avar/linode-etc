@@ -27,6 +27,7 @@ hdparm
 tree
 bc
 parallel
+jq
 
 # dns
 bind9-host
