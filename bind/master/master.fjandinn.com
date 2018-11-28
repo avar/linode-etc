@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN fjandinn.com.
 @  1d  IN SOA ns1.first-ns.de. hostmaster.fjandinn.com. (
-      2   ; serial
+      3   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -14,5 +14,5 @@ $ORIGIN fjandinn.com.
 
        IN  MX  10 mail.nix.is.
 
-fjandinn.com.            IN  A      5.9.157.150
+fjandinn.com.            IN  A      78.46.64.234
 www                  IN  CNAME  fjandinn.com.

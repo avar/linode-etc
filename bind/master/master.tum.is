@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN tum.is.
 @  1d  IN SOA ns1.first-ns.de. hostmaster.tum.is (
-      2   ; serial
+      3   ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -15,5 +15,5 @@ $ORIGIN tum.is.
        IN  MX  10 in1-smtp.messagingengine.com.
        IN  MX  20 in2-smtp.messagingengine.com.
 
-tum.is.            IN  A      5.9.157.150
+tum.is.            IN  A      78.46.64.234
 www                IN  CNAME  tum.is.

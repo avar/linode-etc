@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN aevar.net.
 @  1D  IN SOA ns1.first-ns.de. hostmaster.aevar.net. (
-      48  ; serial
+      49  ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -14,6 +14,6 @@ $ORIGIN aevar.net.
 
        IN  MX  10 mail.aevar.net.
 
-aevar.net. IN  A      5.9.157.150
+aevar.net. IN  A      78.46.64.234
 www        IN  CNAME  aevar.net.
-mail       IN  A      5.9.157.150
+mail       IN  A      78.46.64.234

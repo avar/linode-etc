@@ -14,44 +14,24 @@ $ORIGIN nix.is.
 
        IN  MX  10 mail.nix.is.
 
-nix.is.              IN  A      5.9.157.150
+nix.is.              IN  A      78.46.64.234
 
 t-old                IN  A      208.78.101.240
 u-old                IN  A      64.71.167.207
 v-old                IN  A      109.74.193.250
 
-t                    IN  A      5.9.157.150
+t                    IN  A      78.46.64.234
 u                    IN  A      5.9.157.150
 u                    IN  AAAA   2a01:4f8:190:5095::2
-v                    IN  A      5.9.157.150
+v                    IN  A      78.46.64.234
 w                    IN  A      188.40.98.140
 x                    IN  A      188.40.98.164
 vm                   IN  A      78.46.64.234
 vm                   IN  AAAA   2a01:4f8:120:2468::2
 
 www                  IN  CNAME  nix.is.
-mail                 IN  A      5.9.157.150
-lists                IN  A      5.9.157.150
-noc                  IN  A      5.9.157.150
-vnstat               IN  A      5.9.157.150
-leech                IN  A      5.9.157.150
-hailo                IN  A      5.9.157.150
-ci                   IN  A      5.9.157.150
-osm                  IN  A      5.9.157.150
-tms                  IN  A      5.9.157.150
-tumi                 IN  A      5.9.157.150
-avar                 IN  A      5.9.157.150
-ap                   IN  A      5.9.157.150
-git                  IN  A      5.9.157.150
-graphite             IN  A      5.9.157.150
+mail                 IN  A      78.46.64.234
 blog                 IN  CNAME  hinrik.github.io.
-chanmirror           IN  A      5.9.157.150
-jesus                IN  A      5.9.157.150
-term                 IN  A      5.9.157.150
-errbit               IN  A      5.9.157.150
-piratelogs           IN  A      5.9.157.150
-kviklekar            IN  A      109.74.193.250
-tor                  IN  A      5.9.157.150
 tg                   IN  A      78.46.64.234
 photos		     IN  A	209.15.228.200
 
@@ -61,26 +41,3 @@ ah                   IN  A      212.182.132.170
 albatross	     IN  A      198.211.100.156
 
 fedora		     IN  A	213.190.110.151
-$ORIGIN gg.nix.is.
-@          IN  NS     ns.gg.nix.is.
-ns         IN  A      5.9.157.150
-
-$ORIGIN v.nix.is.
-@      IN  MX  10 mail
-mail   IN  A      5.9.157.150
-
-$ORIGIN git.nix.is.
-smoke  IN  A      5.9.157.150
-
-$ORIGIN avar.nix.is.
-dev    IN  A      5.9.157.150
-
-$ORIGIN ah.nix.is.
-org    IN  A      5.9.157.150
-
-$ORIGIN dev.avar.nix.is.
-mw     IN  A      5.9.157.150
-
-$ORIGIN mw.dev.avar.nix.is.
-trunk  IN  A      5.9.157.150
-hw     IN  A      5.9.157.150
