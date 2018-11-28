@@ -98,6 +98,7 @@ automake
 asciidoc
 asciidoctor
 cmake
+valgrind
 
 ## Perl
 
