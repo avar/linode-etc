@@ -96,6 +96,7 @@ clang
 bison
 automake
 asciidoc
+asciidoctor
 cmake
 
 ## Perl
