@@ -47,6 +47,7 @@ nmap
 iptables
 lftp
 telnet
+socat
 
 ## System monitoring
 sockstat
