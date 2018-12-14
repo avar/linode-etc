@@ -22,6 +22,7 @@ apg
 members
 
 # general
+time
 file
 hdparm
 tree
