@@ -52,6 +52,13 @@ server {
 	include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
 	ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
+        # User views
+        location ~ ^/~avar/dns/a/p/v/is/(movies|eps)(/.*)?$ {
+            charset utf-8;
+            alias /dns/annex/piracy/video/$1/Icelandic$2;
+            autoindex on;
+        }
+
         # Userdirs
         location ~ ^/~(.+?)/noindex(/.*)?$ {
             alias /home/$1/www/noindex$2;
