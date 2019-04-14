@@ -59,6 +59,14 @@ server {
             autoindex on;
         }
 
+        location ~ ^/~leech/dns/a/p/l/w/c(/.*)?$ {
+            auth_basic "DNS";
+            auth_basic_user_file /etc/nginx/passwd/leech;
+            charset utf-8;
+            alias /dns/annex/piracy/leech/wnixis/complete/$1;
+            autoindex on;
+        }
+
         # Userdirs
         location ~ ^/~(.+?)/noindex(/.*)?$ {
             alias /home/$1/www/noindex$2;
