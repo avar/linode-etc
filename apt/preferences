@@ -1,14 +1,14 @@
-Explanation: Stable has the lowest priority, we install select broken packages from stable
+Explanation: Stable has the highest priority, we install select broken packages from testing
 Package: *
 Pin: release a=stable
-Pin-Priority: 700
-
-Explanation: We normally use testing for everything
-Package: *
-Pin: release a=testing
 Pin-Priority: 900
 
-Explanation: If we install anything not from testing it's usually from unstable
+Explanation: Testing is our default fallback
+Package: *
+Pin: release a=testing
+Pin-Priority: 800
+
+Explanation: Some things broken in stable and testing we install from unstable
 Package: *
 Pin: release a=unstable
-Pin-Priority: 800
+Pin-Priority: 700
