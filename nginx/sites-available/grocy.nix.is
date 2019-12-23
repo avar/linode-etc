@@ -1,0 +1,54 @@
+server {
+    server_name grocy.nix.is;
+    root /home/hinrik/grocy/public;
+    autoindex off;
+
+    #location ~ /\.well-known {
+    #    allow all;
+    #    try_files $uri =404;
+    #    break;
+    #}
+
+    location /robots.txt {
+        alias /etc/nginx/sites-common/robots.txt/disallow-all.txt;
+    }
+
+    location = /favicon.ico {
+        log_not_found off;
+        access_log off;
+    }
+
+    location / {
+        try_files $uri /index.php;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/grocy.nix.is/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/grocy.nix.is/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    if ($host = grocy.nix.is) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    server_name grocy.nix.is;
+    listen 80;
+    listen [::]:80;
+    return 404; # managed by Certbot
+
+
+}
