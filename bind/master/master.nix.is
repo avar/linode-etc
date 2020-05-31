@@ -1,7 +1,7 @@
 $TTL 1d
 $ORIGIN nix.is.
 @  1d  IN SOA ns1.first-ns.de. hostmaster.nix.is. (
-      160 ; serial
+      161 ; serial
       3h  ; refresh
       30m ; retry
       1w  ; expire
@@ -30,6 +30,8 @@ vm                   IN  A      78.46.64.234
 vm                   IN  AAAA   2a01:4f8:120:2468::2
 grocy                IN  A      78.46.64.234
 grocy                IN  AAAA   2a01:4f8:120:2468::2
+img                  IN  A      78.46.64.234
+img                  IN  AAAA   2a01:4f8:120:2468::2
 
 www                  IN  CNAME  nix.is.
 mail                 IN  A      78.46.64.234
