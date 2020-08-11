@@ -25,25 +25,26 @@ server {
 
 	server_name _;
 
-	location / {
-		# First attempt to serve request as file, then
-		# as directory, then fall back to displaying a 404.
-		try_files $uri $uri/ =404;
-	}
+	# location / {
+	# 	# First attempt to serve request as file, then
+	# 	# as directory, then fall back to displaying a 404.
+	# 	# try_files $uri $uri/ =404;
+	# }
 }
 
 server {
 	root /etc/nginx/sites/vm.nix.is;
+    # error_log /var/log/nginx/error.log debug;
 
 	# Add index.php to the list if you are using PHP
 	index index.html;
 	server_name vm.nix.is; # managed by Certbot
 
-	location / {
-		# First attempt to serve request as file, then
-		# as directory, then fall back to displaying a 404.
-		try_files $uri $uri/ =404;
-	}
+	# location / {
+	# 	# First attempt to serve request as file, then
+	# 	# as directory, then fall back to displaying a 404.
+	# 	try_files $uri $uri/ =404;
+	# }
 
 	listen [::]:443 ssl; # managed by Certbot
 	listen 443 ssl; # managed by Certbot
@@ -76,6 +77,18 @@ server {
             alias /home/$1/www$2;
             autoindex on;
         }
+
+	location /rutorrent/ {
+		index  index.php index.html index.htm;
+		alias /opt/rutorrent/ruTorrent-3.10/;
+		location ~* "\.php$" {
+            include snippets/fastcgi-php.conf;
+			# try_files      $uri =404;
+            fastcgi_pass   unix:/run/php/php7.3-fpm.sock;
+			fastcgi_param  SCRIPT_FILENAME  $request_filename;
+		}
+	 }
+
 }
 
 server {
