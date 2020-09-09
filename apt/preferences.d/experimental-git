@@ -1,9 +1,4 @@
 Explanation: Ævar likes being on the bleeding bitlbee edge
-Package: git git-doc git-man git-core git-svn git-email git-annex
+Package: git git-doc git-man git-core git-svn git-email
 Pin: release a=experimental
-Pin-Priority: 1001
-
-Explanation: Now git depends on a later libpcre2 (in unstable, not testing)
-Package: libpcre2-dev libpcre2-8-0 libpcre2-16-0 libpcre2-32-0 libpcre2-posix0
-Pin: release a=unstable
 Pin-Priority: 1001

@@ -1,4 +1,0 @@
-Explanation: Ævar likes being on the bleeding git-annex edge
-Package: git-annex
-Pin: release a=unstable
-Pin-Priority: 1001
