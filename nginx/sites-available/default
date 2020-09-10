@@ -73,22 +73,24 @@ server {
             alias /home/$1/www/noindex$2;
             autoindex off;
         }
+
         location ~ ^/~(.+?)(/.*)?$ {
             alias /home/$1/www$2;
             autoindex on;
         }
 
-	location /rutorrent/ {
-		index  index.php index.html index.htm;
-		alias /opt/rutorrent/ruTorrent-3.10/;
-		location ~* "\.php$" {
-            include snippets/fastcgi-php.conf;
-			# try_files      $uri =404;
-            fastcgi_pass   unix:/run/php/php7.3-fpm.sock;
-			fastcgi_param  SCRIPT_FILENAME  $request_filename;
-		}
-	 }
-
+        location /rutorrent/ {
+            auth_basic "rutorrent";
+            auth_basic_user_file /etc/nginx/passwd/rutorrent;
+            index  index.php index.html index.htm;
+            alias /opt/rutorrent/ruTorrent-3.10/;
+            location ~* "\.php$" {
+                include snippets/fastcgi-php.conf;
+                # try_files      $uri =404;
+                fastcgi_pass   unix:/run/php/php7.3-fpm.sock;
+                fastcgi_param  SCRIPT_FILENAME  $request_filename;
+            }
+        }
 }
 
 server {
