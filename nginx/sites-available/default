@@ -68,6 +68,20 @@ server {
             autoindex on;
         }
 
+        # "Userdirs" special behavior. I'm keeping this out of ~user
+        # so I don't have these overlapping rules clashing with each
+        # other
+        location /+avar/mediawiki/ {
+            alias /home/avar/g/mediawiki/;
+            index index.php;
+            location ~* "\.php$" {
+                include snippets/fastcgi-php.conf;
+                # try_files      $uri =404;
+                fastcgi_pass   unix:/run/php/php7.3-fpm.sock;
+                fastcgi_param  SCRIPT_FILENAME  $request_filename;
+            }
+        }
+
         # Userdirs
         location ~ ^/~(.+?)/noindex(/.*)?$ {
             alias /home/$1/www/noindex$2;
