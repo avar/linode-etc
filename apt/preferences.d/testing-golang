@@ -1,0 +1,4 @@
+Explanation: A newer golang to build gitaly
+Package: golang golang-doc golang-go golang-src
+Pin: release a=testing
+Pin-Priority: 1001
