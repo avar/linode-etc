@@ -12,3 +12,8 @@ Explanation: Some things broken in stable and testing we install from unstable
 Package: *
 Pin: release a=unstable
 Pin-Priority: 700
+
+Explanation: Even more obscure things we get from buster-backports
+Package: *
+Pin: release a=buster-backports
+Pin-Priority: 600
