@@ -1,5 +1,0 @@
-## I ended up using their own package: https://classic.yarnpkg.com/en/docs/install/#debian-stable
-#Explanation: A newer yarn is needed to build gitlab, the one in unstable conflicts
-#Package: yarnpkg node-js-yaml
-#Pin: release a=buster-backports
-#Pin-Priority: 1001
