@@ -1,4 +1,0 @@
-Explanation: The golang in stable is ancient
-Package: golang golang-doc golang-go golang-src
-Pin: release a=testing
-Pin-Priority: 1001

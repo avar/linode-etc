@@ -1,4 +1,0 @@
-Explanation: The GDK installation for Ævar
-Package: runit
-Pin: release a=experimental
-Pin-Priority: 1001

@@ -1,5 +1,0 @@
-## I ended up using nvm to install it.
-#Explanation: A newer nodejs is needed to build gitlab, at least 12.18.3
-#Package: nodejs libnode-dev libuv1-dev libnode72
-#Pin: release a=testing
-#Pin-Priority: 1001
