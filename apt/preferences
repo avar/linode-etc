@@ -1,19 +1,19 @@
-Explanation: Use stable for everything
+Explanation: Stable has the highest priority, we install select broken packages from testing
 Package: *
 Pin: release a=stable
-Pin-Priority: 1000
+Pin-Priority: 900
 
-Explanation: If we don't get it from stable, then probably testing
+Explanation: Testing is our default fallback
 Package: *
 Pin: release a=testing
-Pin-Priority: 400
+Pin-Priority: 800
 
 Explanation: Some things broken in stable and testing we install from unstable
 Package: *
 Pin: release a=unstable
-Pin-Priority: 100
+Pin-Priority: 700
 
-Explanation: Or even from experimental
+Explanation: Even more obscure things we get from bullseye-backports
 Package: *
-Pin: release a=unstable
-Pin-Priority: 50
+Pin: release a=bullseye-backports
+Pin-Priority: 600
