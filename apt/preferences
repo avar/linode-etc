@@ -1,11 +1,11 @@
-Explanation: Use testing for everything
-Package: *
-Pin: release a=testing
-Pin-Priority: 1000
-
-Explanation: If we don't get it from testing, then probably stable
+Explanation: Use stable for everything
 Package: *
 Pin: release a=stable
+Pin-Priority: 1000
+
+Explanation: If we don't get it from stable, then probably testing
+Package: *
+Pin: release a=testing
 Pin-Priority: 400
 
 Explanation: Some things broken in stable and testing we install from unstable
