@@ -1,4 +1,4 @@
 Explanation: Gitaly needs Go 1.16 now, the one in testing needs a new libc
-Package: golang-1.16 golang-1.16-go
+Package: golang-1.16 golang-1.16-go golang-1.17 golang-1.17-go
 Pin: release a=bullseye-backports
 Pin-Priority: 1001

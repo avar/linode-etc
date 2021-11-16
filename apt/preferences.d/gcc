@@ -1,0 +1,4 @@
+Explanation: GCC 10 is being retarded
+Package: gcc
+Pin: release a=unstable
+Pin-Priority: 1001
